@@ -19,6 +19,7 @@ dist/
 
 # --- Heavy Raw Datasets (Do NOT commit 2.34 GB IO-VNBD dataset) ---
 data/raw/**
+data/processed/**
 *.zip
 IO-VNBD-master.zip
 
