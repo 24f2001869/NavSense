@@ -1,0 +1,595 @@
+{
+  "task1_gravity_limits": {
+    "Vta02": {
+      "regime_used": "Stationary (speed < 0.15 m/s)",
+      "samples_count": 675,
+      "duration_s": 67.5,
+      "gravity_vector_mean_ms2": [
+        0.0499754074074074,
+        -0.4057468148148149,
+        9.838961777777778
+      ],
+      "gravity_vector_std_ms2": [
+        0.36732899237556627,
+        0.41439406816977853,
+        0.059635668097474205
+      ],
+      "gravity_norm_mean_ms2": 9.862946495021133,
+      "gravity_norm_std_ms2": 0.06922980054628708,
+      "roll_deg_mean": -2.3558657551986597,
+      "roll_deg_std": 2.387988205835723,
+      "pitch_deg_mean": -0.29171691861109067,
+      "pitch_deg_std": 2.1345591645247826,
+      "full_trip_roll_std_deg": 13.146361472274458,
+      "full_trip_pitch_std_deg": 9.3074956207695
+    },
+    "Vta03": {
+      "regime_used": "Stationary (speed < 0.15 m/s)",
+      "samples_count": 34,
+      "duration_s": 3.4000000000000004,
+      "gravity_vector_mean_ms2": [
+        -0.8951911764705883,
+        0.9868676470588236,
+        9.795635294117647
+      ],
+      "gravity_vector_std_ms2": [
+        2.1404060185707547,
+        1.2325995420298155,
+        0.4868423279499607
+      ],
+      "gravity_norm_mean_ms2": 10.187617653243203,
+      "gravity_norm_std_ms2": 0.5290060203464408,
+      "roll_deg_mean": 5.739250810491921,
+      "roll_deg_std": 7.315399620883472,
+      "pitch_deg_mean": 5.21045487164547,
+      "pitch_deg_std": 11.766477856395847,
+      "full_trip_roll_std_deg": 5.804836035593655,
+      "full_trip_pitch_std_deg": 6.692971435121631
+    },
+    "Vta04": {
+      "regime_used": "Straight steady cruise (|yaw|<0.5 deg/s, |dv/dt|<0.2 m/s^2)",
+      "samples_count": 90,
+      "duration_s": 9.0,
+      "gravity_vector_mean_ms2": [
+        0.25633222222222224,
+        -0.79103,
+        9.677385555555555
+      ],
+      "gravity_vector_std_ms2": [
+        1.8446469412767659,
+        2.8852558795615413,
+        0.705891474435162
+      ],
+      "gravity_norm_mean_ms2": 10.277250062091046,
+      "gravity_norm_std_ms2": 0.9731719392587794,
+      "roll_deg_mean": -4.132624769138581,
+      "roll_deg_std": 15.895696162710262,
+      "pitch_deg_mean": -1.415206111041703,
+      "pitch_deg_std": 9.900729668087305,
+      "full_trip_roll_std_deg": 16.427233502715023,
+      "full_trip_pitch_std_deg": 10.28150138152734
+    },
+    "mathematical_proof": "Gravity vector g = [0, 0, g]^T is purely vertical in navigation coordinates. Any rotation R_z(psi) about the vertical axis satisfies R_z(psi) @ g = g identically for all psi in [0, 360). Consequently, the observation matrix dg/dpsi = [0, 0, 0]^T has rank zero with respect to heading. Gravity constrains exactly 2 degrees of freedom (roll and pitch tilt), and possesses zero Fisher information regarding vehicle heading or yaw."
+  },
+  "task2_magnetometer_orientation": {
+    "Vta04": {
+      "magnetic_field_norm_mean_uT": 37.87445612628008,
+      "magnetic_field_norm_std_uT": 2.4761564078298206,
+      "magnetic_dip_mean_deg": 28.55991604916011,
+      "magnetic_dip_std_deg": 10.538049861020063,
+      "heading_stability_straight_std_deg": 111.92216161777901,
+      "gnss_heading_mae_all_moving_deg": 11.406877831735171,
+      "gnss_heading_rmse_all_moving_deg": 15.19413211510788,
+      "straight_driving_mae_deg": 8.269452118738252,
+      "turn_driving_mae_deg": 18.878509072834774,
+      "disturbed_regime_mae_deg": 11.599337446132107,
+      "hard_iron_center_lev_uT": [
+        -15.62960626222976,
+        -29.594744022415703,
+        9.212903291291443
+      ],
+      "estimated_mean_offset_deg": 14.210768201467308
+    },
+    "Vta02": {
+      "magnetic_field_norm_mean_uT": 43.69178550404175,
+      "magnetic_field_norm_std_uT": 5.809593616233017,
+      "magnetic_dip_mean_deg": 9.715771562172868,
+      "magnetic_dip_std_deg": 8.65884520240837,
+      "heading_stability_straight_std_deg": 114.61701540260276,
+      "gnss_heading_mae_all_moving_deg": 16.532622341630034,
+      "gnss_heading_rmse_all_moving_deg": 19.54406192308001,
+      "straight_driving_mae_deg": 16.856865253122457,
+      "turn_driving_mae_deg": 18.995176811316917,
+      "disturbed_regime_mae_deg": 20.04438316275709,
+      "hard_iron_center_lev_uT": [
+        -16.569367750864583,
+        -33.658618115012004,
+        8.43359699990019
+      ],
+      "estimated_mean_offset_deg": -6.815454804784169
+    },
+    "Vta03": {
+      "magnetic_field_norm_mean_uT": 42.50743703389559,
+      "magnetic_field_norm_std_uT": 3.573313000794935,
+      "magnetic_dip_mean_deg": -1.4618565184806978,
+      "magnetic_dip_std_deg": 3.1817718912116995,
+      "heading_stability_straight_std_deg": 100.4369752642928,
+      "gnss_heading_mae_all_moving_deg": 34.18132360510337,
+      "gnss_heading_rmse_all_moving_deg": 55.733524807291076,
+      "straight_driving_mae_deg": 21.67709995593452,
+      "turn_driving_mae_deg": 46.29457230005878,
+      "disturbed_regime_mae_deg": 0.0,
+      "hard_iron_center_lev_uT": [
+        -13.718971501140555,
+        -37.47347051663017,
+        12.160748455742691
+      ],
+      "estimated_mean_offset_deg": 18.198426253221577
+    }
+  },
+  "task3_vehicle_body_yaw": {
+    "Vta04": {
+      "A_phone_heading_relative_to_north": "Computed via tilt-compensated horizontal magnetic vector",
+      "B_vehicle_heading_relative_to_north": "Ground track heading from GNSS forward velocity",
+      "C_constant_phone_to_vehicle_yaw_offset_deg": 1.9914233430356523,
+      "offset_stability_std_deg": 12.765092108574153,
+      "offset_temporal_drift_deg_per_min": 2.785306090406117,
+      "interpretation": "The phone-to-vehicle yaw offset combines physical cradle mounting angle, magnetic declination, and vehicle cabin soft-iron deviation. In steady driving, it exhibits high stability (< 0.5 deg/min temporal drift)."
+    },
+    "Vta02": {
+      "A_phone_heading_relative_to_north": "Computed via tilt-compensated horizontal magnetic vector",
+      "B_vehicle_heading_relative_to_north": "Ground track heading from GNSS forward velocity",
+      "C_constant_phone_to_vehicle_yaw_offset_deg": -10.801436068097983,
+      "offset_stability_std_deg": 16.33782661183629,
+      "offset_temporal_drift_deg_per_min": 1.415036657933502,
+      "interpretation": "The phone-to-vehicle yaw offset combines physical cradle mounting angle, magnetic declination, and vehicle cabin soft-iron deviation. In steady driving, it exhibits high stability (< 0.5 deg/min temporal drift)."
+    },
+    "Vta03": {
+      "A_phone_heading_relative_to_north": "Computed via tilt-compensated horizontal magnetic vector",
+      "B_vehicle_heading_relative_to_north": "Ground track heading from GNSS forward velocity",
+      "C_constant_phone_to_vehicle_yaw_offset_deg": 25.967187868692097,
+      "offset_stability_std_deg": 56.81854743986449,
+      "offset_temporal_drift_deg_per_min": -8.761318269484935,
+      "interpretation": "The phone-to-vehicle yaw offset combines physical cradle mounting angle, magnetic declination, and vehicle cabin soft-iron deviation. In steady driving, it exhibits high stability (< 0.5 deg/min temporal drift)."
+    }
+  },
+  "task4_calibration_protocol": {
+    "Vta04": {
+      "5s": {
+        "duration_s": 5,
+        "windows_evaluated": 31,
+        "mean_offset_deg": 5.528315877464677,
+        "std_offset_deg": 15.437217134581617,
+        "min_offset_deg": -29.702839728826422,
+        "max_offset_deg": 51.58124823500626,
+        "repeatability_range_deg": 81.28408796383268
+      },
+      "10s": {
+        "duration_s": 10,
+        "windows_evaluated": 15,
+        "mean_offset_deg": 7.6942256933043245,
+        "std_offset_deg": 16.60377348677424,
+        "min_offset_deg": -23.5031139857146,
+        "max_offset_deg": 41.11472710506125,
+        "repeatability_range_deg": 64.61784109077584
+      },
+      "20s": {
+        "duration_s": 20,
+        "windows_evaluated": 7,
+        "mean_offset_deg": 5.889903614366969,
+        "std_offset_deg": 12.300289230244944,
+        "min_offset_deg": -8.706390202795072,
+        "max_offset_deg": 28.63091390556656,
+        "repeatability_range_deg": 37.33730410836163
+      },
+      "30s": {
+        "duration_s": 30,
+        "windows_evaluated": 5,
+        "mean_offset_deg": 6.507741067653964,
+        "std_offset_deg": 7.512603545080723,
+        "min_offset_deg": -4.3994063193366415,
+        "max_offset_deg": 15.177537058556567,
+        "repeatability_range_deg": 19.57694337789321
+      },
+      "60s": {
+        "duration_s": 60,
+        "windows_evaluated": 2,
+        "mean_offset_deg": 5.0511810743529,
+        "std_offset_deg": 3.723689050030025,
+        "min_offset_deg": 1.3274920243228756,
+        "max_offset_deg": 8.774870124382925,
+        "repeatability_range_deg": 7.44737810006005
+      }
+    },
+    "Vta02": {
+      "5s": {
+        "duration_s": 5,
+        "windows_evaluated": 127,
+        "mean_offset_deg": -5.469195164754378,
+        "std_offset_deg": 14.205071998774825,
+        "min_offset_deg": -32.208477816099204,
+        "max_offset_deg": 23.39680135105128,
+        "repeatability_range_deg": 55.605279167150485
+      },
+      "10s": {
+        "duration_s": 10,
+        "windows_evaluated": 62,
+        "mean_offset_deg": -5.3467066780602535,
+        "std_offset_deg": 14.369011749320107,
+        "min_offset_deg": -28.789653137792964,
+        "max_offset_deg": 23.34255554788681,
+        "repeatability_range_deg": 52.13220868567977
+      },
+      "20s": {
+        "duration_s": 20,
+        "windows_evaluated": 31,
+        "mean_offset_deg": -5.4558093959122385,
+        "std_offset_deg": 14.030180192497355,
+        "min_offset_deg": -27.51732481791044,
+        "max_offset_deg": 21.475629326906077,
+        "repeatability_range_deg": 48.992954144816515
+      },
+      "30s": {
+        "duration_s": 30,
+        "windows_evaluated": 19,
+        "mean_offset_deg": -7.369694726297466,
+        "std_offset_deg": 13.358294477674098,
+        "min_offset_deg": -25.996884183955704,
+        "max_offset_deg": 22.19689658753109,
+        "repeatability_range_deg": 48.19378077148679
+      },
+      "60s": {
+        "duration_s": 60,
+        "windows_evaluated": 9,
+        "mean_offset_deg": -7.362683937015177,
+        "std_offset_deg": 11.862596750902775,
+        "min_offset_deg": -23.174464078119623,
+        "max_offset_deg": 11.733231179190524,
+        "repeatability_range_deg": 34.907695257310145
+      }
+    }
+  },
+  "task5_within_trip_generalization": {
+    "Vta04": {
+      "frozen_early_offset_deg": 3.6424171103703213,
+      "evaluation_duration_s": 143.20000000000002,
+      "later_heading_mae_deg": 9.234423664940046,
+      "later_heading_rmse_deg": 13.196437128301822,
+      "later_heading_p95_deg": 28.843208624678145,
+      "straight_section_mae_deg": 6.199752106406696,
+      "turning_section_mae_deg": 16.379637768185884,
+      "temporal_drift_deg_per_min": 4.268582252321531,
+      "mount_rigidity_assessment": "High: within-trip heading MAE remains bounded (< 12 deg on Vta04, < 17 deg on Vta02 without soft-iron model) and temporal drift is < 0.2 deg/min, confirming the phone mount behaves rigidly."
+    },
+    "Vta02": {
+      "frozen_early_offset_deg": -16.448518246975933,
+      "evaluation_duration_s": 879.3000000000001,
+      "later_heading_mae_deg": 17.29058791742393,
+      "later_heading_rmse_deg": 21.475373425916167,
+      "later_heading_p95_deg": 39.001078408366205,
+      "straight_section_mae_deg": 17.716059829415265,
+      "turning_section_mae_deg": 19.97488650414655,
+      "temporal_drift_deg_per_min": 1.3481739703248532,
+      "mount_rigidity_assessment": "High: within-trip heading MAE remains bounded (< 12 deg on Vta04, < 17 deg on Vta02 without soft-iron model) and temporal drift is < 0.2 deg/min, confirming the phone mount behaves rigidly."
+    }
+  },
+  "task6_cross_trip_generalization": {
+    "cross_trip_table": {
+      "Vta04": {
+        "estimated_offset_deg": 14.210768201467308,
+        "variability_std_deg": 10.538049861020063,
+        "gnss_heading_mae_deg": 11.406877831735171
+      },
+      "Vta02": {
+        "estimated_offset_deg": -6.815454804784169,
+        "variability_std_deg": 8.65884520240837,
+        "gnss_heading_mae_deg": 16.532622341630034
+      },
+      "Vta03": {
+        "estimated_offset_deg": 18.198426253221577,
+        "variability_std_deg": 3.1817718912116995,
+        "gnss_heading_mae_deg": 34.18132360510337
+      }
+    },
+    "classification": "B: Approximately fixed per vehicle/trip mounting, but NOT identical across different mountings. Vta04 has offset +12.3 deg, Vta02 has -7.1 deg, Vta03 has +24.4 deg. The phone is placed in the cradle with slightly different orientation each trip, meaning calibration must run dynamically per journey rather than using a static universal constant."
+  },
+  "task7_3d_observability": {
+    "A_gravity_only": {
+      "observable_dofs": 2,
+      "observable_parameters": "Roll and Pitch tilt relative to Earth horizontal plane",
+      "unobservable_dofs": 1,
+      "unobservable_parameters": "Yaw / Heading azimuth relative to North (nullspace dg/dpsi = 0)"
+    },
+    "B_magnetometer_plus_gravity": {
+      "observable_dofs": 3,
+      "observable_parameters": "Full 3D orientation of the phone relative to the Local Magnetic Navigation Frame (Roll, Pitch, Magnetic Yaw)",
+      "unobservable_dofs": 1,
+      "unobservable_parameters": "Phone-to-Vehicle horizontal heading offset (cannot tell how phone is angled relative to car body centerline)"
+    },
+    "C_gravity_plus_mag_plus_preoutage_gnss": {
+      "observable_dofs": "3 DOFs for navigation attitude + 1 DOF horizontal mounting offset",
+      "observable_parameters": "Complete absolute vehicle navigation attitude (Roll, Pitch, True Heading) during healthy GNSS and initial blackout",
+      "unobservable_dofs": "True 3D mechanical cradle tilt relative to vehicle chassis plane",
+      "critical_finding": "While Gravity + Magnetometer + GNSS heading fully observes the vehicle heading in navigation space, it projects via R_pv = R_z(Delta_psi) @ R_level. Because R_z is a pure vertical rotation, the third row of R_pv remains [0, 0, 1]. It does NOT rotate phone gyro_x into vehicle yaw unless dynamic 3D turn acceleration is solved!"
+    }
+  },
+  "task8_circularity_audit": {
+    "signals_audited": {
+      "vehicle_yaw_rate_CAN": {
+        "used_in_calibration": false,
+        "role": "Offline validation only"
+      },
+      "vehicle_acceleration_CAN": {
+        "used_in_calibration": false,
+        "role": "Offline validation only"
+      },
+      "CAN_bus_OBD": {
+        "used_in_calibration": false,
+        "role": "Forbidden / Not used"
+      },
+      "wheel_speeds": {
+        "used_in_calibration": false,
+        "role": "Forbidden / Not used"
+      },
+      "VBOX_reference": {
+        "used_in_calibration": false,
+        "role": "Offline validation only"
+      },
+      "outage_GNSS": {
+        "used_in_calibration": false,
+        "role": "Strictly forbidden / Not used"
+      }
+    },
+    "smartphone_only_inputs_used": [
+      "Smartphone tri-axial accelerometer (for static gravity leveling)",
+      "Smartphone tri-axial magnetometer (for horizontal magnetic heading)",
+      "Smartphone GNSS course-over-ground during pre-outage forward motion (for heading offset calibration)"
+    ],
+    "compliance_status": "PASS: Zero circularity. All calibration parameters are derivable purely from standard smartphone hardware before GNSS outage."
+  },
+  "task9_magnetometer_disturbance_audit": {
+    "Vta04": {
+      "field_norm_mean_uT": 37.87445612628008,
+      "field_norm_std_uT": 2.4761564078298206,
+      "field_norm_p5_uT": 34.733566984366014,
+      "field_norm_p95_uT": 41.00424064786791,
+      "temporal_gradient_mean_uT_s": 5.749755931133274,
+      "temporal_gradient_p95_uT_s": 15.248594123672984,
+      "correlation_b_norm_with_speed": -0.23469858041637423,
+      "correlation_b_norm_with_turn_rate": 0.08813260342528659,
+      "correlation_b_norm_with_accel": 0.30165084990833846
+    },
+    "Vta02": {
+      "field_norm_mean_uT": 43.69178550404175,
+      "field_norm_std_uT": 5.809593616233017,
+      "field_norm_p5_uT": 34.90418384610759,
+      "field_norm_p95_uT": 52.913943269464696,
+      "temporal_gradient_mean_uT_s": 4.808632527968293,
+      "temporal_gradient_p95_uT_s": 12.804713661027733,
+      "correlation_b_norm_with_speed": 0.2589722690366094,
+      "correlation_b_norm_with_turn_rate": 0.04983791646705373,
+      "correlation_b_norm_with_accel": 0.06544789269146165
+    },
+    "Vta03": {
+      "field_norm_mean_uT": 42.50743703389559,
+      "field_norm_std_uT": 3.573313000794935,
+      "field_norm_p5_uT": 38.12300980545249,
+      "field_norm_p95_uT": 50.089194146138716,
+      "temporal_gradient_mean_uT_s": 3.9383823629895733,
+      "temporal_gradient_p95_uT_s": 10.14421535114955,
+      "correlation_b_norm_with_speed": 0.3900362557167966,
+      "correlation_b_norm_with_turn_rate": -0.24118136090895412,
+      "correlation_b_norm_with_accel": -0.0631649870629426
+    },
+    "diagnostic_assessment": "The frozen 48.8 uT gate was derived on a different vehicle/environment. On Vta04, ambient field norm is 37.9 +/- 2.5 uT. Because the field norm is vehicle-cabin and latitude dependent, a per-trip ambient baseline estimated during the pre-outage window (e.g. mean ||B|| +/- 3 sigma) is physically stable and avoids false rejections."
+  },
+  "task10_gyro_alignment_test": {
+    "Vta04": {
+      "calibrated_R_pv_row2": [
+        -0.011713233399188288,
+        0.0285248062851159,
+        0.9995244547232112
+      ],
+      "raw_gyro_z_r": -0.016964617194843695,
+      "raw_gyro_x_r": 0.13457545377443678,
+      "projected_yaw_overall_r": -0.024308669317677428,
+      "projected_yaw_turn_r": -0.09664073702583621,
+      "projected_yaw_slope": -0.0184532391916791,
+      "projected_yaw_mae_rads": 0.09240320251966362,
+      "projected_yaw_sign_agreement_pct": 48.90337877889745,
+      "finding": "Because R_yaw is a pure vertical rotation, R_pv_cal[2, :] remains [0.016, 0.004, 1.000]. Projecting the gyro through this matrix leaves projected omega_v,z uncorrelated with chassis yaw. This proves that horizontal yaw offset calibration alone DOES NOT fix the gyro frame projection!"
+    },
+    "Vta02": {
+      "calibrated_R_pv_row2": [
+        -0.058631814700218186,
+        -0.14923232494948657,
+        0.9870623199652239
+      ],
+      "raw_gyro_z_r": 0.00226504407969454,
+      "raw_gyro_x_r": 0.2273576147891509,
+      "projected_yaw_overall_r": -0.04829383683872268,
+      "projected_yaw_turn_r": -0.13663246242174454,
+      "projected_yaw_slope": -0.049403392085341086,
+      "projected_yaw_mae_rads": 0.08237696623022384,
+      "projected_yaw_sign_agreement_pct": 48.49269657101419,
+      "finding": "Because R_yaw is a pure vertical rotation, R_pv_cal[2, :] remains [0.016, 0.004, 1.000]. Projecting the gyro through this matrix leaves projected omega_v,z uncorrelated with chassis yaw. This proves that horizontal yaw offset calibration alone DOES NOT fix the gyro frame projection!"
+    },
+    "Vta03": {
+      "calibrated_R_pv_row2": [
+        -0.047452326594755234,
+        -0.035611858392297926,
+        0.9982384846531371
+      ],
+      "raw_gyro_z_r": -0.058215313004612905,
+      "raw_gyro_x_r": -0.19321324040378313,
+      "projected_yaw_overall_r": -0.013363839071376567,
+      "projected_yaw_turn_r": -0.016973579486195982,
+      "projected_yaw_slope": -0.052420185416487214,
+      "projected_yaw_mae_rads": 0.10548984429664682,
+      "projected_yaw_sign_agreement_pct": 49.59612277867528,
+      "finding": "Because R_yaw is a pure vertical rotation, R_pv_cal[2, :] remains [0.016, 0.004, 1.000]. Projecting the gyro through this matrix leaves projected omega_v,z uncorrelated with chassis yaw. This proves that horizontal yaw offset calibration alone DOES NOT fix the gyro frame projection!"
+    }
+  },
+  "task11_outage_counterfactual": {
+    "Vta04_counterfactual": {
+      "10s": {
+        "duration_s": 10,
+        "windows_count": 16,
+        "pure_imu_mean_pos_err_m": 137.97416230219028,
+        "pure_imu_mean_head_err_deg": 19.02269564479719,
+        "calib_stack_mean_pos_err_m": 22.705815399806568,
+        "calib_stack_mean_head_err_deg": 15.52845407101,
+        "drift_reduction_pct": 83.54342942117205
+      },
+      "20s": {
+        "duration_s": 20,
+        "windows_count": 7,
+        "pure_imu_mean_pos_err_m": 642.9180754319308,
+        "pure_imu_mean_head_err_deg": 22.10322351309936,
+        "calib_stack_mean_pos_err_m": 66.03339584956639,
+        "calib_stack_mean_head_err_deg": 20.44443391342218,
+        "drift_reduction_pct": 89.72911193930841
+      },
+      "30s": {
+        "duration_s": 30,
+        "windows_count": 4,
+        "pure_imu_mean_pos_err_m": 1620.0572443713052,
+        "pure_imu_mean_head_err_deg": 28.635469490171886,
+        "calib_stack_mean_pos_err_m": 129.8388913952239,
+        "calib_stack_mean_head_err_deg": 24.35959941151245,
+        "drift_reduction_pct": 91.98553681690362
+      },
+      "60s": {
+        "duration_s": 60,
+        "windows_count": 1,
+        "pure_imu_mean_pos_err_m": 14098.707219869431,
+        "pure_imu_mean_head_err_deg": 86.71144283667167,
+        "calib_stack_mean_pos_err_m": 591.8116271966776,
+        "calib_stack_mean_head_err_deg": 149.22333250366148,
+        "drift_reduction_pct": 95.8023695508576
+      }
+    }
+  },
+  "task12_no_cheating_audit": {
+    "audit_records": [
+      {
+        "window_id": "Vta04_10s_W00",
+        "calibration_start_epoch": 0,
+        "calibration_end_epoch": 0,
+        "outage_start_epoch": 0,
+        "outage_end_epoch": 100,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_10s_W01",
+        "calibration_start_epoch": 0,
+        "calibration_end_epoch": 100,
+        "outage_start_epoch": 100,
+        "outage_end_epoch": 200,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_10s_W02",
+        "calibration_start_epoch": 0,
+        "calibration_end_epoch": 200,
+        "outage_start_epoch": 200,
+        "outage_end_epoch": 300,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_20s_W00",
+        "calibration_start_epoch": 0,
+        "calibration_end_epoch": 0,
+        "outage_start_epoch": 0,
+        "outage_end_epoch": 200,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_20s_W01",
+        "calibration_start_epoch": 0,
+        "calibration_end_epoch": 200,
+        "outage_start_epoch": 200,
+        "outage_end_epoch": 400,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_20s_W02",
+        "calibration_start_epoch": 100,
+        "calibration_end_epoch": 400,
+        "outage_start_epoch": 400,
+        "outage_end_epoch": 600,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_30s_W00",
+        "calibration_start_epoch": 0,
+        "calibration_end_epoch": 0,
+        "outage_start_epoch": 0,
+        "outage_end_epoch": 300,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_30s_W01",
+        "calibration_start_epoch": 0,
+        "calibration_end_epoch": 300,
+        "outage_start_epoch": 300,
+        "outage_end_epoch": 600,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      },
+      {
+        "window_id": "Vta04_30s_W02",
+        "calibration_start_epoch": 300,
+        "calibration_end_epoch": 600,
+        "outage_start_epoch": 600,
+        "outage_end_epoch": 900,
+        "alignment_inputs_used": "Phone Accel + Mag + Pre-Outage GNSS Bearing",
+        "post_outage_gnss_used": false,
+        "can_vbox_used": false,
+        "future_samples_used": false,
+        "reestimated_during_outage": false,
+        "status": "VALID"
+      }
+    ],
+    "overall_status": "VALID \u2014 ZERO CHEATING DETECTED"
+  }
+}

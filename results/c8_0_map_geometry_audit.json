@@ -1,0 +1,553 @@
+{
+  "metadata": {
+    "stage": "C8-0",
+    "description": "Offline Map Geometry Feasibility & Candidate Observability Audit",
+    "script": "experiments/audit_map_geometry_c8_0.py",
+    "rules": "Strict offline characterization. Zero ESKF modifications. VBOX quarantined for evaluation."
+  },
+  "phase_1_network_profile": {
+    "Vta02": {
+      "trip": "Vta02",
+      "lat0": 52.7604151,
+      "lon0": -1.6792928,
+      "total_segments": 29663,
+      "total_ways": 3428,
+      "total_length_km": 638.168601346265,
+      "enu_bounds": {
+        "east_min_m": -663.1159611759476,
+        "east_max_m": 5120.037563859232,
+        "north_min_m": -713.8194711009178,
+        "north_max_m": 7504.052209995944
+      },
+      "highway_type_counts": {
+        "trunk": 1617,
+        "trunk_link": 77,
+        "unclassified": 1971,
+        "secondary": 850,
+        "residential": 9905,
+        "tertiary": 1800,
+        "service": 13440,
+        "secondary_link": 3
+      },
+      "highway_type_lengths_km": {
+        "trunk": 46.18209822681685,
+        "trunk_link": 1.8155109613596991,
+        "unclassified": 46.27596769029536,
+        "secondary": 22.941505595062303,
+        "residential": 207.97019305455612,
+        "tertiary": 53.28335712973448,
+        "service": 259.66182033771116,
+        "secondary_link": 0.03814835072902925
+      }
+    },
+    "Vta04": {
+      "trip": "Vta04",
+      "lat0": 52.8137699,
+      "lon0": -1.6368041,
+      "total_segments": 4775,
+      "total_ways": 558,
+      "total_length_km": 118.09571524885345,
+      "enu_bounds": {
+        "east_min_m": -2439.248946013116,
+        "east_max_m": 628.9793498921297,
+        "north_min_m": -583.8316724331216,
+        "north_max_m": 2088.9962832921215
+      },
+      "highway_type_counts": {
+        "trunk": 401,
+        "tertiary": 359,
+        "residential": 2175,
+        "service": 1351,
+        "unclassified": 489
+      },
+      "highway_type_lengths_km": {
+        "trunk": 13.944694532501726,
+        "tertiary": 13.992748986661109,
+        "residential": 55.3120398368341,
+        "service": 21.546799463494047,
+        "unclassified": 13.29943242936246
+      }
+    }
+  },
+  "phase_2_ground_truth_agreement": {
+    "Vta02": {
+      "trip": "Vta02",
+      "motion_epochs": 10021,
+      "d_perp_m_stats": {
+        "count": 10021,
+        "mean": 2.0734056881102725,
+        "median": 1.5386565457041037,
+        "std": 2.6109081583014455,
+        "p5": 0.16022905306030977,
+        "p50": 1.5386565457041037,
+        "p90": 3.712788954384729,
+        "p95": 5.108336089517666,
+        "min": 0.0004985389828414355,
+        "max": 31.303790137481336
+      },
+      "signed_d_perp_m_stats": {
+        "count": 10021,
+        "mean": -0.9787102982747622,
+        "median": -1.3109098399713517,
+        "std": 3.0037750395079508,
+        "p5": -4.151623271602581,
+        "p50": -1.3109098399713517,
+        "p90": 0.9794858937412243,
+        "p95": 1.976136949565895,
+        "min": -30.09790503951161,
+        "max": 31.303790137481332
+      },
+      "heading_error_deg_stats": {
+        "count": 10021,
+        "mean": -0.17445288018724123,
+        "median": 0.1386232146073591,
+        "std": 9.457811865619998,
+        "p5": -10.037957748328436,
+        "p50": 0.1386232146073591,
+        "p90": 4.332169115550353,
+        "p95": 7.425123336901653,
+        "min": -133.3451678894116,
+        "max": 59.87333450283887
+      },
+      "heading_mae_deg": 4.223088430408144,
+      "fraction_d_perp_lt_2m": 0.6329707614010578,
+      "fraction_d_perp_lt_5m": 0.9459135814788944,
+      "fraction_d_perp_lt_10m": 0.9816385590260454,
+      "fraction_e_psi_lt_5deg": 0.820177626983335,
+      "fraction_e_psi_lt_10deg": 0.912882945813791,
+      "road_type_breakdown": {
+        "residential": {
+          "count": 1111,
+          "d_perp_median": 1.4366443554581487,
+          "d_perp_p95": 2.971427710913594,
+          "e_psi_mae_deg": 5.03482034904997
+        },
+        "service": {
+          "count": 44,
+          "d_perp_median": 14.502022542045601,
+          "d_perp_p95": 28.199028068064404,
+          "e_psi_mae_deg": 55.91380956545749
+        },
+        "tertiary": {
+          "count": 4974,
+          "d_perp_median": 1.6535516710574414,
+          "d_perp_p95": 5.606345126266187,
+          "e_psi_mae_deg": 4.3105075420202255
+        },
+        "trunk": {
+          "count": 3635,
+          "d_perp_median": 1.4444412133394091,
+          "d_perp_p95": 5.120991222875345,
+          "e_psi_mae_deg": 3.0252113611790756
+        },
+        "unclassified": {
+          "count": 257,
+          "d_perp_median": 0.744573539972317,
+          "d_perp_p95": 2.2365578717191092,
+          "e_psi_mae_deg": 7.1150518309370705
+        }
+      }
+    },
+    "Vta04": {
+      "trip": "Vta04",
+      "motion_epochs": 1779,
+      "d_perp_m_stats": {
+        "count": 1779,
+        "mean": 1.2880942436008618,
+        "median": 0.8700384086464825,
+        "std": 1.1614614972213864,
+        "p5": 0.06538426484209518,
+        "p50": 0.8700384086464825,
+        "p90": 3.2402342183691815,
+        "p95": 3.7897851088853014,
+        "min": 0.0008539799339095774,
+        "max": 6.161875646618777
+      },
+      "signed_d_perp_m_stats": {
+        "count": 1779,
+        "mean": -0.8177560075954293,
+        "median": -0.5994370412860377,
+        "std": 1.529527607454996,
+        "p5": -3.7897851088853054,
+        "p50": -0.5994370412860377,
+        "p90": 0.8937881697711859,
+        "p95": 1.3256944978482463,
+        "min": -6.161875646618778,
+        "max": 2.4109167071922997
+      },
+      "heading_error_deg_stats": {
+        "count": 1779,
+        "mean": -0.18789143790306329,
+        "median": 0.12868099364015556,
+        "std": 6.462439862425258,
+        "p5": -5.4593675021041745,
+        "p50": 0.12868099364015556,
+        "p90": 3.618457225688343,
+        "p95": 5.597983399965231,
+        "min": -59.066935679556124,
+        "max": 55.35544242554749
+      },
+      "heading_mae_deg": 2.867140433318163,
+      "fraction_d_perp_lt_2m": 0.7689713322091062,
+      "fraction_d_perp_lt_5m": 0.9971894322653176,
+      "fraction_d_perp_lt_10m": 1.0,
+      "fraction_e_psi_lt_5deg": 0.8842046093310849,
+      "fraction_e_psi_lt_10deg": 0.9713322091062394,
+      "road_type_breakdown": {
+        "service": {
+          "count": 3,
+          "d_perp_median": 1.0093580860223368,
+          "d_perp_p95": 1.1166694358885971,
+          "e_psi_mae_deg": 56.30380464902054
+        },
+        "trunk": {
+          "count": 1729,
+          "d_perp_median": 0.8494701620153444,
+          "d_perp_p95": 3.6471665478952,
+          "e_psi_mae_deg": 2.5456315390861666
+        },
+        "unclassified": {
+          "count": 47,
+          "d_perp_median": 2.967178681903304,
+          "d_perp_p95": 5.703070589784713,
+          "e_psi_mae_deg": 11.283712464807817
+        }
+      }
+    }
+  },
+  "phase_3_candidate_ambiguity": {
+    "Vta02": {
+      "trip": "Vta02",
+      "eval_epochs": 2005,
+      "radii": {
+        "R_5m": {
+          "radius_m": 5.0,
+          "mean_raw_roads": 1.1635910224438903,
+          "median_raw_roads": 1.0,
+          "p95_raw_roads": 2.0,
+          "frac_raw_unique_1road": 0.8149625935162095,
+          "frac_raw_ambiguous_ge2": 0.14812967581047382,
+          "frac_raw_severe_ge4": 0.0059850374064837905,
+          "mean_gated_roads": 0.9905236907730673,
+          "median_gated_roads": 1.0,
+          "p95_gated_roads": 1.0,
+          "frac_gated_unique_1road": 0.8912718204488778,
+          "frac_gated_ambiguous_ge2": 0.047880299251870324,
+          "frac_gated_empty_0road": 0.06084788029925187,
+          "ambiguity_reduction_pct": 67.67631080470315
+        },
+        "R_10m": {
+          "radius_m": 10.0,
+          "mean_raw_roads": 1.4653366583541148,
+          "median_raw_roads": 1.0,
+          "p95_raw_roads": 3.0,
+          "frac_raw_unique_1road": 0.6812967581047381,
+          "frac_raw_ambiguous_ge2": 0.3117206982543641,
+          "frac_raw_severe_ge4": 0.026932668329177057,
+          "mean_gated_roads": 1.0982543640897755,
+          "median_gated_roads": 1.0,
+          "p95_gated_roads": 2.0,
+          "frac_gated_unique_1road": 0.8648379052369077,
+          "frac_gated_ambiguous_ge2": 0.10972568578553615,
+          "frac_gated_empty_0road": 0.02543640897755611,
+          "ambiguity_reduction_pct": 64.79979212226688
+        },
+        "R_25m": {
+          "radius_m": 25.0,
+          "mean_raw_roads": 2.446882793017456,
+          "median_raw_roads": 2.0,
+          "p95_raw_roads": 6.0,
+          "frac_raw_unique_1road": 0.3910224438902743,
+          "frac_raw_ambiguous_ge2": 0.6084788029925187,
+          "frac_raw_severe_ge4": 0.18304239401496258,
+          "mean_gated_roads": 1.402992518703242,
+          "median_gated_roads": 1.0,
+          "p95_gated_roads": 3.0,
+          "frac_gated_unique_1road": 0.6887780548628429,
+          "frac_gated_ambiguous_ge2": 0.3012468827930175,
+          "frac_gated_empty_0road": 0.00997506234413965,
+          "ambiguity_reduction_pct": 50.49172029844327
+        },
+        "R_50m": {
+          "radius_m": 50.0,
+          "mean_raw_roads": 4.546134663341646,
+          "median_raw_roads": 3.0,
+          "p95_raw_roads": 12.799999999999955,
+          "frac_raw_unique_1road": 0.15311720698254364,
+          "frac_raw_ambiguous_ge2": 0.8468827930174564,
+          "frac_raw_severe_ge4": 0.4723192019950125,
+          "mean_gated_roads": 2.2633416458852866,
+          "median_gated_roads": 2.0,
+          "p95_gated_roads": 5.0,
+          "frac_gated_unique_1road": 0.41047381546134665,
+          "frac_gated_ambiguous_ge2": 0.5865336658354114,
+          "frac_gated_empty_0road": 0.0029925187032418953,
+          "ambiguity_reduction_pct": 30.74201316976655
+        },
+        "R_100m": {
+          "radius_m": 100.0,
+          "mean_raw_roads": 10.271820448877806,
+          "median_raw_roads": 9.0,
+          "p95_raw_roads": 24.0,
+          "frac_raw_unique_1road": 0.0628428927680798,
+          "frac_raw_ambiguous_ge2": 0.9371571072319203,
+          "frac_raw_severe_ge4": 0.8394014962593517,
+          "mean_gated_roads": 5.058354114713217,
+          "median_gated_roads": 4.0,
+          "p95_gated_roads": 11.799999999999955,
+          "frac_gated_unique_1road": 0.10822942643391521,
+          "frac_gated_ambiguous_ge2": 0.8907730673316708,
+          "frac_gated_empty_0road": 0.000997506234413965,
+          "ambiguity_reduction_pct": 4.949435910793511
+        },
+        "R_200m": {
+          "radius_m": 200.0,
+          "mean_raw_roads": 27.02294264339152,
+          "median_raw_roads": 27.0,
+          "p95_raw_roads": 55.0,
+          "frac_raw_unique_1road": 0.0199501246882793,
+          "frac_raw_ambiguous_ge2": 0.9800498753117207,
+          "frac_raw_severe_ge4": 0.943640897755611,
+          "mean_gated_roads": 13.8857855361596,
+          "median_gated_roads": 13.0,
+          "p95_gated_roads": 31.0,
+          "frac_gated_unique_1road": 0.035910224438902745,
+          "frac_gated_ambiguous_ge2": 0.9640897755610972,
+          "frac_gated_empty_0road": 0.0,
+          "ambiguity_reduction_pct": 1.6284970660882425
+        }
+      }
+    },
+    "Vta04": {
+      "trip": "Vta04",
+      "eval_epochs": 356,
+      "radii": {
+        "R_5m": {
+          "radius_m": 5.0,
+          "mean_raw_roads": 1.1938202247191012,
+          "median_raw_roads": 1.0,
+          "p95_raw_roads": 2.0,
+          "frac_raw_unique_1road": 0.8314606741573034,
+          "frac_raw_ambiguous_ge2": 0.16573033707865167,
+          "frac_raw_severe_ge4": 0.0028089887640449437,
+          "mean_gated_roads": 1.0224719101123596,
+          "median_gated_roads": 1.0,
+          "p95_gated_roads": 1.0,
+          "frac_gated_unique_1road": 0.9606741573033708,
+          "frac_gated_ambiguous_ge2": 0.03089887640449438,
+          "frac_gated_empty_0road": 0.008426966292134831,
+          "ambiguity_reduction_pct": 81.35544131293038
+        },
+        "R_10m": {
+          "radius_m": 10.0,
+          "mean_raw_roads": 1.4747191011235956,
+          "median_raw_roads": 1.0,
+          "p95_raw_roads": 3.0,
+          "frac_raw_unique_1road": 0.6573033707865169,
+          "frac_raw_ambiguous_ge2": 0.34269662921348315,
+          "frac_raw_severe_ge4": 0.02247191011235955,
+          "mean_gated_roads": 1.0786516853932584,
+          "median_gated_roads": 1.0,
+          "p95_gated_roads": 2.0,
+          "frac_gated_unique_1road": 0.9157303370786517,
+          "frac_gated_ambiguous_ge2": 0.07865168539325842,
+          "frac_gated_empty_0road": 0.0056179775280898875,
+          "ambiguity_reduction_pct": 77.0489554964905
+        },
+        "R_25m": {
+          "radius_m": 25.0,
+          "mean_raw_roads": 2.4634831460674156,
+          "median_raw_roads": 2.0,
+          "p95_raw_roads": 5.0,
+          "frac_raw_unique_1road": 0.33707865168539325,
+          "frac_raw_ambiguous_ge2": 0.6629213483146067,
+          "frac_raw_severe_ge4": 0.19662921348314608,
+          "mean_gated_roads": 1.3202247191011236,
+          "median_gated_roads": 1.0,
+          "p95_gated_roads": 3.0,
+          "frac_gated_unique_1road": 0.7612359550561798,
+          "frac_gated_ambiguous_ge2": 0.23595505617977527,
+          "frac_gated_empty_0road": 0.0028089887640449437,
+          "ambiguity_reduction_pct": 64.40668250517383
+        },
+        "R_50m": {
+          "radius_m": 50.0,
+          "mean_raw_roads": 4.719101123595506,
+          "median_raw_roads": 4.0,
+          "p95_raw_roads": 10.0,
+          "frac_raw_unique_1road": 0.09831460674157304,
+          "frac_raw_ambiguous_ge2": 0.901685393258427,
+          "frac_raw_severe_ge4": 0.6292134831460674,
+          "mean_gated_roads": 2.098314606741573,
+          "median_gated_roads": 2.0,
+          "p95_gated_roads": 4.0,
+          "frac_gated_unique_1road": 0.36797752808988765,
+          "frac_gated_ambiguous_ge2": 0.6292134831460674,
+          "frac_gated_empty_0road": 0.0028089887640449437,
+          "ambiguity_reduction_pct": 30.2180350229892
+        },
+        "R_100m": {
+          "radius_m": 100.0,
+          "mean_raw_roads": 12.05056179775281,
+          "median_raw_roads": 11.0,
+          "p95_raw_roads": 25.25,
+          "frac_raw_unique_1road": 0.0,
+          "frac_raw_ambiguous_ge2": 1.0,
+          "frac_raw_severe_ge4": 0.9691011235955056,
+          "mean_gated_roads": 5.758426966292135,
+          "median_gated_roads": 5.0,
+          "p95_gated_roads": 11.0,
+          "frac_gated_unique_1road": 0.03932584269662921,
+          "frac_gated_ambiguous_ge2": 0.9606741573033708,
+          "frac_gated_empty_0road": 0.0,
+          "ambiguity_reduction_pct": 3.932580337082583
+        },
+        "R_200m": {
+          "radius_m": 200.0,
+          "mean_raw_roads": 33.44662921348315,
+          "median_raw_roads": 30.5,
+          "p95_raw_roads": 55.0,
+          "frac_raw_unique_1road": 0.0,
+          "frac_raw_ambiguous_ge2": 1.0,
+          "frac_raw_severe_ge4": 1.0,
+          "mean_gated_roads": 15.797752808988765,
+          "median_gated_roads": 14.0,
+          "p95_gated_roads": 30.25,
+          "frac_gated_unique_1road": 0.0,
+          "frac_gated_ambiguous_ge2": 1.0,
+          "frac_gated_empty_0road": 0.0,
+          "ambiguity_reduction_pct": 0.0
+        }
+      }
+    }
+  },
+  "phase_4_topological_features": {
+    "Vta02": {
+      "trip": "Vta02",
+      "intersection_zones_detected": 432,
+      "intersection_fraction": 0.3930488577990639,
+      "dual_carriageway_analysis": {},
+      "ramp_analysis": {
+        "link_segments_count": 80,
+        "link_highway_types": [
+          "secondary_link",
+          "trunk_link"
+        ]
+      }
+    },
+    "Vta04": {
+      "trip": "Vta04",
+      "intersection_zones_detected": 85,
+      "intersection_fraction": 0.4751257659299845,
+      "dual_carriageway_analysis": {
+        "opp_carriageway_separation_mean_m": 22.654787189008434,
+        "opp_carriageway_separation_min_m": 0.015837500624452293,
+        "opp_carriageway_separation_median_m": 23.2310561038828,
+        "threshold_radius_for_wrong_carriageway_m": 0.015837500624452293,
+        "heading_gating_protection": "100.0% of opposite-carriageway candidates rejected by |Delta psi| <= 30 deg"
+      },
+      "ramp_analysis": {
+        "link_segments_count": 0,
+        "link_highway_types": []
+      }
+    }
+  },
+  "phase_5_drift_breakdown": {
+    "Vta02": {
+      "trip": "Vta02",
+      "total_tested_epochs": 1100,
+      "drift_breakdown": {
+        "drift_5m": {
+          "drift_magnitude_m": 5.0,
+          "false_road_rate_raw": 0.1072727271752066,
+          "false_road_rate_heading_gated": 0.04181818178016528,
+          "hazard_reduction_pct": 61.01638035577582
+        },
+        "drift_10m": {
+          "drift_magnitude_m": 10.0,
+          "false_road_rate_raw": 0.1854545452859504,
+          "false_road_rate_heading_gated": 0.0854545453768595,
+          "hazard_reduction_pct": 53.92127787546217
+        },
+        "drift_20m": {
+          "drift_magnitude_m": 20.0,
+          "false_road_rate_raw": 0.3390909087826446,
+          "false_road_rate_heading_gated": 0.17909090892809915,
+          "hazard_reduction_pct": 47.18484744414951
+        },
+        "drift_30m": {
+          "drift_magnitude_m": 30.0,
+          "false_road_rate_raw": 0.4563636359487603,
+          "false_road_rate_heading_gated": 0.2872727270115702,
+          "hazard_reduction_pct": 37.051711639675624
+        },
+        "drift_50m": {
+          "drift_magnitude_m": 50.0,
+          "false_road_rate_raw": 0.6236363630694214,
+          "false_road_rate_heading_gated": 0.43999999959999997,
+          "hazard_reduction_pct": 29.446016923296426
+        },
+        "drift_75m": {
+          "drift_magnitude_m": 75.0,
+          "false_road_rate_raw": 0.7409090902355371,
+          "false_road_rate_heading_gated": 0.6018181812710743,
+          "hazard_reduction_pct": 18.772980797203804
+        },
+        "drift_100m": {
+          "drift_magnitude_m": 100.0,
+          "false_road_rate_raw": 0.7927272720066115,
+          "false_road_rate_heading_gated": 0.6981818175471074,
+          "hazard_reduction_pct": 11.926590459576241
+        }
+      }
+    },
+    "Vta04": {
+      "trip": "Vta04",
+      "total_tested_epochs": 179,
+      "drift_breakdown": {
+        "drift_5m": {
+          "drift_magnitude_m": 5.0,
+          "false_road_rate_raw": 0.089385474360975,
+          "false_road_rate_heading_gated": 0.02234636859024375,
+          "hazard_reduction_pct": 74.99916094688223
+        },
+        "drift_10m": {
+          "drift_magnitude_m": 10.0,
+          "false_road_rate_raw": 0.1620111722792672,
+          "false_road_rate_heading_gated": 0.039106145032926566,
+          "hazard_reduction_pct": 75.86160071632399
+        },
+        "drift_20m": {
+          "drift_magnitude_m": 20.0,
+          "false_road_rate_raw": 0.2905027916731688,
+          "false_road_rate_heading_gated": 0.11731843509877969,
+          "hazard_reduction_pct": 59.61517940159284
+        },
+        "drift_30m": {
+          "drift_magnitude_m": 30.0,
+          "false_road_rate_raw": 0.39106145032926565,
+          "false_road_rate_heading_gated": 0.1452513958365844,
+          "hazard_reduction_pct": 62.85698212285911
+        },
+        "drift_50m": {
+          "drift_magnitude_m": 50.0,
+          "false_road_rate_raw": 0.6759776498548735,
+          "false_road_rate_heading_gated": 0.4413407796573141,
+          "hazard_reduction_pct": 34.71069245277699
+        },
+        "drift_75m": {
+          "drift_magnitude_m": 75.0,
+          "false_road_rate_raw": 0.8379888221341407,
+          "false_road_rate_heading_gated": 0.7597765320682875,
+          "hazard_reduction_pct": 9.333322195568789
+        },
+        "drift_100m": {
+          "drift_magnitude_m": 100.0,
+          "false_road_rate_raw": 0.9106145200524328,
+          "false_road_rate_heading_gated": 0.8379888221341407,
+          "hazard_reduction_pct": 7.975451364381571
+        }
+      }
+    }
+  }
+}

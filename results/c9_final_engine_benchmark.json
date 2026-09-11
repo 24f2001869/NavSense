@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "stage": "C9",
+    "date": "September 8, 2026",
+    "description": "Stage C9 Canonical Final Benchmark of Unified Dead-Reckoning Engine",
+    "configurations": [
+      "B0_Pure_IMU",
+      "B1_Classical_ESKF_3DOF",
+      "B2_C9_Unified_Engine",
+      "B3_Oracle_Reference"
+    ],
+    "horizons": [
+      10,
+      20,
+      30,
+      60
+    ]
+  },
+  "trips": {
+    "Vta04": {
+      "10s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 130.34842033374463,
+          "p50_pos_err_m": 115.97123399847641,
+          "p90_pos_err_m": 210.45483994839842,
+          "mean_along_err_m": 90.62754671036471,
+          "mean_cross_err_m": 75.38881855804915,
+          "mean_drift_pct": 122.44254275689819,
+          "p90_drift_pct": 190.21955422628727,
+          "mean_yaw_err_deg": 18.56386104301729,
+          "p90_yaw_err_deg": 32.532449051824074,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 14
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 21.337171097114158,
+          "p50_pos_err_m": 14.347561750294464,
+          "p90_pos_err_m": 44.14390997282711,
+          "mean_along_err_m": 16.339722059638067,
+          "mean_cross_err_m": 9.365193353685894,
+          "mean_drift_pct": 18.906925686016827,
+          "p90_drift_pct": 40.94676382773381,
+          "mean_yaw_err_deg": 12.358025357549723,
+          "p90_yaw_err_deg": 30.864476038882017,
+          "sih_pass_rate_pct": 28.57142857142857,
+          "n_windows": 14
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 32.5806644200238,
+          "p50_pos_err_m": 13.50283696500377,
+          "p90_pos_err_m": 91.98024266980755,
+          "mean_along_err_m": 19.703253194127175,
+          "mean_cross_err_m": 19.54529125465131,
+          "mean_drift_pct": 32.600396049105846,
+          "p90_drift_pct": 79.97311185295086,
+          "mean_yaw_err_deg": 11.284802345243703,
+          "p90_yaw_err_deg": 24.322904514441007,
+          "sih_pass_rate_pct": 35.714285714285715,
+          "n_windows": 14
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 31.270183408173178,
+          "p50_pos_err_m": 23.342356401285787,
+          "p90_pos_err_m": 55.221405694083714,
+          "mean_along_err_m": 25.221654158807713,
+          "mean_cross_err_m": 15.144976019793589,
+          "mean_drift_pct": 27.581925407727567,
+          "p90_drift_pct": 46.368724566510146,
+          "mean_yaw_err_deg": 1.000535320070615,
+          "p90_yaw_err_deg": 1.9311563764566475,
+          "sih_pass_rate_pct": 7.142857142857142,
+          "n_windows": 14
+        }
+      },
+      "20s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 646.0648668620751,
+          "p50_pos_err_m": 665.4752730669254,
+          "p90_pos_err_m": 1066.7733535736324,
+          "mean_along_err_m": 380.0202159540791,
+          "mean_cross_err_m": 447.17309495316084,
+          "mean_drift_pct": 297.7867088222715,
+          "p90_drift_pct": 526.1364810190962,
+          "mean_yaw_err_deg": 18.33897500810136,
+          "p90_yaw_err_deg": 39.22483584405339,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 7
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 54.30090343857959,
+          "p50_pos_err_m": 55.218423031564505,
+          "p90_pos_err_m": 79.98426962262204,
+          "mean_along_err_m": 39.82531309199083,
+          "mean_cross_err_m": 27.677670062640424,
+          "mean_drift_pct": 23.589767437728522,
+          "p90_drift_pct": 35.93618470329125,
+          "mean_yaw_err_deg": 24.12057765345295,
+          "p90_yaw_err_deg": 44.296933686090306,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 7
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 104.54206308459004,
+          "p50_pos_err_m": 56.387232369162895,
+          "p90_pos_err_m": 242.8593103508702,
+          "mean_along_err_m": 51.552513926064414,
+          "mean_cross_err_m": 72.83152541530207,
+          "mean_drift_pct": 51.35326024357393,
+          "p90_drift_pct": 125.08815746592799,
+          "mean_yaw_err_deg": 17.073003501204084,
+          "p90_yaw_err_deg": 31.834067950195777,
+          "sih_pass_rate_pct": 28.57142857142857,
+          "n_windows": 7
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 87.81776156408041,
+          "p50_pos_err_m": 74.16625696379613,
+          "p90_pos_err_m": 122.79070652442638,
+          "mean_along_err_m": 76.99388523456517,
+          "mean_cross_err_m": 35.09788035178224,
+          "mean_drift_pct": 39.12877342994981,
+          "p90_drift_pct": 57.464873825503126,
+          "mean_yaw_err_deg": 1.1246192625527474,
+          "p90_yaw_err_deg": 1.662036535877371,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 7
+        }
+      },
+      "30s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 1092.532272314664,
+          "p50_pos_err_m": 1305.4707417359723,
+          "p90_pos_err_m": 1378.442028070601,
+          "mean_along_err_m": 954.4856013900542,
+          "mean_cross_err_m": 430.0525323416767,
+          "mean_drift_pct": 335.2332747266644,
+          "p90_drift_pct": 425.53454030617684,
+          "mean_yaw_err_deg": 23.948997552984608,
+          "p90_yaw_err_deg": 33.924111881559256,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 4
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 94.40395010620844,
+          "p50_pos_err_m": 73.4297054950122,
+          "p90_pos_err_m": 160.7156746083625,
+          "mean_along_err_m": 21.61881467588821,
+          "mean_cross_err_m": 90.92273718182837,
+          "mean_drift_pct": 27.990884104571936,
+          "p90_drift_pct": 46.406261874910605,
+          "mean_yaw_err_deg": 29.850379982454243,
+          "p90_yaw_err_deg": 43.44961456103505,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 4
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 119.1029617318458,
+          "p50_pos_err_m": 78.43346914462559,
+          "p90_pos_err_m": 218.72875552827273,
+          "mean_along_err_m": 33.00839926501524,
+          "mean_cross_err_m": 106.89458304207908,
+          "mean_drift_pct": 37.62518105126174,
+          "p90_drift_pct": 71.55674298808528,
+          "mean_yaw_err_deg": 29.915286377453484,
+          "p90_yaw_err_deg": 53.63756192457627,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 4
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 113.47850317385509,
+          "p50_pos_err_m": 114.5799521722951,
+          "p90_pos_err_m": 130.33144514973802,
+          "mean_along_err_m": 83.0242726329029,
+          "mean_cross_err_m": 59.86290178511349,
+          "mean_drift_pct": 34.05532002380086,
+          "p90_drift_pct": 37.849269160082315,
+          "mean_yaw_err_deg": 0.79021063858616,
+          "p90_yaw_err_deg": 1.036782350288013,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 4
+        }
+      },
+      "60s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 5349.916857141086,
+          "p50_pos_err_m": 5349.916857141086,
+          "p90_pos_err_m": 6993.86408014836,
+          "mean_along_err_m": 5271.890551852683,
+          "mean_cross_err_m": 801.8989767035252,
+          "mean_drift_pct": 802.9572202072794,
+          "p90_drift_pct": 1044.6333322222529,
+          "mean_yaw_err_deg": 2.2846987207439895,
+          "p90_yaw_err_deg": 3.766574713114045,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 2
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 309.72886037250527,
+          "p50_pos_err_m": 309.72886037250527,
+          "p90_pos_err_m": 406.4392274940538,
+          "mean_along_err_m": 170.60870277462539,
+          "mean_cross_err_m": 226.36782409448415,
+          "mean_drift_pct": 46.819192925171876,
+          "p90_drift_pct": 61.72942519949055,
+          "mean_yaw_err_deg": 45.25080932265581,
+          "p90_yaw_err_deg": 61.26930729381073,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 2
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 234.84538756001467,
+          "p50_pos_err_m": 234.84538756001467,
+          "p90_pos_err_m": 260.51216539738095,
+          "mean_along_err_m": 213.6381577127005,
+          "mean_cross_err_m": 88.37185987352619,
+          "mean_drift_pct": 35.32803907388868,
+          "p90_drift_pct": 38.933405953294546,
+          "mean_yaw_err_deg": 54.441271782458756,
+          "p90_yaw_err_deg": 90.40243781270617,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 2
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 186.61178993714788,
+          "p50_pos_err_m": 186.61178993714788,
+          "p90_pos_err_m": 276.98351408682004,
+          "mean_along_err_m": 121.80961877643895,
+          "mean_cross_err_m": 139.79714679314398,
+          "mean_drift_pct": 28.264244791407112,
+          "p90_drift_pct": 42.08314053685118,
+          "mean_yaw_err_deg": 0.6341137740787985,
+          "p90_yaw_err_deg": 0.7722694528181933,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 2
+        }
+      }
+    },
+    "Vta02": {
+      "10s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 40.393382573518934,
+          "p50_pos_err_m": 38.777904904117285,
+          "p90_pos_err_m": 62.40207650259142,
+          "mean_along_err_m": 29.832744758849298,
+          "mean_cross_err_m": 22.260841625800236,
+          "mean_drift_pct": 45.35122870148417,
+          "p90_drift_pct": 87.54359862238454,
+          "mean_yaw_err_deg": 15.52775933985404,
+          "p90_yaw_err_deg": 34.66610369528471,
+          "sih_pass_rate_pct": 4.040404040404041,
+          "n_windows": 99
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 30.629036397738798,
+          "p50_pos_err_m": 27.232260893369155,
+          "p90_pos_err_m": 51.91976516415037,
+          "mean_along_err_m": 20.296126470397542,
+          "mean_cross_err_m": 18.87767623687965,
+          "mean_drift_pct": 34.70662415398999,
+          "p90_drift_pct": 67.36966825670648,
+          "mean_yaw_err_deg": 19.729238560514215,
+          "p90_yaw_err_deg": 49.123395542871805,
+          "sih_pass_rate_pct": 11.11111111111111,
+          "n_windows": 99
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 39.68840482257663,
+          "p50_pos_err_m": 38.969390994205725,
+          "p90_pos_err_m": 65.52668800670735,
+          "mean_along_err_m": 28.916940144997845,
+          "mean_cross_err_m": 21.2373740863069,
+          "mean_drift_pct": 45.59253630469155,
+          "p90_drift_pct": 89.36771109761973,
+          "mean_yaw_err_deg": 12.530787729561649,
+          "p90_yaw_err_deg": 26.653432736039292,
+          "sih_pass_rate_pct": 4.040404040404041,
+          "n_windows": 99
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 1.2669274609903642,
+          "p50_pos_err_m": 1.239039953227575,
+          "p90_pos_err_m": 2.326183611297912,
+          "mean_along_err_m": 1.01402065919077,
+          "mean_cross_err_m": 0.5719669397259677,
+          "mean_drift_pct": 1.2242861965163239,
+          "p90_drift_pct": 1.8574141066500516,
+          "mean_yaw_err_deg": 0.7687433218197672,
+          "p90_yaw_err_deg": 1.5801112571326712,
+          "sih_pass_rate_pct": 100.0,
+          "n_windows": 99
+        }
+      },
+      "20s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 136.27048446734,
+          "p50_pos_err_m": 128.2436973476676,
+          "p90_pos_err_m": 209.52439669695744,
+          "mean_along_err_m": 99.46396275058753,
+          "mean_cross_err_m": 73.84573925942621,
+          "mean_drift_pct": 72.55465572440433,
+          "p90_drift_pct": 135.4252727700558,
+          "mean_yaw_err_deg": 22.315061081451773,
+          "p90_yaw_err_deg": 49.96549239124544,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 50
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 188.5597483218867,
+          "p50_pos_err_m": 181.96028953710865,
+          "p90_pos_err_m": 261.32476892416025,
+          "mean_along_err_m": 162.8624635120088,
+          "mean_cross_err_m": 75.92810405366063,
+          "mean_drift_pct": 95.28661277015796,
+          "p90_drift_pct": 151.2046254660688,
+          "mean_yaw_err_deg": 58.160246717184165,
+          "p90_yaw_err_deg": 113.61784437788994,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 50
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 153.51547621819225,
+          "p50_pos_err_m": 149.95568553172808,
+          "p90_pos_err_m": 279.433242964547,
+          "mean_along_err_m": 112.15371703807476,
+          "mean_cross_err_m": 81.95981684237243,
+          "mean_drift_pct": 84.89360790998228,
+          "p90_drift_pct": 166.4392752476292,
+          "mean_yaw_err_deg": 22.694162290685618,
+          "p90_yaw_err_deg": 70.2182947914861,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 50
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 1.7395397823290255,
+          "p50_pos_err_m": 1.6050014616040402,
+          "p90_pos_err_m": 2.9164677928575893,
+          "mean_along_err_m": 1.1345808470327907,
+          "mean_cross_err_m": 1.0563306731813338,
+          "mean_drift_pct": 0.8680715892262165,
+          "p90_drift_pct": 1.5247212094315277,
+          "mean_yaw_err_deg": 0.6324791682501057,
+          "p90_yaw_err_deg": 1.3526717854901282,
+          "sih_pass_rate_pct": 100.0,
+          "n_windows": 50
+        }
+      },
+      "30s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 307.59175998483914,
+          "p50_pos_err_m": 308.6675001093524,
+          "p90_pos_err_m": 471.97697157134814,
+          "mean_along_err_m": 223.58339245513622,
+          "mean_cross_err_m": 165.84910945187215,
+          "mean_drift_pct": 107.33484739164403,
+          "p90_drift_pct": 195.13484567526635,
+          "mean_yaw_err_deg": 24.987877661187323,
+          "p90_yaw_err_deg": 47.4141395598818,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 34
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 506.26256142896796,
+          "p50_pos_err_m": 485.17585753140946,
+          "p90_pos_err_m": 636.5756858272453,
+          "mean_along_err_m": 440.0697234948442,
+          "mean_cross_err_m": 185.52683896570343,
+          "mean_drift_pct": 170.87534630588345,
+          "p90_drift_pct": 224.76757224279498,
+          "mean_yaw_err_deg": 104.37987832370013,
+          "p90_yaw_err_deg": 157.3157082411218,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 34
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 296.984601152337,
+          "p50_pos_err_m": 259.9519132144339,
+          "p90_pos_err_m": 498.32608570137785,
+          "mean_along_err_m": 214.8593458119567,
+          "mean_cross_err_m": 159.90363949568982,
+          "mean_drift_pct": 105.6602217669051,
+          "p90_drift_pct": 189.713219237334,
+          "mean_yaw_err_deg": 25.830873385004534,
+          "p90_yaw_err_deg": 55.4819244012931,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 34
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 3.4098852556576666,
+          "p50_pos_err_m": 2.1492493981809413,
+          "p90_pos_err_m": 4.958834359030213,
+          "mean_along_err_m": 1.9254447167744695,
+          "mean_cross_err_m": 2.2330228793686686,
+          "mean_drift_pct": 1.3973015353677962,
+          "p90_drift_pct": 1.8996328615671219,
+          "mean_yaw_err_deg": 0.5469829346663903,
+          "p90_yaw_err_deg": 1.2007162436234182,
+          "sih_pass_rate_pct": 97.05882352941177,
+          "n_windows": 34
+        }
+      },
+      "60s": {
+        "B0_Pure_IMU": {
+          "mean_pos_err_m": 1072.952108764662,
+          "p50_pos_err_m": 1032.9279873262424,
+          "p90_pos_err_m": 1585.8128203392107,
+          "mean_along_err_m": 871.7998681555785,
+          "mean_cross_err_m": 434.5783168304467,
+          "mean_drift_pct": 173.1896307503671,
+          "p90_drift_pct": 281.805338397105,
+          "mean_yaw_err_deg": 36.91593872019971,
+          "p90_yaw_err_deg": 80.07316073970343,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 16
+        },
+        "B1_Classical_ESKF_3DOF": {
+          "mean_pos_err_m": 1886.036927776297,
+          "p50_pos_err_m": 1884.8309557129605,
+          "p90_pos_err_m": 2137.702421953757,
+          "mean_along_err_m": 1337.4966404408235,
+          "mean_cross_err_m": 999.0717805464903,
+          "mean_drift_pct": 298.51360028937813,
+          "p90_drift_pct": 371.1773042507258,
+          "mean_yaw_err_deg": 106.8463648839702,
+          "p90_yaw_err_deg": 171.8194106506787,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 16
+        },
+        "B2_C9_Unified_Engine": {
+          "mean_pos_err_m": 1596.6893727462605,
+          "p50_pos_err_m": 1041.5086864720377,
+          "p90_pos_err_m": 2928.2898441942216,
+          "mean_along_err_m": 1074.9544904251784,
+          "mean_cross_err_m": 959.2860412574277,
+          "mean_drift_pct": 280.74761725797134,
+          "p90_drift_pct": 626.1776813461655,
+          "mean_yaw_err_deg": 34.37780625833571,
+          "p90_yaw_err_deg": 95.21615926373966,
+          "sih_pass_rate_pct": 0.0,
+          "n_windows": 16
+        },
+        "B3_Oracle_Reference": {
+          "mean_pos_err_m": 9.224216870167398,
+          "p50_pos_err_m": 5.507750659398881,
+          "p90_pos_err_m": 14.832953323713905,
+          "mean_along_err_m": 7.734007132244172,
+          "mean_cross_err_m": 3.954049079731017,
+          "mean_drift_pct": 1.7673920353467119,
+          "p90_drift_pct": 2.537837807454438,
+          "mean_yaw_err_deg": 0.6617998226314565,
+          "p90_yaw_err_deg": 1.2464651075570146,
+          "sih_pass_rate_pct": 93.75,
+          "n_windows": 16
+        }
+      }
+    }
+  }
+}

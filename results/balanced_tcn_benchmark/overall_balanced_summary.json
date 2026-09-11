@@ -1,0 +1,17 @@
+{
+  "Expanded TCN Macro MAE (m/s)": 2.757,
+  "Balanced TCN Macro MAE (m/s)": 2.945,
+  "Expanded TCN Epoch Weighted MAE (m/s)": 3.233,
+  "Balanced TCN Epoch Weighted MAE (m/s)": 3.407,
+  "Expanded TCN Macro 60s Drift (m)": 92.96,
+  "Balanced TCN Macro 60s Drift (m)": 100.05,
+  "Expanded TCN SIH 60s Pass Rate": "4/19",
+  "Balanced TCN SIH 60s Pass Rate": "5/19",
+  "Balanced TCN Wins vs Expanded TCN": "3/19 (15.8%)",
+  "Motorway V-Vfa02 Exp MAE": 3.412,
+  "Motorway V-Vfa02 Bal MAE": 3.595,
+  "Motorway V-Vfa02 Exp 60s %": 11.22,
+  "Motorway V-Vfa02 Bal 60s %": 11.62,
+  "Motorway V-Vfa02 Exp Bias": -2.216,
+  "Motorway V-Vfa02 Bal Bias": -2.308
+}

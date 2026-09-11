@@ -1,0 +1,3072 @@
+{
+  "meta": {
+    "stage": "C8-11.3",
+    "description": "Rolling Calibration Window & Outage Leakage Audit",
+    "trips_audited": [
+      "Vta02",
+      "Vta04"
+    ],
+    "constraints": {
+      "anti_circularity": "PASS - Strictly smartphone sensors for estimation; vehicle GT used post-hoc only",
+      "temporal_integrity": "PASS - Strictly pre-outage calibration samples (t < t_outage) for every outage",
+      "evaluated_windows_s": [
+        5,
+        10,
+        20,
+        30,
+        60,
+        120
+      ]
+    }
+  },
+  "trips": {
+    "Vta02": {
+      "total_samples": 10991,
+      "duration_s": 1099.1000000000001,
+      "distance_km": 3.0561558333333387,
+      "moving_samples": 4570,
+      "straight_samples": 1029,
+      "baseline_field_uT": 43.886782748340075,
+      "task2_temporal_leakage_audit": {
+        "verdict": "PASS",
+        "num_outages_evaluated": 59,
+        "step_grid_s": 15.0,
+        "leakage_violations": 0
+      },
+      "task1_window_sweep": {
+        "5s": {
+          "valid_outages": 34,
+          "mean_mae_deg": 8.62890032031744,
+          "median_mae_deg": 8.31252454366864,
+          "p95_mae_deg": 18.884897018153687,
+          "rmse_deg": 10.005312902245244
+        },
+        "10s": {
+          "valid_outages": 38,
+          "mean_mae_deg": 8.40220146540622,
+          "median_mae_deg": 6.456038046999394,
+          "p95_mae_deg": 19.400559164557876,
+          "rmse_deg": 10.00058071866836
+        },
+        "20s": {
+          "valid_outages": 46,
+          "mean_mae_deg": 10.524149849883223,
+          "median_mae_deg": 9.589221621673648,
+          "p95_mae_deg": 22.615313729241365,
+          "rmse_deg": 12.773737291641432
+        },
+        "30s": {
+          "valid_outages": 50,
+          "mean_mae_deg": 10.795821936813265,
+          "median_mae_deg": 9.47895247369097,
+          "p95_mae_deg": 23.495178105844566,
+          "rmse_deg": 12.846245912587094
+        },
+        "60s": {
+          "valid_outages": 59,
+          "mean_mae_deg": 12.323409718277095,
+          "median_mae_deg": 10.023877193478235,
+          "p95_mae_deg": 29.794964098830622,
+          "rmse_deg": 14.695343608556966
+        },
+        "120s": {
+          "valid_outages": 59,
+          "mean_mae_deg": 12.572267291074583,
+          "median_mae_deg": 9.66851671903973,
+          "p95_mae_deg": 27.718608476009138,
+          "rmse_deg": 14.721501602798389
+        }
+      },
+      "task3_strategy_comparison": {
+        "strategy_A_initial_frozen": {
+          "mean_mae_deg": 19.222604753537695,
+          "median_mae_deg": 14.295468252533185,
+          "p95_mae_deg": 44.599431271198334
+        },
+        "strategy_B_rolling_all_motion_30s": {
+          "mean_mae_deg": 10.604227257355374,
+          "median_mae_deg": 9.009605510278856,
+          "p95_mae_deg": 25.546921555072956
+        },
+        "strategy_B_rolling_all_motion_60s": {
+          "mean_mae_deg": 12.35853459948464,
+          "median_mae_deg": 10.583549652502494,
+          "p95_mae_deg": 27.761620998006347
+        },
+        "strategy_C_rolling_straight_30s": {
+          "mean_mae_deg": 10.795821936813265,
+          "median_mae_deg": 9.47895247369097,
+          "p95_mae_deg": 23.495178105844566
+        },
+        "strategy_C_rolling_straight_60s": {
+          "mean_mae_deg": 12.323409718277095,
+          "median_mae_deg": 10.023877193478235,
+          "p95_mae_deg": 29.794964098830622
+        },
+        "strategy_D_last_valid_straight": {
+          "valid_count": 43,
+          "mean_mae_deg": 15.710942503877602,
+          "median_mae_deg": 13.507368752616612,
+          "p95_mae_deg": 29.471105984388174
+        }
+      },
+      "task4_robust_estimators": {
+        "circ_mean": {
+          "mean_mae_deg": 12.323409718277095,
+          "median_mae_deg": 10.023877193478235,
+          "p95_mae_deg": 29.794964098830622,
+          "std_mae_deg": 8.005416709268156
+        },
+        "circ_median": {
+          "mean_mae_deg": 12.14876502205214,
+          "median_mae_deg": 10.55229320471725,
+          "p95_mae_deg": 27.86414218204429,
+          "std_mae_deg": 8.201437805340307
+        },
+        "trimmed_mean": {
+          "mean_mae_deg": 12.12152332906191,
+          "median_mae_deg": 10.253950262982075,
+          "p95_mae_deg": 28.00927307916831,
+          "std_mae_deg": 8.188028062861637
+        },
+        "huber_m": {
+          "mean_mae_deg": 12.165219859901294,
+          "median_mae_deg": 10.682693597917948,
+          "p95_mae_deg": 28.953851412365122,
+          "std_mae_deg": 8.14600335117874
+        }
+      },
+      "task5_magnetic_confidence": {
+        "num_confidence_windows": 59,
+        "corr_sigma_B_with_mae": {
+          "pearson_r": 0.06791149522728059,
+          "p_val": 0.6093036298690611,
+          "spearman_rho": 0.16274822114793652
+        },
+        "corr_delta_B_with_mae": {
+          "pearson_r": -0.0881939253634241,
+          "p_val": 0.5065417301998255,
+          "spearman_rho": -0.12306208641658478
+        },
+        "corr_sigma_psi_with_mae": {
+          "pearson_r": -0.008328981392247702,
+          "p_val": 0.9500783913916859,
+          "spearman_rho": 0.0727384310355924
+        },
+        "quiet_vs_disturbed_field": {
+          "quiet_mean_mae_deg": 11.582052247262533,
+          "disturbed_mean_mae_deg": 12.291218850499256,
+          "ratio": 1.0612297879595853
+        }
+      },
+      "task6_geographic_vs_temporal": {
+        "temporal_corr_r": 0.8102662275885719,
+        "temporal_drift_rate_deg_per_min": 2.662286200331679,
+        "spatial_corr_r": 0.8061666599592577,
+        "spatial_drift_rate_deg_per_km": 15.598238897181288,
+        "scientific_interpretation": "Magnetic-field magnitude changes co-occur with heading-offset changes; available smartphone data do not uniquely identify whether this arises from spatial environmental variation, vehicle electrical effects, or both. No substantial temporal drift was detected in tested stationary segments, which makes simple stationary drift an insufficient explanation for the route-scale shift, though thermal or operational drift cannot be ruled out."
+      },
+      "task9_dynamic_covariance": {
+        "formulation": "R_psi(t) = sigma_0^2 + c1 * sigma_psi^2 + c2 * sigma_B^2 + c3 * (delta_B / B_0)^2",
+        "parameters": {
+          "sigma_0_deg": 3.0,
+          "c1": 1.0,
+          "c2": 0.5,
+          "c3": 50.0
+        },
+        "min_std_deg": 3.2586543387439724,
+        "median_std_deg": 6.403623475129053,
+        "mean_std_deg": 6.376682580559983,
+        "p95_std_deg": 10.192849021250842,
+        "max_std_deg": 17.417139071567195
+      },
+      "task8_phase_breakdown": {
+        "early_phase_t_lt_350s": {
+          "outage_count": 20,
+          "mean_frozen_mae_deg": 8.849290208900936,
+          "median_frozen_mae_deg": 7.10018394496265,
+          "mean_r10_mae_deg": 5.8601203216449695,
+          "mean_r30_mae_deg": 8.074460419903893,
+          "mean_r60_mae_deg": 10.676419028712328
+        },
+        "mid_phase_350s_to_700s": {
+          "outage_count": 22,
+          "mean_frozen_mae_deg": 22.70061309176603,
+          "median_frozen_mae_deg": 21.42798559890305,
+          "mean_r10_mae_deg": 9.6776572064904,
+          "mean_r30_mae_deg": 12.368219992168237,
+          "mean_r60_mae_deg": 13.343005267895784
+        },
+        "late_phase_t_ge_700s": {
+          "outage_count": 17,
+          "mean_frozen_mae_deg": 26.925552250697216,
+          "median_frozen_mae_deg": 28.348371547743216,
+          "mean_r10_mae_deg": 11.503302637731903,
+          "mean_r30_mae_deg": 12.265740725476661,
+          "mean_r60_mae_deg": 12.941569230023214
+        }
+      },
+      "task8_dense_outage_log": [
+        {
+          "outage_start_s": 60.0,
+          "distance_km": 0.12021222222222198,
+          "lat": 52.763588,
+          "lon": -1.676534,
+          "gt_mean_offset_deg": 338.90198201277036,
+          "strategy_errors_mae": {
+            "initial_frozen": 4.206761443033047,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 9.418712977782462,
+            "5s_straight_only": 9.418712977782462,
+            "10s_all_motion": 7.285451492999712,
+            "10s_straight_only": 7.285451492999712,
+            "20s_all_motion": 4.887599813545247,
+            "20s_straight_only": 4.887599813545247,
+            "30s_all_motion": 4.887599813545247,
+            "30s_straight_only": 4.887599813545247,
+            "60s_all_motion": 4.887599813545247,
+            "60s_straight_only": 4.887599813545247,
+            "120s_all_motion": 4.887599813545247,
+            "120s_straight_only": 4.887599813545247
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 4.887599813545247,
+            "circ_median": 5.89800481560453,
+            "trimmed_mean": 5.8632881044376886,
+            "huber_m": 4.887625476330632
+          },
+          "mag_confidence": {
+            "mu_B": 45.60485587099486,
+            "sigma_B": 1.262970518562635,
+            "delta_B_baseline": 1.7180731226547863,
+            "sigma_psi": 8.244406588279109,
+            "sample_count": 189,
+            "outage_mae": 4.887599813545247
+          }
+        },
+        {
+          "outage_start_s": 75.0,
+          "distance_km": 0.19798166666666675,
+          "lat": 52.76527,
+          "lon": -1.673494,
+          "gt_mean_offset_deg": 336.2851598019407,
+          "strategy_errors_mae": {
+            "initial_frozen": 5.580273889757126,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 5.886581620997701,
+            "5s_straight_only": 5.886581620997701,
+            "10s_all_motion": 5.649344274763342,
+            "10s_straight_only": 5.649344274763342,
+            "20s_all_motion": 7.12336394033711,
+            "20s_straight_only": 6.297821568470132,
+            "30s_all_motion": 6.2430507036166665,
+            "30s_straight_only": 6.565069885884752,
+            "60s_all_motion": 6.429224513148939,
+            "60s_straight_only": 6.565069885884752,
+            "120s_all_motion": 6.429224513148939,
+            "120s_straight_only": 6.565069885884752
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 6.565069885884752,
+            "circ_median": 5.563780587673003,
+            "trimmed_mean": 5.517034613893843,
+            "huber_m": 5.818354567733819
+          },
+          "mag_confidence": {
+            "mu_B": 46.658853087610645,
+            "sigma_B": 1.3588519230462197,
+            "delta_B_baseline": 2.77207033927057,
+            "sigma_psi": 6.251984004315784,
+            "sample_count": 22,
+            "outage_mae": 6.565069885884752
+          }
+        },
+        {
+          "outage_start_s": 90.0,
+          "distance_km": 0.2853324999999998,
+          "lat": 52.767197,
+          "lon": -1.670286,
+          "gt_mean_offset_deg": 333.7256356863907,
+          "strategy_errors_mae": {
+            "initial_frozen": 5.045893504237365,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 1.7184105325687518,
+            "5s_straight_only": 1.7184105325687518,
+            "10s_all_motion": 3.70535752516006,
+            "10s_straight_only": 3.70535752516006,
+            "20s_all_motion": 5.700382349590703,
+            "20s_straight_only": 6.428891718586892,
+            "30s_all_motion": 5.796100579043631,
+            "30s_straight_only": 6.222451146910706,
+            "60s_all_motion": 6.466342327626303,
+            "60s_straight_only": 7.014139616949072,
+            "120s_all_motion": 6.466342327626303,
+            "120s_straight_only": 7.014139616949072
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 7.014139616949072,
+            "circ_median": 5.206955578542757,
+            "trimmed_mean": 5.319314761417721,
+            "huber_m": 6.653014451185917
+          },
+          "mag_confidence": {
+            "mu_B": 46.54366643999476,
+            "sigma_B": 1.0510668842813597,
+            "delta_B_baseline": 2.6568836916546843,
+            "sigma_psi": 5.679261728791907,
+            "sample_count": 44,
+            "outage_mae": 7.014139616949072
+          }
+        },
+        {
+          "outage_start_s": 105.0,
+          "distance_km": 0.3721880555555546,
+          "lat": 52.76816,
+          "lon": -1.665931,
+          "gt_mean_offset_deg": 331.79845189900624,
+          "strategy_errors_mae": {
+            "initial_frozen": 6.987065299683384,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 2.8590523183378536,
+            "5s_straight_only": 2.8590523183378536,
+            "10s_all_motion": 2.8667987236550356,
+            "10s_straight_only": 2.8667987236550356,
+            "20s_all_motion": 2.8739240601811344,
+            "20s_straight_only": 2.8739240601811344,
+            "30s_all_motion": 4.297082987541146,
+            "30s_straight_only": 6.800419640557721,
+            "60s_all_motion": 6.267016940396659,
+            "60s_straight_only": 7.724064168283831,
+            "120s_all_motion": 6.583048744538655,
+            "120s_straight_only": 7.724064168283831
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 7.724064168283831,
+            "circ_median": 6.505352468650438,
+            "trimmed_mean": 5.927256743745001,
+            "huber_m": 7.5000282021989735
+          },
+          "mag_confidence": {
+            "mu_B": 47.10597350658194,
+            "sigma_B": 1.6386035321768126,
+            "delta_B_baseline": 3.219190758241865,
+            "sigma_psi": 5.966743421701265,
+            "sample_count": 52,
+            "outage_mae": 7.724064168283831
+          }
+        },
+        {
+          "outage_start_s": 120.0,
+          "distance_km": 0.43335749999999934,
+          "lat": 52.768833,
+          "lon": -1.662805,
+          "gt_mean_offset_deg": 330.29997384006856,
+          "strategy_errors_mae": {
+            "initial_frozen": 8.514003869657122,
+            "last_valid_straight": 5.124431538495377
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 4.989258247951835,
+            "5s_straight_only": 4.870039017589617,
+            "10s_all_motion": 5.035962706678553,
+            "10s_straight_only": 4.858567904972971,
+            "20s_all_motion": 4.5012440594784975,
+            "20s_straight_only": 4.607354780227033,
+            "30s_all_motion": 4.3278899885862945,
+            "30s_straight_only": 4.560012917113301,
+            "60s_all_motion": 6.327297930456743,
+            "60s_straight_only": 6.211190906197215,
+            "120s_all_motion": 7.334987150512744,
+            "120s_straight_only": 6.797970149336054
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 6.211190906197215,
+            "circ_median": 5.340008794795588,
+            "trimmed_mean": 5.139652805973744,
+            "huber_m": 5.65824235215604
+          },
+          "mag_confidence": {
+            "mu_B": 48.577404674044615,
+            "sigma_B": 1.6258497218428016,
+            "delta_B_baseline": 4.690621925704541,
+            "sigma_psi": 4.280027513039618,
+            "sample_count": 87,
+            "outage_mae": 6.211190906197215
+          }
+        },
+        {
+          "outage_start_s": 135.0,
+          "distance_km": 0.49176583333333296,
+          "lat": 52.76893,
+          "lon": -1.65984,
+          "gt_mean_offset_deg": 332.4683130035241,
+          "strategy_errors_mae": {
+            "initial_frozen": 6.507901000630357,
+            "last_valid_straight": 3.7052073967039543
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 4.353138773383285,
+            "5s_straight_only": 4.353138773383285,
+            "10s_all_motion": 4.887420760828991,
+            "10s_straight_only": 6.282086188780718,
+            "20s_all_motion": 3.9546771913051453,
+            "20s_straight_only": 3.7155115098857725,
+            "30s_all_motion": 3.640971669935969,
+            "30s_straight_only": 3.6795890237961886,
+            "60s_all_motion": 3.6511706091591516,
+            "60s_straight_only": 3.609911069675696,
+            "120s_all_motion": 4.782916997700034,
+            "120s_straight_only": 4.044984869492272
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 3.609911069675696,
+            "circ_median": 3.5475863617057923,
+            "trimmed_mean": 3.5275644945957434,
+            "huber_m": 3.5494365380314683
+          },
+          "mag_confidence": {
+            "mu_B": 49.39434570044716,
+            "sigma_B": 1.8730165976927726,
+            "delta_B_baseline": 5.507562952107087,
+            "sigma_psi": 5.32176393685767,
+            "sample_count": 97,
+            "outage_mae": 3.609911069675696
+          }
+        },
+        {
+          "outage_start_s": 150.0,
+          "distance_km": 0.5704324999999973,
+          "lat": 52.76981,
+          "lon": -1.655836,
+          "gt_mean_offset_deg": 333.51976236998826,
+          "strategy_errors_mae": {
+            "initial_frozen": 5.454853664919295,
+            "last_valid_straight": 2.6197604992442614
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 2.7433817819075594,
+            "5s_straight_only": 2.7433817819075594,
+            "10s_all_motion": 2.5010090924771173,
+            "10s_straight_only": 2.5010090924771173,
+            "20s_all_motion": 4.300367679181718,
+            "20s_straight_only": 4.300367679181718,
+            "30s_all_motion": 4.417096013799016,
+            "30s_straight_only": 5.822226564592534,
+            "60s_all_motion": 2.931860051938708,
+            "60s_straight_only": 2.7096927843571614,
+            "120s_all_motion": 3.120329383836997,
+            "120s_straight_only": 2.9157876089839614
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 2.7096927843571614,
+            "circ_median": 2.4529533757226933,
+            "trimmed_mean": 2.421542490328601,
+            "huber_m": 2.483982464384061
+          },
+          "mag_confidence": {
+            "mu_B": 50.28607866552702,
+            "sigma_B": 1.0594302451924145,
+            "delta_B_baseline": 6.399295917186947,
+            "sigma_psi": 3.59144105998311,
+            "sample_count": 76,
+            "outage_mae": 2.7096927843571614
+          }
+        },
+        {
+          "outage_start_s": 165.0,
+          "distance_km": 0.66021861111111,
+          "lat": 52.770985,
+          "lon": -1.651521,
+          "gt_mean_offset_deg": 336.8125435373177,
+          "strategy_errors_mae": {
+            "initial_frozen": 5.035677609876589,
+            "last_valid_straight": 4.651325354768478
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 4.991104025234884,
+            "5s_straight_only": 4.991104025234884,
+            "10s_all_motion": 5.103341499218885,
+            "10s_straight_only": 5.103341499218885,
+            "20s_all_motion": 4.699463916376503,
+            "20s_straight_only": 4.699463916376503,
+            "30s_all_motion": 5.7730314438992085,
+            "30s_straight_only": 5.7730314438992085,
+            "60s_all_motion": 5.624620708576183,
+            "60s_straight_only": 5.573194301576119,
+            "120s_all_motion": 4.566879078653894,
+            "120s_straight_only": 4.562334620024541
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 5.573194301576119,
+            "circ_median": 4.913804126480373,
+            "trimmed_mean": 4.912739469031504,
+            "huber_m": 5.129076282951554
+          },
+          "mag_confidence": {
+            "mu_B": 50.25362668495295,
+            "sigma_B": 1.1149739823047025,
+            "delta_B_baseline": 6.366843936612874,
+            "sigma_psi": 3.7464731748997266,
+            "sample_count": 71,
+            "outage_mae": 5.573194301576119
+          }
+        },
+        {
+          "outage_start_s": 180.0,
+          "distance_km": 0.7365686111111088,
+          "lat": 52.77172,
+          "lon": -1.647568,
+          "gt_mean_offset_deg": 343.22088465446217,
+          "strategy_errors_mae": {
+            "initial_frozen": 5.748152567641788,
+            "last_valid_straight": 9.167772491410025
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 10.798400792002228,
+            "5s_straight_only": 10.996692648960941,
+            "10s_all_motion": 11.277709430085833,
+            "10s_straight_only": 10.996692648960941,
+            "20s_all_motion": 10.194067000450197,
+            "20s_straight_only": 10.70250630914954,
+            "30s_all_motion": 9.865635476180374,
+            "30s_straight_only": 10.70250630914954,
+            "60s_all_motion": 11.67191216991136,
+            "60s_straight_only": 13.037763528816955,
+            "120s_all_motion": 9.392549868235248,
+            "120s_straight_only": 9.374473486923115
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 13.037763528816955,
+            "circ_median": 11.830601376697496,
+            "trimmed_mean": 11.752888233550816,
+            "huber_m": 12.535960678807188
+          },
+          "mag_confidence": {
+            "mu_B": 50.66985661658206,
+            "sigma_B": 1.0869487284817698,
+            "delta_B_baseline": 6.783073868241985,
+            "sigma_psi": 3.6370335314336675,
+            "sample_count": 48,
+            "outage_mae": 13.037763528816955
+          }
+        },
+        {
+          "outage_start_s": 195.0,
+          "distance_km": 0.7855797222222182,
+          "lat": 52.772617,
+          "lon": -1.645508,
+          "gt_mean_offset_deg": 345.9704152394602,
+          "strategy_errors_mae": {
+            "initial_frozen": 7.213302590241916,
+            "last_valid_straight": 11.685945354779708
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 2.8472460982977257,
+            "5s_straight_only": 2.8472460982977257,
+            "10s_all_motion": 3.5914462412979735,
+            "10s_straight_only": 3.5914462412979735,
+            "20s_all_motion": 8.295581065647918,
+            "20s_straight_only": 13.622480216211192,
+            "30s_all_motion": 9.82893118300112,
+            "30s_straight_only": 13.622480216211192,
+            "60s_all_motion": 12.257532689668809,
+            "60s_straight_only": 13.746161386956125,
+            "120s_all_motion": 12.075807866728185,
+            "120s_straight_only": 12.418896211193472
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 13.746161386956125,
+            "circ_median": 13.513032053582924,
+            "trimmed_mean": 13.433073686906686,
+            "huber_m": 13.447398810381204
+          },
+          "mag_confidence": {
+            "mu_B": 49.995393144389524,
+            "sigma_B": 0.5966113535292459,
+            "delta_B_baseline": 6.10861039604945,
+            "sigma_psi": 2.4987810343801855,
+            "sample_count": 26,
+            "outage_mae": 13.746161386956125
+          }
+        },
+        {
+          "outage_start_s": 210.0,
+          "distance_km": 0.8294186111111062,
+          "lat": 52.773754,
+          "lon": -1.644057,
+          "gt_mean_offset_deg": 346.3384529406868,
+          "strategy_errors_mae": {
+            "initial_frozen": 7.740822720375921,
+            "last_valid_straight": 12.064271630168465
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": 3.2773319783756145,
+            "10s_straight_only": 3.2773319783756145,
+            "20s_all_motion": 3.727737282833645,
+            "20s_straight_only": 3.727737282833645,
+            "30s_all_motion": 5.647675782373196,
+            "30s_straight_only": 4.391344848050645,
+            "60s_all_motion": 10.071714085354103,
+            "60s_straight_only": 9.970009070867976,
+            "120s_all_motion": 12.689636110216673,
+            "120s_straight_only": 12.979005067627737
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 9.970009070867976,
+            "circ_median": 12.412945748220066,
+            "trimmed_mean": 11.348842683844772,
+            "huber_m": 11.010568987572961
+          },
+          "mag_confidence": {
+            "mu_B": 48.31201551512794,
+            "sigma_B": 2.190242451018319,
+            "delta_B_baseline": 4.425232766787865,
+            "sigma_psi": 5.2492930247240635,
+            "sample_count": 39,
+            "outage_mae": 9.970009070867976
+          }
+        },
+        {
+          "outage_start_s": 225.0,
+          "distance_km": 0.8793574999999932,
+          "lat": 52.77506,
+          "lon": -1.642388,
+          "gt_mean_offset_deg": 341.3913141881594,
+          "strategy_errors_mae": {
+            "initial_frozen": 6.308526861023224,
+            "last_valid_straight": 7.810388294299931
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": 6.525474829036106,
+            "10s_straight_only": 6.525474829036106,
+            "20s_all_motion": 6.453668088128146,
+            "20s_straight_only": 6.418772181884748,
+            "30s_all_motion": 6.345623340796891,
+            "30s_straight_only": 6.283281716499447,
+            "60s_all_motion": 6.25697382811086,
+            "60s_straight_only": 6.301645364389595,
+            "120s_all_motion": 7.401044583529052,
+            "120s_straight_only": 7.548932819322275
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 6.301645364389595,
+            "circ_median": 6.080157678456266,
+            "trimmed_mean": 6.127006756204677,
+            "huber_m": 6.284061206035411
+          },
+          "mag_confidence": {
+            "mu_B": 47.453761038292356,
+            "sigma_B": 2.287846874387888,
+            "delta_B_baseline": 3.5669782899522815,
+            "sigma_psi": 5.919528738764998,
+            "sample_count": 50,
+            "outage_mae": 6.301645364389595
+          }
+        },
+        {
+          "outage_start_s": 240.0,
+          "distance_km": 0.93653805555555,
+          "lat": 52.776497,
+          "lon": -1.640543,
+          "gt_mean_offset_deg": 336.2623017364142,
+          "strategy_errors_mae": {
+            "initial_frozen": 5.992344644255713,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 10.254274438137573,
+            "5s_straight_only": 10.254274438137573,
+            "10s_all_motion": 11.519738135121372,
+            "10s_straight_only": 11.519738135121372,
+            "20s_all_motion": 11.482711333928659,
+            "20s_straight_only": 11.482711333928659,
+            "30s_all_motion": 10.221588995604076,
+            "30s_straight_only": 10.352758854245012,
+            "60s_all_motion": 8.446657683479714,
+            "60s_straight_only": 9.131776870122245,
+            "120s_all_motion": 5.289342310812797,
+            "120s_straight_only": 5.2577061909859415
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 9.131776870122245,
+            "circ_median": 8.607526192239268,
+            "trimmed_mean": 8.679892641623326,
+            "huber_m": 8.887989053485212
+          },
+          "mag_confidence": {
+            "mu_B": 45.630068381770684,
+            "sigma_B": 0.7360916406963105,
+            "delta_B_baseline": 1.7432856334306095,
+            "sigma_psi": 3.2889132695803203,
+            "sample_count": 35,
+            "outage_mae": 9.131776870122245
+          }
+        },
+        {
+          "outage_start_s": 255.0,
+          "distance_km": 0.988899166666662,
+          "lat": 52.777447,
+          "lon": -1.638248,
+          "gt_mean_offset_deg": 332.42268354227963,
+          "strategy_errors_mae": {
+            "initial_frozen": 8.92262991627408,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 6.391203640046782,
+            "5s_straight_only": 6.391203640046782,
+            "10s_all_motion": 6.146968697219914,
+            "10s_straight_only": 6.146968697219914,
+            "20s_all_motion": 9.224946953383597,
+            "20s_straight_only": 9.224946953383597,
+            "30s_all_motion": 10.696536960939516,
+            "30s_straight_only": 10.696536960939516,
+            "60s_all_motion": 11.459241810456408,
+            "60s_straight_only": 13.31589235265257,
+            "120s_all_motion": 8.059982894240475,
+            "120s_straight_only": 9.571350357963592
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 13.31589235265257,
+            "circ_median": 12.37385103819471,
+            "trimmed_mean": 12.553198542973785,
+            "huber_m": 12.866374770938352
+          },
+          "mag_confidence": {
+            "mu_B": 45.5836862429004,
+            "sigma_B": 0.3864808245332877,
+            "delta_B_baseline": 1.696903494560324,
+            "sigma_psi": 2.81069896321689,
+            "sample_count": 37,
+            "outage_mae": 13.31589235265257
+          }
+        },
+        {
+          "outage_start_s": 270.0,
+          "distance_km": 1.0454797222222147,
+          "lat": 52.778557,
+          "lon": -1.635666,
+          "gt_mean_offset_deg": 328.1001345701507,
+          "strategy_errors_mae": {
+            "initial_frozen": 10.671625451493957,
+            "last_valid_straight": 1.979228606095557
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 2.0702500498303644,
+            "5s_straight_only": 2.026400988453553,
+            "10s_all_motion": 4.403867982480791,
+            "10s_straight_only": 2.1833138968977273,
+            "20s_all_motion": 7.2238845794366595,
+            "20s_straight_only": 2.1833138968977273,
+            "30s_all_motion": 7.706293581731336,
+            "30s_straight_only": 2.7499723390121913,
+            "60s_all_motion": 12.275632843978348,
+            "60s_straight_only": 6.664758680944521,
+            "120s_all_motion": 10.176532065129637,
+            "120s_straight_only": 7.249698410574558
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 6.664758680944521,
+            "circ_median": 2.569271793930568,
+            "trimmed_mean": 4.191027178787372,
+            "huber_m": 3.6741267619023863
+          },
+          "mag_confidence": {
+            "mu_B": 47.54841252381137,
+            "sigma_B": 1.4117989189967604,
+            "delta_B_baseline": 3.6616297754712974,
+            "sigma_psi": 8.471262046596172,
+            "sample_count": 72,
+            "outage_mae": 6.664758680944521
+          }
+        },
+        {
+          "outage_start_s": 285.0,
+          "distance_km": 1.086143611111104,
+          "lat": 52.779022,
+          "lon": -1.633527,
+          "gt_mean_offset_deg": 328.7498636890478,
+          "strategy_errors_mae": {
+            "initial_frozen": 10.021485634628805,
+            "last_valid_straight": 2.181039791306267
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": 2.631680660605798,
+            "10s_straight_only": 2.631680660605798,
+            "20s_all_motion": 2.2043529421763477,
+            "20s_straight_only": 2.149062537672579,
+            "30s_all_motion": 6.434240041318643,
+            "30s_straight_only": 2.208074025460522,
+            "60s_all_motion": 9.882290172247806,
+            "60s_straight_only": 3.6990622045198416,
+            "120s_all_motion": 10.162032027146227,
+            "120s_straight_only": 6.286061563412521
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 3.6990622045198416,
+            "circ_median": 2.2101214547669845,
+            "trimmed_mean": 2.17047639892716,
+            "huber_m": 2.242354613973361
+          },
+          "mag_confidence": {
+            "mu_B": 48.33805667351859,
+            "sigma_B": 1.2495770081696003,
+            "delta_B_baseline": 4.451273925178512,
+            "sigma_psi": 7.273308914379624,
+            "sample_count": 67,
+            "outage_mae": 3.6990622045198416
+          }
+        },
+        {
+          "outage_start_s": 300.0,
+          "distance_km": 1.1293602777777736,
+          "lat": 52.779243,
+          "lon": -1.631207,
+          "gt_mean_offset_deg": 342.6305436437858,
+          "strategy_errors_mae": {
+            "initial_frozen": 14.079658079070848,
+            "last_valid_straight": 15.34793613472543
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 14.435984955636298,
+            "5s_straight_only": 14.435984955636298,
+            "10s_all_motion": 14.4974416784212,
+            "10s_straight_only": 14.4974416784212,
+            "20s_all_motion": 14.4974416784212,
+            "20s_straight_only": 14.4974416784212,
+            "30s_all_motion": 14.405960836326074,
+            "30s_straight_only": 14.405960836326074,
+            "60s_all_motion": 13.599871257399604,
+            "60s_straight_only": 14.309755376353738,
+            "120s_all_motion": 14.405906237699977,
+            "120s_straight_only": 13.585872285165491
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 14.309755376353738,
+            "circ_median": 14.737805866358707,
+            "trimmed_mean": 14.813886556103737,
+            "huber_m": 14.737424162205308
+          },
+          "mag_confidence": {
+            "mu_B": 48.81437164980635,
+            "sigma_B": 1.270530482637145,
+            "delta_B_baseline": 4.927588901466272,
+            "sigma_psi": 4.645433384234946,
+            "sample_count": 66,
+            "outage_mae": 14.309755376353738
+          }
+        },
+        {
+          "outage_start_s": 315.0,
+          "distance_km": 1.1630797222222193,
+          "lat": 52.779736,
+          "lon": -1.629511,
+          "gt_mean_offset_deg": 355.1049932014385,
+          "strategy_errors_mae": {
+            "initial_frozen": 17.402949257914365,
+            "last_valid_straight": 27.144242869797765
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 25.45545474911607,
+            "20s_straight_only": 25.45545474911607,
+            "30s_all_motion": 25.616971016076302,
+            "30s_straight_only": 25.616971016076302,
+            "60s_all_motion": 21.113129998675582,
+            "60s_straight_only": 25.98260149365807,
+            "120s_all_motion": 16.832032774227347,
+            "120s_straight_only": 20.194566732355568
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 25.98260149365807,
+            "circ_median": 26.242572385698605,
+            "trimmed_mean": 26.449236242430047,
+            "huber_m": 26.29487573747268
+          },
+          "mag_confidence": {
+            "mu_B": 48.93166005994522,
+            "sigma_B": 1.1774249412371063,
+            "delta_B_baseline": 5.044877311605148,
+            "sigma_psi": 2.60584649425111,
+            "sample_count": 63,
+            "outage_mae": 25.98260149365807
+          }
+        },
+        {
+          "outage_start_s": 330.0,
+          "distance_km": 1.195574166666661,
+          "lat": 52.780647,
+          "lon": -1.62874,
+          "gt_mean_offset_deg": 357.3122116317151,
+          "strategy_errors_mae": {
+            "initial_frozen": 18.746199619290646,
+            "last_valid_straight": 29.09916136424996
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 27.35906701117366,
+            "60s_straight_only": 27.35906701117366,
+            "120s_all_motion": 18.25574600324882,
+            "120s_straight_only": 23.41076489896912
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 27.35906701117366,
+            "circ_median": 27.485731946685767,
+            "trimmed_mean": 27.512513163634956,
+            "huber_m": 27.379007083962243
+          },
+          "mag_confidence": {
+            "mu_B": 50.58668186451657,
+            "sigma_B": 0.7610727059089007,
+            "delta_B_baseline": 6.699899116176496,
+            "sigma_psi": 1.8290121521176184,
+            "sample_count": 51,
+            "outage_mae": 27.35906701117366
+          }
+        },
+        {
+          "outage_start_s": 345.0,
+          "distance_km": 1.2242361111111046,
+          "lat": 52.78153,
+          "lon": -1.62839,
+          "gt_mean_offset_deg": 355.4823466386304,
+          "strategy_errors_mae": {
+            "initial_frozen": 16.80567655401316,
+            "last_valid_straight": 27.2422965410436
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 25.71502468732214,
+            "60s_straight_only": 25.71502468732214,
+            "120s_all_motion": 17.56638364774803,
+            "120s_straight_only": 23.616635886844414
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 25.71502468732214,
+            "circ_median": 25.59047089470928,
+            "trimmed_mean": 25.421499122086257,
+            "huber_m": 25.71403134489557
+          },
+          "mag_confidence": {
+            "mu_B": 50.86242720157497,
+            "sigma_B": 0.7873917901235818,
+            "delta_B_baseline": 6.975644453234892,
+            "sigma_psi": 1.690377361717546,
+            "sample_count": 30,
+            "outage_mae": 25.71502468732214
+          }
+        },
+        {
+          "outage_start_s": 360.0,
+          "distance_km": 1.273536111111103,
+          "lat": 52.78311,
+          "lon": -1.628205,
+          "gt_mean_offset_deg": 344.8047078574801,
+          "strategy_errors_mae": {
+            "initial_frozen": 8.211836561012252,
+            "last_valid_straight": 16.762791867109826
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 18.310062959208295,
+            "5s_straight_only": 18.310062959208295,
+            "10s_all_motion": 17.818697036904027,
+            "10s_straight_only": 17.818697036904027,
+            "20s_all_motion": 16.975712436911422,
+            "20s_straight_only": 16.975712436911422,
+            "30s_all_motion": 16.975712436911422,
+            "30s_straight_only": 16.975712436911422,
+            "60s_all_motion": 16.792571282949194,
+            "60s_straight_only": 16.792571282949194,
+            "120s_all_motion": 6.921643393479244,
+            "120s_straight_only": 11.94005604067263
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 16.792571282949194,
+            "circ_median": 17.144020823015037,
+            "trimmed_mean": 17.22470263339263,
+            "huber_m": 16.97289739167117
+          },
+          "mag_confidence": {
+            "mu_B": 40.85077098704263,
+            "sigma_B": 1.0524209063848724,
+            "delta_B_baseline": 3.036011761297445,
+            "sigma_psi": 3.6803114993196653,
+            "sample_count": 140,
+            "outage_mae": 16.792571282949194
+          }
+        },
+        {
+          "outage_start_s": 375.0,
+          "distance_km": 1.2996472222222184,
+          "lat": 52.783943,
+          "lon": -1.627775,
+          "gt_mean_offset_deg": 341.2002262856184,
+          "strategy_errors_mae": {
+            "initial_frozen": 5.471155043584652,
+            "last_valid_straight": 13.369818581080223
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 20.619734524124137,
+            "20s_straight_only": 20.619734524124137,
+            "30s_all_motion": 20.090746063144536,
+            "30s_straight_only": 20.090746063144536,
+            "60s_all_motion": 20.090746063144536,
+            "60s_straight_only": 20.090746063144536,
+            "120s_all_motion": 7.072088619609347,
+            "120s_straight_only": 9.24760183726793
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 20.090746063144536,
+            "circ_median": 20.31678856275654,
+            "trimmed_mean": 20.347636759441457,
+            "huber_m": 20.108350073713808
+          },
+          "mag_confidence": {
+            "mu_B": 41.04052153705068,
+            "sigma_B": 0.9190008283104895,
+            "delta_B_baseline": 2.846261211289395,
+            "sigma_psi": 3.5308104133360603,
+            "sample_count": 180,
+            "outage_mae": 20.090746063144536
+          }
+        },
+        {
+          "outage_start_s": 390.0,
+          "distance_km": 1.3260555555555522,
+          "lat": 52.784657,
+          "lon": -1.627037,
+          "gt_mean_offset_deg": 345.6156375370529,
+          "strategy_errors_mae": {
+            "initial_frozen": 8.07949303482849,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": 14.769040029421587,
+            "30s_straight_only": 14.769040029421587,
+            "60s_all_motion": 15.67632440002861,
+            "60s_straight_only": 15.67632440002861,
+            "120s_all_motion": 9.471740461723476,
+            "120s_straight_only": 6.334628469043617
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 15.67632440002861,
+            "circ_median": 15.903925813431039,
+            "trimmed_mean": 15.934986756299992,
+            "huber_m": 15.694049817567326
+          },
+          "mag_confidence": {
+            "mu_B": 41.04052153705068,
+            "sigma_B": 0.9190008283104895,
+            "delta_B_baseline": 2.846261211289395,
+            "sigma_psi": 3.5308104133360603,
+            "sample_count": 180,
+            "outage_mae": 15.67632440002861
+          }
+        },
+        {
+          "outage_start_s": 405.0,
+          "distance_km": 1.365280555555549,
+          "lat": 52.785763,
+          "lon": -1.626017,
+          "gt_mean_offset_deg": 347.69210996138514,
+          "strategy_errors_mae": {
+            "initial_frozen": 9.641650675514676,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 5.507783195143051,
+            "5s_straight_only": 5.507783195143051,
+            "10s_all_motion": 5.507783195143051,
+            "10s_straight_only": 5.507783195143051,
+            "20s_all_motion": 5.507783195143051,
+            "20s_straight_only": 5.507783195143051,
+            "30s_all_motion": 5.507783195143051,
+            "30s_straight_only": 5.507783195143051,
+            "60s_all_motion": 11.870404126364287,
+            "60s_straight_only": 11.870404126364287,
+            "120s_all_motion": 8.302954819717153,
+            "120s_straight_only": 8.302954819717153
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 11.870404126364287,
+            "circ_median": 13.219007987616552,
+            "trimmed_mean": 13.223838250194035,
+            "huber_m": 12.724079003082492
+          },
+          "mag_confidence": {
+            "mu_B": 41.30559768928509,
+            "sigma_B": 1.2162918492636092,
+            "delta_B_baseline": 2.581185059054988,
+            "sigma_psi": 5.70253354119795,
+            "sample_count": 199,
+            "outage_mae": 11.870404126364287
+          }
+        },
+        {
+          "outage_start_s": 420.0,
+          "distance_km": 1.409749999999993,
+          "lat": 52.78708,
+          "lon": -1.625072,
+          "gt_mean_offset_deg": 348.1116115587833,
+          "strategy_errors_mae": {
+            "initial_frozen": 10.023115166309806,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 7.085948162715625,
+            "5s_straight_only": 7.2783522675873655,
+            "10s_all_motion": 6.945427210158746,
+            "10s_straight_only": 7.2783522675873655,
+            "20s_all_motion": 5.908906441288326,
+            "20s_straight_only": 7.2783522675873655,
+            "30s_all_motion": 5.908906441288326,
+            "30s_straight_only": 7.2783522675873655,
+            "60s_all_motion": 7.182087993172365,
+            "60s_straight_only": 7.2783522675873655,
+            "120s_all_motion": 10.188310586971022,
+            "120s_straight_only": 9.223501034958286
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 7.2783522675873655,
+            "circ_median": 7.661922875846076,
+            "trimmed_mean": 7.736042841831695,
+            "huber_m": 7.2783522675873655
+          },
+          "mag_confidence": {
+            "mu_B": 43.61152803118969,
+            "sigma_B": 0.4640161851161586,
+            "delta_B_baseline": 0.2752547171503821,
+            "sigma_psi": 2.64946993908858,
+            "sample_count": 17,
+            "outage_mae": 7.2783522675873655
+          }
+        },
+        {
+          "outage_start_s": 435.0,
+          "distance_km": 1.4598999999999962,
+          "lat": 52.78853,
+          "lon": -1.62389,
+          "gt_mean_offset_deg": 355.9419236712905,
+          "strategy_errors_mae": {
+            "initial_frozen": 17.365862955052034,
+            "last_valid_straight": 10.928380686903774
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 10.471840682925528,
+            "5s_straight_only": 10.664548025177059,
+            "10s_all_motion": 10.151955434675305,
+            "10s_straight_only": 9.972654062023041,
+            "20s_all_motion": 10.393150540325111,
+            "20s_straight_only": 10.023877193478235,
+            "30s_all_motion": 10.476053825964192,
+            "30s_straight_only": 10.023877193478235,
+            "60s_all_motion": 10.583549652502494,
+            "60s_straight_only": 10.023877193478235,
+            "120s_all_motion": 8.572760925131567,
+            "120s_straight_only": 9.654279610153935
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 10.023877193478235,
+            "circ_median": 9.783876040568998,
+            "trimmed_mean": 9.564367120537563,
+            "huber_m": 9.909105257911438
+          },
+          "mag_confidence": {
+            "mu_B": 44.05467373818857,
+            "sigma_B": 2.0298986399386982,
+            "delta_B_baseline": 0.1678909898484946,
+            "sigma_psi": 5.5892689258662305,
+            "sample_count": 114,
+            "outage_mae": 10.023877193478235
+          }
+        },
+        {
+          "outage_start_s": 450.0,
+          "distance_km": 1.501094444444446,
+          "lat": 52.78977,
+          "lon": -1.623048,
+          "gt_mean_offset_deg": 0.740334965073129,
+          "strategy_errors_mae": {
+            "initial_frozen": 21.964250657700678,
+            "last_valid_straight": 13.507368752616612
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 15.020210519926247,
+            "20s_straight_only": 15.821073211925953,
+            "30s_all_motion": 14.392066040377383,
+            "30s_straight_only": 14.075797719316881,
+            "60s_all_motion": 13.674109722923209,
+            "60s_straight_only": 13.208299201052766,
+            "120s_all_motion": 8.484205605716785,
+            "120s_straight_only": 12.407917914979565
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 13.208299201052766,
+            "circ_median": 12.833293829407285,
+            "trimmed_mean": 12.494722143194599,
+            "huber_m": 13.012351466105674
+          },
+          "mag_confidence": {
+            "mu_B": 44.24514522277845,
+            "sigma_B": 1.968393632028042,
+            "delta_B_baseline": 0.35836247443837266,
+            "sigma_psi": 6.407739675847254,
+            "sample_count": 138,
+            "outage_mae": 13.208299201052766
+          }
+        },
+        {
+          "outage_start_s": 465.0,
+          "distance_km": 1.5456527777777804,
+          "lat": 52.791134,
+          "lon": -1.623518,
+          "gt_mean_offset_deg": 359.3879272423256,
+          "strategy_errors_mae": {
+            "initial_frozen": 23.121228432666552,
+            "last_valid_straight": 15.783833296810284
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 10.123723922343803,
+            "5s_straight_only": 10.123723922343803,
+            "10s_all_motion": 10.746746147302883,
+            "10s_straight_only": 10.746746147302883,
+            "20s_all_motion": 10.746746147302883,
+            "20s_straight_only": 10.746746147302883,
+            "30s_all_motion": 10.397789248919723,
+            "30s_straight_only": 16.754758126117903,
+            "60s_all_motion": 13.16549351145706,
+            "60s_straight_only": 14.784994597292282,
+            "120s_all_motion": 10.924406370000266,
+            "120s_straight_only": 14.198002012401576
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 14.784994597292282,
+            "circ_median": 14.822609855774704,
+            "trimmed_mean": 14.49666360181235,
+            "huber_m": 14.864804897861065
+          },
+          "mag_confidence": {
+            "mu_B": 43.894186449099436,
+            "sigma_B": 2.371095225910284,
+            "delta_B_baseline": 0.007403700759361698,
+            "sigma_psi": 7.345091916037032,
+            "sample_count": 147,
+            "outage_mae": 14.784994597292282
+          }
+        },
+        {
+          "outage_start_s": 480.0,
+          "distance_km": 1.5817555555555562,
+          "lat": 52.79224,
+          "lon": -1.62331,
+          "gt_mean_offset_deg": 354.071675547712,
+          "strategy_errors_mae": {
+            "initial_frozen": 23.61789721848393,
+            "last_valid_straight": 18.6756520927736
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 19.43562571016784,
+            "20s_straight_only": 19.43562571016784,
+            "30s_all_motion": 20.025011864331585,
+            "30s_straight_only": 20.025011864331585,
+            "60s_all_motion": 17.816637554070127,
+            "60s_straight_only": 18.503196542433457,
+            "120s_all_motion": 17.684572909598305,
+            "120s_straight_only": 18.294261788279297
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 18.503196542433457,
+            "circ_median": 18.69383362775479,
+            "trimmed_mean": 18.644108053088495,
+            "huber_m": 18.58547483070897
+          },
+          "mag_confidence": {
+            "mu_B": 43.93114947297994,
+            "sigma_B": 2.5134277510238756,
+            "delta_B_baseline": 0.044366724639864685,
+            "sigma_psi": 7.45960300868149,
+            "sample_count": 130,
+            "outage_mae": 18.503196542433457
+          }
+        },
+        {
+          "outage_start_s": 495.0,
+          "distance_km": 1.6180527777777804,
+          "lat": 52.79343,
+          "lon": -1.623291,
+          "gt_mean_offset_deg": 351.4356924795989,
+          "strategy_errors_mae": {
+            "initial_frozen": 21.32267734947774,
+            "last_valid_straight": 16.989478997968043
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 17.69534993747124,
+            "60s_straight_only": 17.286151993937406,
+            "120s_all_motion": 16.759050122138486,
+            "120s_straight_only": 16.834666977245007
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 17.286151993937406,
+            "circ_median": 19.007512828222524,
+            "trimmed_mean": 19.023285912626278,
+            "huber_m": 18.673427241709646
+          },
+          "mag_confidence": {
+            "mu_B": 43.33977581406426,
+            "sigma_B": 3.2269343212905715,
+            "delta_B_baseline": 0.5470069342758137,
+            "sigma_psi": 11.196828955140782,
+            "sample_count": 33,
+            "outage_mae": 17.286151993937406
+          }
+        },
+        {
+          "outage_start_s": 510.0,
+          "distance_km": 1.6514333333333373,
+          "lat": 52.794514,
+          "lon": -1.623081,
+          "gt_mean_offset_deg": 358.15120335908495,
+          "strategy_errors_mae": {
+            "initial_frozen": 22.166125040297356,
+            "last_valid_straight": 15.709215660849722
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 11.927886354880162,
+            "60s_straight_only": 11.927886354880162,
+            "120s_all_motion": 14.069935444967214,
+            "120s_straight_only": 15.008166194891013
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 11.927886354880162,
+            "circ_median": 12.336044230795075,
+            "trimmed_mean": 12.362297859893989,
+            "huber_m": 12.115851592547742
+          },
+          "mag_confidence": {
+            "mu_B": 38.29929687196686,
+            "sigma_B": 1.6925884850180617,
+            "delta_B_baseline": 5.587485876373215,
+            "sigma_psi": 5.598369273184423,
+            "sample_count": 60,
+            "outage_mae": 11.927886354880162
+          }
+        },
+        {
+          "outage_start_s": 540.0,
+          "distance_km": 1.7276250000000035,
+          "lat": 52.79689,
+          "lon": -1.622889,
+          "gt_mean_offset_deg": 349.31433661530104,
+          "strategy_errors_mae": {
+            "initial_frozen": 11.286201599634584,
+            "last_valid_straight": 12.193212751877276
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 13.404777371170379,
+            "5s_straight_only": 13.404777371170379,
+            "10s_all_motion": 12.595726754312992,
+            "10s_straight_only": 12.035111992888986,
+            "20s_all_motion": 12.595726754312992,
+            "20s_straight_only": 12.035111992888986,
+            "30s_all_motion": 12.595726754312992,
+            "30s_straight_only": 12.035111992888986,
+            "60s_all_motion": 12.595726754312992,
+            "60s_straight_only": 12.035111992888986,
+            "120s_all_motion": 7.578426823331672,
+            "120s_straight_only": 6.663041053258356
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 12.035111992888986,
+            "circ_median": 11.245269885239113,
+            "trimmed_mean": 11.031078583583694,
+            "huber_m": 11.80242114993245
+          },
+          "mag_confidence": {
+            "mu_B": 38.697966186282414,
+            "sigma_B": 2.378123061437961,
+            "delta_B_baseline": 5.18881656205766,
+            "sigma_psi": 4.111343165470581,
+            "sample_count": 32,
+            "outage_mae": 12.035111992888986
+          }
+        },
+        {
+          "outage_start_s": 555.0,
+          "distance_km": 1.797186111111117,
+          "lat": 52.799084,
+          "lon": -1.622597,
+          "gt_mean_offset_deg": 351.43050521798244,
+          "strategy_errors_mae": {
+            "initial_frozen": 12.989055302780166,
+            "last_valid_straight": 9.412155277038462
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 9.346696819749914,
+            "5s_straight_only": 9.346696819749914,
+            "10s_all_motion": 6.7935658781580015,
+            "10s_straight_only": 5.894813135188238,
+            "20s_all_motion": 4.842496050578308,
+            "20s_straight_only": 7.028236157778612,
+            "30s_all_motion": 5.2050268417082135,
+            "30s_straight_only": 7.7361963986396916,
+            "60s_all_motion": 5.2050268417082135,
+            "60s_straight_only": 7.7361963986396916,
+            "120s_all_motion": 5.288930467242836,
+            "120s_straight_only": 5.186803009672397
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 7.7361963986396916,
+            "circ_median": 7.953343701406238,
+            "trimmed_mean": 8.153796463469998,
+            "huber_m": 7.948705195803759
+          },
+          "mag_confidence": {
+            "mu_B": 39.05787407771908,
+            "sigma_B": 2.270270640042833,
+            "delta_B_baseline": 4.828908670620997,
+            "sigma_psi": 6.998428345837659,
+            "sample_count": 64,
+            "outage_mae": 7.7361963986396916
+          }
+        },
+        {
+          "outage_start_s": 570.0,
+          "distance_km": 1.8588250000000024,
+          "lat": 52.801064,
+          "lon": -1.621772,
+          "gt_mean_offset_deg": 351.0616314456805,
+          "strategy_errors_mae": {
+            "initial_frozen": 12.39412709002973,
+            "last_valid_straight": 9.771270846222981
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 4.816192570102779,
+            "5s_straight_only": 4.816192570102779,
+            "10s_all_motion": 4.821113889820772,
+            "10s_straight_only": 4.793011436386629,
+            "20s_all_motion": 6.350456123450656,
+            "20s_straight_only": 4.832142498804872,
+            "30s_all_motion": 5.311814485652057,
+            "30s_straight_only": 5.658672176515397,
+            "60s_all_motion": 4.772687816892414,
+            "60s_straight_only": 6.953721544843667,
+            "120s_all_motion": 4.931946368518455,
+            "120s_straight_only": 7.365850409005372
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 6.953721544843667,
+            "circ_median": 7.104473431285615,
+            "trimmed_mean": 7.149245327147198,
+            "huber_m": 6.958289532040704
+          },
+          "mag_confidence": {
+            "mu_B": 39.80456920676689,
+            "sigma_B": 2.541634614515779,
+            "delta_B_baseline": 4.082213541573182,
+            "sigma_psi": 7.088852045880507,
+            "sample_count": 80,
+            "outage_mae": 6.953721544843667
+          }
+        },
+        {
+          "outage_start_s": 585.0,
+          "distance_km": 1.9212888888888944,
+          "lat": 52.80303,
+          "lon": -1.621241,
+          "gt_mean_offset_deg": 344.9165825538336,
+          "strategy_errors_mae": {
+            "initial_frozen": 8.238350949433347,
+            "last_valid_straight": 10.109961116702378
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 10.025867508884994,
+            "5s_straight_only": 10.025867508884994,
+            "10s_all_motion": 10.274890635947601,
+            "10s_straight_only": 10.1929847402698,
+            "20s_all_motion": 9.762515542221974,
+            "20s_straight_only": 10.392532316421047,
+            "30s_all_motion": 7.860983996764232,
+            "30s_straight_only": 9.842961324529186,
+            "60s_all_motion": 8.861823319034446,
+            "60s_straight_only": 11.765334513441514,
+            "120s_all_motion": 8.861823319034446,
+            "120s_straight_only": 11.765334513441514
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 11.765334513441514,
+            "circ_median": 11.565234551424677,
+            "trimmed_mean": 11.275797632165512,
+            "huber_m": 11.588521215207114
+          },
+          "mag_confidence": {
+            "mu_B": 40.727379037426495,
+            "sigma_B": 2.3202964314223733,
+            "delta_B_baseline": 3.1594037109135797,
+            "sigma_psi": 5.947686588081294,
+            "sample_count": 132,
+            "outage_mae": 11.765334513441514
+          }
+        },
+        {
+          "outage_start_s": 600.0,
+          "distance_km": 1.9791333333333347,
+          "lat": 52.80475,
+          "lon": -1.62002,
+          "gt_mean_offset_deg": 356.7650596730944,
+          "strategy_errors_mae": {
+            "initial_frozen": 21.533293848328356,
+            "last_valid_straight": 19.757501267399483
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 19.95244598476657,
+            "5s_straight_only": 19.95244598476657,
+            "10s_all_motion": 19.238964818414377,
+            "10s_straight_only": 19.238964818414377,
+            "20s_all_motion": 19.22183050499168,
+            "20s_straight_only": 19.186957255479285,
+            "30s_all_motion": 19.33346822259297,
+            "30s_straight_only": 19.43471737037092,
+            "60s_all_motion": 19.25275985884364,
+            "60s_straight_only": 19.6083853053683,
+            "120s_all_motion": 19.38515134545726,
+            "120s_straight_only": 19.837067699080066
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 19.6083853053683,
+            "circ_median": 19.73732648771703,
+            "trimmed_mean": 19.745584936404583,
+            "huber_m": 19.62977079092616
+          },
+          "mag_confidence": {
+            "mu_B": 41.81443033627444,
+            "sigma_B": 2.0098656222539835,
+            "delta_B_baseline": 2.0723524120656336,
+            "sigma_psi": 6.802793759140154,
+            "sample_count": 120,
+            "outage_mae": 19.6083853053683
+          }
+        },
+        {
+          "outage_start_s": 615.0,
+          "distance_km": 2.0021694444444447,
+          "lat": 52.80543,
+          "lon": -1.619394,
+          "gt_mean_offset_deg": 18.3517875296199,
+          "strategy_errors_mae": {
+            "initial_frozen": 40.37716874272347,
+            "last_valid_straight": 28.011377409765046
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 37.3784836383406,
+            "20s_straight_only": 37.3784836383406,
+            "30s_all_motion": 33.029229625152134,
+            "30s_straight_only": 35.15026469964561,
+            "60s_all_motion": 31.384606879500748,
+            "60s_straight_only": 29.788143701870684,
+            "120s_all_motion": 30.11240589797621,
+            "120s_straight_only": 27.62700132560014
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 29.788143701870684,
+            "circ_median": 28.787596315400734,
+            "trimmed_mean": 28.359005385502968,
+            "huber_m": 29.194563516010554
+          },
+          "mag_confidence": {
+            "mu_B": 42.68593883340852,
+            "sigma_B": 1.0307994477180529,
+            "delta_B_baseline": 1.2008439149315535,
+            "sigma_psi": 5.338619882300163,
+            "sample_count": 88,
+            "outage_mae": 29.788143701870684
+          }
+        },
+        {
+          "outage_start_s": 630.0,
+          "distance_km": 2.0416111111111133,
+          "lat": 52.806095,
+          "lon": -1.620613,
+          "gt_mean_offset_deg": 21.968593036139158,
+          "strategy_errors_mae": {
+            "initial_frozen": 43.20110761018063,
+            "last_valid_straight": 27.543941155365047
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 6.266166380813716,
+            "5s_straight_only": 6.266166380813716,
+            "10s_all_motion": 6.266166380813716,
+            "10s_straight_only": 6.266166380813716,
+            "20s_all_motion": 6.266166380813716,
+            "20s_straight_only": 6.266166380813716,
+            "30s_all_motion": 6.081156559184393,
+            "30s_straight_only": 6.081156559184393,
+            "60s_all_motion": 26.386055408350305,
+            "60s_straight_only": 29.856347671470065,
+            "120s_all_motion": 28.271371189647496,
+            "120s_straight_only": 27.036015615575707
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 29.856347671470065,
+            "circ_median": 27.761536167226915,
+            "trimmed_mean": 27.970413934020016,
+            "huber_m": 28.927105623071185
+          },
+          "mag_confidence": {
+            "mu_B": 42.66251419128636,
+            "sigma_B": 1.0850996321179167,
+            "delta_B_baseline": 1.224268557053712,
+            "sigma_psi": 5.601675060414582,
+            "sample_count": 72,
+            "outage_mae": 29.856347671470065
+          }
+        },
+        {
+          "outage_start_s": 645.0,
+          "distance_km": 2.0973480555555595,
+          "lat": 52.80665,
+          "lon": -1.623507,
+          "gt_mean_offset_deg": 21.650913765968863,
+          "strategy_errors_mae": {
+            "initial_frozen": 42.88702621304293,
+            "last_valid_straight": 27.229859758227352
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 6.4275324824775275,
+            "5s_straight_only": 6.785952056593949,
+            "10s_all_motion": 6.285467555222403,
+            "10s_straight_only": 6.386601264962681,
+            "20s_all_motion": 6.316241990777246,
+            "20s_straight_only": 6.345287535006844,
+            "30s_all_motion": 6.316241990777246,
+            "30s_straight_only": 6.345287535006844,
+            "60s_all_motion": 14.446012940445126,
+            "60s_straight_only": 9.850365903438238,
+            "120s_all_motion": 23.267845294566552,
+            "120s_straight_only": 19.36896672160311
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 9.850365903438238,
+            "circ_median": 6.242802818700053,
+            "trimmed_mean": 6.70474385510781,
+            "huber_m": 6.26725473064391
+          },
+          "mag_confidence": {
+            "mu_B": 40.26787338425372,
+            "sigma_B": 2.297156145425263,
+            "delta_B_baseline": 3.618909364086356,
+            "sigma_psi": 17.0698062874778,
+            "sample_count": 77,
+            "outage_mae": 9.850365903438238
+          }
+        },
+        {
+          "outage_start_s": 660.0,
+          "distance_km": 2.115106388888891,
+          "lat": 52.806847,
+          "lon": -1.624524,
+          "gt_mean_offset_deg": 23.97826992444584,
+          "strategy_errors_mae": {
+            "initial_frozen": 45.20586538721965,
+            "last_valid_straight": 29.512433164403532
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 2.577661174089933,
+            "20s_straight_only": 2.3820679336154935,
+            "30s_all_motion": 2.7434383980951482,
+            "30s_straight_only": 2.4221935775747876,
+            "60s_all_motion": 2.61918699986022,
+            "60s_straight_only": 2.4221935775747876,
+            "120s_all_motion": 25.534137258094223,
+            "120s_straight_only": 20.967984266993245
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 2.4221935775747876,
+            "circ_median": 2.542683328073078,
+            "trimmed_mean": 2.5074870069397823,
+            "huber_m": 2.4524020175551517
+          },
+          "mag_confidence": {
+            "mu_B": 38.957433775681814,
+            "sigma_B": 0.5190959746616313,
+            "delta_B_baseline": 4.929348972658261,
+            "sigma_psi": 2.395208847348347,
+            "sample_count": 57,
+            "outage_mae": 2.4221935775747876
+          }
+        },
+        {
+          "outage_start_s": 675.0,
+          "distance_km": 2.1545369444444455,
+          "lat": 52.806984,
+          "lon": -1.626589,
+          "gt_mean_offset_deg": 23.30345349009074,
+          "strategy_errors_mae": {
+            "initial_frozen": 44.53204970275153,
+            "last_valid_straight": 28.83861747993542
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": 4.788539321388166,
+            "30s_straight_only": 4.788539321388166,
+            "60s_all_motion": 2.5171917071795558,
+            "60s_straight_only": 2.4882524777017982,
+            "120s_all_motion": 22.960196359863794,
+            "120s_straight_only": 18.997702102000364
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 2.4882524777017982,
+            "circ_median": 2.514966628164534,
+            "trimmed_mean": 2.5044735885000207,
+            "huber_m": 2.4924694376036314
+          },
+          "mag_confidence": {
+            "mu_B": 38.957433775681814,
+            "sigma_B": 0.5190959746616313,
+            "delta_B_baseline": 4.929348972658261,
+            "sigma_psi": 2.395208847348347,
+            "sample_count": 57,
+            "outage_mae": 2.4882524777017982
+          }
+        },
+        {
+          "outage_start_s": 690.0,
+          "distance_km": 2.1986286111111135,
+          "lat": 52.8071,
+          "lon": -1.628951,
+          "gt_mean_offset_deg": 24.556773030470463,
+          "strategy_errors_mae": {
+            "initial_frozen": 45.78394943780011,
+            "last_valid_straight": 30.090517214984004
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 3.8178416384378906,
+            "60s_straight_only": 3.5992587833211873,
+            "120s_all_motion": 20.00274240357828,
+            "120s_straight_only": 17.499567493399066
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 3.5992587833211873,
+            "circ_median": 3.689750011728887,
+            "trimmed_mean": 3.685417075559129,
+            "huber_m": 3.6151679390139604
+          },
+          "mag_confidence": {
+            "mu_B": 38.93450125337941,
+            "sigma_B": 0.505134227801928,
+            "delta_B_baseline": 4.9522814949606655,
+            "sigma_psi": 2.7472250139020433,
+            "sample_count": 64,
+            "outage_mae": 3.5992587833211873
+          }
+        },
+        {
+          "outage_start_s": 735.0,
+          "distance_km": 2.2314008333333426,
+          "lat": 52.807503,
+          "lon": -1.630607,
+          "gt_mean_offset_deg": 25.83245917535374,
+          "strategy_errors_mae": {
+            "initial_frozen": 47.05124346695344,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 4.047042990956535,
+            "60s_straight_only": 4.134057955110262,
+            "120s_all_motion": 4.653557453802315,
+            "120s_straight_only": 4.412573183781223
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 4.134057955110262,
+            "circ_median": 4.147078166881558,
+            "trimmed_mean": 4.228115310453689,
+            "huber_m": 4.124702226059554
+          },
+          "mag_confidence": {
+            "mu_B": 37.99231837832787,
+            "sigma_B": 0.7291336684289377,
+            "delta_B_baseline": 5.8944643700122015,
+            "sigma_psi": 2.73653946933784,
+            "sample_count": 36,
+            "outage_mae": 4.134057955110262
+          }
+        },
+        {
+          "outage_start_s": 750.0,
+          "distance_km": 2.2314008333333426,
+          "lat": 52.807503,
+          "lon": -1.630607,
+          "gt_mean_offset_deg": 19.957566712463105,
+          "strategy_errors_mae": {
+            "initial_frozen": 41.174289934655796,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 5.734445518447452,
+            "60s_straight_only": 5.562168399208547,
+            "120s_all_motion": 5.399557469904158,
+            "120s_straight_only": 5.687701905198261
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 5.562168399208547,
+            "circ_median": 5.74067481480526,
+            "trimmed_mean": 5.75761673849635,
+            "huber_m": 5.604340832456992
+          },
+          "mag_confidence": {
+            "mu_B": 37.809969193702905,
+            "sigma_B": 0.6818523848203276,
+            "delta_B_baseline": 6.0768135546371695,
+            "sigma_psi": 2.137920450322526,
+            "sample_count": 29,
+            "outage_mae": 5.562168399208547
+          }
+        },
+        {
+          "outage_start_s": 780.0,
+          "distance_km": 2.3085008333333477,
+          "lat": 52.80916,
+          "lon": -1.633445,
+          "gt_mean_offset_deg": 6.363818487249483,
+          "strategy_errors_mae": {
+            "initial_frozen": 27.571008820864936,
+            "last_valid_straight": 9.008455607790077
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 9.210584386658107,
+            "5s_straight_only": 10.410455017078169,
+            "10s_all_motion": 9.079107143633792,
+            "10s_straight_only": 9.487429225459756,
+            "20s_all_motion": 10.322942227099313,
+            "20s_straight_only": 10.905045878081106,
+            "30s_all_motion": 10.322942227099313,
+            "30s_straight_only": 10.905045878081106,
+            "60s_all_motion": 10.322942227099313,
+            "60s_straight_only": 10.905045878081106,
+            "120s_all_motion": 12.225545053465131,
+            "120s_straight_only": 12.667739302685685
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 10.905045878081106,
+            "circ_median": 11.723277817731095,
+            "trimmed_mean": 11.517305171172083,
+            "huber_m": 11.154736952000096
+          },
+          "mag_confidence": {
+            "mu_B": 35.992797464158116,
+            "sigma_B": 1.9144493414598203,
+            "delta_B_baseline": 7.893985284181959,
+            "sigma_psi": 6.350679755075663,
+            "sample_count": 104,
+            "outage_mae": 10.905045878081106
+          }
+        },
+        {
+          "outage_start_s": 795.0,
+          "distance_km": 2.3631813888889073,
+          "lat": 52.810814,
+          "lon": -1.634408,
+          "gt_mean_offset_deg": 1.9307674253473255,
+          "strategy_errors_mae": {
+            "initial_frozen": 23.15000725917559,
+            "last_valid_straight": 14.750223465101971
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 11.077172047913642,
+            "5s_straight_only": 11.077172047913642,
+            "10s_all_motion": 9.378282252665604,
+            "10s_straight_only": 9.378282252665604,
+            "20s_all_motion": 9.886046210791164,
+            "20s_straight_only": 10.96055824305768,
+            "30s_all_motion": 11.425942397660073,
+            "30s_straight_only": 13.041093542283871,
+            "60s_all_motion": 11.425942397660073,
+            "60s_straight_only": 13.041093542283871,
+            "120s_all_motion": 12.922812382206452,
+            "120s_straight_only": 14.960142405190975
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 13.041093542283871,
+            "circ_median": 13.249717163821918,
+            "trimmed_mean": 13.205050614950792,
+            "huber_m": 13.117486649866624
+          },
+          "mag_confidence": {
+            "mu_B": 36.340528662327095,
+            "sigma_B": 1.9836526919894046,
+            "delta_B_baseline": 7.546254086012979,
+            "sigma_psi": 7.178145688078455,
+            "sample_count": 137,
+            "outage_mae": 13.041093542283871
+          }
+        },
+        {
+          "outage_start_s": 810.0,
+          "distance_km": 2.4139008333333467,
+          "lat": 52.812366,
+          "lon": -1.635247,
+          "gt_mean_offset_deg": 7.1346301556898695,
+          "strategy_errors_mae": {
+            "initial_frozen": 28.348371547743216,
+            "last_valid_straight": 7.365621366003691
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 11.303346498108386,
+            "5s_straight_only": 15.996404796720036,
+            "10s_all_motion": 9.90722932307776,
+            "10s_straight_only": 9.447005455165455,
+            "20s_all_motion": 7.764007420866919,
+            "20s_straight_only": 8.126477047662316,
+            "30s_all_motion": 7.510292424884931,
+            "30s_straight_only": 7.8091302316332225,
+            "60s_all_motion": 7.328539560787658,
+            "60s_straight_only": 7.431303797588242,
+            "120s_all_motion": 7.491387847794776,
+            "120s_straight_only": 7.794462548849478
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 7.431303797588242,
+            "circ_median": 7.482312838376644,
+            "trimmed_mean": 7.6131615095946925,
+            "huber_m": 7.518970683113053
+          },
+          "mag_confidence": {
+            "mu_B": 36.1842104494472,
+            "sigma_B": 2.433311674585003,
+            "delta_B_baseline": 7.702572298892875,
+            "sigma_psi": 9.569939178161276,
+            "sample_count": 225,
+            "outage_mae": 7.431303797588242
+          }
+        },
+        {
+          "outage_start_s": 825.0,
+          "distance_km": 2.444139722222245,
+          "lat": 52.81328,
+          "lon": -1.635845,
+          "gt_mean_offset_deg": 12.226901852949762,
+          "strategy_errors_mae": {
+            "initial_frozen": 33.45079560199194,
+            "last_valid_straight": 6.431381035757466
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 12.972621802881234,
+            "20s_straight_only": 16.55503193959156,
+            "30s_all_motion": 10.093891492062339,
+            "30s_straight_only": 9.257655760964278,
+            "60s_all_motion": 5.256826012496422,
+            "60s_straight_only": 4.804097482318801,
+            "120s_all_motion": 5.256826012496422,
+            "120s_straight_only": 4.804097482318801
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 4.804097482318801,
+            "circ_median": 4.805797130401723,
+            "trimmed_mean": 4.607232798157218,
+            "huber_m": 4.649893711638323
+          },
+          "mag_confidence": {
+            "mu_B": 36.23351277811507,
+            "sigma_B": 2.3950640405158863,
+            "delta_B_baseline": 7.653269970225004,
+            "sigma_psi": 9.506505007058905,
+            "sample_count": 235,
+            "outage_mae": 4.804097482318801
+          }
+        },
+        {
+          "outage_start_s": 840.0,
+          "distance_km": 2.4834594444444633,
+          "lat": 52.81436,
+          "lon": -1.636877,
+          "gt_mean_offset_deg": 9.313342358232292,
+          "strategy_errors_mae": {
+            "initial_frozen": 30.533036880961845,
+            "last_valid_straight": 5.839791266910749
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": 8.342660203186881,
+            "30s_straight_only": 8.342660203186881,
+            "60s_all_motion": 6.353703276842248,
+            "60s_straight_only": 6.950610849474965,
+            "120s_all_motion": 5.204822745534983,
+            "120s_straight_only": 5.0503663297761525
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 6.950610849474965,
+            "circ_median": 6.626496213035063,
+            "trimmed_mean": 6.322076812180812,
+            "huber_m": 6.613524927719336
+          },
+          "mag_confidence": {
+            "mu_B": 36.424615012096154,
+            "sigma_B": 2.7015059129453807,
+            "delta_B_baseline": 7.46216773624392,
+            "sigma_psi": 7.986340836954278,
+            "sample_count": 131,
+            "outage_mae": 6.950610849474965
+          }
+        },
+        {
+          "outage_start_s": 855.0,
+          "distance_km": 2.526123333333351,
+          "lat": 52.815548,
+          "lon": -1.638052,
+          "gt_mean_offset_deg": 1.4349412834036,
+          "strategy_errors_mae": {
+            "initial_frozen": 25.641474172438137,
+            "last_valid_straight": 9.23002401783287
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 11.86388218430215,
+            "5s_straight_only": 11.86388218430215,
+            "10s_all_motion": 11.86388218430215,
+            "10s_straight_only": 11.86388218430215,
+            "20s_all_motion": 11.86388218430215,
+            "20s_straight_only": 11.86388218430215,
+            "30s_all_motion": 11.86388218430215,
+            "30s_straight_only": 11.86388218430215,
+            "60s_all_motion": 8.994002426104597,
+            "60s_straight_only": 8.999959408579189,
+            "120s_all_motion": 10.015461107822494,
+            "120s_straight_only": 10.437499614586743
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 8.999959408579189,
+            "circ_median": 8.954710897660389,
+            "trimmed_mean": 8.928147192299624,
+            "huber_m": 8.943462647627923
+          },
+          "mag_confidence": {
+            "mu_B": 36.051140414408174,
+            "sigma_B": 2.870285079358341,
+            "delta_B_baseline": 7.835642333931901,
+            "sigma_psi": 8.208844635626969,
+            "sample_count": 99,
+            "outage_mae": 8.999959408579189
+          }
+        },
+        {
+          "outage_start_s": 870.0,
+          "distance_km": 2.5734205555555696,
+          "lat": 52.816902,
+          "lon": -1.639099,
+          "gt_mean_offset_deg": 343.2397701562284,
+          "strategy_errors_mae": {
+            "initial_frozen": 15.136523348607449,
+            "last_valid_straight": 24.159840527585306
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 21.007197845853373,
+            "5s_straight_only": 21.007197845853373,
+            "10s_all_motion": 22.86204381299929,
+            "10s_straight_only": 20.31626045937104,
+            "20s_all_motion": 25.46130554717998,
+            "20s_straight_only": 22.071090276530583,
+            "30s_all_motion": 25.46130554717998,
+            "30s_straight_only": 22.071090276530583,
+            "60s_all_motion": 24.514729035247637,
+            "60s_straight_only": 21.855035977951665,
+            "120s_all_motion": 25.822143826933026,
+            "120s_straight_only": 26.262735659052964
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 21.855035977951665,
+            "circ_median": 21.312662715170845,
+            "trimmed_mean": 21.09620371305825,
+            "huber_m": 21.754591691732877
+          },
+          "mag_confidence": {
+            "mu_B": 37.1996274139346,
+            "sigma_B": 1.5179024859173151,
+            "delta_B_baseline": 6.687155334405475,
+            "sigma_psi": 6.573440256355706,
+            "sample_count": 39,
+            "outage_mae": 21.855035977951665
+          }
+        },
+        {
+          "outage_start_s": 885.0,
+          "distance_km": 2.612959444444457,
+          "lat": 52.81819,
+          "lon": -1.639402,
+          "gt_mean_offset_deg": 341.2346243517349,
+          "strategy_errors_mae": {
+            "initial_frozen": 11.219699934346112,
+            "last_valid_straight": 26.900870625788176
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": 26.433088409678806,
+            "10s_straight_only": 26.433088409678806,
+            "20s_all_motion": 24.345689442328258,
+            "20s_straight_only": 22.796721546811625,
+            "30s_all_motion": 26.608750238560624,
+            "30s_straight_only": 24.660340875283293,
+            "60s_all_motion": 26.982186762986032,
+            "60s_straight_only": 24.512262422449748,
+            "120s_all_motion": 28.03729320565327,
+            "120s_straight_only": 28.54307282969015
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 24.512262422449748,
+            "circ_median": 25.165404430320173,
+            "trimmed_mean": 24.987165366945636,
+            "huber_m": 24.465456016565682
+          },
+          "mag_confidence": {
+            "mu_B": 37.903957784815105,
+            "sigma_B": 1.9319726420185948,
+            "delta_B_baseline": 5.982824963524969,
+            "sigma_psi": 6.345129331170965,
+            "sample_count": 47,
+            "outage_mae": 24.512262422449748
+          }
+        },
+        {
+          "outage_start_s": 900.0,
+          "distance_km": 2.6265316666666765,
+          "lat": 52.8183,
+          "lon": -1.638648,
+          "gt_mean_offset_deg": 343.9718073541768,
+          "strategy_errors_mae": {
+            "initial_frozen": 14.295468252533185,
+            "last_valid_straight": 24.446368088556593
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": 22.463583475058126,
+            "30s_straight_only": 21.940890940355583,
+            "60s_all_motion": 24.52768422575445,
+            "60s_straight_only": 22.057759885218168,
+            "120s_all_motion": 23.89737623980994,
+            "120s_straight_only": 22.379633763363163
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 22.057759885218168,
+            "circ_median": 22.710901893088593,
+            "trimmed_mean": 22.532662829714052,
+            "huber_m": 22.0109534793341
+          },
+          "mag_confidence": {
+            "mu_B": 37.903957784815105,
+            "sigma_B": 1.9319726420185948,
+            "delta_B_baseline": 5.982824963524969,
+            "sigma_psi": 6.345129331170965,
+            "sample_count": 47,
+            "outage_mae": 22.057759885218168
+          }
+        },
+        {
+          "outage_start_s": 915.0,
+          "distance_km": 2.648903888888892,
+          "lat": 52.818825,
+          "lon": -1.63804,
+          "gt_mean_offset_deg": 333.7169449389211,
+          "strategy_errors_mae": {
+            "initial_frozen": 10.819633664279687,
+            "last_valid_straight": 33.41755642028803
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 33.05839200976236,
+            "60s_straight_only": 30.626403211069757,
+            "120s_all_motion": 31.417605973912952,
+            "120s_straight_only": 29.939673414345815
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 30.626403211069757,
+            "circ_median": 31.347307047969178,
+            "trimmed_mean": 31.265610674769118,
+            "huber_m": 30.594367366492104
+          },
+          "mag_confidence": {
+            "mu_B": 38.01404762995931,
+            "sigma_B": 1.8011192668093683,
+            "delta_B_baseline": 5.872735118380767,
+            "sigma_psi": 6.279522599970501,
+            "sample_count": 46,
+            "outage_mae": 30.626403211069757
+          }
+        },
+        {
+          "outage_start_s": 930.0,
+          "distance_km": 2.679220555555564,
+          "lat": 52.819305,
+          "lon": -1.637095,
+          "gt_mean_offset_deg": 332.3770960901641,
+          "strategy_errors_mae": {
+            "initial_frozen": 7.132003349065211,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": NaN,
+            "20s_straight_only": NaN,
+            "30s_all_motion": NaN,
+            "30s_straight_only": NaN,
+            "60s_all_motion": 32.27338199060592,
+            "60s_straight_only": 31.59996398948245,
+            "120s_all_motion": 34.26099831586683,
+            "120s_straight_only": 31.529872069906137
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 31.59996398948245,
+            "circ_median": 32.38078018299596,
+            "trimmed_mean": 33.0222758931886,
+            "huber_m": 32.325252104484846
+          },
+          "mag_confidence": {
+            "mu_B": 39.11826102634895,
+            "sigma_B": 1.5949673793202006,
+            "delta_B_baseline": 4.768521721991128,
+            "sigma_psi": 4.096297765917519,
+            "sample_count": 18,
+            "outage_mae": 31.59996398948245
+          }
+        },
+        {
+          "outage_start_s": 1020.0,
+          "distance_km": 2.859506944444443,
+          "lat": 52.816647,
+          "lon": -1.631739,
+          "gt_mean_offset_deg": 12.05279813757774,
+          "strategy_errors_mae": {
+            "initial_frozen": 33.28165617631044,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 1.5496362455420447,
+            "5s_straight_only": 1.7439438100533862,
+            "10s_all_motion": 1.5247723468635683,
+            "10s_straight_only": 1.5646373858238711,
+            "20s_all_motion": 1.5247723468635683,
+            "20s_straight_only": 1.5646373858238711,
+            "30s_all_motion": 1.5247723468635683,
+            "30s_straight_only": 1.5646373858238711,
+            "60s_all_motion": 1.5247723468635683,
+            "60s_straight_only": 1.5646373858238711,
+            "120s_all_motion": 1.5247723468635683,
+            "120s_straight_only": 1.5646373858238711
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 1.5646373858238711,
+            "circ_median": 1.5481524899149155,
+            "trimmed_mean": 1.5620184131216754,
+            "huber_m": 1.563296376401563
+          },
+          "mag_confidence": {
+            "mu_B": 47.72672402340504,
+            "sigma_B": 0.4413425251459422,
+            "delta_B_baseline": 3.839941275064966,
+            "sigma_psi": 1.067077473646023,
+            "sample_count": 39,
+            "outage_mae": 1.5646373858238711
+          }
+        },
+        {
+          "outage_start_s": 1035.0,
+          "distance_km": 2.9141652777777796,
+          "lat": 52.81525,
+          "lon": -1.633512,
+          "gt_mean_offset_deg": 9.114614516232532,
+          "strategy_errors_mae": {
+            "initial_frozen": 30.333842828288574,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 4.97238826307312,
+            "5s_straight_only": 4.97238826307312,
+            "10s_all_motion": 5.147612087634408,
+            "10s_straight_only": 5.147612087634408,
+            "20s_all_motion": 5.308184230621715,
+            "20s_straight_only": 5.614334677184191,
+            "30s_all_motion": 5.254375036698126,
+            "30s_straight_only": 5.406991693791906,
+            "60s_all_motion": 5.254375036698126,
+            "60s_straight_only": 5.406991693791906,
+            "120s_all_motion": 5.254375036698126,
+            "120s_straight_only": 5.406991693791906
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 5.406991693791906,
+            "circ_median": 5.431992583176662,
+            "trimmed_mean": 5.424338152213562,
+            "huber_m": 5.408085208795557
+          },
+          "mag_confidence": {
+            "mu_B": 47.98293056131755,
+            "sigma_B": 0.508642905111009,
+            "delta_B_baseline": 4.0961478129774775,
+            "sigma_psi": 1.143428684498659,
+            "sample_count": 70,
+            "outage_mae": 5.406991693791906
+          }
+        },
+        {
+          "outage_start_s": 1050.0,
+          "distance_km": 2.966837500000002,
+          "lat": 52.813847,
+          "lon": -1.635116,
+          "gt_mean_offset_deg": 14.086677379975754,
+          "strategy_errors_mae": {
+            "initial_frozen": 35.31488197582145,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 10.036374046922202,
+            "5s_straight_only": 10.036374046922202,
+            "10s_all_motion": 9.891526279486028,
+            "10s_straight_only": 9.891526279486028,
+            "20s_all_motion": 9.762262876365593,
+            "20s_straight_only": 9.953496289963697,
+            "30s_all_motion": 9.676550817370831,
+            "30s_straight_only": 9.700249186417661,
+            "60s_all_motion": 9.672813657928394,
+            "60s_straight_only": 9.66851671903973,
+            "120s_all_motion": 9.672813657928394,
+            "120s_straight_only": 9.66851671903973
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 9.66851671903973,
+            "circ_median": 9.647222370737888,
+            "trimmed_mean": 9.625314550143113,
+            "huber_m": 9.646808727090074
+          },
+          "mag_confidence": {
+            "mu_B": 48.03130602319152,
+            "sigma_B": 0.5674477199345707,
+            "delta_B_baseline": 4.144523274851444,
+            "sigma_psi": 2.0424104519285904,
+            "sample_count": 96,
+            "outage_mae": 9.66851671903973
+          }
+        },
+        {
+          "outage_start_s": 1065.0,
+          "distance_km": 2.996920833333334,
+          "lat": 52.81345,
+          "lon": -1.635915,
+          "gt_mean_offset_deg": 22.0565672543929,
+          "strategy_errors_mae": {
+            "initial_frozen": 43.28045104781559,
+            "last_valid_straight": NaN
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": NaN,
+            "10s_straight_only": NaN,
+            "20s_all_motion": 12.70240691756952,
+            "20s_straight_only": 14.168365043875744,
+            "30s_all_motion": 11.701398721397725,
+            "30s_straight_only": 12.890961272542196,
+            "60s_all_motion": 10.853499997197874,
+            "60s_straight_only": 10.886768312922376,
+            "120s_all_motion": 10.853499997197874,
+            "120s_straight_only": 10.886768312922376
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 10.886768312922376,
+            "circ_median": 10.55229320471725,
+            "trimmed_mean": 10.253950262982075,
+            "huber_m": 10.682693597917948
+          },
+          "mag_confidence": {
+            "mu_B": 48.03654054947516,
+            "sigma_B": 0.5673273075770068,
+            "delta_B_baseline": 4.149757801135088,
+            "sigma_psi": 2.1012579442459685,
+            "sample_count": 102,
+            "outage_mae": 10.886768312922376
+          }
+        }
+      ]
+    },
+    "Vta04": {
+      "total_samples": 1789,
+      "duration_s": 178.9,
+      "distance_km": 0.5555080555555529,
+      "moving_samples": 1269,
+      "straight_samples": 314,
+      "baseline_field_uT": 37.82584698324679,
+      "task2_temporal_leakage_audit": {
+        "verdict": "PASS",
+        "num_outages_evaluated": 9,
+        "step_grid_s": 10.0,
+        "leakage_violations": 0
+      },
+      "task1_window_sweep": {
+        "5s": {
+          "valid_outages": 8,
+          "mean_mae_deg": 15.684158900714472,
+          "median_mae_deg": 15.889112293849777,
+          "p95_mae_deg": 24.46775132609926,
+          "rmse_deg": 16.6809038259035
+        },
+        "10s": {
+          "valid_outages": 9,
+          "mean_mae_deg": 17.77329399477867,
+          "median_mae_deg": 16.3553515126938,
+          "p95_mae_deg": 32.02199411582034,
+          "rmse_deg": 19.671023169921007
+        },
+        "20s": {
+          "valid_outages": 9,
+          "mean_mae_deg": 19.126295644488366,
+          "median_mae_deg": 16.91225450340608,
+          "p95_mae_deg": 33.72845101754156,
+          "rmse_deg": 21.189402512191407
+        },
+        "30s": {
+          "valid_outages": 9,
+          "mean_mae_deg": 19.9342739098736,
+          "median_mae_deg": 17.32132748036101,
+          "p95_mae_deg": 31.2485493473694,
+          "rmse_deg": 21.286856004689067
+        },
+        "60s": {
+          "valid_outages": 9,
+          "mean_mae_deg": 18.932387810164855,
+          "median_mae_deg": 20.447012236900687,
+          "p95_mae_deg": 27.382227123421547,
+          "rmse_deg": 20.410914681669976
+        },
+        "120s": {
+          "valid_outages": 9,
+          "mean_mae_deg": 17.046599714918,
+          "median_mae_deg": 13.605117423931858,
+          "p95_mae_deg": 28.66508902352678,
+          "rmse_deg": 18.853970876442574
+        }
+      },
+      "task3_strategy_comparison": {
+        "strategy_A_initial_frozen": {
+          "mean_mae_deg": 16.091372479013007,
+          "median_mae_deg": 13.344308777027917,
+          "p95_mae_deg": 29.018781585386073
+        },
+        "strategy_B_rolling_all_motion_30s": {
+          "mean_mae_deg": 18.53950309035791,
+          "median_mae_deg": 17.045206421307665,
+          "p95_mae_deg": 33.12431193853345
+        },
+        "strategy_B_rolling_all_motion_60s": {
+          "mean_mae_deg": 18.51094911119707,
+          "median_mae_deg": 19.707334042078227,
+          "p95_mae_deg": 28.21829231726399
+        },
+        "strategy_C_rolling_straight_30s": {
+          "mean_mae_deg": 19.9342739098736,
+          "median_mae_deg": 17.32132748036101,
+          "p95_mae_deg": 31.2485493473694
+        },
+        "strategy_C_rolling_straight_60s": {
+          "mean_mae_deg": 18.932387810164855,
+          "median_mae_deg": 20.447012236900687,
+          "p95_mae_deg": 27.382227123421547
+        },
+        "strategy_D_last_valid_straight": {
+          "valid_count": 9,
+          "mean_mae_deg": 23.02805444762241,
+          "median_mae_deg": 19.529555602153742,
+          "p95_mae_deg": 40.349235335396465
+        }
+      },
+      "task4_robust_estimators": {
+        "circ_mean": {
+          "mean_mae_deg": 18.932387810164855,
+          "median_mae_deg": 20.447012236900687,
+          "p95_mae_deg": 27.382227123421547,
+          "std_mae_deg": 7.626934505286652
+        },
+        "circ_median": {
+          "mean_mae_deg": 19.17108469917899,
+          "median_mae_deg": 19.811324009922586,
+          "p95_mae_deg": 29.95759874201905,
+          "std_mae_deg": 7.689291451462395
+        },
+        "trimmed_mean": {
+          "mean_mae_deg": 18.60719602934045,
+          "median_mae_deg": 20.53500930168868,
+          "p95_mae_deg": 29.4358479545839,
+          "std_mae_deg": 7.496341442807609
+        },
+        "huber_m": {
+          "mean_mae_deg": 18.90624625213207,
+          "median_mae_deg": 20.58982144624297,
+          "p95_mae_deg": 28.31575838171433,
+          "std_mae_deg": 7.735811516726582
+        }
+      },
+      "task5_magnetic_confidence": {
+        "num_confidence_windows": 9,
+        "corr_sigma_B_with_mae": {
+          "pearson_r": -0.39114006147731356,
+          "p_val": 0.2979001885743241,
+          "spearman_rho": -0.2333333333333333
+        },
+        "corr_delta_B_with_mae": {
+          "pearson_r": -0.1094392356746085,
+          "p_val": 0.7792654386427696,
+          "spearman_rho": 0.16666666666666669
+        },
+        "corr_sigma_psi_with_mae": {
+          "pearson_r": 0.2632983630192934,
+          "p_val": 0.49364227400688493,
+          "spearman_rho": 0.19999999999999998
+        },
+        "quiet_vs_disturbed_field": {
+          "quiet_mean_mae_deg": 21.93816704590883,
+          "disturbed_mean_mae_deg": 16.392048313004896,
+          "ratio": 0.7471931578742258
+        }
+      },
+      "task6_geographic_vs_temporal": {
+        "temporal_corr_r": 0.16117853891974476,
+        "temporal_drift_rate_deg_per_min": 3.78617187610854,
+        "spatial_corr_r": 0.15873267671628652,
+        "spatial_drift_rate_deg_per_km": 19.801885177684323,
+        "scientific_interpretation": "Magnetic-field magnitude changes co-occur with heading-offset changes; available smartphone data do not uniquely identify whether this arises from spatial environmental variation, vehicle electrical effects, or both. No substantial temporal drift was detected in tested stationary segments, which makes simple stationary drift an insufficient explanation for the route-scale shift, though thermal or operational drift cannot be ruled out."
+      },
+      "task9_dynamic_covariance": {
+        "formulation": "R_psi(t) = sigma_0^2 + c1 * sigma_psi^2 + c2 * sigma_B^2 + c3 * (delta_B / B_0)^2",
+        "parameters": {
+          "sigma_0_deg": 3.0,
+          "c1": 1.0,
+          "c2": 0.5,
+          "c3": 50.0
+        },
+        "min_std_deg": 7.478844681142252,
+        "median_std_deg": 13.087537614063292,
+        "mean_std_deg": 12.538180379191225,
+        "p95_std_deg": 19.474801265435698,
+        "max_std_deg": 20.448986147568522
+      },
+      "task8_phase_breakdown": {
+        "phase1_outward_t_lt_80s": {
+          "outage_count": 2,
+          "mean_frozen_mae_deg": 7.601282637960984,
+          "median_frozen_mae_deg": 7.601282637960984,
+          "mean_r10_mae_deg": 7.566120940685964,
+          "mean_r30_mae_deg": 10.89221065568426,
+          "mean_r60_mae_deg": 8.007372121034074
+        },
+        "phase2_loop_80s_to_120s": {
+          "outage_count": 4,
+          "mean_frozen_mae_deg": 21.106629975581775,
+          "median_frozen_mae_deg": 22.14635600569317,
+          "mean_r10_mae_deg": 15.543605881533168,
+          "mean_r30_mae_deg": 20.735548967242885,
+          "mean_r60_mae_deg": 23.565054522604726
+        },
+        "phase3_return_t_ge_120s": {
+          "outage_count": 3,
+          "mean_frozen_mae_deg": 15.064422377622671,
+          "median_frozen_mae_deg": 13.344308777027917,
+          "mean_r10_mae_deg": 27.550993515167814,
+          "mean_r30_mae_deg": 24.89394933617412,
+          "mean_r60_mae_deg": 20.038842652998884
+        }
+      },
+      "task8_dense_outage_log": [
+        {
+          "outage_start_s": 60.0,
+          "distance_km": 0.17691055555555552,
+          "lat": 52.818134,
+          "lon": -1.639458,
+          "gt_mean_offset_deg": 5.367171208731623,
+          "strategy_errors_mae": {
+            "initial_frozen": 7.105796855599877,
+            "last_valid_straight": 7.625530629536645
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 7.8059791005606165,
+            "5s_straight_only": 7.8059791005606165,
+            "10s_all_motion": 7.060149537081693,
+            "10s_straight_only": 7.060149537081693,
+            "20s_all_motion": 7.066436133926039,
+            "20s_straight_only": 8.807821649368012,
+            "30s_all_motion": 7.039855722757261,
+            "30s_straight_only": 9.665277004617623,
+            "60s_all_motion": 7.018065506005434,
+            "60s_straight_only": 7.004621889905529,
+            "120s_all_motion": 7.018065506005434,
+            "120s_straight_only": 7.004621889905529
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 7.004621889905529,
+            "circ_median": 7.134368126012547,
+            "trimmed_mean": 7.201894646529693,
+            "huber_m": 7.008276515666975
+          },
+          "mag_confidence": {
+            "mu_B": 38.252626523136044,
+            "sigma_B": 2.043657199271825,
+            "delta_B_baseline": 0.4267795398892531,
+            "sigma_psi": 7.365064007113378,
+            "sample_count": 75,
+            "outage_mae": 7.004621889905529
+          }
+        },
+        {
+          "outage_start_s": 70.0,
+          "distance_km": 0.2099080555555553,
+          "lat": 52.820164,
+          "lon": -1.640313,
+          "gt_mean_offset_deg": 8.63148768104071,
+          "strategy_errors_mae": {
+            "initial_frozen": 8.09676842032209,
+            "last_valid_straight": 7.958679017891796
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 8.72728462966266,
+            "5s_straight_only": 8.72728462966266,
+            "10s_all_motion": 8.072092344290235,
+            "10s_straight_only": 8.072092344290235,
+            "20s_all_motion": 8.110686604438975,
+            "20s_straight_only": 8.110686604438975,
+            "30s_all_motion": 8.59044767838572,
+            "30s_straight_only": 12.119144306750895,
+            "60s_all_motion": 8.18895565279004,
+            "60s_straight_only": 9.01012235216262,
+            "120s_all_motion": 8.18895565279004,
+            "120s_straight_only": 9.01012235216262
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 9.01012235216262,
+            "circ_median": 9.75439746946132,
+            "trimmed_mean": 9.770528029738644,
+            "huber_m": 9.03902238488815
+          },
+          "mag_confidence": {
+            "mu_B": 37.84125270562864,
+            "sigma_B": 2.5512874041849702,
+            "delta_B_baseline": 0.015405722381849785,
+            "sigma_psi": 7.5211646399891965,
+            "sample_count": 80,
+            "outage_mae": 9.01012235216262
+          }
+        },
+        {
+          "outage_start_s": 80.0,
+          "distance_km": 0.24363944444444344,
+          "lat": 52.82069,
+          "lon": -1.640629,
+          "gt_mean_offset_deg": 14.407365358355628,
+          "strategy_errors_mae": {
+            "initial_frozen": 9.490079919299955,
+            "last_valid_straight": 19.529555602153742
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 15.479547190508613,
+            "5s_straight_only": 16.40610758793373,
+            "10s_all_motion": 15.649636395150628,
+            "10s_straight_only": 16.599421521805954,
+            "20s_all_motion": 12.141462441487212,
+            "20s_straight_only": 16.91225450340608,
+            "30s_all_motion": 11.264441296420314,
+            "30s_straight_only": 16.91225450340608,
+            "60s_all_motion": 10.986737078129929,
+            "60s_straight_only": 13.634269910202645,
+            "120s_all_motion": 10.718745744747876,
+            "120s_straight_only": 13.605117423931858
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 13.634269910202645,
+            "circ_median": 15.063685013866298,
+            "trimmed_mean": 14.086376663458141,
+            "huber_m": 13.416957622797435
+          },
+          "mag_confidence": {
+            "mu_B": 37.930243976657806,
+            "sigma_B": 2.192362592186806,
+            "delta_B_baseline": 0.10439699341101516,
+            "sigma_psi": 8.313035736438927,
+            "sample_count": 118,
+            "outage_mae": 13.634269910202645
+          }
+        },
+        {
+          "outage_start_s": 90.0,
+          "distance_km": 0.26705555555555416,
+          "lat": 52.82146,
+          "lon": -1.641184,
+          "gt_mean_offset_deg": 23.964221996584484,
+          "strategy_errors_mae": {
+            "initial_frozen": 17.711350005382357,
+            "last_valid_straight": 29.03581301822526
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 16.3553515126938,
+            "5s_straight_only": 16.3553515126938,
+            "10s_all_motion": 16.3553515126938,
+            "10s_straight_only": 16.3553515126938,
+            "20s_all_motion": 23.450717494945298,
+            "20s_straight_only": 26.008488788597557,
+            "30s_all_motion": 20.653403119483805,
+            "30s_straight_only": 26.335997695651482,
+            "60s_all_motion": 20.764764827470167,
+            "60s_straight_only": 26.531752676649425,
+            "120s_all_motion": 19.23684904655817,
+            "120s_straight_only": 22.793876854344084
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 26.531752676649425,
+            "circ_median": 25.782075657705256,
+            "trimmed_mean": 25.630996278767146,
+            "huber_m": 26.141796889038
+          },
+          "mag_confidence": {
+            "mu_B": 38.00285941636045,
+            "sigma_B": 2.1994531431840847,
+            "delta_B_baseline": 0.17701243311366,
+            "sigma_psi": 6.671823269178368,
+            "sample_count": 78,
+            "outage_mae": 26.531752676649425
+          }
+        },
+        {
+          "outage_start_s": 100.0,
+          "distance_km": 0.29754444444444317,
+          "lat": 52.82217,
+          "lon": -1.641975,
+          "gt_mean_offset_deg": 32.88521917174192,
+          "strategy_errors_mae": {
+            "initial_frozen": 26.58136200600399,
+            "last_valid_straight": 37.91181575601438
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 13.654310502012255,
+            "5s_straight_only": 13.654310502012255,
+            "10s_all_motion": 12.881030799906176,
+            "10s_straight_only": 13.796777416627162,
+            "20s_all_motion": 14.602085139633443,
+            "20s_straight_only": 13.796777416627162,
+            "30s_all_motion": 22.41790107928503,
+            "30s_straight_only": 25.187163636178347,
+            "60s_all_motion": 26.15241718111929,
+            "60s_straight_only": 27.949210087936294,
+            "120s_all_motion": 25.739271413797777,
+            "120s_straight_only": 27.7313960319919
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 27.949210087936294,
+            "circ_median": 32.74128079822825,
+            "trimmed_mean": 31.972415738461738,
+            "huber_m": 29.76506604349855
+          },
+          "mag_confidence": {
+            "mu_B": 37.95374102613912,
+            "sigma_B": 1.9908845489959075,
+            "delta_B_baseline": 0.1278940428923292,
+            "sigma_psi": 13.251492407228463,
+            "sample_count": 96,
+            "outage_mae": 27.949210087936294
+          }
+        },
+        {
+          "outage_start_s": 110.0,
+          "distance_km": 0.32865611111110965,
+          "lat": 52.82294,
+          "lon": -1.642846,
+          "gt_mean_offset_deg": 36.924389571676876,
+          "strategy_errors_mae": {
+            "initial_frozen": 30.6437279716408,
+            "last_valid_straight": 41.97418172165119
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 15.35870118992817,
+            "5s_straight_only": 15.422873075005755,
+            "10s_all_motion": 15.35870118992817,
+            "10s_straight_only": 15.422873075005755,
+            "20s_all_motion": 13.008061052094982,
+            "20s_straight_only": 14.50678003373563,
+            "30s_all_motion": 15.23811898085242,
+            "30s_straight_only": 14.50678003373563,
+            "60s_all_motion": 27.345510575732206,
+            "60s_straight_only": 26.144985415630536,
+            "120s_all_motion": 28.904957928445413,
+            "120s_straight_only": 29.287551017883366
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 26.144985415630536,
+            "circ_median": 24.269912267207552,
+            "trimmed_mean": 22.64825073534633,
+            "huber_m": 25.95022413303442
+          },
+          "mag_confidence": {
+            "mu_B": 37.643581258504824,
+            "sigma_B": 1.6504094705506858,
+            "delta_B_baseline": 0.182265724741967,
+            "sigma_psi": 14.448954321741986,
+            "sample_count": 101,
+            "outage_mae": 26.144985415630536
+          }
+        },
+        {
+          "outage_start_s": 120.0,
+          "distance_km": 0.36093138888888643,
+          "lat": 52.823666,
+          "lon": -1.643811,
+          "gt_mean_offset_deg": 24.376642811811404,
+          "strategy_errors_mae": {
+            "initial_frozen": 24.222856323844958,
+            "last_valid_straight": 30.696909659099614
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 19.391245406795523,
+            "5s_straight_only": 20.4937859750042,
+            "10s_all_motion": 19.44729468205162,
+            "10s_straight_only": 20.4937859750042,
+            "20s_all_motion": 17.410808215198248,
+            "20s_straight_only": 17.072325735219,
+            "30s_all_motion": 17.045206421307665,
+            "30s_straight_only": 17.32132748036101,
+            "60s_all_motion": 19.707334042078227,
+            "60s_straight_only": 20.447012236900687,
+            "120s_all_motion": 21.74426540430004,
+            "120s_straight_only": 22.318626053226016
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 20.447012236900687,
+            "circ_median": 19.811324009922586,
+            "trimmed_mean": 20.53500930168868,
+            "huber_m": 20.58982144624297
+          },
+          "mag_confidence": {
+            "mu_B": 37.378644179086066,
+            "sigma_B": 1.8391991330257398,
+            "delta_B_baseline": 0.44720280416072455,
+            "sigma_psi": 17.71408279608234,
+            "sample_count": 119,
+            "outage_mae": 20.447012236900687
+          }
+        },
+        {
+          "outage_start_s": 130.0,
+          "distance_km": 0.3920647222222191,
+          "lat": 52.824055,
+          "lon": -1.645072,
+          "gt_mean_offset_deg": 12.631931888991799,
+          "strategy_errors_mae": {
+            "initial_frozen": 13.344308777027917,
+            "last_valid_straight": 19.142869470326485
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": 26.607578822842758,
+            "5s_straight_only": 26.607578822842758,
+            "10s_all_motion": 37.70443193177848,
+            "10s_straight_only": 35.79158143810323,
+            "20s_all_motion": 31.95211905789395,
+            "20s_straight_only": 32.12232311930088,
+            "30s_all_motion": 28.19690085151965,
+            "30s_straight_only": 22.836936746313345,
+            "60s_all_motion": 17.634610325829847,
+            "60s_straight_only": 14.36938781734764,
+            "120s_all_motion": 12.788206381943644,
+            "120s_straight_only": 12.363401387215188
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 14.36938781734764,
+            "circ_median": 15.291928712566953,
+            "trimmed_mean": 14.076740003054299,
+            "huber_m": 14.289505111169388
+          },
+          "mag_confidence": {
+            "mu_B": 37.87902455120011,
+            "sigma_B": 1.4748935824846259,
+            "delta_B_baseline": 0.05317756795331974,
+            "sigma_psi": 20.20082374811819,
+            "sample_count": 133,
+            "outage_mae": 14.36938781734764
+          }
+        },
+        {
+          "outage_start_s": 140.0,
+          "distance_km": 0.4207922222222174,
+          "lat": 52.824047,
+          "lon": -1.646565,
+          "gt_mean_offset_deg": 6.895459039108537,
+          "strategy_errors_mae": {
+            "initial_frozen": 7.626102031995135,
+            "last_valid_straight": 13.37713515370256
+          },
+          "window_sweep_mae": {
+            "5s_all_motion": NaN,
+            "5s_straight_only": NaN,
+            "10s_all_motion": 27.87211954982145,
+            "10s_straight_only": 26.367613132396013,
+            "20s_all_motion": 39.79737948143555,
+            "20s_straight_only": 34.799202949702014,
+            "30s_all_motion": 36.40925266320932,
+            "30s_straight_only": 34.52358378184802,
+            "60s_all_motion": 28.800146811618518,
+            "60s_straight_only": 25.300127904748322,
+            "120s_all_motion": 10.590931728602133,
+            "120s_straight_only": 9.304684423601419
+          },
+          "estimator_sweep_mae": {
+            "circ_mean": 25.300127904748322,
+            "circ_median": 22.69079023764017,
+            "trimmed_mean": 21.542552867019378,
+            "huber_m": 23.955546122852763
+          },
+          "mag_confidence": {
+            "mu_B": 37.8948915920536,
+            "sigma_B": 1.5316826706039135,
+            "delta_B_baseline": 0.06904460880680574,
+            "sigma_psi": 12.692929067261876,
+            "sample_count": 104,
+            "outage_mae": 25.300127904748322
+          }
+        }
+      ]
+    }
+  },
+  "cross_trip_summary": {
+    "Vta02": {
+      "initial_frozen_mean_mae": 19.222604753537695,
+      "rolling_straight_30s_mean_mae": 10.795821936813265,
+      "rolling_straight_60s_mean_mae": 12.323409718277095,
+      "error_reduction_30s_pct": 43.83788214328018,
+      "error_reduction_60s_pct": 35.89105183048038,
+      "best_window_s": "10s"
+    },
+    "Vta04": {
+      "initial_frozen_mean_mae": 16.091372479013007,
+      "rolling_straight_30s_mean_mae": 19.9342739098736,
+      "rolling_straight_60s_mean_mae": 18.932387810164855,
+      "error_reduction_30s_pct": -23.881750521110945,
+      "error_reduction_60s_pct": -17.65551903578897,
+      "best_window_s": "5s"
+    }
+  }
+}

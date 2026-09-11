@@ -1,0 +1,1080 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-06T13:58:52",
+    "stage": "C8-5.1",
+    "trips_evaluated": [
+      "Vta02",
+      "Vta04"
+    ],
+    "total_windows": 64,
+    "execution_time_sec": 256.81170773506165
+  },
+  "sub_audit_a_accuracy": {
+    "Vta02_suburban": {
+      "trip_name": "Vta02_suburban",
+      "total_samples": 10991,
+      "overall": {
+        "mean_bias_ms": -0.007636151918462043,
+        "std_ms": 0.1256404037885217,
+        "mae_ms": 0.08363330099734052,
+        "median_ms": -0.015,
+        "p90_abs_err_ms": 0.18027727188888854,
+        "p95_abs_err_ms": 0.24409625294444615,
+        "p99_abs_err_ms": 0.4387287271888874,
+        "max_abs_err_ms": 1.5446601725555542
+      },
+      "indicated_speed_overall": {
+        "mean_bias_ms": 0.06461752549560745,
+        "std_ms": 0.12968520409319959,
+        "mae_ms": 0.10001224794528854
+      },
+      "speed_stratified": {
+        "[0, 5) m/s": {
+          "count": 1725,
+          "mean_bias_ms": -0.015199906427853026,
+          "std_ms": 0.09402267656999054,
+          "mae_ms": 0.06323583630118775,
+          "p95_abs_err_ms": 0.20138608417777784
+        },
+        "[5, 10) m/s": {
+          "count": 3501,
+          "mean_bias_ms": -0.0020119761694747714,
+          "std_ms": 0.11976632557689648,
+          "mae_ms": 0.08355400522269822,
+          "p95_abs_err_ms": 0.23028700000000057
+        },
+        "[10, 15) m/s": {
+          "count": 4175,
+          "mean_bias_ms": -0.0015562896885154861,
+          "std_ms": 0.13117149953287294,
+          "mae_ms": 0.08350667053599456,
+          "p95_abs_err_ms": 0.2422983479777791
+        },
+        "[15, 20) m/s": {
+          "count": 1085,
+          "mean_bias_ms": -0.01769331795022912,
+          "std_ms": 0.16439990122078918,
+          "mae_ms": 0.11528980157849437,
+          "p95_abs_err_ms": 0.3451160590888903
+        },
+        "[20, 25) m/s": {
+          "count": 505,
+          "mean_bias_ms": -0.04944637456017409,
+          "std_ms": 0.10450275314229772,
+          "mae_ms": 0.08688997456853598,
+          "p95_abs_err_ms": 0.2300339607777765
+        }
+      },
+      "acceleration_stratified": {
+        "< -2.0 m/s\u00b2 (hard brake)": {
+          "count": 235,
+          "mean_bias_ms": -0.28047821979073223,
+          "std_ms": 0.10968272173147571,
+          "mae_ms": 0.28047821979073223
+        },
+        "[-2.0, -0.5) m/s\u00b2": {
+          "count": 1216,
+          "mean_bias_ms": -0.06933274804086467,
+          "std_ms": 0.11424477238260426,
+          "mae_ms": 0.10297881744550674
+        },
+        "[-0.5, 0.5) m/s\u00b2": {
+          "count": 7592,
+          "mean_bias_ms": -0.012527083951000294,
+          "std_ms": 0.11457012288314211,
+          "mae_ms": 0.07100765567424636
+        },
+        "[0.5, 2.0) m/s\u00b2": {
+          "count": 1873,
+          "mean_bias_ms": 0.07841204689221823,
+          "std_ms": 0.09082972315579538,
+          "mae_ms": 0.0930955249143915
+        },
+        ">= 2.0 m/s\u00b2 (hard accel)": {
+          "count": 75,
+          "mean_bias_ms": 0.19375886746088908,
+          "std_ms": 0.07987480258695802,
+          "mae_ms": 0.19494596738237058
+        }
+      },
+      "braking_regime": {
+        "count": 605,
+        "mean_bias_ms": -0.17842446515336952,
+        "std_ms": 0.14052077523228254,
+        "mae_ms": 0.19223283705254315,
+        "p95_abs_err_ms": 0.4296469423244436,
+        "max_abs_err_ms": 0.6534019385555538
+      }
+    },
+    "Vta04_highway": {
+      "trip_name": "Vta04_highway",
+      "total_samples": 1789,
+      "overall": {
+        "mean_bias_ms": 0.01214035945477372,
+        "std_ms": 0.23838694620359863,
+        "mae_ms": 0.0999266778428855,
+        "median_ms": -0.00998149411111271,
+        "p90_abs_err_ms": 0.1812357234000009,
+        "p95_abs_err_ms": 0.25902855555555615,
+        "p99_abs_err_ms": 0.5513039125244364,
+        "max_abs_err_ms": 3.5916545555555572
+      },
+      "indicated_speed_overall": {
+        "mean_bias_ms": 0.09301627150487536,
+        "std_ms": 0.23879803527532356,
+        "mae_ms": 0.12208154757468473
+      },
+      "speed_stratified": {
+        "[0, 5) m/s": {
+          "count": 81,
+          "mean_bias_ms": 0.04079410959986304,
+          "std_ms": 0.19086193602793136,
+          "mae_ms": 0.1628521532994513,
+          "p95_abs_err_ms": 0.3605799999999997
+        },
+        "[5, 10) m/s": {
+          "count": 208,
+          "mean_bias_ms": 0.08903017722275702,
+          "std_ms": 0.524671376481267,
+          "mae_ms": 0.20052286822061985,
+          "p95_abs_err_ms": 0.330476267383333
+        },
+        "[10, 15) m/s": {
+          "count": 1500,
+          "mean_bias_ms": -6.899778355478859e-05,
+          "std_ms": 0.16317095301376194,
+          "mae_ms": 0.08257936376918512,
+          "p95_abs_err_ms": 0.1953577086277763
+        }
+      },
+      "acceleration_stratified": {
+        "< -2.0 m/s\u00b2 (hard brake)": {
+          "count": 51,
+          "mean_bias_ms": -0.2593227979265792,
+          "std_ms": 0.09056204412523357,
+          "mae_ms": 0.2593227979265792
+        },
+        "[-2.0, -0.5) m/s\u00b2": {
+          "count": 53,
+          "mean_bias_ms": -0.09441205423165577,
+          "std_ms": 0.08295062474148425,
+          "mae_ms": 0.09842985618134148
+        },
+        "[-0.5, 0.5) m/s\u00b2": {
+          "count": 1301,
+          "mean_bias_ms": 0.007241796582612444,
+          "std_ms": 0.2638061656546465,
+          "mae_ms": 0.09319682832788441
+        },
+        "[0.5, 2.0) m/s\u00b2": {
+          "count": 367,
+          "mean_bias_ms": 0.06978723564426344,
+          "std_ms": 0.09452273255599536,
+          "mae_ms": 0.09308609301574364
+        },
+        ">= 2.0 m/s\u00b2 (hard accel)": {
+          "count": 17,
+          "mean_bias_ms": 0.2891124586882355,
+          "std_ms": 0.09317169407776074,
+          "mae_ms": 0.2891124586882355
+        }
+      },
+      "braking_regime": {
+        "count": 69,
+        "mean_bias_ms": -0.23151262689855043,
+        "std_ms": 0.09990246673672123,
+        "mae_ms": 0.23151262689855043,
+        "p95_abs_err_ms": 0.3780809754222222,
+        "max_abs_err_ms": 0.542119111111111
+      }
+    }
+  },
+  "sub_audit_b_slip_and_differentials": {
+    "Vta02_suburban": {
+      "trip_name": "Vta02_suburban",
+      "percentile_distribution": {
+        "p50_ms": 0.04148723399999987,
+        "p75_ms": 0.08574600000000032,
+        "p90_ms": 0.16042800000000046,
+        "p95_ms": 0.23787600000000086,
+        "p99_ms": 0.6201394128000018,
+        "p99_9_ms": 0.9376739999999995,
+        "max_ms": 1.0095899999999998
+      },
+      "regimes": {
+        "Cruising": {
+          "count": 5141,
+          "delta_rear_median_ms": 0.033191999999999666,
+          "delta_rear_p90_ms": 0.08298276600000065,
+          "delta_rear_p99_ms": 0.14659799999999912,
+          "delta_rear_max_ms": 0.41766600000000054,
+          "mean_slip_ratio": -0.000746040140015691,
+          "front_rear_diff_mean_ms": 0.027390170270569947,
+          "front_rear_diff_max_ms": 0.30840623400000045
+        },
+        "Acceleration": {
+          "count": 655,
+          "delta_rear_median_ms": 0.0580887660000009,
+          "delta_rear_p90_ms": 0.3363428340000008,
+          "delta_rear_p99_ms": 0.6606314400000004,
+          "delta_rear_max_ms": 0.8491622766000004,
+          "mean_slip_ratio": 0.02511811704127809,
+          "front_rear_diff_mean_ms": 0.05237444817160301,
+          "front_rear_diff_max_ms": 0.8187361382999998
+        },
+        "Hard Braking": {
+          "count": 153,
+          "delta_rear_median_ms": 0.0885119999999997,
+          "delta_rear_p90_ms": 0.2074499999999997,
+          "delta_rear_p99_ms": 0.34397976000000036,
+          "delta_rear_max_ms": 0.3623487660000011,
+          "mean_slip_ratio": -0.051675664643154706,
+          "front_rear_diff_mean_ms": 0.019506799196078353,
+          "front_rear_diff_max_ms": 0.12723738300000065
+        },
+        "Cornering": {
+          "count": 650,
+          "delta_rear_median_ms": 0.36511199999999944,
+          "delta_rear_p90_ms": 0.7498625999999999,
+          "delta_rear_p99_ms": 0.9515593199999999,
+          "delta_rear_max_ms": 1.0095899999999998,
+          "mean_slip_ratio": 0.0025354073947817437,
+          "front_rear_diff_mean_ms": 0.0860480880516923,
+          "front_rear_diff_max_ms": 0.8187361382999998
+        },
+        "Low Speed": {
+          "count": 311,
+          "delta_rear_median_ms": 0.019361723400000308,
+          "delta_rear_p90_ms": 0.14936427660000007,
+          "delta_rear_p99_ms": 0.44200660637999994,
+          "delta_rear_max_ms": 0.5587311701999997,
+          "mean_slip_ratio": -0.017159815346975096,
+          "front_rear_diff_mean_ms": 0.022323671820578768,
+          "front_rear_diff_max_ms": 0.8187361382999998
+        },
+        "Standstill": {
+          "count": 658,
+          "delta_rear_median_ms": 0.0,
+          "delta_rear_p90_ms": 0.0,
+          "delta_rear_p99_ms": 0.0,
+          "delta_rear_max_ms": 0.0,
+          "mean_slip_ratio": -0.02084050996285038,
+          "front_rear_diff_mean_ms": 0.0,
+          "front_rear_diff_max_ms": 0.0
+        }
+      },
+      "extreme_event_counts": {
+        "gt_1_0_ms": 4,
+        "gt_1_0_ms_pct": 0.0363934127922846,
+        "gt_2_0_ms": 0,
+        "gt_2_0_ms_pct": 0.0,
+        "gt_3_0_ms": 0,
+        "gt_3_0_ms_pct": 0.0
+      },
+      "maximum_differential_event": {
+        "timestamp_s": 41220.3,
+        "delta_v_rear_ms": 1.0095899999999998,
+        "v_vbox_ms": 3.9819444444444447,
+        "v_rl_ms": 4.38411,
+        "v_rr_ms": 3.37452,
+        "accel_long_ms2": 0.390107556335,
+        "accel_lat_ms2": -3.330925758335,
+        "yaw_rate_degs": -38.60001,
+        "steer_deg": 300.4,
+        "brake_pressure_psi": -0.02999878
+      }
+    },
+    "Vta04_highway": {
+      "trip_name": "Vta04_highway",
+      "percentile_distribution": {
+        "p50_ms": 0.044253234000002806,
+        "p75_ms": 0.08298276599999888,
+        "p90_ms": 0.16042799999999957,
+        "p95_ms": 0.2561327063999996,
+        "p99_ms": 0.540700047696,
+        "p99_9_ms": 0.7841167440000043,
+        "max_ms": 0.810438
+      },
+      "regimes": {
+        "Cruising": {
+          "count": 986,
+          "delta_rear_median_ms": 0.03318923400000173,
+          "delta_rear_p90_ms": 0.08297999999999917,
+          "delta_rear_p99_ms": 0.17190925109999997,
+          "delta_rear_max_ms": 0.29872523400000084,
+          "mean_slip_ratio": 0.0017166207103559115,
+          "front_rear_diff_mean_ms": 0.030110394069979736,
+          "front_rear_diff_max_ms": 0.2558549999999986
+        },
+        "Acceleration": {
+          "count": 133,
+          "delta_rear_median_ms": 0.07744800000000218,
+          "delta_rear_p90_ms": 0.3905575403999997,
+          "delta_rear_p99_ms": 0.7101981600000001,
+          "delta_rear_max_ms": 0.7689480000000004,
+          "mean_slip_ratio": 0.026659560003356775,
+          "front_rear_diff_mean_ms": 0.04532710646390961,
+          "front_rear_diff_max_ms": 0.2848981383
+        },
+        "Hard Braking": {
+          "count": 36,
+          "delta_rear_median_ms": 0.04010700000000034,
+          "delta_rear_p90_ms": 0.16734438300000054,
+          "delta_rear_p99_ms": 0.271758531900001,
+          "delta_rear_max_ms": 0.27660000000000107,
+          "mean_slip_ratio": -0.036949033798217124,
+          "front_rear_diff_mean_ms": 0.018862468083333164,
+          "front_rear_diff_max_ms": 0.11202023399999916
+        },
+        "Cornering": {
+          "count": 103,
+          "delta_rear_median_ms": 0.29043276600000034,
+          "delta_rear_p90_ms": 0.7230324000000001,
+          "delta_rear_p99_ms": 0.7989867600000004,
+          "delta_rear_max_ms": 0.810438,
+          "mean_slip_ratio": 0.013834208458916503,
+          "front_rear_diff_mean_ms": 0.07527288070776697,
+          "front_rear_diff_max_ms": 0.33468600000000004
+        },
+        "Low Speed": {
+          "count": 9,
+          "delta_rear_median_ms": 0.2683003404000004,
+          "delta_rear_p90_ms": 0.3761757787199999,
+          "delta_rear_p99_ms": 0.4558367778719998,
+          "delta_rear_max_ms": 0.46468799999999977,
+          "mean_slip_ratio": 0.05350074192954543,
+          "front_rear_diff_mean_ms": 0.09342962529999993,
+          "front_rear_diff_max_ms": 0.21298199999999978
+        }
+      },
+      "extreme_event_counts": {
+        "gt_1_0_ms": 0,
+        "gt_1_0_ms_pct": 0.0,
+        "gt_2_0_ms": 0,
+        "gt_2_0_ms_pct": 0.0,
+        "gt_3_0_ms": 0,
+        "gt_3_0_ms_pct": 0.0
+      },
+      "maximum_differential_event": {
+        "timestamp_s": 42451.3,
+        "delta_v_rear_ms": 0.810438,
+        "v_vbox_ms": 3.276111111111111,
+        "v_rl_ms": 2.93196,
+        "v_rr_ms": 3.742398,
+        "accel_long_ms2": -0.09002572365885,
+        "accel_lat_ms2": 1.0702968003349989,
+        "yaw_rate_degs": 30.0,
+        "steer_deg": 0.0,
+        "brake_pressure_psi": -0.02999878
+      }
+    }
+  },
+  "sub_audit_c_tire_radius_sensitivity": {
+    "Vta02_suburban": {
+      "30s": {
+        "0.98": {
+          "scale_factor": 0.98,
+          "tire_radius_m": 0.27106800000000003,
+          "mean_drift_m": 156.8118714029793,
+          "mean_along_m": 85.13257936849001,
+          "mean_cross_m": 122.18674393122313,
+          "std_drift_m": 212.1546527436912
+        },
+        "0.99": {
+          "scale_factor": 0.99,
+          "tire_radius_m": 0.273834,
+          "mean_drift_m": 157.262855276269,
+          "mean_along_m": 83.7772415436118,
+          "mean_cross_m": 123.24650285350023,
+          "std_drift_m": 212.33866126731942
+        },
+        "1.00": {
+          "scale_factor": 1.0,
+          "tire_radius_m": 0.2766,
+          "mean_drift_m": 157.60862733620854,
+          "mean_along_m": 82.4194781252255,
+          "mean_cross_m": 124.13784495489956,
+          "std_drift_m": 212.52298531320994
+        },
+        "1.01": {
+          "scale_factor": 1.01,
+          "tire_radius_m": 0.279366,
+          "mean_drift_m": 158.16445976532108,
+          "mean_along_m": 81.52460531436026,
+          "mean_cross_m": 124.97047109252989,
+          "std_drift_m": 212.5868564949033
+        },
+        "1.02": {
+          "scale_factor": 1.02,
+          "tire_radius_m": 0.282132,
+          "mean_drift_m": 158.77156097169214,
+          "mean_along_m": 80.87723877796213,
+          "mean_cross_m": 125.79150665486178,
+          "std_drift_m": 212.66459411670684
+        },
+        "sensitivity_pct_drift_per_pct_radius": 31.08474456370414
+      },
+      "60s": {
+        "0.98": {
+          "scale_factor": 0.98,
+          "tire_radius_m": 0.27106800000000003,
+          "mean_drift_m": 542.3689662105551,
+          "mean_along_m": 364.4559416491672,
+          "mean_cross_m": 314.6247283664319,
+          "std_drift_m": 776.2475801897934
+        },
+        "0.99": {
+          "scale_factor": 0.99,
+          "tire_radius_m": 0.273834,
+          "mean_drift_m": 543.3032389463975,
+          "mean_along_m": 361.6407392168722,
+          "mean_cross_m": 317.65678862098764,
+          "std_drift_m": 775.3337663225002
+        },
+        "1.00": {
+          "scale_factor": 1.0,
+          "tire_radius_m": 0.2766,
+          "mean_drift_m": 544.0963944944143,
+          "mean_along_m": 358.8070479008121,
+          "mean_cross_m": 320.31250328789974,
+          "std_drift_m": 775.6774512257068
+        },
+        "1.01": {
+          "scale_factor": 1.01,
+          "tire_radius_m": 0.279366,
+          "mean_drift_m": 545.3769370652425,
+          "mean_along_m": 356.9967458704792,
+          "mean_cross_m": 322.9495231165629,
+          "std_drift_m": 775.8323395545407
+        },
+        "1.02": {
+          "scale_factor": 1.02,
+          "tire_radius_m": 0.282132,
+          "mean_drift_m": 546.5789285006026,
+          "mean_along_m": 355.0236281662053,
+          "mean_cross_m": 325.54007832304717,
+          "std_drift_m": 776.0762914489501
+        },
+        "sensitivity_pct_drift_per_pct_radius": 19.34382552727411
+      }
+    },
+    "Vta04_highway": {
+      "30s": {
+        "0.98": {
+          "scale_factor": 0.98,
+          "tire_radius_m": 0.27106800000000003,
+          "mean_drift_m": 239.61866042108448,
+          "mean_along_m": 159.97044100592774,
+          "mean_cross_m": 168.20270410342437,
+          "std_drift_m": 241.13117936812273
+        },
+        "0.99": {
+          "scale_factor": 0.99,
+          "tire_radius_m": 0.273834,
+          "mean_drift_m": 239.36868705623093,
+          "mean_along_m": 157.55614033446855,
+          "mean_cross_m": 169.0069556152352,
+          "std_drift_m": 242.51352198505154
+        },
+        "1.00": {
+          "scale_factor": 1.0,
+          "tire_radius_m": 0.2766,
+          "mean_drift_m": 240.40900433091664,
+          "mean_along_m": 156.3998618575012,
+          "mean_cross_m": 170.8056060668228,
+          "std_drift_m": 243.52310244882972
+        },
+        "1.01": {
+          "scale_factor": 1.01,
+          "tire_radius_m": 0.279366,
+          "mean_drift_m": 241.3419047794021,
+          "mean_along_m": 154.93445436238102,
+          "mean_cross_m": 172.69659177273812,
+          "std_drift_m": 244.35962166285407
+        },
+        "1.02": {
+          "scale_factor": 1.02,
+          "tire_radius_m": 0.282132,
+          "mean_drift_m": 241.85037271875564,
+          "mean_along_m": 152.9183190135828,
+          "mean_cross_m": 174.3099327220692,
+          "std_drift_m": 244.8885253601248
+        },
+        "sensitivity_pct_drift_per_pct_radius": 23.207453313596137
+      },
+      "60s": {
+        "0.98": {
+          "scale_factor": 0.98,
+          "tire_radius_m": 0.27106800000000003,
+          "mean_drift_m": 541.1909356875542,
+          "mean_along_m": 441.05319628803795,
+          "mean_cross_m": 220.80922514307426,
+          "std_drift_m": 396.40577438378733
+        },
+        "0.99": {
+          "scale_factor": 0.99,
+          "tire_radius_m": 0.273834,
+          "mean_drift_m": 539.9009249677456,
+          "mean_along_m": 437.69012979584784,
+          "mean_cross_m": 218.78257802668702,
+          "std_drift_m": 396.1108580932325
+        },
+        "1.00": {
+          "scale_factor": 1.0,
+          "tire_radius_m": 0.2766,
+          "mean_drift_m": 539.0270023856998,
+          "mean_along_m": 431.4098964076542,
+          "mean_cross_m": 228.28675974661058,
+          "std_drift_m": 395.5240097886887
+        },
+        "1.01": {
+          "scale_factor": 1.01,
+          "tire_radius_m": 0.279366,
+          "mean_drift_m": 539.5306589022723,
+          "mean_along_m": 425.35618205004903,
+          "mean_cross_m": 239.35013679501893,
+          "std_drift_m": 391.0055130313416
+        },
+        "1.02": {
+          "scale_factor": 1.02,
+          "tire_radius_m": 0.282132,
+          "mean_drift_m": 539.1344539835328,
+          "mean_along_m": 417.610344627015,
+          "mean_cross_m": 247.64743537740227,
+          "std_drift_m": 385.38232524574573
+        },
+        "sensitivity_pct_drift_per_pct_radius": 10.534652668764261
+      }
+    }
+  },
+  "sub_audit_d_covariance_sensitivity": {
+    "Vta02_suburban": {
+      "30s": {
+        "0.10": {
+          "sigma_wheel_ms": 0.1,
+          "R_var_m2s2": 0.010000000000000002,
+          "mean_drift_m": 175.93534250272987,
+          "mean_along_m": 84.99892349611409,
+          "mean_cross_m": 141.6055267479748,
+          "mean_cov_trace_m2": 104.43032993617055
+        },
+        "0.20": {
+          "sigma_wheel_ms": 0.2,
+          "R_var_m2s2": 0.04000000000000001,
+          "mean_drift_m": 157.60862733620854,
+          "mean_along_m": 82.4194781252255,
+          "mean_cross_m": 124.13784495489956,
+          "mean_cov_trace_m2": 126.57035830972424
+        },
+        "0.30": {
+          "sigma_wheel_ms": 0.3,
+          "R_var_m2s2": 0.09,
+          "mean_drift_m": 162.76317431198513,
+          "mean_along_m": 92.04869618282345,
+          "mean_cross_m": 119.66683730997356,
+          "mean_cov_trace_m2": 163.5144239217159
+        },
+        "0.50": {
+          "sigma_wheel_ms": 0.5,
+          "R_var_m2s2": 0.25,
+          "mean_drift_m": 158.17728136423665,
+          "mean_along_m": 90.00398884954949,
+          "mean_cross_m": 112.02135686456013,
+          "mean_cov_trace_m2": 177.1308274786355
+        },
+        "1.00": {
+          "sigma_wheel_ms": 1.0,
+          "R_var_m2s2": 1.0,
+          "mean_drift_m": 157.83908056755192,
+          "mean_along_m": 87.1390569219796,
+          "mean_cross_m": 105.68251536733689,
+          "mean_cov_trace_m2": 240.17195222875185
+        }
+      },
+      "60s": {
+        "0.10": {
+          "sigma_wheel_ms": 0.1,
+          "R_var_m2s2": 0.010000000000000002,
+          "mean_drift_m": 589.4847820882455,
+          "mean_along_m": 382.8074774086704,
+          "mean_cross_m": 376.0264607824893,
+          "mean_cov_trace_m2": 258.74138911053666
+        },
+        "0.20": {
+          "sigma_wheel_ms": 0.2,
+          "R_var_m2s2": 0.04000000000000001,
+          "mean_drift_m": 544.0963944944143,
+          "mean_along_m": 358.8070479008121,
+          "mean_cross_m": 320.31250328789974,
+          "mean_cov_trace_m2": 334.1925762555095
+        },
+        "0.30": {
+          "sigma_wheel_ms": 0.3,
+          "R_var_m2s2": 0.09,
+          "mean_drift_m": 532.7018177980841,
+          "mean_along_m": 382.70906504002835,
+          "mean_cross_m": 287.36156650624037,
+          "mean_cov_trace_m2": 393.4983822400702
+        },
+        "0.50": {
+          "sigma_wheel_ms": 0.5,
+          "R_var_m2s2": 0.25,
+          "mean_drift_m": 505.6143524066764,
+          "mean_along_m": 366.0243140936687,
+          "mean_cross_m": 276.0648041071025,
+          "mean_cov_trace_m2": 459.02198369926697
+        },
+        "1.00": {
+          "sigma_wheel_ms": 1.0,
+          "R_var_m2s2": 1.0,
+          "mean_drift_m": 498.7817438291364,
+          "mean_along_m": 336.61937905578486,
+          "mean_cross_m": 301.5436113817663,
+          "mean_cov_trace_m2": 513.2655562622349
+        }
+      }
+    },
+    "Vta04_highway": {
+      "30s": {
+        "0.10": {
+          "sigma_wheel_ms": 0.1,
+          "R_var_m2s2": 0.010000000000000002,
+          "mean_drift_m": 202.66200680306562,
+          "mean_along_m": 139.2064495815006,
+          "mean_cross_m": 142.986122142562,
+          "mean_cov_trace_m2": 52.39124152015229
+        },
+        "0.20": {
+          "sigma_wheel_ms": 0.2,
+          "R_var_m2s2": 0.04000000000000001,
+          "mean_drift_m": 240.40900433091664,
+          "mean_along_m": 156.3998618575012,
+          "mean_cross_m": 170.8056060668228,
+          "mean_cov_trace_m2": 89.46105391717023
+        },
+        "0.30": {
+          "sigma_wheel_ms": 0.3,
+          "R_var_m2s2": 0.09,
+          "mean_drift_m": 259.7955821025809,
+          "mean_along_m": 176.05771420582627,
+          "mean_cross_m": 178.43065943997462,
+          "mean_cov_trace_m2": 112.51832710839786
+        },
+        "0.50": {
+          "sigma_wheel_ms": 0.5,
+          "R_var_m2s2": 0.25,
+          "mean_drift_m": 282.68831784260186,
+          "mean_along_m": 225.01197283723982,
+          "mean_cross_m": 136.76544328721783,
+          "mean_cov_trace_m2": 142.32416083466595
+        },
+        "1.00": {
+          "sigma_wheel_ms": 1.0,
+          "R_var_m2s2": 1.0,
+          "mean_drift_m": 317.7534894364356,
+          "mean_along_m": 248.3625325237769,
+          "mean_cross_m": 157.2163215926807,
+          "mean_cov_trace_m2": 141.6834503837911
+        }
+      },
+      "60s": {
+        "0.10": {
+          "sigma_wheel_ms": 0.1,
+          "R_var_m2s2": 0.010000000000000002,
+          "mean_drift_m": 709.054324534706,
+          "mean_along_m": 628.9638420109435,
+          "mean_cross_m": 192.2693601803146,
+          "mean_cov_trace_m2": 135.28742338966845
+        },
+        "0.20": {
+          "sigma_wheel_ms": 0.2,
+          "R_var_m2s2": 0.04000000000000001,
+          "mean_drift_m": 539.0270023856998,
+          "mean_along_m": 431.4098964076542,
+          "mean_cross_m": 228.28675974661058,
+          "mean_cov_trace_m2": 219.9249939091025
+        },
+        "0.30": {
+          "sigma_wheel_ms": 0.3,
+          "R_var_m2s2": 0.09,
+          "mean_drift_m": 493.6713867006893,
+          "mean_along_m": 361.3094874037353,
+          "mean_cross_m": 252.8304593745748,
+          "mean_cov_trace_m2": 259.38022401019776
+        },
+        "0.50": {
+          "sigma_wheel_ms": 0.5,
+          "R_var_m2s2": 0.25,
+          "mean_drift_m": 567.9259412968652,
+          "mean_along_m": 412.72587150246443,
+          "mean_cross_m": 298.7415966568543,
+          "mean_cov_trace_m2": 323.35151972602404
+        },
+        "1.00": {
+          "sigma_wheel_ms": 1.0,
+          "R_var_m2s2": 1.0,
+          "mean_drift_m": 469.227934537345,
+          "mean_along_m": 341.7575688522026,
+          "mean_cross_m": 231.97661273079285,
+          "mean_cov_trace_m2": 282.26354380718885
+        }
+      }
+    }
+  },
+  "sub_audit_e_huber_sensitivity": {
+    "Vta02_suburban": {
+      "30s": {
+        "No_Huber": {
+          "mode": "No_Huber",
+          "mean_drift_m": 127.30579185374438,
+          "std_drift_m": 110.90366515939425,
+          "max_drift_m": 522.691206870812,
+          "mean_along_m": 66.58291558992248,
+          "mean_cross_m": 92.36209168914391
+        },
+        "Weak_Huber": {
+          "mode": "Weak_Huber",
+          "mean_drift_m": 151.70491062203703,
+          "std_drift_m": 197.69776764154983,
+          "max_drift_m": 1085.6729101324352,
+          "mean_along_m": 78.04856710081737,
+          "mean_cross_m": 118.11072545829627
+        },
+        "Nominal_Huber": {
+          "mode": "Nominal_Huber",
+          "mean_drift_m": 157.60862733620854,
+          "std_drift_m": 212.52298531320994,
+          "max_drift_m": 1125.9656930637614,
+          "mean_along_m": 82.4194781252255,
+          "mean_cross_m": 124.13784495489956
+        },
+        "Strong_Huber": {
+          "mode": "Strong_Huber",
+          "mean_drift_m": 170.15810802770076,
+          "std_drift_m": 235.78957285319285,
+          "max_drift_m": 1200.1961718154382,
+          "mean_along_m": 93.286290999803,
+          "mean_cross_m": 129.70851829308612
+        }
+      },
+      "60s": {
+        "No_Huber": {
+          "mode": "No_Huber",
+          "mean_drift_m": 395.9524302424319,
+          "std_drift_m": 273.3685332486268,
+          "max_drift_m": 1395.2861281304513,
+          "mean_along_m": 248.54131265488024,
+          "mean_cross_m": 251.14144931170523
+        },
+        "Weak_Huber": {
+          "mode": "Weak_Huber",
+          "mean_drift_m": 551.3514078697956,
+          "std_drift_m": 737.4036625233418,
+          "max_drift_m": 4252.031955176773,
+          "mean_along_m": 341.92830524060304,
+          "mean_cross_m": 346.9907563967842
+        },
+        "Nominal_Huber": {
+          "mode": "Nominal_Huber",
+          "mean_drift_m": 544.0963944944143,
+          "std_drift_m": 775.6774512257068,
+          "max_drift_m": 4422.111361520655,
+          "mean_along_m": 358.8070479008121,
+          "mean_cross_m": 320.31250328789974
+        },
+        "Strong_Huber": {
+          "mode": "Strong_Huber",
+          "mean_drift_m": 562.8402668131404,
+          "std_drift_m": 828.397339381782,
+          "max_drift_m": 4684.608943974834,
+          "mean_along_m": 408.8507860610631,
+          "mean_cross_m": 294.3475016069849
+        }
+      }
+    },
+    "Vta04_highway": {
+      "30s": {
+        "No_Huber": {
+          "mode": "No_Huber",
+          "mean_drift_m": 184.89790218116664,
+          "std_drift_m": 162.3290330999595,
+          "max_drift_m": 486.4958461675803,
+          "mean_along_m": 119.01391621072166,
+          "mean_cross_m": 127.19894906873822
+        },
+        "Weak_Huber": {
+          "mode": "Weak_Huber",
+          "mean_drift_m": 221.07854525660713,
+          "std_drift_m": 232.23302232649098,
+          "max_drift_m": 778.4284830206769,
+          "mean_along_m": 142.67341293195457,
+          "mean_cross_m": 161.89422364601515
+        },
+        "Nominal_Huber": {
+          "mode": "Nominal_Huber",
+          "mean_drift_m": 240.40900433091664,
+          "std_drift_m": 243.52310244882972,
+          "max_drift_m": 846.3795930598773,
+          "mean_along_m": 156.3998618575012,
+          "mean_cross_m": 170.8056060668228
+        },
+        "Strong_Huber": {
+          "mode": "Strong_Huber",
+          "mean_drift_m": 242.09041472456215,
+          "std_drift_m": 256.03415747693725,
+          "max_drift_m": 910.214989529812,
+          "mean_along_m": 157.82090256003042,
+          "mean_cross_m": 171.41713138726678
+        }
+      },
+      "60s": {
+        "No_Huber": {
+          "mode": "No_Huber",
+          "mean_drift_m": 415.62148118567035,
+          "std_drift_m": 271.2846121826195,
+          "max_drift_m": 781.6569702962942,
+          "mean_along_m": 339.71395011044285,
+          "mean_cross_m": 135.34457585094515
+        },
+        "Weak_Huber": {
+          "mode": "Weak_Huber",
+          "mean_drift_m": 485.1819596276796,
+          "std_drift_m": 394.3524348496704,
+          "max_drift_m": 1349.5018031422842,
+          "mean_along_m": 248.24363700372078,
+          "mean_cross_m": 324.20406122131584
+        },
+        "Nominal_Huber": {
+          "mode": "Nominal_Huber",
+          "mean_drift_m": 539.0270023856998,
+          "std_drift_m": 395.5240097886887,
+          "max_drift_m": 1462.9748817821367,
+          "mean_along_m": 431.4098964076542,
+          "mean_cross_m": 228.28675974661058
+        },
+        "Strong_Huber": {
+          "mode": "Strong_Huber",
+          "mean_drift_m": 537.9341118493378,
+          "std_drift_m": 337.52408570655274,
+          "max_drift_m": 1292.776892812095,
+          "mean_along_m": 422.1833006129268,
+          "mean_cross_m": 200.94517414361462
+        }
+      }
+    }
+  },
+  "sub_audit_f_filter_consistency": {
+    "Vta02_suburban": {
+      "10s": {
+        "window_count": 55,
+        "mean_actual_error_m": 21.32550518622025,
+        "mean_sigma_p_m": 4.589048613250265,
+        "mean_3sigma_p_m": 13.767145839750793,
+        "mean_error_to_sigma_ratio": 5.251273006846918,
+        "median_error_to_sigma_ratio": 2.089335155300513,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 238.30364935225924,
+          "empirical_median_nees": 7.960557154779725,
+          "empirical_p90_nees": 249.92467511202102,
+          "overconfidence_factor": 10.915668769073639
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 16,
+          "within_1sigma_pct": 29.09090909090909,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 26,
+          "within_2sigma_pct": 47.27272727272727,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 33,
+          "within_3sigma_pct": 60.0,
+          "theoretical_3sigma_pct": 98.9
+        }
+      },
+      "20s": {
+        "window_count": 54,
+        "mean_actual_error_m": 81.406771938007,
+        "mean_sigma_p_m": 8.303481294238063,
+        "mean_3sigma_p_m": 24.91044388271419,
+        "mean_error_to_sigma_ratio": 10.148768327284355,
+        "median_error_to_sigma_ratio": 6.0902529957446685,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 1037.6320741328575,
+          "empirical_median_nees": 119.41725547248359,
+          "empirical_p90_nees": 2157.186614723029,
+          "overconfidence_factor": 22.777533603672474
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 6,
+          "within_1sigma_pct": 11.11111111111111,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 10,
+          "within_2sigma_pct": 18.51851851851852,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 17,
+          "within_3sigma_pct": 31.48148148148148,
+          "theoretical_3sigma_pct": 98.9
+        }
+      },
+      "30s": {
+        "window_count": 54,
+        "mean_actual_error_m": 157.60862733620854,
+        "mean_sigma_p_m": 10.419953805069056,
+        "mean_3sigma_p_m": 31.259861415207176,
+        "mean_error_to_sigma_ratio": 14.52459245258616,
+        "median_error_to_sigma_ratio": 10.659679420187286,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 2004.9617010690783,
+          "empirical_median_nees": 293.6638534191296,
+          "empirical_p90_nees": 4683.792593089869,
+          "overconfidence_factor": 31.66197799466324
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 2,
+          "within_1sigma_pct": 3.7037037037037033,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 9,
+          "within_2sigma_pct": 16.666666666666664,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 11,
+          "within_3sigma_pct": 20.37037037037037,
+          "theoretical_3sigma_pct": 98.9
+        }
+      },
+      "60s": {
+        "window_count": 52,
+        "mean_actual_error_m": 544.0963944944143,
+        "mean_sigma_p_m": 16.886468936957108,
+        "mean_3sigma_p_m": 50.659406810871324,
+        "mean_error_to_sigma_ratio": 27.713810868764433,
+        "median_error_to_sigma_ratio": 21.548456727508277,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 6666.378493431833,
+          "empirical_median_nees": 1819.9090427563124,
+          "empirical_p90_nees": 23489.82756562749,
+          "overconfidence_factor": 57.73377907876736
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 0,
+          "within_1sigma_pct": 0.0,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 0,
+          "within_2sigma_pct": 0.0,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 2,
+          "within_3sigma_pct": 3.8461538461538463,
+          "theoretical_3sigma_pct": 98.9
+        }
+      }
+    },
+    "Vta04_highway": {
+      "10s": {
+        "window_count": 12,
+        "mean_actual_error_m": 29.4995693695537,
+        "mean_sigma_p_m": 4.49317214587328,
+        "mean_3sigma_p_m": 13.479516437619841,
+        "mean_error_to_sigma_ratio": 5.863770608376984,
+        "median_error_to_sigma_ratio": 4.785666193694641,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 252.4922880103072,
+          "empirical_median_nees": 32.344435961398425,
+          "empirical_p90_nees": 263.07177326673053,
+          "overconfidence_factor": 11.235930936293334
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 2,
+          "within_1sigma_pct": 16.666666666666664,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 3,
+          "within_2sigma_pct": 25.0,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 4,
+          "within_3sigma_pct": 33.33333333333333,
+          "theoretical_3sigma_pct": 98.9
+        }
+      },
+      "20s": {
+        "window_count": 11,
+        "mean_actual_error_m": 133.66825260445395,
+        "mean_sigma_p_m": 7.644254529561942,
+        "mean_3sigma_p_m": 22.932763588685827,
+        "mean_error_to_sigma_ratio": 17.04524091207854,
+        "median_error_to_sigma_ratio": 9.829439875148434,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 3549.266070746265,
+          "empirical_median_nees": 347.9993950872842,
+          "empirical_p90_nees": 6458.8989361541935,
+          "overconfidence_factor": 42.126393571882375
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 0,
+          "within_1sigma_pct": 0.0,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 0,
+          "within_2sigma_pct": 0.0,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 0,
+          "within_3sigma_pct": 0.0,
+          "theoretical_3sigma_pct": 98.9
+        }
+      },
+      "30s": {
+        "window_count": 10,
+        "mean_actual_error_m": 240.40900433091664,
+        "mean_sigma_p_m": 8.68527451234518,
+        "mean_3sigma_p_m": 26.055823537035536,
+        "mean_error_to_sigma_ratio": 25.681567720221967,
+        "median_error_to_sigma_ratio": 21.68235674816127,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 6806.896577752579,
+          "empirical_median_nees": 596.953325767355,
+          "empirical_p90_nees": 23489.11532784372,
+          "overconfidence_factor": 58.3390802882278
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 0,
+          "within_1sigma_pct": 0.0,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 1,
+          "within_2sigma_pct": 10.0,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 1,
+          "within_3sigma_pct": 10.0,
+          "theoretical_3sigma_pct": 98.9
+        }
+      },
+      "60s": {
+        "window_count": 8,
+        "mean_actual_error_m": 539.0270023856998,
+        "mean_sigma_p_m": 13.515229184002285,
+        "mean_3sigma_p_m": 40.545687552006854,
+        "mean_error_to_sigma_ratio": 38.248267794376325,
+        "median_error_to_sigma_ratio": 33.85627533510776,
+        "nees_statistics": {
+          "expected_2d_nees": 2.0,
+          "empirical_mean_nees": 3717.8176034319795,
+          "empirical_median_nees": 2310.0605033503334,
+          "empirical_p90_nees": 7593.5771053661565,
+          "overconfidence_factor": 43.115064672524724
+        },
+        "envelope_containment": {
+          "within_1sigma_count": 0,
+          "within_1sigma_pct": 0.0,
+          "theoretical_1sigma_pct": 39.3,
+          "within_2sigma_count": 0,
+          "within_2sigma_pct": 0.0,
+          "theoretical_2sigma_pct": 86.5,
+          "within_3sigma_count": 0,
+          "within_3sigma_pct": 0.0,
+          "theoretical_3sigma_pct": 98.9
+        }
+      }
+    }
+  }
+}

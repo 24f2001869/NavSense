@@ -1,0 +1,342 @@
+{
+  "aggregate_metrics": [
+    {
+      "horizon_sec": 10,
+      "model": "Static_TCN",
+      "total_trips": 14,
+      "mean_drift_m": 24.42,
+      "mean_drift_pct": 31.35,
+      "trips_passed_10pct": 2,
+      "trip_pass_rate_pct": 14.3
+    },
+    {
+      "horizon_sec": 10,
+      "model": "Pure_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 23.11,
+      "mean_drift_pct": 38.15,
+      "trips_passed_10pct": 4,
+      "trip_pass_rate_pct": 28.6
+    },
+    {
+      "horizon_sec": 10,
+      "model": "BiasCorr_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 28.0,
+      "mean_drift_pct": 38.6,
+      "trips_passed_10pct": 4,
+      "trip_pass_rate_pct": 28.6
+    },
+    {
+      "horizon_sec": 10,
+      "model": "Damped_Momentum",
+      "total_trips": 14,
+      "mean_drift_m": 23.65,
+      "mean_drift_pct": 34.07,
+      "trips_passed_10pct": 4,
+      "trip_pass_rate_pct": 28.6
+    },
+    {
+      "horizon_sec": 20,
+      "model": "Static_TCN",
+      "total_trips": 14,
+      "mean_drift_m": 47.43,
+      "mean_drift_pct": 38.76,
+      "trips_passed_10pct": 3,
+      "trip_pass_rate_pct": 21.4
+    },
+    {
+      "horizon_sec": 20,
+      "model": "Pure_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 59.12,
+      "mean_drift_pct": 53.3,
+      "trips_passed_10pct": 2,
+      "trip_pass_rate_pct": 14.3
+    },
+    {
+      "horizon_sec": 20,
+      "model": "BiasCorr_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 91.82,
+      "mean_drift_pct": 71.72,
+      "trips_passed_10pct": 1,
+      "trip_pass_rate_pct": 7.1
+    },
+    {
+      "horizon_sec": 20,
+      "model": "Damped_Momentum",
+      "total_trips": 14,
+      "mean_drift_m": 55.13,
+      "mean_drift_pct": 48.1,
+      "trips_passed_10pct": 3,
+      "trip_pass_rate_pct": 21.4
+    },
+    {
+      "horizon_sec": 30,
+      "model": "Static_TCN",
+      "total_trips": 14,
+      "mean_drift_m": 63.26,
+      "mean_drift_pct": 36.5,
+      "trips_passed_10pct": 3,
+      "trip_pass_rate_pct": 21.4
+    },
+    {
+      "horizon_sec": 30,
+      "model": "Pure_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 111.7,
+      "mean_drift_pct": 66.7,
+      "trips_passed_10pct": 1,
+      "trip_pass_rate_pct": 7.1
+    },
+    {
+      "horizon_sec": 30,
+      "model": "BiasCorr_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 180.33,
+      "mean_drift_pct": 103.42,
+      "trips_passed_10pct": 1,
+      "trip_pass_rate_pct": 7.1
+    },
+    {
+      "horizon_sec": 30,
+      "model": "Damped_Momentum",
+      "total_trips": 14,
+      "mean_drift_m": 82.36,
+      "mean_drift_pct": 51.8,
+      "trips_passed_10pct": 2,
+      "trip_pass_rate_pct": 14.3
+    },
+    {
+      "horizon_sec": 60,
+      "model": "Static_TCN",
+      "total_trips": 14,
+      "mean_drift_m": 97.91,
+      "mean_drift_pct": 24.64,
+      "trips_passed_10pct": 3,
+      "trip_pass_rate_pct": 21.4
+    },
+    {
+      "horizon_sec": 60,
+      "model": "Pure_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 305.61,
+      "mean_drift_pct": 86.61,
+      "trips_passed_10pct": 0,
+      "trip_pass_rate_pct": 0.0
+    },
+    {
+      "horizon_sec": 60,
+      "model": "BiasCorr_Kinematics",
+      "total_trips": 14,
+      "mean_drift_m": 607.58,
+      "mean_drift_pct": 159.42,
+      "trips_passed_10pct": 0,
+      "trip_pass_rate_pct": 0.0
+    },
+    {
+      "horizon_sec": 60,
+      "model": "Damped_Momentum",
+      "total_trips": 14,
+      "mean_drift_m": 170.1,
+      "mean_drift_pct": 45.05,
+      "trips_passed_10pct": 1,
+      "trip_pass_rate_pct": 7.1
+    }
+  ],
+  "vfa02_metrics": [
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "BiasCorr_Kinematics",
+      "horizon_sec": 10,
+      "n_episodes": 446,
+      "mean_dist_m": 243.48,
+      "drift_m": 13.85,
+      "drift_pct": 7.98,
+      "episode_pass_rate_pct": 83.9,
+      "is_trip_pass": 1
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "BiasCorr_Kinematics",
+      "horizon_sec": 20,
+      "n_episodes": 446,
+      "mean_dist_m": 486.82,
+      "drift_m": 51.78,
+      "drift_pct": 14.02,
+      "episode_pass_rate_pct": 61.4,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "BiasCorr_Kinematics",
+      "horizon_sec": 30,
+      "n_episodes": 446,
+      "mean_dist_m": 730.4,
+      "drift_m": 113.55,
+      "drift_pct": 20.63,
+      "episode_pass_rate_pct": 44.6,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "BiasCorr_Kinematics",
+      "horizon_sec": 60,
+      "n_episodes": 446,
+      "mean_dist_m": 1460.32,
+      "drift_m": 437.99,
+      "drift_pct": 36.46,
+      "episode_pass_rate_pct": 22.9,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Damped_Momentum",
+      "horizon_sec": 10,
+      "n_episodes": 446,
+      "mean_dist_m": 243.48,
+      "drift_m": 16.42,
+      "drift_pct": 10.62,
+      "episode_pass_rate_pct": 75.6,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Damped_Momentum",
+      "horizon_sec": 20,
+      "n_episodes": 446,
+      "mean_dist_m": 486.82,
+      "drift_m": 43.92,
+      "drift_pct": 10.7,
+      "episode_pass_rate_pct": 63.2,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Damped_Momentum",
+      "horizon_sec": 30,
+      "n_episodes": 446,
+      "mean_dist_m": 730.4,
+      "drift_m": 73.93,
+      "drift_pct": 12.1,
+      "episode_pass_rate_pct": 57.4,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Damped_Momentum",
+      "horizon_sec": 60,
+      "n_episodes": 446,
+      "mean_dist_m": 1460.32,
+      "drift_m": 162.32,
+      "drift_pct": 12.8,
+      "episode_pass_rate_pct": 50.7,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Pure_Kinematics",
+      "horizon_sec": 10,
+      "n_episodes": 446,
+      "mean_dist_m": 243.48,
+      "drift_m": 14.44,
+      "drift_pct": 9.06,
+      "episode_pass_rate_pct": 83.0,
+      "is_trip_pass": 1
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Pure_Kinematics",
+      "horizon_sec": 20,
+      "n_episodes": 446,
+      "mean_dist_m": 486.82,
+      "drift_m": 49.36,
+      "drift_pct": 14.27,
+      "episode_pass_rate_pct": 60.8,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Pure_Kinematics",
+      "horizon_sec": 30,
+      "n_episodes": 446,
+      "mean_dist_m": 730.4,
+      "drift_m": 100.15,
+      "drift_pct": 18.1,
+      "episode_pass_rate_pct": 46.0,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Pure_Kinematics",
+      "horizon_sec": 60,
+      "n_episodes": 446,
+      "mean_dist_m": 1460.32,
+      "drift_m": 313.9,
+      "drift_pct": 25.44,
+      "episode_pass_rate_pct": 28.5,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Static_TCN",
+      "horizon_sec": 10,
+      "n_episodes": 446,
+      "mean_dist_m": 243.48,
+      "drift_m": 31.13,
+      "drift_pct": 27.31,
+      "episode_pass_rate_pct": 46.4,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Static_TCN",
+      "horizon_sec": 20,
+      "n_episodes": 446,
+      "mean_dist_m": 486.82,
+      "drift_m": 58.82,
+      "drift_pct": 14.8,
+      "episode_pass_rate_pct": 46.4,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Static_TCN",
+      "horizon_sec": 30,
+      "n_episodes": 446,
+      "mean_dist_m": 730.4,
+      "drift_m": 85.02,
+      "drift_pct": 13.52,
+      "episode_pass_rate_pct": 47.8,
+      "is_trip_pass": 0
+    },
+    {
+      "trip": "V-Vfa02",
+      "category": "Motorway",
+      "model": "Static_TCN",
+      "horizon_sec": 60,
+      "n_episodes": 446,
+      "mean_dist_m": 1460.32,
+      "drift_m": 163.65,
+      "drift_pct": 12.28,
+      "episode_pass_rate_pct": 52.2,
+      "is_trip_pass": 0
+    }
+  ]
+}

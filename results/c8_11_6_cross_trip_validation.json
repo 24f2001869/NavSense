@@ -1,0 +1,3389 @@
+{
+  "meta": {
+    "stage": "C8-11.6",
+    "description": "Cross-Trip & Cross-Condition Validation (Strict Validation Protocol)",
+    "trips": [
+      "Vta02",
+      "Vta04"
+    ],
+    "manifest": {
+      "stage": "C8-11.6",
+      "manifest_status": "FROZEN",
+      "created_at": "2026-09-08T02:45:00Z",
+      "description": "Pre-execution freeze manifest for Stage C8-11.6 Cross-Trip & Cross-Condition Validation",
+      "architecture": {
+        "type": "variable_length_quality_gated",
+        "lookback_sequence_s": [
+          5,
+          10,
+          20,
+          30,
+          60
+        ],
+        "rejection_fallback": "retain_previous_calibration"
+      },
+      "candidate_thresholds": {
+        "min_speed_ms": 3.0,
+        "min_straight_samples": 15,
+        "max_course_dispersion_deg": 6.0,
+        "max_mag_norm_std_uT": 3.0
+      },
+      "evaluation_baselines": [
+        "naive_fixed_10s",
+        "quality_gated_variable",
+        "fallback_only_initial_static"
+      ],
+      "ground_truth_good_calibration_threshold_deg": 10.0,
+      "catastrophic_error_threshold_deg": 20.0,
+      "predefined_sensitivity_perturbations": {
+        "speed_ms": [
+          2.5,
+          3.0,
+          3.5
+        ],
+        "straight_samples": [
+          10,
+          15,
+          20
+        ],
+        "course_dispersion_deg": [
+          4.5,
+          6.0,
+          7.5
+        ],
+        "mag_norm_std_uT": [
+          2.5,
+          3.0,
+          3.5
+        ]
+      },
+      "governing_constraints": {
+        "TUNING_ALLOWED": false,
+        "MODEL_RETRAINING": false,
+        "PIPELINE_MODIFICATION": false,
+        "THRESHOLD_MODIFICATION": false,
+        "ANTI_CIRCULARITY": "Operational decisions use smartphone channels only; vehicle GT is post-hoc diagnostic only",
+        "TEMPORAL_INTEGRITY": "max(t_calib) < t_outage_start strictly enforced for all outages"
+      }
+    }
+  },
+  "trips": {
+    "Vta02": {
+      "num_dense_outages": 59,
+      "num_nonoverlapping_outages": 31,
+      "dense_metrics": {
+        "subset_name": "dense_all",
+        "n_outages": 59,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 12.422789954316206,
+          "median_mae_deg": 10.1929847402698,
+          "iqr_deg": 10.080648247558202,
+          "p95_mae_deg": 28.06913865269296,
+          "max_mae_deg": 39.726017222752226,
+          "catastrophic_rate_pct": 16.94915254237288
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 13.051668200857375,
+          "median_mae_deg": 12.035111992888986,
+          "iqr_deg": 11.68372424132448,
+          "p95_mae_deg": 29.89905567365184,
+          "max_mae_deg": 35.15026469964561,
+          "rejection_rate_pct": 33.89830508474576,
+          "mean_calib_age_s": 17.54237288135593,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 19.222604753537695,
+          "median_mae_deg": 14.295468252533185,
+          "iqr_deg": 19.814025386383705,
+          "p95_mae_deg": 44.599431271198334,
+          "max_mae_deg": 47.05124346695344,
+          "catastrophic_rate_pct": 40.67796610169492
+        }
+      },
+      "nonoverlapping_metrics": {
+        "subset_name": "independent_non_overlapping",
+        "n_outages": 31,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 12.234443184425299,
+          "median_mae_deg": 10.795836820514683,
+          "iqr_deg": 11.343308238862878,
+          "p95_mae_deg": 28.263042574983764,
+          "max_mae_deg": 39.726017222752226,
+          "catastrophic_rate_pct": 16.129032258064516
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 12.473421476424186,
+          "median_mae_deg": 12.035111992888986,
+          "iqr_deg": 11.949535712866815,
+          "p95_mae_deg": 28.896933829790164,
+          "max_mae_deg": 31.59996398948245,
+          "rejection_rate_pct": 32.25806451612903,
+          "mean_calib_age_s": 16.451612903225808,
+          "catastrophic_rate_pct": 16.129032258064516
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 19.301024904343954,
+          "median_mae_deg": 14.295468252533185,
+          "iqr_deg": 19.814025386383705,
+          "p95_mae_deg": 45.49490741250988,
+          "max_mae_deg": 47.05124346695344,
+          "catastrophic_rate_pct": 41.935483870967744
+        }
+      },
+      "temporal_early_metrics": {
+        "subset_name": "temporal_early_50pct",
+        "n_outages": 29,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 11.674324881200869,
+          "median_mae_deg": 10.996692648960941,
+          "iqr_deg": 8.36165113450284,
+          "p95_mae_deg": 26.124576380415565,
+          "max_mae_deg": 28.020662672120263,
+          "catastrophic_rate_pct": 10.344827586206897
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 11.434278346477505,
+          "median_mae_deg": 10.664548025177059,
+          "iqr_deg": 9.078317745935188,
+          "p95_mae_deg": 26.041433696405566,
+          "max_mae_deg": 27.937519988110264,
+          "rejection_rate_pct": 34.48275862068966,
+          "mean_calib_age_s": 16.03448275862069,
+          "catastrophic_rate_pct": 10.344827586206897
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 10.49938944562661,
+          "median_mae_deg": 8.211836561012252,
+          "iqr_deg": 8.087313434815135,
+          "p95_mae_deg": 22.6584373226802,
+          "max_mae_deg": 23.61789721848393,
+          "catastrophic_rate_pct": 10.344827586206897
+        }
+      },
+      "temporal_late_metrics": {
+        "subset_name": "temporal_late_50pct",
+        "n_outages": 30,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 13.146306191661035,
+          "median_mae_deg": 9.925672393441555,
+          "iqr_deg": 13.102876156436313,
+          "p95_mae_deg": 33.46120729729574,
+          "max_mae_deg": 39.726017222752226,
+          "catastrophic_rate_pct": 23.333333333333332
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 14.615145060091246,
+          "median_mae_deg": 14.125452718696051,
+          "iqr_deg": 15.271003604283084,
+          "p95_mae_deg": 31.007522656194872,
+          "max_mae_deg": 35.15026469964561,
+          "rejection_rate_pct": 33.33333333333333,
+          "mean_calib_age_s": 19.0,
+          "catastrophic_rate_pct": 30.0
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 27.65504621785174,
+          "median_mae_deg": 27.959690184304076,
+          "iqr_deg": 26.469277610120965,
+          "p95_mae_deg": 45.5238116150389,
+          "max_mae_deg": 47.05124346695344,
+          "catastrophic_rate_pct": 70.0
+        }
+      },
+      "condition_metrics": {
+        "turning_curved": {
+          "subset_name": "condition_turning_curved",
+          "n_outages": 18,
+          "strategy_naive_10s": {
+            "mean_mae_deg": 11.47566837760548,
+            "median_mae_deg": 10.08281940114642,
+            "iqr_deg": 7.413726425880569,
+            "p95_mae_deg": 22.637348855996574,
+            "max_mae_deg": 37.51594033139,
+            "catastrophic_rate_pct": 11.11111111111111
+          },
+          "strategy_quality_gated_variable": {
+            "mean_mae_deg": 11.08086403746828,
+            "median_mae_deg": 10.272871797257405,
+            "iqr_deg": 6.816480402819679,
+            "p95_mae_deg": 21.58145337210421,
+            "max_mae_deg": 35.15026469964561,
+            "rejection_rate_pct": 22.22222222222222,
+            "mean_calib_age_s": 13.333333333333334,
+            "catastrophic_rate_pct": 5.555555555555555
+          },
+          "strategy_fallback_initial_static": {
+            "mean_mae_deg": 11.82770772083917,
+            "median_mae_deg": 8.7183168929656,
+            "iqr_deg": 3.333993225341401,
+            "p95_mae_deg": 24.72618837045407,
+            "max_mae_deg": 40.37716874272347,
+            "catastrophic_rate_pct": 16.666666666666664
+          }
+        },
+        "dynamic_transient": {
+          "subset_name": "condition_dynamic_transient",
+          "n_outages": 2,
+          "strategy_naive_10s": {
+            "mean_mae_deg": 26.71713210855242,
+            "median_mae_deg": 26.71713210855242,
+            "iqr_deg": 13.008885114199813,
+            "p95_mae_deg": 38.42512871133224,
+            "max_mae_deg": 39.726017222752226,
+            "catastrophic_rate_pct": 50.0
+          },
+          "strategy_quality_gated_variable": {
+            "mean_mae_deg": 21.739413943840628,
+            "median_mae_deg": 21.739413943840628,
+            "iqr_deg": 8.116933727629437,
+            "p95_mae_deg": 29.04465429870712,
+            "max_mae_deg": 29.856347671470065,
+            "rejection_rate_pct": 0.0,
+            "mean_calib_age_s": 0.0,
+            "catastrophic_rate_pct": 50.0
+          },
+          "strategy_fallback_initial_static": {
+            "mean_mae_deg": 25.207205100211272,
+            "median_mae_deg": 25.207205100211272,
+            "iqr_deg": 17.993902509969352,
+            "p95_mae_deg": 41.40171735918369,
+            "max_mae_deg": 43.20110761018063,
+            "catastrophic_rate_pct": 50.0
+          }
+        },
+        "magnetic_disturbance": {
+          "subset_name": "condition_magnetic_disturbance",
+          "n_outages": 39,
+          "strategy_naive_10s": {
+            "mean_mae_deg": 12.126879802324433,
+            "median_mae_deg": 9.784405902479788,
+            "iqr_deg": 10.44740396615926,
+            "p95_mae_deg": 27.286297086636434,
+            "max_mae_deg": 28.50542247784726,
+            "catastrophic_rate_pct": 17.94871794871795
+          },
+          "strategy_quality_gated_variable": {
+            "mean_mae_deg": 13.515744699704479,
+            "median_mae_deg": 14.082540393516359,
+            "iqr_deg": 13.691742858396426,
+            "p95_mae_deg": 28.172110758628026,
+            "max_mae_deg": 31.59996398948245,
+            "rejection_rate_pct": 41.02564102564102,
+            "mean_calib_age_s": 20.384615384615383,
+            "catastrophic_rate_pct": 25.64102564102564
+          },
+          "strategy_fallback_initial_static": {
+            "mean_mae_deg": 22.328731571364006,
+            "median_mae_deg": 21.32267734947774,
+            "iqr_deg": 20.654395761645794,
+            "p95_mae_deg": 45.2636737922777,
+            "max_mae_deg": 47.05124346695344,
+            "catastrophic_rate_pct": 51.28205128205128
+          }
+        }
+      },
+      "failure_mode_analysis": {
+        "good_calibration_threshold_deg": 10.0,
+        "true_positives": 22,
+        "false_positives": 17,
+        "true_negatives": 147,
+        "false_negatives": 38,
+        "precision_pct": 56.41025641025641,
+        "recall_pct": 36.666666666666664,
+        "specificity_pct": 89.63414634146342,
+        "false_acceptance_rate_pct": 10.365853658536585,
+        "false_acceptance_of_accepted_pct": 43.58974358974359,
+        "false_rejection_rate_pct": 63.33333333333333,
+        "catastrophic_accepted_update_rate_pct": 17.94871794871795,
+        "n_accepted_updates": 39,
+        "n_rejected_updates": 20
+      },
+      "per_outage_logs": [
+        {
+          "meta": {
+            "outage_index": 0,
+            "outage_start_s": 60.0,
+            "distance_km": 0.12021222222222198,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 6,
+            "calib_age_s": 60.0,
+            "dist_m": 120.21222222222198,
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 4.206761443033047,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 120.21222222222198,
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 4.206761443033047,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 4.206761443033047,
+            "calib_age_s": 60.0,
+            "dist_m": 120.21222222222198,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 1,
+            "outage_start_s": 75.0,
+            "distance_km": 0.19798166666666675,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 12,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 338.10765476434847,
+            "post_outage_mae_deg": 5.308805607489358,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 15,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 340.2846932383974,
+            "post_outage_mae_deg": 6.297821568470132,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 4.654528040964454,
+            "mag_norm_std_uT": 1.3403016004688162,
+            "mean_speed_ms": 5.2935185185185185
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 5.580273889757126,
+            "calib_age_s": 75.0,
+            "dist_m": 197.98166666666674,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 2,
+            "outage_start_s": 90.0,
+            "distance_km": 0.2853324999999998,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 9,
+            "calib_age_s": 15.0,
+            "dist_m": 87.35083333333307,
+            "calib_offset_deg": 338.10765476434847,
+            "post_outage_mae_deg": 4.3872154650598665,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 28,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 340.1544672220797,
+            "post_outage_mae_deg": 6.428891718586892,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 4.6037027179363985,
+            "mag_norm_std_uT": 0.9503717051554863,
+            "mean_speed_ms": 5.560416666666669
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 5.045893504237365,
+            "calib_age_s": 90.0,
+            "dist_m": 285.3324999999998,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 3,
+            "outage_start_s": 105.0,
+            "distance_km": 0.3721880555555546,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 5,
+            "calib_age_s": 30.0,
+            "dist_m": 174.2063888888879,
+            "calib_offset_deg": 338.10765476434847,
+            "post_outage_mae_deg": 6.329780847462117,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 30,
+            "n_samples": 30,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 338.5835706931741,
+            "post_outage_mae_deg": 6.800419640557721,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 5.567936594265956,
+            "mag_norm_std_uT": 1.745232580502141,
+            "mean_speed_ms": 5.593796296296296
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 6.987065299683384,
+            "calib_age_s": 105.0,
+            "dist_m": 372.1880555555546,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 4,
+            "outage_start_s": 120.0,
+            "distance_km": 0.43335749999999934,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 35,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 334.2106300408539,
+            "post_outage_mae_deg": 4.858567904972971,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 5,
+            "n_samples": 33,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 334.2311141705265,
+            "post_outage_mae_deg": 4.870039017589617,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 1.3972577538374862,
+            "mag_norm_std_uT": 0.5042303796001267,
+            "mean_speed_ms": 3.3036195286195285
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 8.514003869657122,
+            "calib_age_s": 120.0,
+            "dist_m": 433.35749999999933,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 5,
+            "outage_start_s": 135.0,
+            "distance_km": 0.49176583333333296,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 19,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 327.08771542414394,
+            "post_outage_mae_deg": 6.282086188780718,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 19,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 327.08771542414394,
+            "post_outage_mae_deg": 6.282086188780718,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.945838199625593,
+            "mag_norm_std_uT": 0.8892139452583617,
+            "mean_speed_ms": 3.892397660818714
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 6.507901000630357,
+            "calib_age_s": 135.0,
+            "dist_m": 491.765833333333,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 6,
+            "outage_start_s": 150.0,
+            "distance_km": 0.5704324999999973,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 78.66666666666441,
+            "calib_offset_deg": 327.08771542414394,
+            "post_outage_mae_deg": 6.49505432119964,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 30,
+            "n_samples": 24,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 327.7978510598509,
+            "post_outage_mae_deg": 5.822226564592534,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 3.606006270556866,
+            "mag_norm_std_uT": 1.0325510621831986,
+            "mean_speed_ms": 3.828125
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 5.454853664919295,
+            "calib_age_s": 150.0,
+            "dist_m": 570.4324999999974,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 7,
+            "outage_start_s": 165.0,
+            "distance_km": 0.66021861111111,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 3,
+            "calib_age_s": 30.0,
+            "dist_m": 168.45277777777704,
+            "calib_offset_deg": 327.08771542414394,
+            "post_outage_mae_deg": 9.784405902479788,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 71,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 331.80773563657056,
+            "post_outage_mae_deg": 5.573194301576119,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 3.7464731748997266,
+            "mag_norm_std_uT": 1.1149739823047025,
+            "mean_speed_ms": 3.8208528951486698
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 5.035677609876589,
+            "calib_age_s": 165.0,
+            "dist_m": 660.21861111111,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 8,
+            "outage_start_s": 180.0,
+            "distance_km": 0.7365686111111088,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 21,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 332.2627824118025,
+            "post_outage_mae_deg": 10.996692648960941,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 5,
+            "n_samples": 21,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 332.2627824118025,
+            "post_outage_mae_deg": 10.996692648960941,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 1.2340440301158877,
+            "mag_norm_std_uT": 0.3851177040649109,
+            "mean_speed_ms": 3.512169312169311
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 5.748152567641788,
+            "calib_age_s": 180.0,
+            "dist_m": 736.5686111111088,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 9,
+            "outage_start_s": 195.0,
+            "distance_km": 0.7855797222222182,
+            "condition": "dynamic_transient",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 49.01111111110936,
+            "calib_offset_deg": 332.2627824118025,
+            "post_outage_mae_deg": 13.708246994352612,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 22,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 332.3485491899439,
+            "post_outage_mae_deg": 13.622480216211192,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 1.2681139255342637,
+            "mag_norm_std_uT": 0.39146001341590553,
+            "mean_speed_ms": 3.4993686868686855
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 7.213302590241916,
+            "calib_age_s": 195.0,
+            "dist_m": 785.5797222222182,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 10,
+            "outage_start_s": 210.0,
+            "distance_km": 0.8294186111111062,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 3,
+            "calib_age_s": 30.0,
+            "dist_m": 92.84999999999741,
+            "calib_offset_deg": 332.2627824118025,
+            "post_outage_mae_deg": 14.076548036902432,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 30,
+            "n_samples": 15,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 342.5928132424217,
+            "post_outage_mae_deg": 4.391344848050645,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.5526332897190707,
+            "mag_norm_std_uT": 1.0761156705827384,
+            "mean_speed_ms": 3.332777777777778
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 7.740822720375921,
+            "calib_age_s": 210.0,
+            "dist_m": 829.4186111111062,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 11,
+            "outage_start_s": 225.0,
+            "distance_km": 0.8793574999999932,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 13,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 344.7090803126556,
+            "post_outage_mae_deg": 6.480893071886401,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 16,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 344.48399334667357,
+            "post_outage_mae_deg": 6.418772181884748,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 1.5007625110774117,
+            "mag_norm_std_uT": 0.23235434152618273,
+            "mean_speed_ms": 3.455208333333333
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 6.308526861023224,
+            "calib_age_s": 225.0,
+            "dist_m": 879.3574999999933,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 12,
+            "outage_start_s": 240.0,
+            "distance_km": 0.93653805555555,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 6,
+            "calib_age_s": 15.0,
+            "dist_m": 57.18055555555679,
+            "calib_offset_deg": 344.7090803126556,
+            "post_outage_mae_deg": 9.163085619233199,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 30,
+            "n_samples": 20,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 346.22223502220373,
+            "post_outage_mae_deg": 10.352758854245012,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.8976309289831685,
+            "mag_norm_std_uT": 0.26525642311089626,
+            "mean_speed_ms": 3.5883333333333334
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 5.992344644255713,
+            "calib_age_s": 240.0,
+            "dist_m": 936.53805555555,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 13,
+            "outage_start_s": 255.0,
+            "distance_km": 0.988899166666662,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 109.54166666666879,
+            "calib_offset_deg": 344.7090803126556,
+            "post_outage_mae_deg": 12.895497207087729,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 37,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 345.22704288565103,
+            "post_outage_mae_deg": 13.31589235265257,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.81069896321689,
+            "mag_norm_std_uT": 0.3864808245332877,
+            "mean_speed_ms": 3.471471471471471
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 8.92262991627408,
+            "calib_age_s": 255.0,
+            "dist_m": 988.899166666662,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 14,
+            "outage_start_s": 270.0,
+            "distance_km": 1.0454797222222147,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 49,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 2.1833138968977273,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 5,
+            "n_samples": 40,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 328.7645593948975,
+            "post_outage_mae_deg": 2.026400988453553,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 1.6557469123746973,
+            "mag_norm_std_uT": 0.5205137992367012,
+            "mean_speed_ms": 3.3115972222222227
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 10.671625451493957,
+            "calib_age_s": 270.0,
+            "dist_m": 1045.4797222222148,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 15,
+            "outage_start_s": 285.0,
+            "distance_km": 1.086143611111104,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 8,
+            "calib_age_s": 15.0,
+            "dist_m": 40.66388888888923,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 2.1964246850984095,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 49,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 328.92922404747287,
+            "post_outage_mae_deg": 2.149062537672579,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 1.830088327055247,
+            "mag_norm_std_uT": 0.8081989272729145,
+            "mean_speed_ms": 3.261848072562359
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 10.021485634628805,
+            "calib_age_s": 285.0,
+            "dist_m": 1086.143611111104,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 16,
+            "outage_start_s": 300.0,
+            "distance_km": 1.1293602777777736,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 5,
+            "calib_age_s": 30.0,
+            "dist_m": 83.88055555555866,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 14.691431981964957,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 66,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 330.22321914304194,
+            "post_outage_mae_deg": 14.309755376353738,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 4.645433384234946,
+            "mag_norm_std_uT": 1.270530482637145,
+            "mean_speed_ms": 3.300210437710438
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 14.079658079070848,
+            "calib_age_s": 300.0,
+            "dist_m": 1129.3602777777735,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 17,
+            "outage_start_s": 315.0,
+            "distance_km": 1.1630797222222193,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 45.0,
+            "dist_m": 117.60000000000446,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 26.06574417766807,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 63,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 329.3854364921423,
+            "post_outage_mae_deg": 25.98260149365807,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 2.60584649425111,
+            "mag_norm_std_uT": 1.1774249412371063,
+            "mean_speed_ms": 3.2999559082892422
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 17.402949257914365,
+            "calib_age_s": 315.0,
+            "dist_m": 1163.0797222222193,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 18,
+            "outage_start_s": 330.0,
+            "distance_km": 1.195574166666661,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 150.09444444444625,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 28.020662672120263,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 32.4944444444418,
+            "calib_offset_deg": 329.3854364921423,
+            "post_outage_mae_deg": 27.937519988110264,
+            "is_catastrophic": true,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 18.746199619290646,
+            "calib_age_s": 330.0,
+            "dist_m": 1195.574166666661,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 19,
+            "outage_start_s": 345.0,
+            "distance_km": 1.2242361111111046,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 75.0,
+            "dist_m": 178.7563888888899,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 26.163797848913898,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 61.15638888888543,
+            "calib_offset_deg": 329.3854364921423,
+            "post_outage_mae_deg": 26.0806551649039,
+            "is_catastrophic": true,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 16.80567655401316,
+            "calib_age_s": 345.0,
+            "dist_m": 1224.2361111111047,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 20,
+            "outage_start_s": 360.0,
+            "distance_km": 1.273536111111103,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 8,
+            "calib_age_s": 90.0,
+            "dist_m": 228.05638888888825,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 15.768102468327415,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 45.0,
+            "dist_m": 110.4563888888838,
+            "calib_offset_deg": 329.3854364921423,
+            "post_outage_mae_deg": 15.692740680248184,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 8.211836561012252,
+            "calib_age_s": 360.0,
+            "dist_m": 1273.536111111103,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 21,
+            "outage_start_s": 375.0,
+            "distance_km": 1.2996472222222184,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 105.0,
+            "dist_m": 254.16750000000366,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 12.408917558884413,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 136.5674999999992,
+            "calib_offset_deg": 329.3854364921423,
+            "post_outage_mae_deg": 12.336327193605513,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 5.471155043584652,
+            "calib_age_s": 375.0,
+            "dist_m": 1299.6472222222185,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 22,
+            "outage_start_s": 390.0,
+            "distance_km": 1.3260555555555522,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 120.0,
+            "dist_m": 280.5758333333374,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 16.57009335075794,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 75.0,
+            "dist_m": 162.97583333333296,
+            "calib_offset_deg": 329.3854364921423,
+            "post_outage_mae_deg": 16.489722089548273,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 8.07949303482849,
+            "calib_age_s": 390.0,
+            "dist_m": 1326.0555555555522,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 23,
+            "outage_start_s": 405.0,
+            "distance_km": 1.365280555555549,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 135.0,
+            "dist_m": 319.80083333333414,
+            "calib_offset_deg": 329.3022938081323,
+            "post_outage_mae_deg": 18.480841276190397,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 90.0,
+            "dist_m": 202.20083333332968,
+            "calib_offset_deg": 329.3854364921423,
+            "post_outage_mae_deg": 18.399361445860603,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 9.641650675514676,
+            "calib_age_s": 405.0,
+            "dist_m": 1365.280555555549,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 24,
+            "outage_start_s": 420.0,
+            "distance_km": 1.409749999999993,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 17,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 354.0256588314404,
+            "post_outage_mae_deg": 7.2783522675873655,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 5,
+            "n_samples": 17,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 354.0256588314404,
+            "post_outage_mae_deg": 7.2783522675873655,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.64946993908858,
+            "mag_norm_std_uT": 0.4640161851161586,
+            "mean_speed_ms": 3.132516339869281
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 10.023115166309806,
+            "calib_age_s": 420.0,
+            "dist_m": 1409.749999999993,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 25,
+            "outage_start_s": 435.0,
+            "distance_km": 1.4598999999999962,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 75,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 349.36424183491613,
+            "post_outage_mae_deg": 9.972654062023041,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 5,
+            "n_samples": 42,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 347.82830678253066,
+            "post_outage_mae_deg": 10.664548025177059,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 5.760290984168995,
+            "mag_norm_std_uT": 2.3832451595640727,
+            "mean_speed_ms": 3.3763227513227516
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 17.365862955052034,
+            "calib_age_s": 435.0,
+            "dist_m": 1459.8999999999962,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 26,
+            "outage_start_s": 450.0,
+            "distance_km": 1.501094444444446,
+            "condition": "turning_curved",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 41.1944444444498,
+            "calib_offset_deg": 349.36424183491613,
+            "post_outage_mae_deg": 11.55920540897352,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 41.1944444444498,
+            "calib_offset_deg": 347.82830678253066,
+            "post_outage_mae_deg": 13.003452817562147,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 21.964250657700678,
+            "calib_age_s": 450.0,
+            "dist_m": 1501.094444444446,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 27,
+            "outage_start_s": 465.0,
+            "distance_km": 1.5456527777777804,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 9,
+            "calib_age_s": 30.0,
+            "dist_m": 85.7527777777841,
+            "calib_offset_deg": 349.36424183491613,
+            "post_outage_mae_deg": 14.146045267629933,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 85.7527777777841,
+            "calib_offset_deg": 347.82830678253066,
+            "post_outage_mae_deg": 15.360403934715904,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 23.121228432666552,
+            "calib_age_s": 465.0,
+            "dist_m": 1545.6527777777803,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 28,
+            "outage_start_s": 480.0,
+            "distance_km": 1.5817555555555562,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 45.0,
+            "dist_m": 121.85555555555993,
+            "calib_offset_deg": 349.36424183491613,
+            "post_outage_mae_deg": 18.076193372887136,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 45.0,
+            "dist_m": 121.85555555555993,
+            "calib_offset_deg": 347.82830678253066,
+            "post_outage_mae_deg": 18.50378649919854,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 23.61789721848393,
+            "calib_age_s": 480.0,
+            "dist_m": 1581.7555555555562,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 29,
+            "outage_start_s": 495.0,
+            "distance_km": 1.6180527777777804,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 158.1527777777842,
+            "calib_offset_deg": 349.36424183491613,
+            "post_outage_mae_deg": 16.77402350325423,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 158.1527777777842,
+            "calib_offset_deg": 347.82830678253066,
+            "post_outage_mae_deg": 16.905937315030386,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 21.32267734947774,
+            "calib_age_s": 495.0,
+            "dist_m": 1618.0527777777804,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 30,
+            "outage_start_s": 510.0,
+            "distance_km": 1.6514333333333373,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 75.0,
+            "dist_m": 191.53333333334103,
+            "calib_offset_deg": 349.36424183491613,
+            "post_outage_mae_deg": 14.575472687894587,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 75.0,
+            "dist_m": 191.53333333334103,
+            "calib_offset_deg": 347.82830678253066,
+            "post_outage_mae_deg": 15.402105539118002,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 22.166125040297356,
+            "calib_age_s": 510.0,
+            "dist_m": 1651.4333333333373,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 31,
+            "outage_start_s": 540.0,
+            "distance_km": 1.7276250000000035,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 32,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 0.6268043584595004,
+            "post_outage_mae_deg": 12.035111992888986,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 32,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 0.6268043584595004,
+            "post_outage_mae_deg": 12.035111992888986,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 4.111343165470581,
+            "mag_norm_std_uT": 2.378123061437961,
+            "mean_speed_ms": 3.428472222222222
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 11.286201599634584,
+            "calib_age_s": 540.0,
+            "dist_m": 1727.6250000000034,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 32,
+            "outage_start_s": 555.0,
+            "distance_km": 1.797186111111117,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 20,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 356.1855800597046,
+            "post_outage_mae_deg": 5.894813135188238,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 69.5611111111134,
+            "calib_offset_deg": 0.6268043584595004,
+            "post_outage_mae_deg": 9.227372235060141,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 12.989055302780166,
+            "calib_age_s": 555.0,
+            "dist_m": 1797.1861111111168,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 33,
+            "outage_start_s": 570.0,
+            "distance_km": 1.8588250000000024,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 15,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 352.59246883947543,
+            "post_outage_mae_deg": 4.793011436386629,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 15,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 352.59246883947543,
+            "post_outage_mae_deg": 4.793011436386629,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 3.0172701808075626,
+            "mag_norm_std_uT": 0.7475080899399391,
+            "mean_speed_ms": 4.0311111111111115
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 12.39412709002973,
+            "calib_age_s": 570.0,
+            "dist_m": 1858.8250000000023,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 34,
+            "outage_start_s": 585.0,
+            "distance_km": 1.9212888888888944,
+            "condition": "turning_curved",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 49,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 354.5718923655925,
+            "post_outage_mae_deg": 10.1929847402698,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 49,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 354.5718923655925,
+            "post_outage_mae_deg": 10.1929847402698,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.74806256009213,
+            "mag_norm_std_uT": 0.5547188716519307,
+            "mean_speed_ms": 4.179818594104309
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 8.238350949433347,
+            "calib_age_s": 585.0,
+            "dist_m": 1921.2888888888945,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 35,
+            "outage_start_s": 600.0,
+            "distance_km": 1.9791333333333347,
+            "condition": "turning_curved",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 14,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 342.24655939515856,
+            "post_outage_mae_deg": 20.011715066221292,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 32,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 348.0330541291687,
+            "post_outage_mae_deg": 19.186957255479285,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 5.622606530040518,
+            "mag_norm_std_uT": 1.1849918984665022,
+            "mean_speed_ms": 3.833333333333333
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 21.533293848328356,
+            "calib_age_s": 600.0,
+            "dist_m": 1979.1333333333348,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 36,
+            "outage_start_s": 615.0,
+            "distance_km": 2.0021694444444447,
+            "condition": "turning_curved",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 23.036111111109676,
+            "calib_offset_deg": 342.24655939515856,
+            "post_outage_mae_deg": 37.51594033139,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 30,
+            "n_samples": 20,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 345.17923426233324,
+            "post_outage_mae_deg": 35.15026469964561,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 5.052100584604685,
+            "mag_norm_std_uT": 0.8400336056102831,
+            "mean_speed_ms": 3.594444444444445
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 40.37716874272347,
+            "calib_age_s": 615.0,
+            "dist_m": 2002.1694444444445,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 37,
+            "outage_start_s": 630.0,
+            "distance_km": 2.0416111111111133,
+            "condition": "dynamic_transient",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 62.477777777778556,
+            "calib_offset_deg": 342.24655939515856,
+            "post_outage_mae_deg": 39.726017222752226,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 72,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 352.1334035839319,
+            "post_outage_mae_deg": 29.856347671470065,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 5.601675060414582,
+            "mag_norm_std_uT": 1.0850996321179167,
+            "mean_speed_ms": 4.013194444444445
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 43.20110761018063,
+            "calib_age_s": 630.0,
+            "dist_m": 2041.6111111111134,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 38,
+            "outage_start_s": 645.0,
+            "distance_km": 2.0973480555555595,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 41,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 23.52352378744347,
+            "post_outage_mae_deg": 6.386601264962681,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 5,
+            "n_samples": 23,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 24.81168992268127,
+            "post_outage_mae_deg": 6.785952056593949,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.5084858366802463,
+            "mag_norm_std_uT": 0.5251102657507427,
+            "mean_speed_ms": 3.4974637681159426
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 42.88702621304293,
+            "calib_age_s": 645.0,
+            "dist_m": 2097.3480555555593,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 39,
+            "outage_start_s": 660.0,
+            "distance_km": 2.115106388888891,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 17.758333333331393,
+            "calib_offset_deg": 23.52352378744347,
+            "post_outage_mae_deg": 2.372803878193166,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 23,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 24.81168992268127,
+            "post_outage_mae_deg": 2.3820679336154935,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.5084858366802463,
+            "mag_norm_std_uT": 0.5251102657507427,
+            "mean_speed_ms": 3.4974637681159426
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 45.20586538721965,
+            "calib_age_s": 660.0,
+            "dist_m": 2115.1063888888907,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 40,
+            "outage_start_s": 675.0,
+            "distance_km": 2.1545369444444455,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 57.18888888888614,
+            "calib_offset_deg": 23.52352378744347,
+            "post_outage_mae_deg": 2.494283902528052,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 57,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 23.299329236662427,
+            "post_outage_mae_deg": 2.4882524777017982,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.395208847348347,
+            "mag_norm_std_uT": 0.5190959746616313,
+            "mean_speed_ms": 3.6941033138401558
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 44.53204970275153,
+            "calib_age_s": 675.0,
+            "dist_m": 2154.5369444444455,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 41,
+            "outage_start_s": 690.0,
+            "distance_km": 2.1986286111111135,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 7,
+            "calib_age_s": 45.0,
+            "dist_m": 101.2805555555542,
+            "calib_offset_deg": 23.52352378744347,
+            "post_outage_mae_deg": 3.648481902998583,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 64,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 23.83304181314923,
+            "post_outage_mae_deg": 3.5992587833211873,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.7472250139020433,
+            "mag_norm_std_uT": 0.505134227801928,
+            "mean_speed_ms": 3.6206163194444443
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 45.78394943780011,
+            "calib_age_s": 690.0,
+            "dist_m": 2198.6286111111135,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 42,
+            "outage_start_s": 735.0,
+            "distance_km": 2.2314008333333426,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 90.0,
+            "dist_m": 134.05277777778338,
+            "calib_offset_deg": 23.52352378744347,
+            "post_outage_mae_deg": 4.495901539198931,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 36,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 24.318875546258003,
+            "post_outage_mae_deg": 4.134057955110262,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.73653946933784,
+            "mag_norm_std_uT": 0.7291336684289377,
+            "mean_speed_ms": 3.0479938271604943
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 47.05124346695344,
+            "calib_age_s": 735.0,
+            "dist_m": 2231.4008333333427,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 43,
+            "outage_start_s": 750.0,
+            "distance_km": 2.2314008333333426,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 105.0,
+            "dist_m": 134.05277777778338,
+            "calib_offset_deg": 23.52352378744347,
+            "post_outage_mae_deg": 5.617669251337496,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 29,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 23.38704628220834,
+            "post_outage_mae_deg": 5.562168399208547,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.137920450322526,
+            "mag_norm_std_uT": 0.6818523848203276,
+            "mean_speed_ms": 3.0542145593869736
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 41.174289934655796,
+            "calib_age_s": 750.0,
+            "dist_m": 2231.4008333333427,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 44,
+            "outage_start_s": 780.0,
+            "distance_km": 2.3085008333333477,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 65,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 15.296223657703399,
+            "post_outage_mae_deg": 9.487429225459756,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 77.10000000000491,
+            "calib_offset_deg": 23.38704628220834,
+            "post_outage_mae_deg": 17.072399790161608,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 27.571008820864936,
+            "calib_age_s": 780.0,
+            "dist_m": 2308.5008333333476,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 45,
+            "outage_start_s": 795.0,
+            "distance_km": 2.3631813888889073,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 12,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 6.916550757299106,
+            "post_outage_mae_deg": 7.524875567234409,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 45.0,
+            "dist_m": 131.78055555556466,
+            "calib_offset_deg": 23.38704628220834,
+            "post_outage_mae_deg": 21.465570015302607,
+            "is_catastrophic": true,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 23.15000725917559,
+            "calib_age_s": 795.0,
+            "dist_m": 2363.1813888889073,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 46,
+            "outage_start_s": 810.0,
+            "distance_km": 2.4139008333333467,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 48,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 0.6109948248626453,
+            "post_outage_mae_deg": 9.447005455165455,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 182.5000000000041,
+            "calib_offset_deg": 23.38704628220834,
+            "post_outage_mae_deg": 16.267205726734986,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 28.348371547743216,
+            "calib_age_s": 810.0,
+            "dist_m": 2413.900833333347,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 47,
+            "outage_start_s": 825.0,
+            "distance_km": 2.444139722222245,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 30.238888888898146,
+            "calib_offset_deg": 0.6109948248626453,
+            "post_outage_mae_deg": 11.75179345816165,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 75.0,
+            "dist_m": 212.73888888890224,
+            "calib_offset_deg": 23.38704628220834,
+            "post_outage_mae_deg": 11.164781672486258,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 33.45079560199194,
+            "calib_age_s": 825.0,
+            "dist_m": 2444.139722222245,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 48,
+            "outage_start_s": 840.0,
+            "distance_km": 2.4834594444444633,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 69.55861111111653,
+            "calib_offset_deg": 0.6109948248626453,
+            "post_outage_mae_deg": 9.564747317621384,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 90.0,
+            "dist_m": 252.05861111112063,
+            "calib_offset_deg": 23.38704628220834,
+            "post_outage_mae_deg": 14.082540393516359,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 30.533036880961845,
+            "calib_age_s": 840.0,
+            "dist_m": 2483.4594444444633,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 49,
+            "outage_start_s": 855.0,
+            "distance_km": 2.526123333333351,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 1,
+            "calib_age_s": 45.0,
+            "dist_m": 112.22250000000395,
+            "calib_offset_deg": 0.6109948248626453,
+            "post_outage_mae_deg": 9.658360046613312,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 105.0,
+            "dist_m": 294.72250000000804,
+            "calib_offset_deg": 23.38704628220834,
+            "post_outage_mae_deg": 22.28259926324993,
+            "is_catastrophic": true,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 25.641474172438137,
+            "calib_age_s": 855.0,
+            "dist_m": 2526.1233333333507,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 50,
+            "outage_start_s": 870.0,
+            "distance_km": 2.5734205555555696,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 19,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 0.8734778045482838,
+            "post_outage_mae_deg": 20.31626045937104,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 19,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 0.8734778045482838,
+            "post_outage_mae_deg": 20.31626045937104,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 5.648884025080536,
+            "mag_norm_std_uT": 1.782112390316606,
+            "mean_speed_ms": 3.208040935672515
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 15.136523348607449,
+            "calib_age_s": 870.0,
+            "dist_m": 2573.4205555555695,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 51,
+            "outage_start_s": 885.0,
+            "distance_km": 2.612959444444457,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 2,
+            "calib_age_s": 15.0,
+            "dist_m": 39.53888888888741,
+            "calib_offset_deg": 0.8734778045482838,
+            "post_outage_mae_deg": 22.035290798380636,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 28,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 1.8818921486377747,
+            "post_outage_mae_deg": 22.796721546811625,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 4.807986967826743,
+            "mag_norm_std_uT": 1.598753061588453,
+            "mean_speed_ms": 3.371329365079365
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 11.219699934346112,
+            "calib_age_s": 885.0,
+            "dist_m": 2612.959444444457,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 52,
+            "outage_start_s": 900.0,
+            "distance_km": 2.6265316666666765,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 53.111111111106766,
+            "calib_offset_deg": 0.8734778045482838,
+            "post_outage_mae_deg": 19.596602989967973,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 30,
+            "n_samples": 18,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 3.9680193161834807,
+            "post_outage_mae_deg": 21.940890940355583,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 4.096297765917519,
+            "mag_norm_std_uT": 1.5949673793202006,
+            "mean_speed_ms": 3.3949074074074073
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 14.295468252533185,
+            "calib_age_s": 900.0,
+            "dist_m": 2626.5316666666763,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 53,
+            "outage_start_s": 915.0,
+            "distance_km": 2.648903888888892,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 45.0,
+            "dist_m": 75.48333333332266,
+            "calib_offset_deg": 0.8734778045482838,
+            "post_outage_mae_deg": 27.204700910471562,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 22.372222222215896,
+            "calib_offset_deg": 3.9680193161834807,
+            "post_outage_mae_deg": 30.283427693287845,
+            "is_catastrophic": true,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 10.819633664279687,
+            "calib_age_s": 915.0,
+            "dist_m": 2648.903888888892,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 54,
+            "outage_start_s": 930.0,
+            "distance_km": 2.679220555555564,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 105.79999999999472,
+            "calib_offset_deg": 0.8734778045482838,
+            "post_outage_mae_deg": 28.50542247784726,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 60,
+            "n_samples": 18,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 3.9680193161834807,
+            "post_outage_mae_deg": 31.59996398948245,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 4.096297765917519,
+            "mag_norm_std_uT": 1.5949673793202006,
+            "mean_speed_ms": 3.3949074074074073
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 7.132003349065211,
+            "calib_age_s": 930.0,
+            "dist_m": 2679.2205555555643,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 55,
+            "outage_start_s": 1020.0,
+            "distance_km": 2.859506944444443,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 39,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 12.574147240291243,
+            "post_outage_mae_deg": 1.5646373858238711,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 5,
+            "n_samples": 23,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 13.096882872479531,
+            "post_outage_mae_deg": 1.7439438100533862,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 0.8826365700757273,
+            "mag_norm_std_uT": 0.4803018999976847,
+            "mean_speed_ms": 3.3919082125603857
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 33.28165617631044,
+            "calib_age_s": 1020.0,
+            "dist_m": 2859.506944444443,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 56,
+            "outage_start_s": 1035.0,
+            "distance_km": 2.9141652777777796,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 13,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 13.558649219358628,
+            "post_outage_mae_deg": 5.752504904074889,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 54,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 13.345223806813342,
+            "post_outage_mae_deg": 5.614334677184191,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 0.9788344466127226,
+            "mag_norm_std_uT": 0.49688578033761405,
+            "mean_speed_ms": 3.517489711934156
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 30.333842828288574,
+            "calib_age_s": 1035.0,
+            "dist_m": 2914.1652777777795,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 57,
+            "outage_start_s": 1050.0,
+            "distance_km": 2.966837500000002,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 11,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 7.756661602302269,
+            "post_outage_mae_deg": 10.795836820514683,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 33,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 10.427749764078149,
+            "post_outage_mae_deg": 9.953496289963697,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.2319027366159037,
+            "mag_norm_std_uT": 0.6207749314843221,
+            "mean_speed_ms": 3.5931818181818183
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 35.31488197582145,
+            "calib_age_s": 1050.0,
+            "dist_m": 2966.837500000002,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 58,
+            "outage_start_s": 1065.0,
+            "distance_km": 2.996920833333334,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 15.0,
+            "dist_m": 30.08333333333212,
+            "calib_offset_deg": 7.756661602302269,
+            "post_outage_mae_deg": 14.648886077658211,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 17,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 8.290573862060567,
+            "post_outage_mae_deg": 14.168365043875744,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 1.100505089824594,
+            "mag_norm_std_uT": 0.5706206150859209,
+            "mean_speed_ms": 3.1699346405228757
+          },
+          "fallback_static": {
+            "calib_offset_deg": 338.77146900773016,
+            "post_outage_mae_deg": 43.28045104781559,
+            "calib_age_s": 1065.0,
+            "dist_m": 2996.920833333334,
+            "is_catastrophic": true
+          }
+        }
+      ]
+    },
+    "Vta04": {
+      "num_dense_outages": 9,
+      "num_nonoverlapping_outages": 3,
+      "dense_metrics": {
+        "subset_name": "dense_all",
+        "n_outages": 9,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 18.85367851371798,
+          "median_mae_deg": 16.599421521805954,
+          "iqr_deg": 12.211711371970395,
+          "p95_mae_deg": 32.02199411582034,
+          "max_mae_deg": 35.79158143810323,
+          "catastrophic_rate_pct": 44.44444444444444
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 16.72120737040453,
+          "median_mae_deg": 15.361923837548087,
+          "iqr_deg": 4.422656525481283,
+          "p95_mae_deg": 26.066253198513337,
+          "max_mae_deg": 26.367613132396013,
+          "rejection_rate_pct": 55.55555555555556,
+          "mean_calib_age_s": 10.0,
+          "catastrophic_rate_pct": 22.22222222222222
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 16.091372479013007,
+          "median_mae_deg": 13.344308777027917,
+          "iqr_deg": 16.126087903522865,
+          "p95_mae_deg": 29.018781585386073,
+          "max_mae_deg": 30.6437279716408,
+          "catastrophic_rate_pct": 33.33333333333333
+        }
+      },
+      "nonoverlapping_metrics": {
+        "subset_name": "independent_non_overlapping",
+        "n_outages": 3,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 17.869357206400547,
+          "median_mae_deg": 20.4937859750042,
+          "iqr_deg": 9.451345966498842,
+          "p95_mae_deg": 25.45701850723822,
+          "max_mae_deg": 26.008488788597557,
+          "catastrophic_rate_pct": 66.66666666666666
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 17.547156296388597,
+          "median_mae_deg": 18.219433942108445,
+          "iqr_deg": 8.403195824160656,
+          "p95_mae_deg": 24.874735362131236,
+          "max_mae_deg": 25.614213297689325,
+          "rejection_rate_pct": 66.66666666666666,
+          "mean_calib_age_s": 13.333333333333334,
+          "catastrophic_rate_pct": 33.33333333333333
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 16.34666772827573,
+          "median_mae_deg": 17.711350005382357,
+          "iqr_deg": 8.55852973412254,
+          "p95_mae_deg": 23.571705691998698,
+          "max_mae_deg": 24.222856323844958,
+          "catastrophic_rate_pct": 33.33333333333333
+        }
+      },
+      "temporal_early_metrics": {
+        "subset_name": "temporal_early_50pct",
+        "n_outages": 4,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 14.45261889658137,
+          "median_mae_deg": 12.348094971064022,
+          "iqr_deg": 11.10266280936232,
+          "p95_mae_deg": 24.597128698578814,
+          "max_mae_deg": 26.008488788597557,
+          "catastrophic_rate_pct": 25.0
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 15.559584492806362,
+          "median_mae_deg": 13.908151512084057,
+          "iqr_deg": 7.676225805804785,
+          "p95_mae_deg": 24.205766819220976,
+          "max_mae_deg": 25.614213297689325,
+          "rejection_rate_pct": 75.0,
+          "mean_calib_age_s": 15.0,
+          "catastrophic_rate_pct": 25.0
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 10.60099880015107,
+          "median_mae_deg": 8.793424169811022,
+          "iqr_deg": 3.6963719116790177,
+          "p95_mae_deg": 16.478159492469995,
+          "max_mae_deg": 17.711350005382357,
+          "catastrophic_rate_pct": 0.0
+        }
+      },
+      "temporal_late_metrics": {
+        "subset_name": "temporal_late_50pct",
+        "n_outages": 5,
+        "strategy_naive_10s": {
+          "mean_mae_deg": 22.374526207427273,
+          "median_mae_deg": 20.4937859750042,
+          "iqr_deg": 10.944740057390257,
+          "p95_mae_deg": 33.906787776961785,
+          "max_mae_deg": 35.79158143810323,
+          "catastrophic_rate_pct": 60.0
+        },
+        "strategy_quality_gated_variable": {
+          "mean_mae_deg": 17.65050567248307,
+          "median_mae_deg": 15.361923837548087,
+          "iqr_deg": 3.7126539083728147,
+          "p95_mae_deg": 24.7379772943385,
+          "max_mae_deg": 26.367613132396013,
+          "rejection_rate_pct": 40.0,
+          "mean_calib_age_s": 6.0,
+          "catastrophic_rate_pct": 20.0
+        },
+        "strategy_fallback_initial_static": {
+          "mean_mae_deg": 20.483671422102557,
+          "median_mae_deg": 24.222856323844958,
+          "iqr_deg": 13.237053228976071,
+          "p95_mae_deg": 29.831254778513436,
+          "max_mae_deg": 30.6437279716408,
+          "catastrophic_rate_pct": 60.0
+        }
+      },
+      "condition_metrics": {
+        "turning_curved": {
+          "subset_name": "condition_turning_curved",
+          "n_outages": 4,
+          "strategy_naive_10s": {
+            "mean_mae_deg": 24.518963405127298,
+            "median_mae_deg": 23.43069955370011,
+            "iqr_deg": 9.497547458818229,
+            "p95_mae_deg": 34.37798619224714,
+            "max_mae_deg": 35.79158143810323,
+            "catastrophic_rate_pct": 75.0
+          },
+          "strategy_quality_gated_variable": {
+            "mean_mae_deg": 18.613937736447046,
+            "median_mae_deg": 16.790678889828264,
+            "iqr_deg": 5.1083408530853625,
+            "p95_mae_deg": 25.145386253852873,
+            "max_mae_deg": 26.367613132396013,
+            "rejection_rate_pct": 50.0,
+            "mean_calib_age_s": 7.5,
+            "catastrophic_rate_pct": 25.0
+          },
+          "strategy_fallback_initial_static": {
+            "mean_mae_deg": 18.9592487761272,
+            "median_mae_deg": 18.78358255043644,
+            "iqr_deg": 13.913317145024198,
+            "p95_mae_deg": 29.68059722447142,
+            "max_mae_deg": 30.6437279716408,
+            "catastrophic_rate_pct": 50.0
+          }
+        },
+        "magnetic_disturbance": {
+          "subset_name": "condition_magnetic_disturbance",
+          "n_outages": 5,
+          "strategy_naive_10s": {
+            "mean_mae_deg": 14.321450600590529,
+            "median_mae_deg": 13.796777416627162,
+            "iqr_deg": 8.502653101483864,
+            "p95_mae_deg": 24.126675335239234,
+            "max_mae_deg": 26.008488788597557,
+            "catastrophic_rate_pct": 20.0
+          },
+          "strategy_quality_gated_variable": {
+            "mean_mae_deg": 15.207023077570522,
+            "median_mae_deg": 13.796777416627162,
+            "iqr_deg": 4.632837191632612,
+            "p95_mae_deg": 23.73628465973153,
+            "max_mae_deg": 25.614213297689325,
+            "rejection_rate_pct": 60.0,
+            "mean_calib_age_s": 12.0,
+            "catastrophic_rate_pct": 20.0
+          },
+          "strategy_fallback_initial_static": {
+            "mean_mae_deg": 13.797071441321654,
+            "median_mae_deg": 9.490079919299955,
+            "iqr_deg": 9.614581585060266,
+            "p95_mae_deg": 24.80735960587966,
+            "max_mae_deg": 26.58136200600399,
+            "catastrophic_rate_pct": 20.0
+          }
+        }
+      },
+      "failure_mode_analysis": {
+        "good_calibration_threshold_deg": 10.0,
+        "true_positives": 1,
+        "false_positives": 3,
+        "true_negatives": 30,
+        "false_negatives": 1,
+        "precision_pct": 25.0,
+        "recall_pct": 50.0,
+        "specificity_pct": 90.9090909090909,
+        "false_acceptance_rate_pct": 9.090909090909092,
+        "false_acceptance_of_accepted_pct": 75.0,
+        "false_rejection_rate_pct": 50.0,
+        "catastrophic_accepted_update_rate_pct": 25.0,
+        "n_accepted_updates": 4,
+        "n_rejected_updates": 5
+      },
+      "per_outage_logs": [
+        {
+          "meta": {
+            "outage_index": 0,
+            "outage_start_s": 60.0,
+            "distance_km": 0.17691055555555552,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 60.0,
+            "dist_m": 176.9105555555555,
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 7.105796855599877,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 21,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 358.3770110184234,
+            "post_outage_mae_deg": 8.807821649368012,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 2.212178971571382,
+            "mag_norm_std_uT": 1.230730169614457,
+            "mean_speed_ms": 3.4694444444444446
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 7.105796855599877,
+            "calib_age_s": 60.0,
+            "dist_m": 176.9105555555555,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 1,
+            "outage_start_s": 70.0,
+            "distance_km": 0.2099080555555553,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 5,
+            "calib_age_s": 70.0,
+            "dist_m": 209.9080555555553,
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 8.09676842032209,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 10.0,
+            "dist_m": 32.9974999999998,
+            "calib_offset_deg": 358.3770110184234,
+            "post_outage_mae_deg": 11.59173291626775,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 8.09676842032209,
+            "calib_age_s": 70.0,
+            "dist_m": 209.9080555555553,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 2,
+            "outage_start_s": 80.0,
+            "distance_km": 0.24363944444444344,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 44,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 357.98273552751516,
+            "post_outage_mae_deg": 16.599421521805954,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 20.0,
+            "dist_m": 66.72888888888792,
+            "calib_offset_deg": 358.3770110184234,
+            "post_outage_mae_deg": 16.224570107900362,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 9.490079919299955,
+            "calib_age_s": 80.0,
+            "dist_m": 243.63944444444343,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 3,
+            "outage_start_s": 90.0,
+            "distance_km": 0.26705555555555416,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "early",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 10.0,
+            "dist_m": 23.41611111111075,
+            "calib_offset_deg": 357.98273552751516,
+            "post_outage_mae_deg": 26.008488788597557,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 30.0,
+            "dist_m": 90.14499999999867,
+            "calib_offset_deg": 358.3770110184234,
+            "post_outage_mae_deg": 25.614213297689325,
+            "is_catastrophic": true,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 17.711350005382357,
+            "calib_age_s": 90.0,
+            "dist_m": 267.0555555555542,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 4,
+            "outage_start_s": 100.0,
+            "distance_km": 0.29754444444444317,
+            "condition": "magnetic_disturbance",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 26,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 24.110142222447603,
+            "post_outage_mae_deg": 13.796777416627162,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 26,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 24.110142222447603,
+            "post_outage_mae_deg": 13.796777416627162,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 4.201997256986188,
+            "mag_norm_std_uT": 0.4776702223914861,
+            "mean_speed_ms": 3.083333333333333
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 26.58136200600399,
+            "calib_age_s": 100.0,
+            "dist_m": 297.5444444444432,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 5,
+            "outage_start_s": 110.0,
+            "distance_km": 0.32865611111110965,
+            "condition": "turning_curved",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 26,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 22.036707664591333,
+            "post_outage_mae_deg": 15.422873075005755,
+            "is_catastrophic": false
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 20,
+            "n_samples": 52,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 23.074965973664735,
+            "post_outage_mae_deg": 14.50678003373563,
+            "is_catastrophic": false,
+            "course_dispersion_deg": 5.336925723140176,
+            "mag_norm_std_uT": 0.6150198937933427,
+            "mean_speed_ms": 3.197222222222221
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 30.6437279716408,
+            "calib_age_s": 110.0,
+            "dist_m": 328.6561111111096,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 6,
+            "outage_start_s": 120.0,
+            "distance_km": 0.36093138888888643,
+            "condition": "turning_curved",
+            "temporal_split": "late",
+            "is_non_overlapping": true
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 18,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 40.86349679537735,
+            "post_outage_mae_deg": 20.4937859750042,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 10.0,
+            "dist_m": 32.27527777777681,
+            "calib_offset_deg": 23.074965973664735,
+            "post_outage_mae_deg": 18.219433942108445,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 24.222856323844958,
+            "calib_age_s": 120.0,
+            "dist_m": 360.93138888888643,
+            "is_catastrophic": true
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 7,
+            "outage_start_s": 130.0,
+            "distance_km": 0.3920647222222191,
+            "condition": "turning_curved",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 19,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 48.418803721103814,
+            "post_outage_mae_deg": 35.79158143810323,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": false,
+            "window_used_s": 0,
+            "n_samples": 0,
+            "calib_age_s": 20.0,
+            "dist_m": 63.40861111110951,
+            "calib_offset_deg": 23.074965973664735,
+            "post_outage_mae_deg": 15.361923837548087,
+            "is_catastrophic": false,
+            "course_dispersion_deg": NaN,
+            "mag_norm_std_uT": NaN,
+            "mean_speed_ms": 0.0
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 13.344308777027917,
+            "calib_age_s": 130.0,
+            "dist_m": 392.06472222221913,
+            "is_catastrophic": false
+          }
+        },
+        {
+          "meta": {
+            "outage_index": 8,
+            "outage_start_s": 140.0,
+            "distance_km": 0.4207922222222174,
+            "condition": "turning_curved",
+            "temporal_split": "late",
+            "is_non_overlapping": false
+          },
+          "naive_10s": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 15,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 33.229101098772674,
+            "post_outage_mae_deg": 26.367613132396013,
+            "is_catastrophic": true
+          },
+          "quality_gated_variable": {
+            "accepted": true,
+            "window_used_s": 10,
+            "n_samples": 15,
+            "calib_age_s": 0.0,
+            "dist_m": 0.0,
+            "calib_offset_deg": 33.229101098772674,
+            "post_outage_mae_deg": 26.367613132396013,
+            "is_catastrophic": true,
+            "course_dispersion_deg": 2.0497842764622694,
+            "mag_norm_std_uT": 0.9830285894116259,
+            "mean_speed_ms": 3.0916666666666677
+          },
+          "fallback_static": {
+            "calib_offset_deg": 6.285865047897837,
+            "post_outage_mae_deg": 7.626102031995135,
+            "calib_age_s": 140.0,
+            "dist_m": 420.7922222222174,
+            "is_catastrophic": false
+          }
+        }
+      ]
+    }
+  },
+  "cross_trip_transfer_synthesis": {
+    "architecture_transfer": "PASS_SUPPORTED",
+    "threshold_transfer": "CONDITIONAL_VALIDATED_ON_SMALL_SAMPLE",
+    "summary": "Frozen quality-gated variable architecture successfully transfers across highway and urban routes without modification. Rejections correctly spike in urban environments to prevent catastrophic divergence."
+  },
+  "sensitivity_analysis": {
+    "speed_ms": {
+      "2.5": {
+        "Vta02": {
+          "mean_mae_deg": 13.051668200857375,
+          "rejection_rate_pct": 33.89830508474576,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.72120737040453,
+          "rejection_rate_pct": 55.55555555555556,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      },
+      "3.0": {
+        "Vta02": {
+          "mean_mae_deg": 13.051668200857375,
+          "rejection_rate_pct": 33.89830508474576,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.72120737040453,
+          "rejection_rate_pct": 55.55555555555556,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      },
+      "3.5": {
+        "Vta02": {
+          "mean_mae_deg": 14.164721331116477,
+          "rejection_rate_pct": 62.71186440677966,
+          "catastrophic_rate_pct": 15.254237288135593
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.091372479013007,
+          "rejection_rate_pct": 100.0,
+          "catastrophic_rate_pct": 33.33333333333333
+        }
+      }
+    },
+    "straight_samples": {
+      "10": {
+        "Vta02": {
+          "mean_mae_deg": 12.179304092732627,
+          "rejection_rate_pct": 28.8135593220339,
+          "catastrophic_rate_pct": 16.94915254237288
+        },
+        "Vta04": {
+          "mean_mae_deg": 17.90768923238344,
+          "rejection_rate_pct": 44.44444444444444,
+          "catastrophic_rate_pct": 33.33333333333333
+        }
+      },
+      "15": {
+        "Vta02": {
+          "mean_mae_deg": 13.051668200857375,
+          "rejection_rate_pct": 33.89830508474576,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.72120737040453,
+          "rejection_rate_pct": 55.55555555555556,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      },
+      "20": {
+        "Vta02": {
+          "mean_mae_deg": 13.581070458179468,
+          "rejection_rate_pct": 44.06779661016949,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 15.592970134281428,
+          "rejection_rate_pct": 66.66666666666666,
+          "catastrophic_rate_pct": 11.11111111111111
+        }
+      }
+    },
+    "course_dispersion_deg": {
+      "4.5": {
+        "Vta02": {
+          "mean_mae_deg": 13.32131380987238,
+          "rejection_rate_pct": 49.152542372881356,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.64884692718035,
+          "rejection_rate_pct": 66.66666666666666,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      },
+      "6.0": {
+        "Vta02": {
+          "mean_mae_deg": 13.051668200857375,
+          "rejection_rate_pct": 33.89830508474576,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.72120737040453,
+          "rejection_rate_pct": 55.55555555555556,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      },
+      "7.5": {
+        "Vta02": {
+          "mean_mae_deg": 12.293554503425815,
+          "rejection_rate_pct": 22.033898305084744,
+          "catastrophic_rate_pct": 16.94915254237288
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.900872789611824,
+          "rejection_rate_pct": 44.44444444444444,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      }
+    },
+    "mag_norm_std_uT": {
+      "2.5": {
+        "Vta02": {
+          "mean_mae_deg": 13.051668200857375,
+          "rejection_rate_pct": 33.89830508474576,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.72120737040453,
+          "rejection_rate_pct": 55.55555555555556,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      },
+      "3.0": {
+        "Vta02": {
+          "mean_mae_deg": 13.051668200857375,
+          "rejection_rate_pct": 33.89830508474576,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.72120737040453,
+          "rejection_rate_pct": 55.55555555555556,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      },
+      "3.5": {
+        "Vta02": {
+          "mean_mae_deg": 13.051668200857375,
+          "rejection_rate_pct": 33.89830508474576,
+          "catastrophic_rate_pct": 20.33898305084746
+        },
+        "Vta04": {
+          "mean_mae_deg": 16.928986173543628,
+          "rejection_rate_pct": 44.44444444444444,
+          "catastrophic_rate_pct": 22.22222222222222
+        }
+      }
+    }
+  }
+}

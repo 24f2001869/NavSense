@@ -1,0 +1,471 @@
+{
+  "trip": "Vta02",
+  "sample_count": 10991,
+  "duration_s": 1099.1000000000001,
+  "C3_A_detector_validation": {
+    "thresholds": {
+      "window_samples": 20,
+      "window_s": 2.0,
+      "accel_std_thresh_ms2": 0.15,
+      "gyro_norm_thresh_rads": 0.05,
+      "causal": true
+    },
+    "reference_criteria": {
+      "vbox_stop_thresh_ms": 0.1,
+      "min_duration_samples": 10,
+      "min_duration_s": 1.0
+    },
+    "confusion_matrix": {
+      "true_positives": 631,
+      "false_positives": 154,
+      "false_negatives": 5,
+      "true_negatives": 10201,
+      "precision": 0.8038216560509555,
+      "recall": 0.9921383647798742,
+      "f1_score": 0.8881069669247009,
+      "iou": 0.7987341772151899,
+      "accuracy": 0.9855336184150669
+    },
+    "reference_episodes": [
+      {
+        "episode_id": 2,
+        "start_idx": 144,
+        "end_idx": 189,
+        "duration_samples": 46,
+        "duration_s": 4.6000000000000005,
+        "mean_speed_ms": 0.02534420289855072,
+        "max_speed_ms": 0.09888888888888889,
+        "first_det_t_s": 13.098,
+        "lead_time_s": 1.2989999999999995,
+        "lag_time_s": 5.899999999999999,
+        "imu_coverage_pct": 100.0
+      },
+      {
+        "episode_id": 3,
+        "start_idx": 202,
+        "end_idx": 231,
+        "duration_samples": 30,
+        "duration_s": 3.0,
+        "mean_speed_ms": 0.028777777777777767,
+        "max_speed_ms": 0.09999999999999999,
+        "first_det_t_s": 13.098,
+        "lead_time_s": 7.1,
+        "lag_time_s": 1.6999999999999993,
+        "imu_coverage_pct": 100.0
+      },
+      {
+        "episode_id": 7,
+        "start_idx": 7073,
+        "end_idx": 7531,
+        "duration_samples": 459,
+        "duration_s": 45.900000000000006,
+        "mean_speed_ms": 0.01790668119099491,
+        "max_speed_ms": 0.06388888888888888,
+        "first_det_t_s": 704.598,
+        "lead_time_s": 2.7000000000000455,
+        "lag_time_s": 0.0,
+        "imu_coverage_pct": 100.0
+      },
+      {
+        "episode_id": 9,
+        "start_idx": 9947,
+        "end_idx": 10006,
+        "duration_samples": 60,
+        "duration_s": 6.0,
+        "mean_speed_ms": 0.020814814814814803,
+        "max_speed_ms": 0.08694444444444445,
+        "first_det_t_s": 995.198,
+        "lead_time_s": -0.5,
+        "lag_time_s": 4.5,
+        "imu_coverage_pct": 91.66666666666666
+      },
+      {
+        "episode_id": 10,
+        "start_idx": 10008,
+        "end_idx": 10048,
+        "duration_samples": 41,
+        "duration_s": 4.1000000000000005,
+        "mean_speed_ms": 0.02324525745257452,
+        "max_speed_ms": 0.08499999999999999,
+        "first_det_t_s": 995.198,
+        "lead_time_s": 5.600000000000023,
+        "lag_time_s": 0.3009999999999309,
+        "imu_coverage_pct": 100.0
+      }
+    ],
+    "zupt_episodes_audit": [
+      {
+        "episode_id": 1,
+        "t_start_s": 13.098,
+        "t_end_s": 24.798,
+        "duration_s": 11.8,
+        "v_start_ms": 0.5911111111111111,
+        "v_end_ms": 1.0769444444444443,
+        "v_min_ms": 0.0030555555555555553,
+        "v_max_ms": 1.0769444444444443,
+        "category": "EARLY TRIGGER (Pre-stop motion)",
+        "ref_stop_id": 2,
+        "lead_time_s": 1.2989999999999995,
+        "lag_time_s": 5.899999999999999
+      },
+      {
+        "episode_id": 2,
+        "t_start_s": 369.798,
+        "t_end_s": 371.398,
+        "duration_s": 1.7000000000000002,
+        "v_start_ms": 2.4811111111111113,
+        "v_end_ms": 2.6311111111111107,
+        "v_min_ms": 2.265,
+        "v_max_ms": 2.6311111111111107,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      },
+      {
+        "episode_id": 3,
+        "t_start_s": 374.498,
+        "t_end_s": 375.798,
+        "duration_s": 1.4000000000000001,
+        "v_start_ms": 0.08388888888888889,
+        "v_end_ms": 0.508888888888889,
+        "v_min_ms": 0.06305555555555553,
+        "v_max_ms": 0.5469444444444445,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      },
+      {
+        "episode_id": 4,
+        "t_start_s": 611.299,
+        "t_end_s": 612.198,
+        "duration_s": 1.0,
+        "v_start_ms": 0.10388888888888889,
+        "v_end_ms": 0.3080555555555555,
+        "v_min_ms": 0.10388888888888889,
+        "v_max_ms": 0.3080555555555555,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      },
+      {
+        "episode_id": 5,
+        "t_start_s": 651.898,
+        "t_end_s": 653.697,
+        "duration_s": 1.9000000000000001,
+        "v_start_ms": 1.87,
+        "v_end_ms": 1.4211111111111112,
+        "v_min_ms": 1.175,
+        "v_max_ms": 1.87,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      },
+      {
+        "episode_id": 6,
+        "t_start_s": 655.998,
+        "t_end_s": 656.298,
+        "duration_s": 0.4,
+        "v_start_ms": 2.1599999999999997,
+        "v_end_ms": 2.4861111111111107,
+        "v_min_ms": 2.1599999999999997,
+        "v_max_ms": 2.4861111111111107,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      },
+      {
+        "episode_id": 7,
+        "t_start_s": 703.698,
+        "t_end_s": 703.698,
+        "duration_s": 0.1,
+        "v_start_ms": 2.5869444444444447,
+        "v_end_ms": 2.5869444444444447,
+        "v_min_ms": 2.5869444444444447,
+        "v_max_ms": 2.5869444444444447,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      },
+      {
+        "episode_id": 8,
+        "t_start_s": 704.598,
+        "t_end_s": 753.098,
+        "duration_s": 48.6,
+        "v_start_ms": 1.5,
+        "v_end_ms": 0.026944444444444417,
+        "v_min_ms": 0.0011111111111111111,
+        "v_max_ms": 1.5,
+        "category": "EARLY TRIGGER (Pre-stop motion)",
+        "ref_stop_id": 7,
+        "lead_time_s": 2.7000000000000455,
+        "lag_time_s": 0.0
+      },
+      {
+        "episode_id": 9,
+        "t_start_s": 889.598,
+        "t_end_s": 890.698,
+        "duration_s": 1.2000000000000002,
+        "v_start_ms": 1.8230555555555554,
+        "v_end_ms": 2.083888888888889,
+        "v_min_ms": 1.7388888888888887,
+        "v_max_ms": 2.083888888888889,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      },
+      {
+        "episode_id": 10,
+        "t_start_s": 995.198,
+        "t_end_s": 1005.098,
+        "duration_s": 10.0,
+        "v_start_ms": 0.028888888888888888,
+        "v_end_ms": 0.1438888888888889,
+        "v_min_ms": 0.0019444444444444166,
+        "v_max_ms": 0.15194444444444447,
+        "category": "LATE RELEASE (Post-stop creep)",
+        "ref_stop_id": 9,
+        "lead_time_s": -0.5,
+        "lag_time_s": 4.5
+      },
+      {
+        "episode_id": 11,
+        "t_start_s": 1098.698,
+        "t_end_s": 1098.998,
+        "duration_s": 0.4,
+        "v_start_ms": 0.05111111111111111,
+        "v_end_ms": 0.023888888888888887,
+        "v_min_ms": 0.01888888888888889,
+        "v_max_ms": 0.05111111111111111,
+        "category": "FALSE ZUPT (No stop overlap)",
+        "ref_stop_id": null,
+        "lead_time_s": null,
+        "lag_time_s": null
+      }
+    ]
+  },
+  "C3_B_and_C_benchmarks": {
+    "Full Trip Vta02": {
+      "type": "Complete Multi-Stop Mission (18.3 min)",
+      "t_start_s": 0.0,
+      "duration_s": 1099.0000000000002,
+      "true_dist_m": 11048.880890972221,
+      "C3-B0_no_zupt": {
+        "mae_ms": 191.42427634012103,
+        "rmse_ms": 211.64723723587264,
+        "final_err_ms": 220.58133014971241,
+        "final_pos_err_m": 210198.80295396637,
+        "drift_pct": 1902.4442839791568
+      },
+      "C3-B1_raw_imu_zupt": {
+        "mae_ms": 50.520866014419454,
+        "rmse_ms": 70.13067392369855,
+        "final_err_ms": -0.023888888888888887,
+        "final_pos_err_m": 42497.54387660822,
+        "drift_pct": 384.63211157730876,
+        "zupt_applied_count": 785,
+        "zupt_fraction": 0.07142207260485853
+      },
+      "C3-B2_oracle_valid_zupt": {
+        "mae_ms": 115.19041452523399,
+        "rmse_ms": 159.26055738007062,
+        "final_err_ms": -9.644901531378181,
+        "final_pos_err_m": 111552.07375937609,
+        "drift_pct": 1009.6232809471468,
+        "zupt_applied_count": 636,
+        "zupt_fraction": 0.057865526339732506
+      },
+      "comparisons": {
+        "raw_vs_none_mae_pct": -73.60791066820886,
+        "oracle_vs_none_mae_pct": -39.824552701683125,
+        "raw_vs_oracle_mae_diff": -64.66954851081454
+      }
+    },
+    "Segment 1: Early Stops": {
+      "type": "Stop-Containing (Stops 1 & 2 at 14.4-23.1 s)",
+      "t_start_s": 0.0,
+      "duration_s": 40.0,
+      "true_dist_m": 151.41062916666664,
+      "C3-B0_no_zupt": {
+        "mae_ms": 2.402225449949646,
+        "rmse_ms": 3.0372972180308446,
+        "final_err_ms": 2.2484266504566985,
+        "final_pos_err_m": -88.3732857430914,
+        "drift_pct": 58.36663266606844
+      },
+      "C3-B1_raw_imu_zupt": {
+        "mae_ms": 1.2829886538079365,
+        "rmse_ms": 2.086212400516392,
+        "final_err_ms": 3.029553437543891,
+        "final_pos_err_m": -32.14789568476144,
+        "drift_pct": 21.232258172161973,
+        "zupt_applied_count": 118,
+        "zupt_fraction": 0.2942643391521197
+      },
+      "C3-B2_oracle_valid_zupt": {
+        "mae_ms": 1.874184196860789,
+        "rmse_ms": 2.622679874312677,
+        "final_err_ms": 4.9708567199067435,
+        "final_pos_err_m": -7.682806969855618,
+        "drift_pct": 5.074152991860761,
+        "zupt_applied_count": 76,
+        "zupt_fraction": 0.18952618453865336
+      },
+      "comparisons": {
+        "raw_vs_none_mae_pct": -46.59166341631966,
+        "oracle_vs_none_mae_pct": -21.98133622720238,
+        "raw_vs_oracle_mae_diff": -0.5911955430528526
+      }
+    },
+    "Segment 2: Major Intersection Stop": {
+      "type": "Stop-Containing (Major 45.9 s Stop 3 at 707.3-753.1 s)",
+      "t_start_s": 680.0,
+      "duration_s": 100.0,
+      "true_dist_m": 500.75285013888924,
+      "C3-B0_no_zupt": {
+        "mae_ms": 19.103064831054915,
+        "rmse_ms": 20.82949710552197,
+        "final_err_ms": -36.765458971394445,
+        "final_pos_err_m": -1910.376668971906,
+        "drift_pct": 381.5009077715768
+      },
+      "C3-B1_raw_imu_zupt": {
+        "mae_ms": 6.293248134603258,
+        "rmse_ms": 9.52058006313974,
+        "final_err_ms": -18.989315351144757,
+        "final_pos_err_m": -629.0028248381095,
+        "drift_pct": 125.61143179986868,
+        "zupt_applied_count": 487,
+        "zupt_fraction": 0.4865134865134865
+      },
+      "C3-B2_oracle_valid_zupt": {
+        "mae_ms": 6.705459641422481,
+        "rmse_ms": 9.809339878477413,
+        "final_err_ms": -18.989315351144757,
+        "final_pos_err_m": -670.2651966707137,
+        "drift_pct": 133.85149909477468,
+        "zupt_applied_count": 459,
+        "zupt_fraction": 0.45854145854145856
+      },
+      "comparisons": {
+        "raw_vs_none_mae_pct": -67.05634310379017,
+        "oracle_vs_none_mae_pct": -64.89851392577727,
+        "raw_vs_oracle_mae_diff": -0.41221150681922314
+      }
+    },
+    "Segment 3: Late Stops": {
+      "type": "Stop-Containing (Stops 4 & 5 at 994.7-1004.8 s)",
+      "t_start_s": 970.0,
+      "duration_s": 60.0,
+      "true_dist_m": 448.57647763888923,
+      "C3-B0_no_zupt": {
+        "mae_ms": 3.181586085159254,
+        "rmse_ms": 4.00757749686304,
+        "final_err_ms": -2.8683874419668545,
+        "final_pos_err_m": -37.953129764789246,
+        "drift_pct": 8.460793567366249
+      },
+      "C3-B1_raw_imu_zupt": {
+        "mae_ms": 4.889828637682091,
+        "rmse_ms": 7.465873351908281,
+        "final_err_ms": -10.336146793182014,
+        "final_pos_err_m": -277.14492210407695,
+        "drift_pct": 61.783204407606675,
+        "zupt_applied_count": 100,
+        "zupt_fraction": 0.16638935108153077
+      },
+      "C3-B2_oracle_valid_zupt": {
+        "mae_ms": 4.771862770800164,
+        "rmse_ms": 7.3183856847720685,
+        "final_err_ms": -10.10394699069169,
+        "final_pos_err_m": -273.0478203347597,
+        "drift_pct": 60.86984805176684,
+        "zupt_applied_count": 101,
+        "zupt_fraction": 0.16805324459234608
+      },
+      "comparisons": {
+        "raw_vs_none_mae_pct": 53.69153959061682,
+        "oracle_vs_none_mae_pct": 49.983770455210184,
+        "raw_vs_oracle_mae_diff": 0.117965866881927
+      }
+    },
+    "Segment 4: Highway Cruise 1": {
+      "type": "Continuous Driving (Zero Stops for 320 s)",
+      "t_start_s": 40.0,
+      "duration_s": 320.0,
+      "true_dist_m": 4480.873334166667,
+      "C3-B0_no_zupt": {
+        "mae_ms": 83.05281980537787,
+        "rmse_ms": 92.48940126152287,
+        "final_err_ms": 144.44953336207868,
+        "final_pos_err_m": 26577.98514303332,
+        "drift_pct": 593.1429692594999
+      },
+      "C3-B1_raw_imu_zupt": {
+        "mae_ms": 83.05281980537787,
+        "rmse_ms": 92.48940126152287,
+        "final_err_ms": 144.44953336207868,
+        "final_pos_err_m": 26577.98514303332,
+        "drift_pct": 593.1429692594999,
+        "zupt_applied_count": 0,
+        "zupt_fraction": 0.0
+      },
+      "C3-B2_oracle_valid_zupt": {
+        "mae_ms": 83.05281980537787,
+        "rmse_ms": 92.48940126152287,
+        "final_err_ms": 144.44953336207868,
+        "final_pos_err_m": 26577.98514303332,
+        "drift_pct": 593.1429692594999,
+        "zupt_applied_count": 0,
+        "zupt_fraction": 0.0
+      },
+      "comparisons": {
+        "raw_vs_none_mae_pct": 0.0,
+        "oracle_vs_none_mae_pct": 0.0,
+        "raw_vs_oracle_mae_diff": 0.0
+      }
+    },
+    "Segment 5: Highway Cruise 2": {
+      "type": "Continuous Driving (Zero Stops for 220 s)",
+      "t_start_s": 380.0,
+      "duration_s": 220.0,
+      "true_dist_m": 2425.8407012500006,
+      "C3-B0_no_zupt": {
+        "mae_ms": 79.60601836022106,
+        "rmse_ms": 89.69559580155416,
+        "final_err_ms": 147.16175671166292,
+        "final_pos_err_m": 17513.890464167816,
+        "drift_pct": 721.971993261683
+      },
+      "C3-B1_raw_imu_zupt": {
+        "mae_ms": 79.60601836022106,
+        "rmse_ms": 89.69559580155416,
+        "final_err_ms": 147.16175671166292,
+        "final_pos_err_m": 17513.890464167816,
+        "drift_pct": 721.971993261683,
+        "zupt_applied_count": 0,
+        "zupt_fraction": 0.0
+      },
+      "C3-B2_oracle_valid_zupt": {
+        "mae_ms": 79.60601836022106,
+        "rmse_ms": 89.69559580155416,
+        "final_err_ms": 147.16175671166292,
+        "final_pos_err_m": 17513.890464167816,
+        "drift_pct": 721.971993261683,
+        "zupt_applied_count": 0,
+        "zupt_fraction": 0.0
+      },
+      "comparisons": {
+        "raw_vs_none_mae_pct": 0.0,
+        "oracle_vs_none_mae_pct": 0.0,
+        "raw_vs_oracle_mae_diff": 0.0
+      }
+    }
+  }
+}

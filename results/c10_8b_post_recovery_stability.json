@@ -1,0 +1,1070 @@
+[
+  {
+    "episode": "Trip 1 Ep 2",
+    "trip": "Trip 1",
+    "ep_idx": 2,
+    "duration_s": 94.301,
+    "t_recovery_s": 5.677999973297119,
+    "epoch_recovery": 48,
+    "trajectory_class": "PARTIAL RECOVERY",
+    "class_reason": "Partial stabilization: peak |v_U|=40.1 m/s, drift=-282.8m",
+    "pre_update": {
+      "r_vert_ms": 2.582614257508651,
+      "vel_u_ms": -2.173931612105119,
+      "pos_u_m": -44.958535903058475,
+      "pitch_deg": -0.3505730449582469,
+      "roll_deg": 3.48605187626207,
+      "yaw_deg": 358.591124127626,
+      "omega_norm_rad_s": 0.20221681853891382,
+      "omega_z_deg_s": 0.015469860468532227,
+      "dyn_accel_mps2": 1.307432184187137,
+      "S_cov": 1.7810990423240969,
+      "sigma_S_ms": 1.3345782263786925,
+      "nis": 3.744820610528,
+      "P_vu_vu": 1.4463594589122428,
+      "sigma_vu_ms": 1.2026468554452063,
+      "P_att_trace": 0.019323255702823606,
+      "K_vu": 0.8324472549976006,
+      "gamma_huber": 1.0,
+      "delta_vu_kick": 2.149890149380743
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -0.024041462724376128,
+      "pos_u_m": -44.958535903058475,
+      "P_vu_vu": 0.21211404768741232,
+      "delta_vu_actual": 2.149890149380743
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 6.261999845504761,
+        "vel_u": 0.48234555111554933,
+        "pos_u": -41.25148458098929,
+        "delta_pos_u_from_rec": 3.7070513220691836,
+        "r_vert": 0.08666145940301895,
+        "nis": 0.022978775383804526,
+        "vnhc_active": true
+      },
+      "plus_1.0s": {
+        "t_s": 6.734999895095825,
+        "vel_u": 0.5618591619787698,
+        "pos_u": -41.31933752236518,
+        "delta_pos_u_from_rec": 3.639198380693294,
+        "r_vert": 0.13029127989341482,
+        "nis": 0.05340664894113099,
+        "vnhc_active": true
+      },
+      "plus_2.0s": {
+        "t_s": 7.790999889373779,
+        "vel_u": 0.9437468005516774,
+        "pos_u": -40.58515444442849,
+        "delta_pos_u_from_rec": 4.373381458629986,
+        "r_vert": 0.37159746757126455,
+        "nis": 0.38397685332248715,
+        "vnhc_active": true
+      },
+      "plus_5.0s": {
+        "t_s": 10.692999839782715,
+        "vel_u": -0.2900742038900051,
+        "pos_u": -39.461367775496534,
+        "delta_pos_u_from_rec": 5.497168127561942,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_10.0s": {
+        "t_s": 15.702999830245972,
+        "vel_u": 0.09323227429435527,
+        "pos_u": -38.58532237726758,
+        "delta_pos_u_from_rec": 6.373213525790895,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 40.144232884980035,
+      "time_to_vu_lt_1mps_s": 0.0,
+      "time_to_vu_lt_05mps_s": 0.0,
+      "post_rec_delta_u_m": -282.7756085806443,
+      "total_delta_u_m": -291.5605737032387,
+      "final_horiz_err_m": 5348.917333210616,
+      "max_pitch_dev_deg": 41.89578594269314,
+      "max_roll_dev_deg": 53.700252086309646
+    }
+  },
+  {
+    "episode": "Trip 1 Ep 3",
+    "trip": "Trip 1",
+    "ep_idx": 3,
+    "duration_s": 132.432,
+    "t_recovery_s": 0.24600005149841309,
+    "epoch_recovery": 2,
+    "trajectory_class": "DESTABILIZATION",
+    "class_reason": "Instability: peak |v_U| reached 97.5 m/s, drift reached 153.4m",
+    "pre_update": {
+      "r_vert_ms": 0.4532129140626597,
+      "vel_u_ms": -0.4280877632795685,
+      "pos_u_m": -45.611391485797554,
+      "pitch_deg": 0.13801465874346336,
+      "roll_deg": -0.429287102672284,
+      "yaw_deg": 359.9362187945038,
+      "omega_norm_rad_s": 0.025859042905722555,
+      "omega_z_deg_s": 0.43487496650429486,
+      "dyn_accel_mps2": 0.0635610338955086,
+      "S_cov": 0.3265145146213304,
+      "sigma_S_ms": 0.5714144858343464,
+      "nis": 0.6290744707364055,
+      "P_vu_vu": 0.07659017139686072,
+      "sigma_vu_ms": 0.276749293399027,
+      "P_att_trace": 0.010335520589183453,
+      "K_vu": 0.2344476383606172,
+      "gamma_huber": 1.0,
+      "delta_vu_kick": 0.10625469737652392
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -0.32183306590304456,
+      "pos_u_m": -45.611391485797554,
+      "P_vu_vu": 0.05864307412972741,
+      "delta_vu_actual": 0.10625469737652393
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 0.8459999561309814,
+        "vel_u": -0.46097427673914565,
+        "pos_u": -45.93112490309059,
+        "delta_pos_u_from_rec": -0.31973341729303684,
+        "r_vert": 0.6166250529071482,
+        "nis": 1.2015439415489821,
+        "vnhc_active": true
+      },
+      "plus_1.0s": {
+        "t_s": 1.3240001201629639,
+        "vel_u": -0.5533776667371062,
+        "pos_u": -46.167709427914595,
+        "delta_pos_u_from_rec": -0.5563179421170403,
+        "r_vert": 0.7158996145032758,
+        "nis": 1.6157222993561906,
+        "vnhc_active": true
+      },
+      "plus_2.0s": {
+        "t_s": 2.2639999389648438,
+        "vel_u": -0.24664459052748833,
+        "pos_u": -46.481179599997176,
+        "delta_pos_u_from_rec": -0.869788114199622,
+        "r_vert": 0.49239332214587084,
+        "nis": 0.7610849439406018,
+        "vnhc_active": true
+      },
+      "plus_5.0s": {
+        "t_s": 5.302000045776367,
+        "vel_u": 0.2732213858204419,
+        "pos_u": -46.75457958149545,
+        "delta_pos_u_from_rec": -1.1431880956978944,
+        "r_vert": 0.24487029758662424,
+        "nis": 0.1889492243645564,
+        "vnhc_active": true
+      },
+      "plus_10.0s": {
+        "t_s": 10.285000085830688,
+        "vel_u": 2.023934001634822,
+        "pos_u": -39.96066849671482,
+        "delta_pos_u_from_rec": 5.6507229890827375,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 97.4650177960327,
+      "time_to_vu_lt_1mps_s": 0.0,
+      "time_to_vu_lt_05mps_s": 0.0,
+      "post_rec_delta_u_m": 153.41051540677313,
+      "total_delta_u_m": 153.33168852945826,
+      "final_horiz_err_m": 5470.060700659392,
+      "max_pitch_dev_deg": 34.995681610321725,
+      "max_roll_dev_deg": 34.6051690873499
+    }
+  },
+  {
+    "episode": "Trip 1 Ep 4",
+    "trip": "Trip 1",
+    "ep_idx": 4,
+    "duration_s": 128.581,
+    "t_recovery_s": 0.2109999656677246,
+    "epoch_recovery": 2,
+    "trajectory_class": "DESTABILIZATION",
+    "class_reason": "Instability: peak |v_U| reached 76.3 m/s, drift reached 1454.8m",
+    "pre_update": {
+      "r_vert_ms": 0.10669440329368525,
+      "vel_u_ms": -0.09516435452665374,
+      "pos_u_m": -33.97676050612198,
+      "pitch_deg": 0.04336263742746817,
+      "roll_deg": 1.0270583917779061,
+      "yaw_deg": 11.11584391322044,
+      "omega_norm_rad_s": 0.03261783101311306,
+      "omega_z_deg_s": 1.3046248995128844,
+      "dyn_accel_mps2": 0.7115722209823527,
+      "S_cov": 0.32217296421836816,
+      "sigma_S_ms": 0.5676028225954908,
+      "nis": 0.03533411228907373,
+      "P_vu_vu": 0.0720644754851783,
+      "sigma_vu_ms": 0.2684482733883351,
+      "P_att_trace": 0.006223471518151358,
+      "K_vu": 0.22382650283662786,
+      "gamma_huber": 1.0,
+      "delta_vu_kick": 0.02388103516146636
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -0.07128331936518738,
+      "pos_u_m": -33.97676050612198,
+      "P_vu_vu": 0.05592415658548583,
+      "delta_vu_actual": 0.023881035161466363
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 0.7880001068115234,
+        "vel_u": -0.13232877739280027,
+        "pos_u": -34.0525550844384,
+        "delta_pos_u_from_rec": -0.075794578316426,
+        "r_vert": 0.1996365125040254,
+        "nis": 0.12669451685787686,
+        "vnhc_active": true
+      },
+      "plus_1.0s": {
+        "t_s": 1.261000156402588,
+        "vel_u": -0.14275535534510625,
+        "pos_u": -34.11908002287274,
+        "delta_pos_u_from_rec": -0.14231951675076004,
+        "r_vert": 0.26400837679971817,
+        "nis": 0.22094527838646133,
+        "vnhc_active": true
+      },
+      "plus_2.0s": {
+        "t_s": 2.3010001182556152,
+        "vel_u": -0.05664062572933241,
+        "pos_u": -34.169356465793236,
+        "delta_pos_u_from_rec": -0.19259595967125875,
+        "r_vert": 0.20021108692134246,
+        "nis": 0.12749571830918385,
+        "vnhc_active": true
+      },
+      "plus_5.0s": {
+        "t_s": 5.259999990463257,
+        "vel_u": 0.15045225130560022,
+        "pos_u": -33.89701497514687,
+        "delta_pos_u_from_rec": 0.07974553097511006,
+        "r_vert": 0.08988344567702247,
+        "nis": 0.02540896514560045,
+        "vnhc_active": true
+      },
+      "plus_10.0s": {
+        "t_s": 10.220999956130981,
+        "vel_u": 0.06518889975335058,
+        "pos_u": -33.225481268515054,
+        "delta_pos_u_from_rec": 0.7512792376069228,
+        "r_vert": 0.08262318161256021,
+        "nis": 0.02161399176861159,
+        "vnhc_active": true
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 76.31827484669148,
+      "time_to_vu_lt_1mps_s": 0.0,
+      "time_to_vu_lt_05mps_s": 0.0,
+      "post_rec_delta_u_m": 1454.788847186959,
+      "total_delta_u_m": 1454.7889904055953,
+      "final_horiz_err_m": 5071.47908332913,
+      "max_pitch_dev_deg": 53.14748759769784,
+      "max_roll_dev_deg": 40.58429732966742
+    }
+  },
+  {
+    "episode": "Trip 1 Ep 5",
+    "trip": "Trip 1",
+    "ep_idx": 5,
+    "duration_s": 125.063,
+    "t_recovery_s": 28.197999954223633,
+    "epoch_recovery": 244,
+    "trajectory_class": "PARTIAL RECOVERY",
+    "class_reason": "Partial stabilization: peak |v_U|=9.9 m/s, drift=81.1m",
+    "pre_update": {
+      "r_vert_ms": 6.699915222560305,
+      "vel_u_ms": 7.6220706968328615,
+      "pos_u_m": 29.006125864378394,
+      "pitch_deg": 45.97963657619232,
+      "roll_deg": 10.674480099090593,
+      "yaw_deg": 356.69432963324584,
+      "omega_norm_rad_s": 0.16461114269696325,
+      "omega_z_deg_s": 0.8084434489295915,
+      "dyn_accel_mps2": 0.08445160980626198,
+      "S_cov": 2.0519608969729006,
+      "sigma_S_ms": 1.4324667175794699,
+      "nis": 21.876081584067403,
+      "P_vu_vu": 1.2707935852365717,
+      "sigma_vu_ms": 1.1272948084847068,
+      "P_att_trace": 0.058781779871086653,
+      "K_vu": 0.1610047620302755,
+      "gamma_huber": 0.4276074159135605,
+      "delta_vu_kick": -1.0787182560313422
+    },
+    "immediate_post_update": {
+      "vel_u_ms": 6.543352440801519,
+      "pos_u_m": 29.006125864378394,
+      "P_vu_vu": 1.0751965437889424,
+      "delta_vu_actual": -1.0787182560313422
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 28.756999969482422,
+        "vel_u": 3.89326586425689,
+        "pos_u": 25.487759312595532,
+        "delta_pos_u_from_rec": -3.5183665517828615,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_1.0s": {
+        "t_s": 29.30399990081787,
+        "vel_u": 3.878129442654936,
+        "pos_u": 28.255875584829717,
+        "delta_pos_u_from_rec": -0.750250279548677,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_2.0s": {
+        "t_s": 30.293999910354614,
+        "vel_u": 4.625440056235838,
+        "pos_u": 32.574684528385674,
+        "delta_pos_u_from_rec": 3.5685586640072806,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_5.0s": {
+        "t_s": 33.294999837875366,
+        "vel_u": 3.09179335440555,
+        "pos_u": 33.221140138583586,
+        "delta_pos_u_from_rec": 4.215014274205192,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_10.0s": {
+        "t_s": 38.27199983596802,
+        "vel_u": 3.3192143616860976,
+        "pos_u": 38.22628028963866,
+        "delta_pos_u_from_rec": 9.220154425260265,
+        "r_vert": 3.242377065656254,
+        "nis": 20.87505387546631,
+        "vnhc_active": true
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 9.870118866677505,
+      "time_to_vu_lt_1mps_s": 29.954999923706055,
+      "time_to_vu_lt_05mps_s": 30.983999967575073,
+      "post_rec_delta_u_m": 81.13298841984802,
+      "total_delta_u_m": 131.99540447090135,
+      "final_horiz_err_m": 482.5971233451605,
+      "max_pitch_dev_deg": 40.49082060528234,
+      "max_roll_dev_deg": 46.16669225205886
+    }
+  },
+  {
+    "episode": "Trip 1 Ep 6",
+    "trip": "Trip 1",
+    "ep_idx": 6,
+    "duration_s": 24.89,
+    "t_recovery_s": 0.9889998435974121,
+    "epoch_recovery": 2,
+    "trajectory_class": "PARTIAL RECOVERY",
+    "class_reason": "Partial stabilization: peak |v_U|=25.2 m/s, drift=-54.3m",
+    "pre_update": {
+      "r_vert_ms": 0.9813336575188429,
+      "vel_u_ms": -1.007849660650229,
+      "pos_u_m": -38.95876468395777,
+      "pitch_deg": -9.480605169862914,
+      "roll_deg": -9.97298085471041,
+      "yaw_deg": 1.4590193758170187,
+      "omega_norm_rad_s": 0.3847785991969928,
+      "omega_z_deg_s": 2.4488216163891385,
+      "dyn_accel_mps2": 0.04747071246390533,
+      "S_cov": 0.3671216153870626,
+      "sigma_S_ms": 0.6059056159065227,
+      "nis": 2.6231518576316617,
+      "P_vu_vu": 0.12520875383907976,
+      "sigma_vu_ms": 0.35384848994884766,
+      "P_att_trace": 0.01049168124337085,
+      "K_vu": 0.3211818511235065,
+      "gamma_huber": 1.0,
+      "delta_vu_kick": 0.31518656069170314
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -0.6926630999585258,
+      "pos_u_m": -38.95876468395777,
+      "P_vu_vu": 0.0873373024583133,
+      "delta_vu_actual": 0.31518656069170314
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 1.5820000171661377,
+        "vel_u": -3.422507502704591,
+        "pos_u": -40.24149103432193,
+        "delta_pos_u_from_rec": -1.2827263503641646,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_1.0s": {
+        "t_s": 2.069999933242798,
+        "vel_u": -4.667476412570091,
+        "pos_u": -42.11297781485489,
+        "delta_pos_u_from_rec": -3.1542131308971193,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_2.0s": {
+        "t_s": 3.1089999675750732,
+        "vel_u": -8.207446091227844,
+        "pos_u": -46.138554796251185,
+        "delta_pos_u_from_rec": -7.179790112293418,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_5.0s": {
+        "t_s": 6.0950000286102295,
+        "vel_u": -3.2029591245201208,
+        "pos_u": -55.984694348311926,
+        "delta_pos_u_from_rec": -17.02592966435416,
+        "r_vert": 1.70014361221505,
+        "nis": 5.909197637176888,
+        "vnhc_active": true
+      },
+      "plus_10.0s": {
+        "t_s": 11.096999883651733,
+        "vel_u": -1.3459168954999643,
+        "pos_u": -48.13958000834378,
+        "delta_pos_u_from_rec": -9.18081532438601,
+        "r_vert": 1.2980334349015155,
+        "nis": 4.203292015008948,
+        "vnhc_active": true
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 25.189218095317802,
+      "time_to_vu_lt_1mps_s": 0.0,
+      "time_to_vu_lt_05mps_s": 7.114000082015991,
+      "post_rec_delta_u_m": -54.31377510022149,
+      "total_delta_u_m": -54.68306345463944,
+      "final_horiz_err_m": 194.06489767349828,
+      "max_pitch_dev_deg": 88.7084180219697,
+      "max_roll_dev_deg": 180.90786974567283
+    }
+  },
+  {
+    "episode": "Trip 1 Ep 8",
+    "trip": "Trip 1",
+    "ep_idx": 8,
+    "duration_s": 39.931,
+    "t_recovery_s": 38.14800000190735,
+    "epoch_recovery": 339,
+    "trajectory_class": "DESTABILIZATION",
+    "class_reason": "Instability: peak |v_U| reached 269.0 m/s, drift reached 483.6m",
+    "pre_update": {
+      "r_vert_ms": 299.8047230721804,
+      "vel_u_ms": 161.56009093631204,
+      "pos_u_m": 4073.852077416139,
+      "pitch_deg": -38.634716617863276,
+      "roll_deg": -90.25473632691927,
+      "yaw_deg": 226.50174439788137,
+      "omega_norm_rad_s": 0.006516855069740312,
+      "omega_z_deg_s": 0.007448451336700701,
+      "dyn_accel_mps2": 0.5748066024581817,
+      "S_cov": 25.361577931295063,
+      "sigma_S_ms": 5.036027991512266,
+      "nis": 3544.0567704375885,
+      "P_vu_vu": 31724.876614364992,
+      "sigma_vu_ms": 178.11478494040014,
+      "P_att_trace": 997.602315374652,
+      "K_vu": -0.15906204323302897,
+      "gamma_huber": 0.03359538795724576,
+      "delta_vu_kick": 47.68755182277344
+    },
+    "immediate_post_update": {
+      "vel_u_ms": 209.24764275908547,
+      "pos_u_m": 4073.852077416139,
+      "P_vu_vu": 31687.318601360374,
+      "delta_vu_actual": 47.68755182277343
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 38.72000002861023,
+        "vel_u": 239.37946765543916,
+        "pos_u": 4311.029856046936,
+        "delta_pos_u_from_rec": 237.17777863079755,
+        "r_vert": 258.60458885741554,
+        "nis": 3702.572779235599,
+        "vnhc_active": true
+      },
+      "plus_1.0s": {
+        "t_s": 39.16199994087219,
+        "vel_u": 204.3276867524278,
+        "pos_u": 4409.846455421761,
+        "delta_pos_u_from_rec": 335.9943780056219,
+        "r_vert": 230.64883836329207,
+        "nis": 3731.066404908405,
+        "vnhc_active": true
+      },
+      "plus_2.0s": null,
+      "plus_5.0s": null,
+      "plus_10.0s": null
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 268.95171707931587,
+      "time_to_vu_lt_1mps_s": null,
+      "time_to_vu_lt_05mps_s": null,
+      "post_rec_delta_u_m": 483.5582270643208,
+      "total_delta_u_m": 4591.462421862106,
+      "final_horiz_err_m": 5234.568378648908,
+      "max_pitch_dev_deg": 0.017234197150742148,
+      "max_roll_dev_deg": 0.1967025915172229
+    }
+  },
+  {
+    "episode": "Trip 1 Ep 9",
+    "trip": "Trip 1",
+    "ep_idx": 9,
+    "duration_s": 40.644,
+    "t_recovery_s": 1.001000165939331,
+    "epoch_recovery": 1,
+    "trajectory_class": "PARTIAL RECOVERY",
+    "class_reason": "Partial stabilization: peak |v_U|=16.7 m/s, drift=-69.1m",
+    "pre_update": {
+      "r_vert_ms": 3.406185400045222,
+      "vel_u_ms": -3.411231754762353,
+      "pos_u_m": -39.05238162226357,
+      "pitch_deg": -0.3213947367231523,
+      "roll_deg": 0.2934577679431868,
+      "yaw_deg": 359.394846505957,
+      "omega_norm_rad_s": 0.026152875558913213,
+      "omega_z_deg_s": 1.1441967168762541,
+      "dyn_accel_mps2": 0.31845281263376,
+      "S_cov": 0.3848663578806716,
+      "sigma_S_ms": 0.6203759810636382,
+      "nis": 30.1457863019518,
+      "P_vu_vu": 0.13483748471293724,
+      "sigma_vu_ms": 0.36720223952603726,
+      "P_att_trace": 0.01055458667536234,
+      "K_vu": 0.12762556428009553,
+      "gamma_huber": 0.3642643650902865,
+      "delta_vu_kick": 0.4347163337233944
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -2.9765154210389584,
+      "pos_u_m": -39.05238162226357,
+      "P_vu_vu": 0.10668726894718218,
+      "delta_vu_actual": 0.4347163337233946
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 1.621000051498413,
+        "vel_u": -3.8209026405676005,
+        "pos_u": -41.120194498070596,
+        "delta_pos_u_from_rec": -2.0678128758070287,
+        "r_vert": 4.263320730215599,
+        "nis": 45.85167239870029,
+        "vnhc_active": true
+      },
+      "plus_1.0s": {
+        "t_s": 2.0970001220703125,
+        "vel_u": -4.205911043522263,
+        "pos_u": -42.95896359491915,
+        "delta_pos_u_from_rec": -3.90658197265558,
+        "r_vert": 4.652212208369203,
+        "nis": 51.99856578542134,
+        "vnhc_active": true
+      },
+      "plus_2.0s": {
+        "t_s": 3.883000135421753,
+        "vel_u": -7.396724493002594,
+        "pos_u": -48.93836053160798,
+        "delta_pos_u_from_rec": -9.88597890934441,
+        "r_vert": 8.249365954720941,
+        "nis": 92.4033634076377,
+        "vnhc_active": true
+      },
+      "plus_5.0s": {
+        "t_s": 6.881999969482422,
+        "vel_u": -5.859899364425159,
+        "pos_u": -58.67531403962464,
+        "delta_pos_u_from_rec": -19.62293241736107,
+        "r_vert": 7.621677068897852,
+        "nis": 61.21344427570118,
+        "vnhc_active": true
+      },
+      "plus_10.0s": {
+        "t_s": 12.004000186920166,
+        "vel_u": -3.3643845454156596,
+        "pos_u": -50.198898389738815,
+        "delta_pos_u_from_rec": -11.146516767475248,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 16.71983815755689,
+      "time_to_vu_lt_1mps_s": 12.980999946594238,
+      "time_to_vu_lt_05mps_s": 14.34499979019165,
+      "post_rec_delta_u_m": -69.09670342182511,
+      "total_delta_u_m": -70.12371361472623,
+      "final_horiz_err_m": 718.2738918880148,
+      "max_pitch_dev_deg": 35.81071126650899,
+      "max_roll_dev_deg": 44.55021580169305
+    }
+  },
+  {
+    "episode": "Trip 2 Ep 1",
+    "trip": "Trip 2",
+    "ep_idx": 1,
+    "duration_s": 2.428,
+    "t_recovery_s": 1.0789999961853027,
+    "epoch_recovery": 9,
+    "trajectory_class": "PARTIAL RECOVERY",
+    "class_reason": "Partial stabilization: peak |v_U|=5.2 m/s, drift=-4.8m",
+    "pre_update": {
+      "r_vert_ms": 3.821673329071527,
+      "vel_u_ms": -3.1295834172105272,
+      "pos_u_m": -19.09790345247089,
+      "pitch_deg": -0.03398710786015465,
+      "roll_deg": 5.568055019873559,
+      "yaw_deg": 349.2818404446112,
+      "omega_norm_rad_s": 0.3571286833901752,
+      "omega_z_deg_s": 1.4954198452914487,
+      "dyn_accel_mps2": 0.47719594107159935,
+      "S_cov": 0.5179412264620578,
+      "sigma_S_ms": 0.7196813367470757,
+      "nis": 28.198541239710647,
+      "P_vu_vu": 0.2511976944135995,
+      "sigma_vu_ms": 0.501196263367555,
+      "P_att_trace": 0.01015039679694135,
+      "K_vu": 0.18787534625853605,
+      "gamma_huber": 0.37663153010617045,
+      "delta_vu_kick": 0.7179981999863253
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -2.411585217224202,
+      "pos_u_m": -19.09790345247089,
+      "P_vu_vu": 0.17239873166297034,
+      "delta_vu_actual": 0.7179981999863254
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 1.6080000400543213,
+        "vel_u": -3.3653563486383233,
+        "pos_u": -20.583008552686515,
+        "delta_pos_u_from_rec": -1.4851051002156233,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_1.0s": {
+        "t_s": 2.0870001316070557,
+        "vel_u": -4.418217909760562,
+        "pos_u": -22.346283163385145,
+        "delta_pos_u_from_rec": -3.2483797109142536,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_2.0s": null,
+      "plus_5.0s": null,
+      "plus_10.0s": null
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 5.199548932378654,
+      "time_to_vu_lt_1mps_s": null,
+      "time_to_vu_lt_05mps_s": null,
+      "post_rec_delta_u_m": -4.782075386430773,
+      "total_delta_u_m": -6.490433961380042,
+      "final_horiz_err_m": 8540570.702522699,
+      "max_pitch_dev_deg": 3.6979654179097015,
+      "max_roll_dev_deg": 4.007819665443426
+    }
+  },
+  {
+    "episode": "Trip 2 Ep 2",
+    "trip": "Trip 2",
+    "ep_idx": 2,
+    "duration_s": 161.654,
+    "t_recovery_s": 2.0439999103546143,
+    "epoch_recovery": 17,
+    "trajectory_class": "DESTABILIZATION",
+    "class_reason": "Instability: peak |v_U| reached 180.7 m/s, drift reached 7522.4m",
+    "pre_update": {
+      "r_vert_ms": 1.4247722275932222,
+      "vel_u_ms": -2.6206886298933467,
+      "pos_u_m": 22.308633464425068,
+      "pitch_deg": -8.767311632089642,
+      "roll_deg": -7.564137371314749,
+      "yaw_deg": 359.8702639040314,
+      "omega_norm_rad_s": 0.12735683805748318,
+      "omega_z_deg_s": 0.5339966650619272,
+      "dyn_accel_mps2": 0.3246287075551013,
+      "S_cov": 0.6329864516118637,
+      "sigma_S_ms": 0.7956044567571651,
+      "nis": 3.2069815955013494,
+      "P_vu_vu": 0.39840071612911165,
+      "sigma_vu_ms": 0.6311899208076058,
+      "P_att_trace": 0.010479624233381783,
+      "K_vu": 0.6070989351638525,
+      "gamma_huber": 1.0,
+      "delta_vu_kick": 0.8649777022228753
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -1.7557109276704714,
+      "pos_u_m": 22.308633464425068,
+      "P_vu_vu": 0.16510145853677094,
+      "delta_vu_actual": 0.8649777022228753
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 2.620000123977661,
+        "vel_u": -1.6593516645688402,
+        "pos_u": 21.422765588145296,
+        "delta_pos_u_from_rec": -0.8858678762797716,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_1.0s": {
+        "t_s": 3.1029999256134033,
+        "vel_u": -1.995737315791936,
+        "pos_u": 20.547139102386552,
+        "delta_pos_u_from_rec": -1.7614943620385155,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_2.0s": {
+        "t_s": 4.141000032424927,
+        "vel_u": -2.6379890131126573,
+        "pos_u": 18.28759577651422,
+        "delta_pos_u_from_rec": -4.021037687910848,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_5.0s": {
+        "t_s": 7.101999998092651,
+        "vel_u": -3.7680121580308175,
+        "pos_u": 9.238029140457773,
+        "delta_pos_u_from_rec": -13.070604323967295,
+        "r_vert": 1.054705363498039,
+        "nis": 2.5820864760544184,
+        "vnhc_active": true
+      },
+      "plus_10.0s": {
+        "t_s": 12.061000108718872,
+        "vel_u": -6.126645702516387,
+        "pos_u": -20.0421867483585,
+        "delta_pos_u_from_rec": -42.35082021278357,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 180.66135294684878,
+      "time_to_vu_lt_1mps_s": 15.516000032424927,
+      "time_to_vu_lt_05mps_s": 15.516000032424927,
+      "post_rec_delta_u_m": 7522.392199276927,
+      "total_delta_u_m": 7519.264018454098,
+      "final_horiz_err_m": 19894.65708001186,
+      "max_pitch_dev_deg": 34.442905377932036,
+      "max_roll_dev_deg": 50.15075242146389
+    }
+  },
+  {
+    "episode": "Trip 2 Ep 3",
+    "trip": "Trip 2",
+    "ep_idx": 3,
+    "duration_s": 57.56,
+    "t_recovery_s": 2.7699999809265137,
+    "epoch_recovery": 25,
+    "trajectory_class": "STABLE CONVERGENCE",
+    "class_reason": "Smooth exponential damping: |v_U| < 1 m/s in 0.00s, drift bounded at -8.9m",
+    "pre_update": {
+      "r_vert_ms": 3.0011543385321717,
+      "vel_u_ms": -2.2877219351318,
+      "pos_u_m": 24.56734425380508,
+      "pitch_deg": -8.589413951665273,
+      "roll_deg": 5.777763323514654,
+      "yaw_deg": 10.276647631689059,
+      "omega_norm_rad_s": 0.09206822850473446,
+      "omega_z_deg_s": 1.3882767376019847,
+      "dyn_accel_mps2": 0.25894286655753973,
+      "S_cov": 1.0199683024284933,
+      "sigma_S_ms": 1.0099348010780167,
+      "nis": 8.83059536482206,
+      "P_vu_vu": 0.6489410360129462,
+      "sigma_vu_ms": 0.8055687655395697,
+      "P_att_trace": 0.012992727086904668,
+      "K_vu": 0.45696018554339163,
+      "gamma_huber": 0.6730308988853693,
+      "delta_vu_kick": 1.371408043380016
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -0.9163138917517839,
+      "pos_u_m": 24.56734425380508,
+      "P_vu_vu": 0.2290184766443536,
+      "delta_vu_actual": 1.371408043380016
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 3.303999900817871,
+        "vel_u": -0.4675302515627963,
+        "pos_u": 24.883331896999906,
+        "delta_pos_u_from_rec": 0.315987643194827,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_1.0s": {
+        "t_s": 3.857999801635742,
+        "vel_u": -0.3143653018024769,
+        "pos_u": 24.76822627883832,
+        "delta_pos_u_from_rec": 0.20088202503324126,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_2.0s": {
+        "t_s": 4.8399999141693115,
+        "vel_u": 0.07257196054093218,
+        "pos_u": 24.88969801028775,
+        "delta_pos_u_from_rec": 0.32235375648266995,
+        "r_vert": 0.5181476888376066,
+        "nis": 0.816329490382584,
+        "vnhc_active": true
+      },
+      "plus_5.0s": {
+        "t_s": 7.830999851226807,
+        "vel_u": -1.0450207929414062,
+        "pos_u": 23.8433496162412,
+        "delta_pos_u_from_rec": -0.7239946375638802,
+        "r_vert": 4.100790677291634,
+        "nis": 19.872550930095652,
+        "vnhc_active": true
+      },
+      "plus_10.0s": {
+        "t_s": 12.812999963760376,
+        "vel_u": -1.2797023595734436,
+        "pos_u": 15.634223774135188,
+        "delta_pos_u_from_rec": -8.93312047966989,
+        "r_vert": 0.4077749274404996,
+        "nis": 0.501678093876279,
+        "vnhc_active": true
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 1.9112846387471871,
+      "time_to_vu_lt_1mps_s": 0.0,
+      "time_to_vu_lt_05mps_s": 0.10500001907348633,
+      "post_rec_delta_u_m": -8.857567299467803,
+      "total_delta_u_m": -12.413335126407063,
+      "final_horiz_err_m": 2346.5748458577473,
+      "max_pitch_dev_deg": 18.74234645782674,
+      "max_roll_dev_deg": 34.44163021964899
+    }
+  },
+  {
+    "episode": "Trip 2 Ep 4",
+    "trip": "Trip 2",
+    "ep_idx": 4,
+    "duration_s": 80.099,
+    "t_recovery_s": 0.22999978065490723,
+    "epoch_recovery": 2,
+    "trajectory_class": "PARTIAL RECOVERY",
+    "class_reason": "Partial stabilization: peak |v_U|=9.5 m/s, drift=-335.1m",
+    "pre_update": {
+      "r_vert_ms": 0.273856385835181,
+      "vel_u_ms": -0.21397126279819853,
+      "pos_u_m": 22.873239830810927,
+      "pitch_deg": 1.757971555396034,
+      "roll_deg": 0.7062300659215828,
+      "yaw_deg": 359.3381483444121,
+      "omega_norm_rad_s": 0.016443834710918252,
+      "omega_z_deg_s": 0.625669912282859,
+      "dyn_accel_mps2": 0.8612578772209556,
+      "S_cov": 0.32422621771082394,
+      "sigma_S_ms": 0.5694086561607787,
+      "nis": 0.23131170758558875,
+      "P_vu_vu": 0.0741257259120011,
+      "sigma_vu_ms": 0.2722604009252927,
+      "P_att_trace": 0.010334360844011927,
+      "K_vu": 0.22867601085747422,
+      "gamma_huber": 1.0,
+      "delta_vu_kick": 0.0626243858606345
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -0.15134687693756405,
+      "pos_u_m": 22.873239830810927,
+      "P_vu_vu": 0.057171055759948776,
+      "delta_vu_actual": 0.06262438586063448
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 0.8190000057220459,
+        "vel_u": -0.36563258572305507,
+        "pos_u": 22.751384843857057,
+        "delta_pos_u_from_rec": -0.12185498695387054,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_1.0s": {
+        "t_s": 1.248999834060669,
+        "vel_u": -0.34185459813699526,
+        "pos_u": 22.543676857749055,
+        "delta_pos_u_from_rec": -0.3295629730618721,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_2.0s": {
+        "t_s": 2.234999895095825,
+        "vel_u": -1.2552413770807067,
+        "pos_u": 21.808105232363165,
+        "delta_pos_u_from_rec": -1.065134598447763,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_5.0s": {
+        "t_s": 5.264999866485596,
+        "vel_u": -2.873803936781648,
+        "pos_u": 16.693518920522045,
+        "delta_pos_u_from_rec": -6.179720910288882,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      },
+      "plus_10.0s": {
+        "t_s": 10.263999938964844,
+        "vel_u": -4.185370331844839,
+        "pos_u": 0.2410654630763912,
+        "delta_pos_u_from_rec": -22.632174367734535,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 9.501277290180678,
+      "time_to_vu_lt_1mps_s": 0.0,
+      "time_to_vu_lt_05mps_s": 0.0,
+      "post_rec_delta_u_m": -335.1470962041255,
+      "total_delta_u_m": -335.1638164946207,
+      "final_horiz_err_m": 3580.2034912748068,
+      "max_pitch_dev_deg": 16.12799004052585,
+      "max_roll_dev_deg": 12.892162059326589
+    }
+  },
+  {
+    "episode": "Trip 2 Ep 5",
+    "trip": "Trip 2",
+    "ep_idx": 5,
+    "duration_s": 223.983,
+    "t_recovery_s": 0.9859998226165771,
+    "epoch_recovery": 1,
+    "trajectory_class": "DESTABILIZATION",
+    "class_reason": "Instability: peak |v_U| reached 1612.3 m/s, drift reached -7103.2m",
+    "pre_update": {
+      "r_vert_ms": 8.497748461988568,
+      "vel_u_ms": -8.544993246782942,
+      "pos_u_m": 17.687853174179214,
+      "pitch_deg": 0.5336373942688273,
+      "roll_deg": -0.09943373830272598,
+      "yaw_deg": 359.6133591836661,
+      "omega_norm_rad_s": 0.028002973056445273,
+      "omega_z_deg_s": 0.7477099226457243,
+      "dyn_accel_mps2": 0.22477494265262443,
+      "S_cov": 0.3890679525823232,
+      "sigma_S_ms": 0.6237531182946688,
+      "nis": 185.60184267027168,
+      "P_vu_vu": 0.1387749424156687,
+      "sigma_vu_ms": 0.372525089645877,
+      "P_att_trace": 0.01055602090855496,
+      "K_vu": 0.052416338195680215,
+      "gamma_huber": 0.14680432613057215,
+      "delta_vu_kick": 0.4454208572854142
+    },
+    "immediate_post_update": {
+      "vel_u_ms": -8.099572389497528,
+      "pos_u_m": 17.687853174179214,
+      "P_vu_vu": 0.1252809258445616,
+      "delta_vu_actual": 0.4454208572854146
+    },
+    "trajectory_snapshots": {
+      "plus_0.5s": {
+        "t_s": 2.013000011444092,
+        "vel_u": -14.07838754264857,
+        "pos_u": 11.992515779485121,
+        "delta_pos_u_from_rec": -5.695337394694093,
+        "r_vert": 14.694487727176924,
+        "nis": 414.515566755033,
+        "vnhc_active": true
+      },
+      "plus_1.0s": {
+        "t_s": 2.013000011444092,
+        "vel_u": -14.07838754264857,
+        "pos_u": 11.992515779485121,
+        "delta_pos_u_from_rec": -5.695337394694093,
+        "r_vert": 14.694487727176924,
+        "nis": 414.515566755033,
+        "vnhc_active": true
+      },
+      "plus_2.0s": {
+        "t_s": 2.988999843597412,
+        "vel_u": -19.418711300213403,
+        "pos_u": 3.4930240018469494,
+        "delta_pos_u_from_rec": -14.194829172332264,
+        "r_vert": 20.255142159853055,
+        "nis": 582.581584497157,
+        "vnhc_active": true
+      },
+      "plus_5.0s": {
+        "t_s": 6.019999980926514,
+        "vel_u": -30.836835932801016,
+        "pos_u": -41.21477149358706,
+        "delta_pos_u_from_rec": -58.902624667766275,
+        "r_vert": 32.647224899738795,
+        "nis": 720.9679319908429,
+        "vnhc_active": true
+      },
+      "plus_10.0s": {
+        "t_s": 11.006999969482422,
+        "vel_u": -42.421832103897096,
+        "pos_u": -129.4790760642968,
+        "delta_pos_u_from_rec": -147.16692923847603,
+        "r_vert": 0.0,
+        "nis": 0.0,
+        "vnhc_active": false
+      }
+    },
+    "post_recovery_summary": {
+      "post_peak_abs_vu_ms": 1612.2850225828042,
+      "time_to_vu_lt_1mps_s": null,
+      "time_to_vu_lt_05mps_s": null,
+      "post_rec_delta_u_m": -7103.161745456102,
+      "total_delta_u_m": -7105.718184814823,
+      "final_horiz_err_m": 16391.24173273105,
+      "max_pitch_dev_deg": 86.34661060400666,
+      "max_roll_dev_deg": 180.08512404256797
+    }
+  }
+]

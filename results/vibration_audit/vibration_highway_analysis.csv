@@ -1,0 +1,4 @@
+speed_band,samples,mean_speed_kmh,mean_dom_freq_hz,mean_centroid_hz,mean_total_power,mean_mid_power_2_3Hz,mean_high_power_3_5Hz
+80-90 km/h,105,85.7,2.869,2.714,0.3571,0.1059,0.1726
+90-100 km/h,114,95.1,2.928,2.724,0.459,0.1388,0.2106
+100-110 km/h,48,103.5,2.863,2.636,0.4285,0.1433,0.1908

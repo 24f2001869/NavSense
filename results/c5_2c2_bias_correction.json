@@ -1,0 +1,375 @@
+{
+  "C2-A": {
+    "info": {
+      "method": "C2-A: No Correction",
+      "bias_estimate": 0.0,
+      "bias_source": "None \u2014 raw leveled a_x passed directly",
+      "stationarity_used": false,
+      "vbox_used": false
+    },
+    "durations": {
+      "5s": {
+        "t_start_s": 25.1,
+        "duration_s": 5.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.36,
+        "v_final_est_ms": 11.38648814295928,
+        "mae_ms": 0.4721985585706329,
+        "rmse_ms": 0.6196678861616086,
+        "final_err_ms": 0.02648814295928048,
+        "final_pos_err_m": -2.247343019182936,
+        "true_dist_m": 58.23828055555555,
+        "drift_pct": 3.8588759794154917,
+        "bias_at_outage": 0.0
+      },
+      "10s": {
+        "t_start_s": 25.1,
+        "duration_s": 10.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 9.516944444444444,
+        "v_final_est_ms": 10.046721210988737,
+        "mae_ms": 0.4618927418621794,
+        "rmse_ms": 0.5775992670519107,
+        "final_err_ms": 0.529776766544293,
+        "final_pos_err_m": -4.159133054688452,
+        "true_dist_m": 112.60777513888885,
+        "drift_pct": 3.6934688120412957,
+        "bias_at_outage": 0.0
+      },
+      "20s": {
+        "t_start_s": 25.1,
+        "duration_s": 20.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 12.436944444444444,
+        "v_final_est_ms": 19.95779988202338,
+        "mae_ms": 2.4539787455456117,
+        "rmse_ms": 3.474042277334772,
+        "final_err_ms": 7.520855437578936,
+        "final_pos_err_m": 40.151169104418585,
+        "true_dist_m": 220.86869263888883,
+        "drift_pct": 18.17875074312324,
+        "bias_at_outage": 0.0
+      },
+      "30s": {
+        "t_start_s": 25.1,
+        "duration_s": 30.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 13.833888888888888,
+        "v_final_est_ms": 31.042797113073618,
+        "mae_ms": 5.569118461252328,
+        "rmse_ms": 7.623427379583112,
+        "final_err_ms": 17.208908224184732,
+        "final_pos_err_m": 157.97225936331662,
+        "true_dist_m": 345.3363829166666,
+        "drift_pct": 45.744458788009325,
+        "bias_at_outage": 0.0
+      },
+      "60s": {
+        "t_start_s": 25.1,
+        "duration_s": 60.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.26888888888889,
+        "v_final_est_ms": 48.325995355497035,
+        "mae_ms": 15.894190126742528,
+        "rmse_ms": 19.8761495638022,
+        "final_err_ms": 37.05710646660815,
+        "final_pos_err_m": 944.5902103847255,
+        "true_dist_m": 660.2931506944444,
+        "drift_pct": 143.0561879055204,
+        "bias_at_outage": 0.0
+      }
+    }
+  },
+  "C2-B": {
+    "info": {
+      "method": "C2-B: Stationary Bias",
+      "stationarity_used": true,
+      "vbox_used": false,
+      "stationarity_criteria": {
+        "window_s": 2.0,
+        "accel_std_thresh_ms2": 0.15,
+        "gyro_norm_thresh_rads": 0.05
+      },
+      "n_pre_outage_samples": 251,
+      "n_stationary_samples": 0,
+      "n_low_dynamics_samples": 27,
+      "stationary_fraction": 0.0,
+      "bias_estimate": 0.0,
+      "bias_valid": false,
+      "note": "Only 0 stationary samples found in pre-outage window (0 to 25.1 s). 27 low-dynamics samples found but these may include steady-speed cruising where a_x contains real vehicle dynamics. Falling back to zero bias."
+    },
+    "durations": {
+      "5s": {
+        "t_start_s": 25.1,
+        "duration_s": 5.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.36,
+        "v_final_est_ms": 11.38648814295928,
+        "mae_ms": 0.4721985585706329,
+        "rmse_ms": 0.6196678861616086,
+        "final_err_ms": 0.02648814295928048,
+        "final_pos_err_m": -2.247343019182936,
+        "true_dist_m": 58.23828055555555,
+        "drift_pct": 3.8588759794154917,
+        "bias_at_outage": 0.0
+      },
+      "10s": {
+        "t_start_s": 25.1,
+        "duration_s": 10.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 9.516944444444444,
+        "v_final_est_ms": 10.046721210988737,
+        "mae_ms": 0.4618927418621794,
+        "rmse_ms": 0.5775992670519107,
+        "final_err_ms": 0.529776766544293,
+        "final_pos_err_m": -4.159133054688452,
+        "true_dist_m": 112.60777513888885,
+        "drift_pct": 3.6934688120412957,
+        "bias_at_outage": 0.0
+      },
+      "20s": {
+        "t_start_s": 25.1,
+        "duration_s": 20.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 12.436944444444444,
+        "v_final_est_ms": 19.95779988202338,
+        "mae_ms": 2.4539787455456117,
+        "rmse_ms": 3.474042277334772,
+        "final_err_ms": 7.520855437578936,
+        "final_pos_err_m": 40.151169104418585,
+        "true_dist_m": 220.86869263888883,
+        "drift_pct": 18.17875074312324,
+        "bias_at_outage": 0.0
+      },
+      "30s": {
+        "t_start_s": 25.1,
+        "duration_s": 30.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 13.833888888888888,
+        "v_final_est_ms": 31.042797113073618,
+        "mae_ms": 5.569118461252328,
+        "rmse_ms": 7.623427379583112,
+        "final_err_ms": 17.208908224184732,
+        "final_pos_err_m": 157.97225936331662,
+        "true_dist_m": 345.3363829166666,
+        "drift_pct": 45.744458788009325,
+        "bias_at_outage": 0.0
+      },
+      "60s": {
+        "t_start_s": 25.1,
+        "duration_s": 60.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.26888888888889,
+        "v_final_est_ms": 48.325995355497035,
+        "mae_ms": 15.894190126742528,
+        "rmse_ms": 19.8761495638022,
+        "final_err_ms": 37.05710646660815,
+        "final_pos_err_m": 944.5902103847255,
+        "true_dist_m": 660.2931506944444,
+        "drift_pct": 143.0561879055204,
+        "bias_at_outage": 0.0
+      }
+    }
+  },
+  "C2-C": {
+    "info": {
+      "method": "C2-C: Quasi-Static Update",
+      "stationarity_used": true,
+      "vbox_used": false,
+      "initial_bias": 0.0,
+      "n_quasi_static_updates": 61,
+      "update_times": [
+        75.699,
+        75.799,
+        75.898,
+        75.998,
+        76.099,
+        76.2,
+        76.299,
+        76.399,
+        76.499,
+        76.599,
+        76.699,
+        76.799,
+        76.899,
+        76.999,
+        77.099,
+        77.199,
+        77.299,
+        77.399,
+        77.499,
+        77.599
+      ],
+      "stationarity_criteria": {
+        "window_s": 2.0,
+        "accel_std_thresh_ms2": 0.15,
+        "gyro_norm_thresh_rads": 0.05
+      },
+      "bias_estimate": -1.576678781802672
+    },
+    "durations": {
+      "5s": {
+        "t_start_s": 25.1,
+        "duration_s": 5.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.36,
+        "v_final_est_ms": 11.38648814295928,
+        "mae_ms": 0.4721985585706329,
+        "rmse_ms": 0.6196678861616086,
+        "final_err_ms": 0.02648814295928048,
+        "final_pos_err_m": -2.247343019182936,
+        "true_dist_m": 58.23828055555555,
+        "drift_pct": 3.8588759794154917,
+        "bias_at_outage": 0.0
+      },
+      "10s": {
+        "t_start_s": 25.1,
+        "duration_s": 10.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 9.516944444444444,
+        "v_final_est_ms": 10.046721210988737,
+        "mae_ms": 0.4618927418621794,
+        "rmse_ms": 0.5775992670519107,
+        "final_err_ms": 0.529776766544293,
+        "final_pos_err_m": -4.159133054688452,
+        "true_dist_m": 112.60777513888885,
+        "drift_pct": 3.6934688120412957,
+        "bias_at_outage": 0.0
+      },
+      "20s": {
+        "t_start_s": 25.1,
+        "duration_s": 20.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 12.436944444444444,
+        "v_final_est_ms": 19.95779988202338,
+        "mae_ms": 2.4539787455456117,
+        "rmse_ms": 3.474042277334772,
+        "final_err_ms": 7.520855437578936,
+        "final_pos_err_m": 40.151169104418585,
+        "true_dist_m": 220.86869263888883,
+        "drift_pct": 18.17875074312324,
+        "bias_at_outage": 0.0
+      },
+      "30s": {
+        "t_start_s": 25.1,
+        "duration_s": 30.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 13.833888888888888,
+        "v_final_est_ms": 31.042797113073618,
+        "mae_ms": 5.569118461252328,
+        "rmse_ms": 7.623427379583112,
+        "final_err_ms": 17.208908224184732,
+        "final_pos_err_m": 157.97225936331662,
+        "true_dist_m": 345.3363829166666,
+        "drift_pct": 45.744458788009325,
+        "bias_at_outage": 0.0
+      },
+      "60s": {
+        "t_start_s": 25.1,
+        "duration_s": 60.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.26888888888889,
+        "v_final_est_ms": 27.981017313383216,
+        "mae_ms": 14.45437548741744,
+        "rmse_ms": 17.588974507769265,
+        "final_err_ms": 16.712128424494324,
+        "final_pos_err_m": 859.0745994633941,
+        "true_dist_m": 660.2931506944444,
+        "drift_pct": 130.10502964628466,
+        "bias_at_outage": 0.0
+      }
+    }
+  },
+  "C2-D": {
+    "info": {
+      "method": "C2-D: Bounded Correction",
+      "stationarity_used": true,
+      "vbox_used": false,
+      "b_raw": 0.0,
+      "b_max": 0.5,
+      "b_clamped": 0.0,
+      "was_clamped": false,
+      "bias_estimate": 0.0,
+      "physical_justification": "b_max = 0.5 m/s\u00b2 from conservative MEMS zero-g offset spec (InvenSense MPU-6500 \u00b160 mg = \u00b10.588 m/s\u00b2). Does NOT attempt to absorb road grade, pitch dynamics, or vehicle acceleration."
+    },
+    "durations": {
+      "5s": {
+        "t_start_s": 25.1,
+        "duration_s": 5.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.36,
+        "v_final_est_ms": 11.38648814295928,
+        "mae_ms": 0.4721985585706329,
+        "rmse_ms": 0.6196678861616086,
+        "final_err_ms": 0.02648814295928048,
+        "final_pos_err_m": -2.247343019182936,
+        "true_dist_m": 58.23828055555555,
+        "drift_pct": 3.8588759794154917,
+        "bias_at_outage": 0.0
+      },
+      "10s": {
+        "t_start_s": 25.1,
+        "duration_s": 10.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 9.516944444444444,
+        "v_final_est_ms": 10.046721210988737,
+        "mae_ms": 0.4618927418621794,
+        "rmse_ms": 0.5775992670519107,
+        "final_err_ms": 0.529776766544293,
+        "final_pos_err_m": -4.159133054688452,
+        "true_dist_m": 112.60777513888885,
+        "drift_pct": 3.6934688120412957,
+        "bias_at_outage": 0.0
+      },
+      "20s": {
+        "t_start_s": 25.1,
+        "duration_s": 20.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 12.436944444444444,
+        "v_final_est_ms": 19.95779988202338,
+        "mae_ms": 2.4539787455456117,
+        "rmse_ms": 3.474042277334772,
+        "final_err_ms": 7.520855437578936,
+        "final_pos_err_m": 40.151169104418585,
+        "true_dist_m": 220.86869263888883,
+        "drift_pct": 18.17875074312324,
+        "bias_at_outage": 0.0
+      },
+      "30s": {
+        "t_start_s": 25.1,
+        "duration_s": 30.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 13.833888888888888,
+        "v_final_est_ms": 31.042797113073618,
+        "mae_ms": 5.569118461252328,
+        "rmse_ms": 7.623427379583112,
+        "final_err_ms": 17.208908224184732,
+        "final_pos_err_m": 157.97225936331662,
+        "true_dist_m": 345.3363829166666,
+        "drift_pct": 45.744458788009325,
+        "bias_at_outage": 0.0
+      },
+      "60s": {
+        "t_start_s": 25.1,
+        "duration_s": 60.0,
+        "v0_ms": 11.751111111111111,
+        "v_final_true_ms": 11.26888888888889,
+        "v_final_est_ms": 48.325995355497035,
+        "mae_ms": 15.894190126742528,
+        "rmse_ms": 19.8761495638022,
+        "final_err_ms": 37.05710646660815,
+        "final_pos_err_m": 944.5902103847255,
+        "true_dist_m": 660.2931506944444,
+        "drift_pct": 143.0561879055204,
+        "bias_at_outage": 0.0
+      }
+    }
+  },
+  "_offline_diagnostics": {
+    "residual_mean_ms2": 0.5689866703863575,
+    "residual_std_ms2": 1.7081895305582215,
+    "residual_min_ms2": -4.715780893131784,
+    "residual_max_ms2": 5.008260979658775,
+    "note": "a_x_level - dv/dt_VBOX during 30s outage. OFFLINE REFERENCE ONLY."
+  }
+}

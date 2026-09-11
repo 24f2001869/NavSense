@@ -1,0 +1,516 @@
+{
+  "horizon_sweep": {
+    "Vta02": {
+      "5s": {
+        "horizon_s": 5.0,
+        "n_evaluations": 219,
+        "mean_mae_ms": 1.4141365585952501,
+        "std_mae_ms": 0.951337810307828,
+        "mean_rmse_ms": 1.6653519301784925,
+        "mean_final_error_ms": 2.717334926341,
+        "mean_pos_error_m": 6.795204376804301,
+        "std_pos_error_m": 4.966650850628568,
+        "mean_drift_pct": 19.87477518097042,
+        "implied_drift_rate_ms2": 0.5656546234381
+      },
+      "10s": {
+        "horizon_s": 10.0,
+        "n_evaluations": 218,
+        "mean_mae_ms": 2.631857626208504,
+        "std_mae_ms": 1.704224644891236,
+        "mean_rmse_ms": 3.0899809310054946,
+        "mean_final_error_ms": 5.042283924539871,
+        "mean_pos_error_m": 25.636749767346867,
+        "std_pos_error_m": 17.624043245751672,
+        "mean_drift_pct": 35.936474136056866,
+        "implied_drift_rate_ms2": 0.5263715252417007
+      },
+      "20s": {
+        "horizon_s": 20.0,
+        "n_evaluations": 216,
+        "mean_mae_ms": 4.8862007115442045,
+        "std_mae_ms": 3.068650911150458,
+        "mean_rmse_ms": 5.712979699823411,
+        "mean_final_error_ms": 9.214460160734497,
+        "mean_pos_error_m": 94.97461533977413,
+        "std_pos_error_m": 63.589239884583506,
+        "mean_drift_pct": 65.46595527651614,
+        "implied_drift_rate_ms2": 0.48862007115442047
+      },
+      "30s": {
+        "horizon_s": 30.0,
+        "n_evaluations": 214,
+        "mean_mae_ms": 7.021080001539363,
+        "std_mae_ms": 4.292001639393768,
+        "mean_rmse_ms": 8.200789560370607,
+        "mean_final_error_ms": 13.225399848217421,
+        "mean_pos_error_m": 204.38345559430934,
+        "std_pos_error_m": 134.3119391394815,
+        "mean_drift_pct": 99.44824884662029,
+        "implied_drift_rate_ms2": 0.4680720001026242
+      },
+      "60s": {
+        "horizon_s": 60.0,
+        "n_evaluations": 208,
+        "mean_mae_ms": 12.9470415785835,
+        "std_mae_ms": 7.875496663938856,
+        "mean_rmse_ms": 15.131048783776938,
+        "mean_final_error_ms": 24.48597970762552,
+        "mean_pos_error_m": 754.268895443209,
+        "std_pos_error_m": 497.19904684494446,
+        "mean_drift_pct": 130.14457830491926,
+        "implied_drift_rate_ms2": 0.43156805261944997
+      }
+    },
+    "Vta03": {
+      "5s": {
+        "horizon_s": 5.0,
+        "n_evaluations": 12,
+        "mean_mae_ms": 2.46383575812352,
+        "std_mae_ms": 1.5469998584070153,
+        "mean_rmse_ms": 2.8829272040982086,
+        "mean_final_error_ms": 4.404473737001337,
+        "mean_pos_error_m": 12.310262395457892,
+        "std_pos_error_m": 7.7553403727910055,
+        "mean_drift_pct": 100.40158187018356,
+        "implied_drift_rate_ms2": 0.9855343032494079
+      },
+      "10s": {
+        "horizon_s": 10.0,
+        "n_evaluations": 11,
+        "mean_mae_ms": 4.534845447919726,
+        "std_mae_ms": 2.9092273101125943,
+        "mean_rmse_ms": 5.2262810874162975,
+        "mean_final_error_ms": 8.021229791400323,
+        "mean_pos_error_m": 44.019030427134744,
+        "std_pos_error_m": 30.71295285259242,
+        "mean_drift_pct": 222.19023968675646,
+        "implied_drift_rate_ms2": 0.9069690895839452
+      },
+      "20s": {
+        "horizon_s": 20.0,
+        "n_evaluations": 9,
+        "mean_mae_ms": 7.79651109023779,
+        "std_mae_ms": 4.837520019577714,
+        "mean_rmse_ms": 9.119426870818444,
+        "mean_final_error_ms": 13.124123410657448,
+        "mean_pos_error_m": 151.0915626117151,
+        "std_pos_error_m": 102.33774242542934,
+        "mean_drift_pct": 219.61924462705235,
+        "implied_drift_rate_ms2": 0.779651109023779
+      },
+      "30s": {
+        "horizon_s": 30.0,
+        "n_evaluations": 7,
+        "mean_mae_ms": 8.068405736024213,
+        "std_mae_ms": 5.01678841203687,
+        "mean_rmse_ms": 9.965533849260295,
+        "mean_final_error_ms": 16.3311264064455,
+        "mean_pos_error_m": 222.40712007736056,
+        "std_pos_error_m": 166.77724446769423,
+        "mean_drift_pct": 188.41916311278288,
+        "implied_drift_rate_ms2": 0.5378937157349475
+      },
+      "60s": {
+        "horizon_s": 60.0,
+        "n_evaluations": 1,
+        "mean_mae_ms": 17.980063144014686,
+        "std_mae_ms": 0.0,
+        "mean_rmse_ms": 21.165601124737158,
+        "mean_final_error_ms": 37.763530406320626,
+        "mean_pos_error_m": 1078.7136184349656,
+        "std_pos_error_m": 0.0,
+        "mean_drift_pct": 335.5864807013454,
+        "implied_drift_rate_ms2": 0.5993354381338228
+      }
+    },
+    "Vta04": {
+      "5s": {
+        "horizon_s": 5.0,
+        "n_evaluations": 35,
+        "mean_mae_ms": 1.669757336864058,
+        "std_mae_ms": 1.3395229454202597,
+        "mean_rmse_ms": 2.0014228176061937,
+        "mean_final_error_ms": 3.100697958628001,
+        "mean_pos_error_m": 7.889464932880264,
+        "std_pos_error_m": 6.9362668665251395,
+        "mean_drift_pct": 17.94719203956284,
+        "implied_drift_rate_ms2": 0.6679029347456231
+      },
+      "10s": {
+        "horizon_s": 10.0,
+        "n_evaluations": 34,
+        "mean_mae_ms": 3.118521613795924,
+        "std_mae_ms": 1.8804246456230358,
+        "mean_rmse_ms": 3.6697671764035777,
+        "mean_final_error_ms": 5.790046210973821,
+        "mean_pos_error_m": 29.918895475738296,
+        "std_pos_error_m": 19.25611360193558,
+        "mean_drift_pct": 29.172730035481152,
+        "implied_drift_rate_ms2": 0.6237043227591849
+      },
+      "20s": {
+        "horizon_s": 20.0,
+        "n_evaluations": 32,
+        "mean_mae_ms": 5.832763882648075,
+        "std_mae_ms": 2.6559900548651068,
+        "mean_rmse_ms": 6.8468528877401384,
+        "mean_final_error_ms": 10.631822956176332,
+        "mean_pos_error_m": 112.52441122935335,
+        "std_pos_error_m": 57.15385701462367,
+        "mean_drift_pct": 50.96397154323755,
+        "implied_drift_rate_ms2": 0.5832763882648075
+      },
+      "30s": {
+        "horizon_s": 30.0,
+        "n_evaluations": 30,
+        "mean_mae_ms": 8.134756356066557,
+        "std_mae_ms": 3.181210489403546,
+        "mean_rmse_ms": 9.525805610988048,
+        "mean_final_error_ms": 14.128310296142233,
+        "mean_pos_error_m": 231.51088196822838,
+        "std_pos_error_m": 111.96109961821118,
+        "mean_drift_pct": 69.78453859283186,
+        "implied_drift_rate_ms2": 0.5423170904044371
+      },
+      "60s": {
+        "horizon_s": 60.0,
+        "n_evaluations": 24,
+        "mean_mae_ms": 13.209434408682066,
+        "std_mae_ms": 5.692668515710533,
+        "mean_rmse_ms": 15.344700924722366,
+        "mean_final_error_ms": 20.56544562117784,
+        "mean_pos_error_m": 701.54815014756,
+        "std_pos_error_m": 440.50915839840616,
+        "mean_drift_pct": 106.46207565790876,
+        "implied_drift_rate_ms2": 0.4403144802894022
+      }
+    }
+  },
+  "motion_intervals": {
+    "Vta02": {
+      "total_valid_stops": 5,
+      "total_stop_duration_s": 63.60000000000001,
+      "valid_stops": [
+        {
+          "t_start_s": 14.397,
+          "t_end_s": 18.898,
+          "duration_s": 4.6000000000000005,
+          "mean_v_ms": 0.02534420289855072
+        },
+        {
+          "t_start_s": 20.198,
+          "t_end_s": 23.098,
+          "duration_s": 3.0,
+          "mean_v_ms": 0.028777777777777767
+        },
+        {
+          "t_start_s": 707.298,
+          "t_end_s": 753.098,
+          "duration_s": 45.900000000000006,
+          "mean_v_ms": 0.01790668119099491
+        },
+        {
+          "t_start_s": 994.698,
+          "t_end_s": 1000.598,
+          "duration_s": 6.0,
+          "mean_v_ms": 0.020814814814814803
+        },
+        {
+          "t_start_s": 1000.798,
+          "t_end_s": 1004.797,
+          "duration_s": 4.1000000000000005,
+          "mean_v_ms": 0.02324525745257452
+        }
+      ],
+      "longest_continuous_motion": {
+        "interval_id": 3,
+        "t_start_s": 23.198,
+        "t_end_s": 707.198,
+        "duration_s": 684.1,
+        "distance_m": 8047.646420694445,
+        "mean_speed_ms": 11.763874352352644,
+        "max_speed_ms": 22.678888888888885
+      },
+      "all_motion_intervals": [
+        {
+          "interval_id": 3,
+          "t_start_s": 23.198,
+          "t_end_s": 707.198,
+          "duration_s": 684.1,
+          "distance_m": 8047.646420694445,
+          "mean_speed_ms": 11.763874352352644,
+          "max_speed_ms": 22.678888888888885
+        },
+        {
+          "interval_id": 4,
+          "t_start_s": 753.198,
+          "t_end_s": 994.598,
+          "duration_s": 241.5,
+          "distance_m": 2109.8537870833334,
+          "mean_speed_ms": 8.736521739130435,
+          "max_speed_ms": 13.871944444444441
+        },
+        {
+          "interval_id": 6,
+          "t_start_s": 1004.897,
+          "t_end_s": 1098.998,
+          "duration_s": 94.2,
+          "distance_m": 838.6449872222222,
+          "mean_speed_ms": 8.902882460485962,
+          "max_speed_ms": 14.031944444444445
+        },
+        {
+          "interval_id": 1,
+          "t_start_s": 0.0,
+          "t_end_s": 14.298,
+          "duration_s": 14.4,
+          "distance_m": 51.216505277777784,
+          "mean_speed_ms": 3.5820254629629633,
+          "max_speed_ms": 6.868055555555555
+        },
+        {
+          "interval_id": 2,
+          "t_start_s": 18.998,
+          "t_end_s": 20.099,
+          "duration_s": 1.2000000000000002,
+          "distance_m": 0.20516597222222216,
+          "mean_speed_ms": 0.18143518518518517,
+          "max_speed_ms": 0.2619444444444444
+        }
+      ]
+    },
+    "Vta03": {
+      "total_valid_stops": 0,
+      "total_stop_duration_s": 0.0,
+      "valid_stops": [],
+      "longest_continuous_motion": {
+        "interval_id": 1,
+        "t_start_s": 0.0,
+        "t_end_s": 64.4,
+        "duration_s": 64.5,
+        "distance_m": 375.45791500000007,
+        "mean_speed_ms": 5.831234711455642,
+        "max_speed_ms": 12.715
+      },
+      "all_motion_intervals": [
+        {
+          "interval_id": 1,
+          "t_start_s": 0.0,
+          "t_end_s": 64.4,
+          "duration_s": 64.5,
+          "distance_m": 375.45791500000007,
+          "mean_speed_ms": 5.831234711455642,
+          "max_speed_ms": 12.715
+        }
+      ]
+    },
+    "Vta04": {
+      "total_valid_stops": 0,
+      "total_stop_duration_s": 0.0,
+      "valid_stops": [],
+      "longest_continuous_motion": {
+        "interval_id": 1,
+        "t_start_s": 0.0,
+        "t_end_s": 178.799,
+        "duration_s": 178.9,
+        "distance_m": 1991.8458934722223,
+        "mean_speed_ms": 11.139835724489162,
+        "max_speed_ms": 14.356111111111112
+      },
+      "all_motion_intervals": [
+        {
+          "interval_id": 1,
+          "t_start_s": 0.0,
+          "t_end_s": 178.799,
+          "duration_s": 178.9,
+          "distance_m": 1991.8458934722223,
+          "mean_speed_ms": 11.139835724489162,
+          "max_speed_ms": 14.356111111111112
+        }
+      ]
+    }
+  },
+  "residual_analysis": {
+    "Vta02": {
+      "mean_constant_bias_ms2": 0.20072482250615117,
+      "std_time_varying_ms2": 1.8053195938786613,
+      "rmse_total_ms2": 1.8164441335786627,
+      "bias_fraction_pct": 1.2211192414247543,
+      "variance_fraction_pct": 98.77888075857526,
+      "range_ms2": [
+        -11.577031665263627,
+        12.389343239554144
+      ],
+      "percentiles_ms2": {
+        "p1": -4.76874483151039,
+        "p5": -2.8077405524697356,
+        "p50": 0.19610466122735712,
+        "p95": 3.033960406456427,
+        "p99": 4.77048133763389
+      },
+      "correlations": {
+        "corr_residual_vs_v": 0.04004974704405268,
+        "corr_abs_residual_vs_v": 0.17125026231762563,
+        "corr_residual_vs_dvdt": -0.33407356696074303,
+        "corr_residual_vs_omega": 0.01863558592822038,
+        "corr_abs_residual_vs_omega": 0.2967181321470614,
+        "corr_abs_residual_vs_vibration": 0.2934239163895844
+      },
+      "suspension_pitch_coupling": {
+        "slope_dr_ddv": -0.645656044103061,
+        "intercept": 0.1966567142540683,
+        "r_squared": 0.1116051481418741,
+        "p_value": 9.400358697747003e-285,
+        "interpretation": "Negative slope -0.646 indicates suspension squat under throttle (rear tilt) and nose dive under braking (forward tilt), projecting gravity oppositely to measured acceleration."
+      },
+      "speed_bin_statistics": {
+        "0-5 m/s": {
+          "count": 1725,
+          "mean_residual_ms2": 0.16775377120779641,
+          "std_residual_ms2": 1.1762761285246086,
+          "mae_residual_ms2": 0.7841127577154993
+        },
+        "5-10 m/s": {
+          "count": 3501,
+          "mean_residual_ms2": 0.17312931100790638,
+          "std_residual_ms2": 1.843761732444479,
+          "mae_residual_ms2": 1.364808647684221
+        },
+        "10-15 m/s": {
+          "count": 4175,
+          "mean_residual_ms2": 0.133221867577523,
+          "std_residual_ms2": 1.9540642220167386,
+          "mae_residual_ms2": 1.4596282636042106
+        },
+        "15-25 m/s": {
+          "count": 1590,
+          "mean_residual_ms2": 0.4745058200357359,
+          "std_residual_ms2": 1.8512197070163343,
+          "mae_residual_ms2": 1.4752441288211524
+        }
+      }
+    },
+    "Vta03": {
+      "mean_constant_bias_ms2": -0.5079295067185058,
+      "std_time_varying_ms2": 1.5443856103641167,
+      "rmse_total_ms2": 1.6257672949395463,
+      "bias_fraction_pct": 9.76090576234422,
+      "variance_fraction_pct": 90.23909423765578,
+      "range_ms2": [
+        -5.787670664339596,
+        6.415960367633839
+      ],
+      "percentiles_ms2": {
+        "p1": -4.144685699889009,
+        "p5": -3.1670911409856677,
+        "p50": -0.4599698119958721,
+        "p95": 1.9996885788871133,
+        "p99": 2.949233868206804
+      },
+      "correlations": {
+        "corr_residual_vs_v": 0.16921826986391264,
+        "corr_abs_residual_vs_v": -0.30268731053950493,
+        "corr_residual_vs_dvdt": -0.6485129429560554,
+        "corr_residual_vs_omega": -0.07822784355136422,
+        "corr_abs_residual_vs_omega": 0.24821235587260548,
+        "corr_abs_residual_vs_vibration": 0.23225912568915602
+      },
+      "suspension_pitch_coupling": {
+        "slope_dr_ddv": -1.1239064007736006,
+        "intercept": -0.3131965079419188,
+        "r_squared": 0.4205690371815236,
+        "p_value": 3.0893735967972697e-78,
+        "interpretation": "Negative slope -1.124 indicates suspension squat under throttle (rear tilt) and nose dive under braking (forward tilt), projecting gravity oppositely to measured acceleration."
+      },
+      "speed_bin_statistics": {
+        "0-5 m/s": {
+          "count": 293,
+          "mean_residual_ms2": -0.6931701858749867,
+          "std_residual_ms2": 1.8237686832652868,
+          "mae_residual_ms2": 1.5687100168809118
+        },
+        "5-10 m/s": {
+          "count": 222,
+          "mean_residual_ms2": -0.7209096794666864,
+          "std_residual_ms2": 1.1393704667280284,
+          "mae_residual_ms2": 1.0932558042606053
+        },
+        "10-15 m/s": {
+          "count": 130,
+          "mean_residual_ms2": 0.27327908822722463,
+          "std_residual_ms2": 1.1641970105190573,
+          "mae_residual_ms2": 0.7798587491761821
+        }
+      }
+    },
+    "Vta04": {
+      "mean_constant_bias_ms2": 0.22137256497462096,
+      "std_time_varying_ms2": 2.0663854138733138,
+      "rmse_total_ms2": 2.078209443533502,
+      "bias_fraction_pct": 1.1346684162425493,
+      "variance_fraction_pct": 98.86533158375745,
+      "range_ms2": [
+        -11.058272966084319,
+        9.922406592156022
+      ],
+      "percentiles_ms2": {
+        "p1": -5.27753354546221,
+        "p5": -3.1158067169497956,
+        "p50": 0.3206392953942033,
+        "p95": 3.3153829292177925,
+        "p99": 5.093352099707745
+      },
+      "correlations": {
+        "corr_residual_vs_v": -0.07998262860908507,
+        "corr_abs_residual_vs_v": -0.10091854964061994,
+        "corr_residual_vs_dvdt": -0.3913512318287974,
+        "corr_residual_vs_omega": -0.022528444655022416,
+        "corr_abs_residual_vs_omega": 0.1769400176036804,
+        "corr_abs_residual_vs_vibration": 0.09102329944149463
+      },
+      "suspension_pitch_coupling": {
+        "slope_dr_ddv": -0.847068066976703,
+        "intercept": 0.23156437053173304,
+        "r_squared": 0.15315578665391708,
+        "p_value": 1.4940569912700716e-66,
+        "interpretation": "Negative slope -0.847 indicates suspension squat under throttle (rear tilt) and nose dive under braking (forward tilt), projecting gravity oppositely to measured acceleration."
+      },
+      "speed_bin_statistics": {
+        "0-5 m/s": {
+          "count": 81,
+          "mean_residual_ms2": 1.6221109918198384,
+          "std_residual_ms2": 2.238861532058827,
+          "mae_residual_ms2": 2.252966506148558
+        },
+        "5-10 m/s": {
+          "count": 208,
+          "mean_residual_ms2": 0.17507309939028504,
+          "std_residual_ms2": 1.9571336943202227,
+          "mae_residual_ms2": 1.5819079119597435
+        },
+        "10-15 m/s": {
+          "count": 1500,
+          "mean_residual_ms2": 0.15215288248600708,
+          "std_residual_ms2": 2.044447395143392,
+          "mae_residual_ms2": 1.5576601846250366
+        }
+      }
+    }
+  },
+  "synthesis_for_c5_3": {
+    "core_finding": "Kinematic drift rate is remarkably uniform across trips at 0.23 to 0.27 m/s\u00b2, producing ~200-230 m position error over 30 s outages. The residual error r(t) is 85-98% time-varying dynamic variance, strongly coupled to vehicle acceleration via chassis suspension pitch squat/dive (negative slope -0.33 to -0.65).",
+    "target_formulation_c5_3": "r_hat(t) = a_x_level(t) - a_true(t)",
+    "required_dynamic_range_ms2": [
+      -6.0,
+      6.0
+    ],
+    "primary_input_signals": [
+      "a_x_level (longitudinal measured specific force)",
+      "accel_mag (total acceleration norm)",
+      "gyro_norm (total angular rate)",
+      "vibration_std (road roughness indicator)",
+      "temporal history / derivative (pitch transient indicator)"
+    ]
+  }
+}

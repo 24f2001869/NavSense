@@ -1,0 +1,66 @@
+{
+  "Vta02": {
+    "trip": "Vta02",
+    "duration_s": 1098.998,
+    "sample_count": 10991,
+    "mean_speed_ms": 10.05299080560863,
+    "var_speed": 26.263331064816207,
+    "bias_mounting_ms2": 0.05883919308357348,
+    "bias_source": "stationary (<0.2 m/s)",
+    "var_raw_imu_ms4": 3.004994184365752,
+    "var_kinematic_signal_ms4": 0.882949323153138,
+    "var_vibration_noise_ms4": 2.0587489695527283,
+    "snr_db": -3.676676168289252,
+    "corr_raw_pearson": 0.19094053384716458,
+    "corr_raw_spearman": 0.19547312661941024,
+    "corr_filtered_pearson": 0.46138729528468486,
+    "corr_filtered_spearman": 0.39685040160180035,
+    "corr_other_axes_with_dvdt": {
+      "phone_x": 0.24448923149324558,
+      "phone_y": -0.028040922266472014,
+      "phone_z": -0.00839113448853677
+    },
+    "best_lag_s": -0.8,
+    "max_lag_correlation": 0.5866268549719339,
+    "sign_consistency": {
+      "accel_regime_fraction": 0.7536882617062219,
+      "brake_regime_fraction": 0.6128928800513149,
+      "dynamic_overall_fraction": 0.6832905708787684,
+      "accel_samples": 3118,
+      "brake_samples": 3118,
+      "cruise_samples": 4031
+    }
+  },
+  "Vta04": {
+    "trip": "Vta04",
+    "duration_s": 178.799,
+    "sample_count": 1789,
+    "mean_speed_ms": 11.139835724489162,
+    "var_speed": 5.275857429762275,
+    "bias_mounting_ms2": 0.15045575539568345,
+    "bias_source": "steady cruising (|dv/dt|<0.08 m/s^2)",
+    "var_raw_imu_ms4": 3.6372965415449547,
+    "var_kinematic_signal_ms4": 0.9023946566677047,
+    "var_vibration_noise_ms4": 2.665912788751776,
+    "snr_db": -4.70449422965241,
+    "corr_raw_pearson": 0.07655418373550998,
+    "corr_raw_spearman": 0.07663714020185165,
+    "corr_filtered_pearson": 0.1876225093248192,
+    "corr_filtered_spearman": 0.1883522987045069,
+    "corr_other_axes_with_dvdt": {
+      "phone_x": 0.08739550585208167,
+      "phone_y": -0.003215421019138451,
+      "phone_z": -0.03114459265857803
+    },
+    "best_lag_s": -2.0,
+    "max_lag_correlation": 0.5107099744026291,
+    "sign_consistency": {
+      "accel_regime_fraction": 0.7391304347826086,
+      "brake_regime_fraction": 0.413265306122449,
+      "dynamic_overall_fraction": 0.5968819599109132,
+      "accel_samples": 506,
+      "brake_samples": 392,
+      "cruise_samples": 889
+    }
+  }
+}

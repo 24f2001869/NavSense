@@ -1,0 +1,21 @@
+[
+  {
+    "outage_id": 1,
+    "start_idx": 3656,
+    "end_idx": 4669,
+    "start_time_s": 423.0400002002716,
+    "end_time_s": 556.0230000019073,
+    "duration_s": 132.98299980163574,
+    "row_count": 1014,
+    "gnss_disp_h_m": 0.0,
+    "eskf_disp_h_m": 438.5366379220783,
+    "eskf_disp_u_m": 370.63,
+    "disp_error_h_m": 438.5366379220783,
+    "drift_rate_m_s": 3.2976894683998856,
+    "ml_speed_mean": 6.758165680473374,
+    "gnss_speed_mean": 1.0500000000000003,
+    "heading_start": 134.12,
+    "heading_end": 142.51,
+    "heading_change": 8.389999999999986
+  }
+]

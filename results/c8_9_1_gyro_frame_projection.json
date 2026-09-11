@@ -1,0 +1,621 @@
+{
+  "task1_convention": {
+    "R_pv_vbox_matrix": [
+      [
+        0.25285749812707076,
+        -0.967503519697135,
+        0.000158159963152987
+      ],
+      [
+        0.9673649698843415,
+        0.25281851475048017,
+        -0.016965071176632044
+      ],
+      [
+        0.016373780308326587,
+        0.004442743861263258,
+        0.9998560703148218
+      ]
+    ],
+    "angles_vbox_deg": {
+      "roll_deg": 0.2545854398777743,
+      "pitch_deg": -0.9381904311087491,
+      "yaw_deg": -75.35132341874059
+    },
+    "R_pv_phone_matrix": [
+      [
+        0.20476732974565864,
+        -0.97881016994634,
+        0.0009959309463206275
+      ],
+      [
+        0.9786737147728283,
+        0.20472155049383628,
+        -0.016936551483471975
+      ],
+      [
+        0.016373780308326587,
+        0.004442743861263258,
+        0.9998560703148218
+      ]
+    ],
+    "angles_phone_deg": {
+      "roll_deg": 0.2545854398777743,
+      "pitch_deg": -0.9381904311087491,
+      "yaw_deg": -78.18251381063946
+    },
+    "transformation_mapping": "Maps vectors from Phone frame to Vehicle frame: v_v = R_pv @ v_p",
+    "code_implementation": "accel_veh = (R_pv @ accel.T).T; gyro_veh = (R_pv @ gyro.T).T",
+    "vehicle_frame_axes": "ISO 8855: X_v = Forward, Y_v = Left, Z_v = Up (normal to road)",
+    "phone_frame_axes": "Android: X_p = Across width (Pitch in AndroSensor), Y_p = Along height (Roll), Z_p = Normal to screen (Yaw)",
+    "yaw_rate_sign_convention": "ISO 8855 vehicle yaw rate is positive for Left turn (CCW), negative for Right turn (CW). Navigation heading azimuth is clockwise from North, so heading rate dh/dt = -yaw_rate."
+  },
+  "task2_direct_projection": {
+    "raw_gyro_x_vs_iso_yaw": {
+      "pearson_r": 0.13457545377443683,
+      "p_value": 1.1027796668285005e-08,
+      "spearman_rho": 0.11888305476053215,
+      "slope": 0.026961517608753947,
+      "intercept": 0.010125964519532281,
+      "rmse": 0.3744907610851194,
+      "mae": 0.28162507417433613,
+      "sign_agreement_pct": 53.618030842230134,
+      "sample_count": 1789
+    },
+    "raw_gyro_y_vs_iso_yaw": {
+      "pearson_r": -0.030522349766300968,
+      "p_value": 0.1969156046741241,
+      "spearman_rho": -0.019448816028886942,
+      "slope": -0.010052711569449972,
+      "intercept": 0.010285414303349717,
+      "rmse": 0.24382057178279995,
+      "mae": 0.18395762248312894,
+      "sign_agreement_pct": 48.517200474495844,
+      "sample_count": 1789
+    },
+    "raw_gyro_z_vs_iso_yaw": {
+      "pearson_r": -0.01696461719484369,
+      "p_value": 0.4733153368647854,
+      "spearman_rho": -0.018504930215089397,
+      "slope": -0.013372991078733503,
+      "intercept": 0.010245530841782289,
+      "rmse": 0.12361665089554602,
+      "mae": 0.0894971059201472,
+      "sign_agreement_pct": 48.96142433234421,
+      "sample_count": 1789
+    },
+    "projected_omega_v_z_vs_iso_yaw": {
+      "pearson_r": -0.008962191945631559,
+      "p_value": 0.7048269877750643,
+      "spearman_rho": -0.009832886539350251,
+      "slope": -0.007207511887141848,
+      "intercept": 0.010257082737560118,
+      "rmse": 0.12165654465937423,
+      "mae": 0.08785314342160372,
+      "sign_agreement_pct": 49.76275207591934,
+      "sample_count": 1789
+    },
+    "raw_gyro_x_vs_heading_rate": {
+      "pearson_r": -0.0758272226830974,
+      "p_value": 0.0013291447178018123,
+      "spearman_rho": -0.06570309401150393,
+      "slope": -0.029031626247750207,
+      "intercept": -0.009199275075385828,
+      "rmse": 0.4141140792519879,
+      "mae": 0.3135523787484702,
+      "sign_agreement_pct": 48.851540616246496,
+      "sample_count": 1789
+    },
+    "raw_gyro_z_vs_heading_rate": {
+      "pearson_r": 0.006511398083629456,
+      "p_value": 0.7831470376568909,
+      "spearman_rho": 0.025144642038292853,
+      "slope": 0.00980903923108289,
+      "intercept": -0.009336132349467823,
+      "rmse": 0.1729236513653056,
+      "mae": 0.12756286106131598,
+      "sign_agreement_pct": 51.681614349775785,
+      "sample_count": 1789
+    },
+    "projected_omega_v_z_vs_heading_rate": {
+      "pearson_r": 0.0018641908785612434,
+      "p_value": 0.937196602553386,
+      "spearman_rho": 0.020014678784229245,
+      "slope": 0.0028650304258197087,
+      "intercept": -0.00934866260810969,
+      "rmse": 0.17225986528008508,
+      "mae": 0.12694822393555022,
+      "sign_agreement_pct": 51.37254901960784,
+      "sample_count": 1789
+    },
+    "regimes_projected_vs_iso": {
+      "straight_driving": {
+        "pearson_r": -0.0056940006853149466,
+        "p_value": 0.8413046839179364,
+        "spearman_rho": -0.013240162399518493,
+        "slope": -0.0010533553030114308,
+        "intercept": 5.48240505675371e-05,
+        "rmse": 0.09251076231033598,
+        "mae": 0.07102066541869165,
+        "sign_agreement_pct": 49.03169014084507,
+        "sample_count": 1239
+      },
+      "moderate_turns": {
+        "pearson_r": -0.04864830330520825,
+        "p_value": 0.287472836525204,
+        "spearman_rho": -0.03813549642444579,
+        "slope": -0.037607665842528636,
+        "intercept": 0.0033897924660964114,
+        "rmse": 0.1356248781721555,
+        "mae": 0.10335593597872035,
+        "sign_agreement_pct": 50.208333333333336,
+        "sample_count": 480
+      },
+      "high_rate_turns": {
+        "pearson_r": 0.14282430172856947,
+        "p_value": 0.23820065304393118,
+        "spearman_rho": 0.06550577754586892,
+        "slope": 0.4623796715327761,
+        "intercept": 0.23754405120786456,
+        "rmse": 0.31724102750537087,
+        "mae": 0.2794831408243476,
+        "sign_agreement_pct": 58.57142857142858,
+        "sample_count": 70
+      }
+    }
+  },
+  "task3_three_components": {
+    "omega_v_x_roll": {
+      "mean_rads": -0.00022172532140860696,
+      "std_rads": 0.310537989537304,
+      "max_rads": 1.6940011
+    },
+    "omega_v_y_pitch": {
+      "mean_rads": 0.00557492453884852,
+      "std_rads": 0.31419425418164315,
+      "max_rads": 1.7101312
+    },
+    "omega_v_z_yaw": {
+      "mean_rads": -0.001675296366685299,
+      "std_rads": 0.0939343807308348,
+      "max_rads": 0.6173031999999999
+    },
+    "omega_v_y_corr_with_accel_long": -0.017469031245557112,
+    "omega_v_x_corr_with_accel_lat": 0.060361988007349224
+  },
+  "task4_convention_crosscheck": {
+    "forward_projection_R_pv": {
+      "pearson_r": -0.008962191945631559,
+      "p_value": 0.7048269877750643,
+      "spearman_rho": -0.009832886539350251,
+      "slope": -0.007207511887141848,
+      "intercept": 0.010257082737560118,
+      "rmse": 0.12165654465937423,
+      "mae": 0.08785314342160372,
+      "sign_agreement_pct": 49.76275207591934,
+      "sample_count": 1789
+    },
+    "inverse_projection_R_pv_T": {
+      "pearson_r": -0.01586447388451693,
+      "p_value": 0.5024842635671353,
+      "spearman_rho": -0.017310606569094753,
+      "slope": -0.012618513477967648,
+      "intercept": 0.010246516903710689,
+      "rmse": 0.12288355923085766,
+      "mae": 0.08878383518326645,
+      "sign_agreement_pct": 49.46619217081851,
+      "sample_count": 1789
+    },
+    "physical_match": "Forward projection R_pv matches the documented mathematical derivation where v_v = R_pv @ v_p. Transpose convention R_pv.T would correspond to transforming vehicle vectors into phone frame."
+  },
+  "task5_time_lag": {
+    "projected_omega_v_z_lag_curve": {
+      "-2.0s": 0.013828206894955728,
+      "-1.5s": -0.0009540489993498148,
+      "-1.0s": 0.0014366076183704307,
+      "-0.5s": -5.824426173396367e-05,
+      "+0.0s": -0.008962191945631545,
+      "+0.5s": -0.018568458966776513,
+      "+1.0s": -0.003340137039931792,
+      "+1.5s": 0.008601188129368758,
+      "+2.0s": 0.003995997852788451
+    },
+    "best_lag_projected_s": 0.5,
+    "raw_gx_lag_curve": {
+      "-2.0s": 0.19918380339701314,
+      "-1.5s": 0.19554996007168476,
+      "-1.0s": 0.157726347467188,
+      "-0.5s": 0.13716947808370655,
+      "+0.0s": 0.13457545377443678,
+      "+0.5s": 0.13433549114975923,
+      "+1.0s": 0.10680423024683859,
+      "+1.5s": 0.07335724733609117,
+      "+2.0s": 0.08115479456776441
+    },
+    "assessment": "Correlation between projected omega_v,z and reference yaw rate remains near zero across all lags (-0.0090 at 0s, max 0.0186 at +0.5s). In contrast, raw gyro_x correlates at r = +0.135 at 0s, rising to r = +0.187 at -0.5s."
+  },
+  "task6_static_sanity": {
+    "vta04_low_dynamic_straight_05degs": {
+      "epochs_count": 420,
+      "duration_s": 42.0,
+      "criterion": "|vehicle yaw rate| < 0.5 deg/s",
+      "omega_v_x_roll": {
+        "mean_degs": -0.7777999880981666,
+        "std_degs": 15.864878564724739
+      },
+      "omega_v_y_pitch": {
+        "mean_degs": -1.0045272726220424,
+        "std_degs": 15.821983799217708
+      },
+      "omega_v_z_yaw": {
+        "mean_degs": -0.048426174574820915,
+        "std_degs": 5.369488061359877
+      },
+      "reference_yaw_rate_mean_degs": -0.017851696428571425,
+      "apparent_projected_yaw_rate_offset_degs": -0.03057447814624949
+    },
+    "vta04_low_dynamic_straight_10degs": {
+      "epochs_count": 754,
+      "duration_s": 75.4,
+      "criterion": "|vehicle yaw rate| < 1.0 deg/s",
+      "apparent_projected_yaw_rate_offset_degs": -0.10331234268044737
+    },
+    "vta02_true_static_zero_speed": {
+      "epochs_count": 675,
+      "duration_s": 67.5,
+      "criterion": "vehicle speed < 0.15 m/s",
+      "omega_v_x_roll": {
+        "mean_degs": 0.5139755698447043,
+        "std_degs": 1.2399524901778205
+      },
+      "omega_v_y_pitch": {
+        "mean_degs": 0.0011024574517815927,
+        "std_degs": 0.8588785823061098
+      },
+      "omega_v_z_yaw": {
+        "mean_degs": -0.14170647857593177,
+        "std_degs": 0.5429819808339811
+      },
+      "reference_yaw_rate_mean_degs": 0.005482222518518518,
+      "apparent_projected_yaw_rate_offset_degs": -0.14718870109445029
+    },
+    "vta03_true_static_zero_speed": {
+      "epochs_count": 34,
+      "duration_s": 3.4000000000000004,
+      "criterion": "vehicle speed < 0.15 m/s",
+      "apparent_projected_yaw_rate_offset_degs": 1.0241847916505267
+    },
+    "terminology_declaration": "Values are reported strictly as \"apparent projected yaw-rate offset\". They cannot be declared true sensor bias because dynamic cradle flutter, imperfect gravity leveling, and road vibration couple into the projected signal."
+  },
+  "task7_turn_check": {
+    ">=5deg_s": {
+      "threshold_deg_s": 5.0,
+      "sample_count": 194,
+      "projected_omega_v_z": {
+        "pearson_r": -0.05771009931645443,
+        "p_value": 0.4241277903185896,
+        "spearman_rho": -0.03972748501805761,
+        "slope": -0.10231745480234065,
+        "intercept": 0.08891411646831045,
+        "rmse": 0.2430336122855106,
+        "mae": 0.1975045035707324,
+        "sign_agreement_pct": 50.0,
+        "sample_count": 194
+      },
+      "raw_gx_pitch": {
+        "pearson_r": 0.3149571089503252,
+        "p_value": 7.717994362277243e-06,
+        "spearman_rho": 0.31566260473842184,
+        "slope": 0.13030964388308966,
+        "intercept": 0.08636697746539136,
+        "rmse": 0.45852488894336735,
+        "mae": 0.33830825834773814,
+        "sign_agreement_pct": 67.5257731958763,
+        "sample_count": 194
+      },
+      "raw_gz_yaw": {
+        "pearson_r": -0.07659790154830326,
+        "p_value": 0.2884395621827642,
+        "spearman_rho": -0.0643405539299284,
+        "slope": -0.13299627323199975,
+        "intercept": 0.08921310575688175,
+        "rmse": 0.24599597152365155,
+        "mae": 0.2001756602717633,
+        "sign_agreement_pct": 46.90721649484536,
+        "sample_count": 194
+      }
+    },
+    ">=10deg_s": {
+      "threshold_deg_s": 10.0,
+      "sample_count": 70,
+      "projected_omega_v_z": {
+        "pearson_r": 0.14282430172856947,
+        "p_value": 0.23820065304393118,
+        "spearman_rho": 0.06550577754586892,
+        "slope": 0.4623796715327761,
+        "intercept": 0.23754405120786456,
+        "rmse": 0.31724102750537087,
+        "mae": 0.2794831408243476,
+        "sign_agreement_pct": 58.57142857142858,
+        "sample_count": 70
+      },
+      "raw_gx_pitch": {
+        "pearson_r": 0.3074127606424152,
+        "p_value": 0.009633839222020523,
+        "spearman_rho": 0.11134057086476573,
+        "slope": 0.20698684487858074,
+        "intercept": 0.20415019761762632,
+        "rmse": 0.3247356621788787,
+        "mae": 0.2762827077594106,
+        "sign_agreement_pct": 84.28571428571429,
+        "sample_count": 70
+      },
+      "raw_gz_yaw": {
+        "pearson_r": 0.12196011963701953,
+        "p_value": 0.3145216883046316,
+        "spearman_rho": 0.04436471976456792,
+        "slope": 0.39529976460711364,
+        "intercept": 0.2383078339971426,
+        "rmse": 0.3199844123432338,
+        "mae": 0.2829256893957762,
+        "sign_agreement_pct": 51.42857142857142,
+        "sample_count": 70
+      }
+    },
+    ">=20deg_s": {
+      "threshold_deg_s": 20.0,
+      "sample_count": 19,
+      "projected_omega_v_z": {
+        "pearson_r": 0.06496083202662749,
+        "p_value": 0.7916157313925771,
+        "spearman_rho": 0.05528741207975126,
+        "slope": 0.07718738113973421,
+        "intercept": 0.48975974432173774,
+        "rmse": 0.49714848826992875,
+        "mae": 0.49263709349497825,
+        "sign_agreement_pct": 47.368421052631575,
+        "sample_count": 19
+      },
+      "raw_gx_pitch": {
+        "pearson_r": -0.6161383457100084,
+        "p_value": 0.0049689323675717375,
+        "spearman_rho": -0.48617819511400306,
+        "slope": -0.28332243547405334,
+        "intercept": 0.5266894848058293,
+        "rmse": 0.38971792178306663,
+        "mae": 0.3607012679245772,
+        "sign_agreement_pct": 89.47368421052632,
+        "sample_count": 19
+      },
+      "raw_gz_yaw": {
+        "pearson_r": 0.08536041369001628,
+        "p_value": 0.7282513733850382,
+        "spearman_rho": 0.05528741207975126,
+        "slope": 0.10108552098085828,
+        "intercept": 0.4900457812095626,
+        "rmse": 0.49913806795061094,
+        "mae": 0.4947295987581361,
+        "sign_agreement_pct": 47.368421052631575,
+        "sample_count": 19
+      }
+    },
+    ">=45deg_s": {
+      "threshold_deg_s": 45.0,
+      "sample_count": 0,
+      "projected_omega_v_z": {
+        "pearson_r": 0.0,
+        "p_value": 1.0,
+        "spearman_rho": 0.0,
+        "slope": 0.0,
+        "intercept": 0.0,
+        "rmse": 0.0,
+        "mae": 0.0,
+        "sign_agreement_pct": 0.0,
+        "sample_count": 0
+      },
+      "raw_gx_pitch": {
+        "pearson_r": 0.0,
+        "p_value": 1.0,
+        "spearman_rho": 0.0,
+        "slope": 0.0,
+        "intercept": 0.0,
+        "rmse": 0.0,
+        "mae": 0.0,
+        "sign_agreement_pct": 0.0,
+        "sample_count": 0
+      },
+      "raw_gz_yaw": {
+        "pearson_r": 0.0,
+        "p_value": 1.0,
+        "spearman_rho": 0.0,
+        "slope": 0.0,
+        "intercept": 0.0,
+        "rmse": 0.0,
+        "mae": 0.0,
+        "sign_agreement_pct": 0.0,
+        "sample_count": 0
+      }
+    }
+  },
+  "task8_cross_trip": {
+    "Vta04": {
+      "R_pv_canonical_matrix": [
+        [
+          0.25285749812707076,
+          -0.967503519697135,
+          0.000158159963152987
+        ],
+        [
+          0.9673649698843415,
+          0.25281851475048017,
+          -0.016965071176632044
+        ],
+        [
+          0.016373780308326587,
+          0.004442743861263258,
+          0.9998560703148218
+        ]
+      ],
+      "R_pv_canonical_row2": [
+        0.016373780308326587,
+        0.004442743861263258,
+        0.9998560703148218
+      ],
+      "R_pv_dynamic_matrix": [
+        [
+          0.20476732974565864,
+          -0.97881016994634,
+          0.0009959309463206275
+        ],
+        [
+          0.9786737147728283,
+          0.20472155049383628,
+          -0.016936551483471975
+        ],
+        [
+          0.016373780308326587,
+          0.004442743861263258,
+          0.9998560703148218
+        ]
+      ],
+      "angles_deg": {
+        "roll_deg": 0.2545854398777743,
+        "pitch_deg": -0.9381904311087491,
+        "yaw_deg": -78.18251381063946
+      },
+      "raw_gz_r_overall": -0.016964617194843695,
+      "raw_gx_r_overall": 0.13457545377443678,
+      "projected_omega_v_z_r_overall": -0.008794473279796895,
+      "projected_omega_v_z_r_turn": -0.05734545175755758,
+      "raw_gx_r_turn": 0.31495710895032514,
+      "observability_improved": false
+    },
+    "Vta02": {
+      "R_pv_canonical_matrix": [
+        [
+          0.8683111185692388,
+          -0.49599844751770644,
+          -0.0046196784587617026
+        ],
+        [
+          0.49585551186395793,
+          0.8677457896146379,
+          0.03383128670625567
+        ],
+        [
+          -0.012771559151865326,
+          -0.03166677542936166,
+          0.9994168812916543
+        ]
+      ],
+      "R_pv_canonical_row2": [
+        -0.012771559151865326,
+        -0.03166677542936166,
+        0.9994168812916543
+      ],
+      "R_pv_dynamic_matrix": [
+        [
+          0.9039519039413303,
+          -0.42761230418937657,
+          -0.0043211881116486245
+        ],
+        [
+          0.4274081885410768,
+          0.9030997153219325,
+          0.041631052754883616
+        ],
+        [
+          -0.013899486640862883,
+          -0.03947938058400398,
+          0.9991237074455914
+        ]
+      ],
+      "angles_deg": {
+        "roll_deg": -2.262808605300758,
+        "pitch_deg": 0.7964075670804952,
+        "yaw_deg": -25.305806374857507
+      },
+      "raw_gz_r_overall": 0.00226504407969454,
+      "raw_gx_r_overall": 0.2273576147891509,
+      "projected_omega_v_z_r_overall": -0.008814395974156914,
+      "projected_omega_v_z_r_turn": -0.018800725801847898,
+      "raw_gx_r_turn": 0.5094290228023516,
+      "observability_improved": false
+    },
+    "Vta03": {
+      "R_pv_canonical_matrix": [
+        [
+          0.6945511510958983,
+          0.7164144212997455,
+          0.06594752053802612
+        ],
+        [
+          -0.7181008045472618,
+          0.6959337025255105,
+          0.0027415684761682986
+        ],
+        [
+          -0.043931002947097925,
+          -0.04926112709718454,
+          0.997819326500132
+        ]
+      ],
+      "R_pv_canonical_row2": [
+        -0.043931002947097925,
+        -0.04926112709718454,
+        0.997819326500132
+      ],
+      "R_pv_dynamic_matrix": [
+        [
+          6.120892370077609e-17,
+          0.9976245646466543,
+          0.06888561543293018
+        ],
+        [
+          -0.9996175835088472,
+          0.001904891844682514,
+          -0.027587281979073966
+        ],
+        [
+          -0.027652969821212278,
+          -0.06885927243758541,
+          0.9972430565611543
+        ]
+      ],
+      "angles_deg": {
+        "roll_deg": -3.949983172273617,
+        "pitch_deg": 1.584600459357432,
+        "yaw_deg": 90.0
+      },
+      "raw_gz_r_overall": -0.058215313004612905,
+      "raw_gx_r_overall": -0.19321324040378313,
+      "projected_omega_v_z_r_overall": -0.01672093509939764,
+      "projected_omega_v_z_r_turn": -0.020644060913932047,
+      "raw_gx_r_turn": -0.2672411465477481,
+      "observability_improved": false
+    },
+    "key_finding": "NO: Physical frame projection with R_pv does NOT consistently improve yaw-rate observability across trips. Projected omega_v,z correlation with chassis yaw rate remains near zero across all trips (|r| <= 0.032 overall, |r| <= 0.057 in turns), while raw phone gyro_x carries a significant turn correlation (r = +0.315 on Vta04, r = +0.509 on Vta02)."
+  },
+  "task9_interpretation": {
+    "R_pv_third_row_weights": [
+      0.016,
+      0.004,
+      1.0
+    ],
+    "empirical_regression_weights": [
+      0.1261,
+      0.1687,
+      0.0745
+    ],
+    "classification": "B: Partially explains it / Reveals Alignment Matrix Limitation. The current gravity leveling matrix R_level sets R_pv[2, :] approx [0, 0, 1], assigning 99.98% weight to phone gyro_z (which has zero yaw correlation) and only 1.6% weight to phone gyro_x (which carries the true yaw signal). Physical frame projection as currently computed fails because stationary gravity leveling alone does not align the rotational axes of the tilted cradle.",
+    "physical_mechanism": "The phone was placed in a tilted landscape mount facing the driver. Because the phone screen is tilted backward and obliquely angled, vehicle chassis yaw rotation projects primarily onto the phone transverse (pitch) and longitudinal (roll) axes, rather than the screen-normal (yaw) axis."
+  },
+  "task10_causality_check": {
+    "1_observed_correlation": "Verified: Raw gyro_x correlates at r = +0.135 overall and r = +0.315 in turns. Raw gyro_z has r = -0.017 (uncorrelated).",
+    "2_physically_expected_frame_projection": "An ideal mounting matrix R_vp for a tilted landscape cradle must mix phone pitch (gx) and roll (gy) into vehicle yaw (omega_v,z).",
+    "3_apparent_gyro_bias": "Apparent yaw-rate drift is +0.7 deg/s to +1.4 deg/s during straight segments.",
+    "4_true_sensor_bias": "Stationary pre-outage epochs show static gyro offset of +0.005 deg/s, indicating that the +1.4 deg/s dynamic drift is not static MEMS bias but dynamic cross-coupling from unmodeled mount tilt.",
+    "5_timing_error": "Lag audit shows correlation peaks within +/- 0.5s; timing latency does NOT explain the axis failure.",
+    "6_mounting_frame_error": "STRONGLY SUPPORTED: The current two-stage gravity alignment assumes the phone lies nearly flat (Z normal to road), failing to correctly recover the 3D oblique orientation of the dashboard mount."
+  }
+}

@@ -1,0 +1,40 @@
+[
+  {
+    "outage_id": 1,
+    "start_idx": 0,
+    "end_idx": 66,
+    "start_time_s": 0.0,
+    "end_time_s": 7.4709999561309814,
+    "duration_s": 7.4709999561309814,
+    "row_count": 67,
+    "gnss_disp_h_m": 0.0,
+    "eskf_disp_h_m": 66.90440942120333,
+    "eskf_disp_u_m": -72.10000000000002,
+    "disp_error_h_m": 66.90440942120333,
+    "drift_rate_m_s": 8.955214805790364,
+    "ml_speed_mean": 11.914776119402987,
+    "gnss_speed_mean": 0.8100000000000004,
+    "heading_start": 265.56,
+    "heading_end": 241.81,
+    "heading_change": -23.75
+  },
+  {
+    "outage_id": 2,
+    "start_idx": 2168,
+    "end_idx": 3291,
+    "start_time_s": 248.31200003623962,
+    "end_time_s": 476.8619999885559,
+    "duration_s": 228.54999995231628,
+    "row_count": 1124,
+    "gnss_disp_h_m": 0.0,
+    "eskf_disp_h_m": 655.8554262183092,
+    "eskf_disp_u_m": 502.25,
+    "disp_error_h_m": 655.8554262183092,
+    "drift_rate_m_s": 2.8696365187273862,
+    "ml_speed_mean": 2.7619128113879,
+    "gnss_speed_mean": 0.18999999999999995,
+    "heading_start": 77.25,
+    "heading_end": 51.64,
+    "heading_change": -25.61
+  }
+]

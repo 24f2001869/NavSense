@@ -1,0 +1,38 @@
+{
+  "stage": "C8-11.6",
+  "manifest_status": "FROZEN",
+  "created_at": "2026-09-08T02:45:00Z",
+  "description": "Pre-execution freeze manifest for Stage C8-11.6 Cross-Trip & Cross-Condition Validation",
+  "architecture": {
+    "type": "variable_length_quality_gated",
+    "lookback_sequence_s": [5, 10, 20, 30, 60],
+    "rejection_fallback": "retain_previous_calibration"
+  },
+  "candidate_thresholds": {
+    "min_speed_ms": 3.0,
+    "min_straight_samples": 15,
+    "max_course_dispersion_deg": 6.0,
+    "max_mag_norm_std_uT": 3.0
+  },
+  "evaluation_baselines": [
+    "naive_fixed_10s",
+    "quality_gated_variable",
+    "fallback_only_initial_static"
+  ],
+  "ground_truth_good_calibration_threshold_deg": 10.0,
+  "catastrophic_error_threshold_deg": 20.0,
+  "predefined_sensitivity_perturbations": {
+    "speed_ms": [2.5, 3.0, 3.5],
+    "straight_samples": [10, 15, 20],
+    "course_dispersion_deg": [4.5, 6.0, 7.5],
+    "mag_norm_std_uT": [2.5, 3.0, 3.5]
+  },
+  "governing_constraints": {
+    "TUNING_ALLOWED": false,
+    "MODEL_RETRAINING": false,
+    "PIPELINE_MODIFICATION": false,
+    "THRESHOLD_MODIFICATION": false,
+    "ANTI_CIRCULARITY": "Operational decisions use smartphone channels only; vehicle GT is post-hoc diagnostic only",
+    "TEMPORAL_INTEGRITY": "max(t_calib) < t_outage_start strictly enforced for all outages"
+  }
+}

@@ -1,0 +1,68 @@
+# ==============================================================================
+# SIH26168-IDR .gitignore
+# ==============================================================================
+
+# --- Python & Environments ---
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+*.egg-info/
+
+# --- Heavy Raw Datasets (Do NOT commit 2.34 GB IO-VNBD dataset) ---
+data/raw/**
+*.zip
+IO-VNBD-master.zip
+
+# --- Intermediate Preprocessing Caches & Binary Buffers ---
+*.npz
+calib_cache.npz
+train_seq_cache.npz
+scratch/calib_cache.npz
+scratch/train_seq_cache.npz
+scratch/test_mock_raw.csv
+
+# --- Heavy Scikit-Learn Binary Checkpoints (>150 MB) ---
+models/**/*.joblib
+models/*.joblib
+
+# --- Android Build Artifacts & Local Machine Settings ---
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/*.iml
+android/app/*.iml
+*.apk
+*.aab
+
+# --- IDE & Editor Metadata ---
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# --- OS Metadata ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Local Logs, Build Artifacts & Temporary Dumps ---
+build/
+scratch/
+field_logs/
+files/
+*.log
+*.tmp
+temp/

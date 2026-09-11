@@ -1,0 +1,467 @@
+{
+  "metadata": {
+    "timestamp": "2026-09-06T12:34:42",
+    "stage": "C8-3.1",
+    "status": "COMPLETED",
+    "strategies": [
+      "S1_InstantaneousNearest",
+      "S2_HeadingGated",
+      "S3_ContinuityAware",
+      "S4_TopologyAware",
+      "S5_MultiFactorScorer"
+    ],
+    "horizons": [
+      10.0,
+      20.0,
+      30.0,
+      60.0
+    ],
+    "search_radius_m": 25.0,
+    "heading_gate_deg": 30.0,
+    "gt_threshold_m": 7.5
+  },
+  "Vta04": {
+    "10s": {
+      "n_windows": 9,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 90,
+          "associated_count": 85,
+          "wrong_road_count": 25,
+          "wrong_road_rate_pct": 29.411764705882355,
+          "coverage_pct": 94.44444444444444,
+          "mean_persistence_s": 6.0,
+          "switches_per_min": 12.0,
+          "mean_gt_dist_m": 9.427577057067802
+        },
+        "S2_HeadingGated": {
+          "total_queries": 90,
+          "associated_count": 75,
+          "wrong_road_count": 16,
+          "wrong_road_rate_pct": 21.333333333333336,
+          "coverage_pct": 83.33333333333334,
+          "mean_persistence_s": 5.9,
+          "switches_per_min": 3.3333333333333335,
+          "mean_gt_dist_m": 5.646283177854269
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 90,
+          "associated_count": 82,
+          "wrong_road_count": 16,
+          "wrong_road_rate_pct": 19.51219512195122,
+          "coverage_pct": 91.11111111111111,
+          "mean_persistence_s": 6.0,
+          "switches_per_min": 4.0,
+          "mean_gt_dist_m": 5.5574779768503575
+        },
+        "S4_TopologyAware": {
+          "total_queries": 90,
+          "associated_count": 76,
+          "wrong_road_count": 11,
+          "wrong_road_rate_pct": 14.473684210526317,
+          "coverage_pct": 84.44444444444444,
+          "mean_persistence_s": 5.416666666666667,
+          "switches_per_min": 2.6666666666666665,
+          "mean_gt_dist_m": 3.876827730772584
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 90,
+          "associated_count": 80,
+          "wrong_road_count": 12,
+          "wrong_road_rate_pct": 15.0,
+          "coverage_pct": 88.88888888888889,
+          "mean_persistence_s": 6.181818181818182,
+          "switches_per_min": 3.3333333333333335,
+          "mean_gt_dist_m": 5.106154540592879
+        }
+      }
+    },
+    "20s": {
+      "n_windows": 8,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 160,
+          "associated_count": 129,
+          "wrong_road_count": 66,
+          "wrong_road_rate_pct": 51.162790697674424,
+          "coverage_pct": 80.625,
+          "mean_persistence_s": 5.25,
+          "switches_per_min": 13.875,
+          "mean_gt_dist_m": 31.793467588017883
+        },
+        "S2_HeadingGated": {
+          "total_queries": 160,
+          "associated_count": 108,
+          "wrong_road_count": 47,
+          "wrong_road_rate_pct": 43.51851851851852,
+          "coverage_pct": 67.5,
+          "mean_persistence_s": 5.083333333333333,
+          "switches_per_min": 4.5,
+          "mean_gt_dist_m": 27.479222989310603
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 160,
+          "associated_count": 118,
+          "wrong_road_count": 46,
+          "wrong_road_rate_pct": 38.983050847457626,
+          "coverage_pct": 73.75,
+          "mean_persistence_s": 5.538461538461538,
+          "switches_per_min": 5.25,
+          "mean_gt_dist_m": 25.60644879535855
+        },
+        "S4_TopologyAware": {
+          "total_queries": 160,
+          "associated_count": 105,
+          "wrong_road_count": 37,
+          "wrong_road_rate_pct": 35.23809523809524,
+          "coverage_pct": 65.625,
+          "mean_persistence_s": 4.857142857142857,
+          "switches_per_min": 3.0,
+          "mean_gt_dist_m": 22.762211792078688
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 160,
+          "associated_count": 110,
+          "wrong_road_count": 38,
+          "wrong_road_rate_pct": 34.54545454545455,
+          "coverage_pct": 68.75,
+          "mean_persistence_s": 5.538461538461538,
+          "switches_per_min": 3.375,
+          "mean_gt_dist_m": 22.89666528996993
+        }
+      }
+    },
+    "30s": {
+      "n_windows": 8,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 240,
+          "associated_count": 187,
+          "wrong_road_count": 120,
+          "wrong_road_rate_pct": 64.1711229946524,
+          "coverage_pct": 77.91666666666667,
+          "mean_persistence_s": 4.466666666666667,
+          "switches_per_min": 13.0,
+          "mean_gt_dist_m": 70.18251511099277
+        },
+        "S2_HeadingGated": {
+          "total_queries": 240,
+          "associated_count": 149,
+          "wrong_road_count": 84,
+          "wrong_road_rate_pct": 56.375838926174495,
+          "coverage_pct": 62.083333333333336,
+          "mean_persistence_s": 4.333333333333333,
+          "switches_per_min": 4.75,
+          "mean_gt_dist_m": 70.5151100164665
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 240,
+          "associated_count": 160,
+          "wrong_road_count": 84,
+          "wrong_road_rate_pct": 52.5,
+          "coverage_pct": 66.66666666666666,
+          "mean_persistence_s": 4.75,
+          "switches_per_min": 5.25,
+          "mean_gt_dist_m": 66.59820839602813
+        },
+        "S4_TopologyAware": {
+          "total_queries": 240,
+          "associated_count": 128,
+          "wrong_road_count": 57,
+          "wrong_road_rate_pct": 44.53125,
+          "coverage_pct": 53.333333333333336,
+          "mean_persistence_s": 4.4375,
+          "switches_per_min": 2.75,
+          "mean_gt_dist_m": 57.225169085886336
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 240,
+          "associated_count": 134,
+          "wrong_road_count": 59,
+          "wrong_road_rate_pct": 44.02985074626866,
+          "coverage_pct": 55.833333333333336,
+          "mean_persistence_s": 5.0,
+          "switches_per_min": 2.5,
+          "mean_gt_dist_m": 57.560900806626755
+        }
+      }
+    },
+    "60s": {
+      "n_windows": 6,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 360,
+          "associated_count": 272,
+          "wrong_road_count": 214,
+          "wrong_road_rate_pct": 78.67647058823529,
+          "coverage_pct": 75.55555555555556,
+          "mean_persistence_s": 4.833333333333333,
+          "switches_per_min": 15.166666666666666,
+          "mean_gt_dist_m": 147.94054158678307
+        },
+        "S2_HeadingGated": {
+          "total_queries": 360,
+          "associated_count": 177,
+          "wrong_road_count": 120,
+          "wrong_road_rate_pct": 67.79661016949152,
+          "coverage_pct": 49.166666666666664,
+          "mean_persistence_s": 4.384615384615385,
+          "switches_per_min": 5.833333333333333,
+          "mean_gt_dist_m": 128.89838797135224
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 360,
+          "associated_count": 190,
+          "wrong_road_count": 123,
+          "wrong_road_rate_pct": 64.73684210526316,
+          "coverage_pct": 52.77777777777778,
+          "mean_persistence_s": 4.785714285714286,
+          "switches_per_min": 6.166666666666667,
+          "mean_gt_dist_m": 122.89622606239216
+        },
+        "S4_TopologyAware": {
+          "total_queries": 360,
+          "associated_count": 125,
+          "wrong_road_count": 63,
+          "wrong_road_rate_pct": 50.4,
+          "coverage_pct": 34.72222222222222,
+          "mean_persistence_s": 4.428571428571429,
+          "switches_per_min": 2.1666666666666665,
+          "mean_gt_dist_m": 73.27057325380602
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 360,
+          "associated_count": 127,
+          "wrong_road_count": 60,
+          "wrong_road_rate_pct": 47.24409448818898,
+          "coverage_pct": 35.27777777777778,
+          "mean_persistence_s": 5.583333333333333,
+          "switches_per_min": 1.8333333333333333,
+          "mean_gt_dist_m": 78.52666644168524
+        }
+      }
+    }
+  },
+  "Vta02": {
+    "10s": {
+      "n_windows": 55,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 550,
+          "associated_count": 534,
+          "wrong_road_count": 122,
+          "wrong_road_rate_pct": 22.846441947565545,
+          "coverage_pct": 97.0909090909091,
+          "mean_persistence_s": 5.802816901408451,
+          "switches_per_min": 8.4,
+          "mean_gt_dist_m": 7.375364621838581
+        },
+        "S2_HeadingGated": {
+          "total_queries": 550,
+          "associated_count": 492,
+          "wrong_road_count": 104,
+          "wrong_road_rate_pct": 21.138211382113823,
+          "coverage_pct": 89.45454545454545,
+          "mean_persistence_s": 4.790123456790123,
+          "switches_per_min": 3.7090909090909094,
+          "mean_gt_dist_m": 6.715412861569669
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 550,
+          "associated_count": 523,
+          "wrong_road_count": 116,
+          "wrong_road_rate_pct": 22.179732313575524,
+          "coverage_pct": 95.0909090909091,
+          "mean_persistence_s": 5.652777777777778,
+          "switches_per_min": 3.0545454545454547,
+          "mean_gt_dist_m": 6.815714670450377
+        },
+        "S4_TopologyAware": {
+          "total_queries": 550,
+          "associated_count": 495,
+          "wrong_road_count": 99,
+          "wrong_road_rate_pct": 20.0,
+          "coverage_pct": 90.0,
+          "mean_persistence_s": 5.823529411764706,
+          "switches_per_min": 2.4000000000000004,
+          "mean_gt_dist_m": 5.93258553891566
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 550,
+          "associated_count": 502,
+          "wrong_road_count": 93,
+          "wrong_road_rate_pct": 18.52589641434263,
+          "coverage_pct": 91.27272727272727,
+          "mean_persistence_s": 5.927536231884058,
+          "switches_per_min": 1.6363636363636365,
+          "mean_gt_dist_m": 5.772012218821047
+        }
+      }
+    },
+    "20s": {
+      "n_windows": 54,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 1080,
+          "associated_count": 923,
+          "wrong_road_count": 420,
+          "wrong_road_rate_pct": 45.50379198266522,
+          "coverage_pct": 85.46296296296296,
+          "mean_persistence_s": 5.848837209302325,
+          "switches_per_min": 10.0,
+          "mean_gt_dist_m": 28.05219571607557
+        },
+        "S2_HeadingGated": {
+          "total_queries": 1080,
+          "associated_count": 785,
+          "wrong_road_count": 303,
+          "wrong_road_rate_pct": 38.598726114649686,
+          "coverage_pct": 72.68518518518519,
+          "mean_persistence_s": 5.2967032967032965,
+          "switches_per_min": 3.8333333333333335,
+          "mean_gt_dist_m": 20.741579779075863
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 1080,
+          "associated_count": 834,
+          "wrong_road_count": 323,
+          "wrong_road_rate_pct": 38.72901678657074,
+          "coverage_pct": 77.22222222222223,
+          "mean_persistence_s": 6.156626506024097,
+          "switches_per_min": 3.5,
+          "mean_gt_dist_m": 20.45434196711317
+        },
+        "S4_TopologyAware": {
+          "total_queries": 1080,
+          "associated_count": 711,
+          "wrong_road_count": 214,
+          "wrong_road_rate_pct": 30.09845288326301,
+          "coverage_pct": 65.83333333333333,
+          "mean_persistence_s": 6.454545454545454,
+          "switches_per_min": 1.6666666666666667,
+          "mean_gt_dist_m": 13.972791411061841
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 1080,
+          "associated_count": 751,
+          "wrong_road_count": 228,
+          "wrong_road_rate_pct": 30.359520639147803,
+          "coverage_pct": 69.53703703703704,
+          "mean_persistence_s": 6.301204819277109,
+          "switches_per_min": 1.3888888888888888,
+          "mean_gt_dist_m": 14.064261747639007
+        }
+      }
+    },
+    "30s": {
+      "n_windows": 54,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 1620,
+          "associated_count": 1262,
+          "wrong_road_count": 717,
+          "wrong_road_rate_pct": 56.81458003169572,
+          "coverage_pct": 77.90123456790124,
+          "mean_persistence_s": 6.264367816091954,
+          "switches_per_min": 11.148148148148149,
+          "mean_gt_dist_m": 62.92716887142282
+        },
+        "S2_HeadingGated": {
+          "total_queries": 1620,
+          "associated_count": 1003,
+          "wrong_road_count": 479,
+          "wrong_road_rate_pct": 47.756729810568295,
+          "coverage_pct": 61.91358024691358,
+          "mean_persistence_s": 5.574468085106383,
+          "switches_per_min": 4.7407407407407405,
+          "mean_gt_dist_m": 45.7120853342781
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 1620,
+          "associated_count": 1063,
+          "wrong_road_count": 509,
+          "wrong_road_rate_pct": 47.88334901222954,
+          "coverage_pct": 65.61728395061729,
+          "mean_persistence_s": 6.517647058823529,
+          "switches_per_min": 4.555555555555555,
+          "mean_gt_dist_m": 45.33958776546459
+        },
+        "S4_TopologyAware": {
+          "total_queries": 1620,
+          "associated_count": 801,
+          "wrong_road_count": 263,
+          "wrong_road_rate_pct": 32.83395755305868,
+          "coverage_pct": 49.44444444444444,
+          "mean_persistence_s": 6.897435897435898,
+          "switches_per_min": 1.3333333333333333,
+          "mean_gt_dist_m": 20.384708995762193
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 1620,
+          "associated_count": 861,
+          "wrong_road_count": 295,
+          "wrong_road_rate_pct": 34.26248548199768,
+          "coverage_pct": 53.148148148148145,
+          "mean_persistence_s": 6.738095238095238,
+          "switches_per_min": 1.4074074074074074,
+          "mean_gt_dist_m": 24.715067373364402
+        }
+      }
+    },
+    "60s": {
+      "n_windows": 52,
+      "strategies": {
+        "S1_InstantaneousNearest": {
+          "total_queries": 3120,
+          "associated_count": 1989,
+          "wrong_road_count": 1412,
+          "wrong_road_rate_pct": 70.9904474610357,
+          "coverage_pct": 63.74999999999999,
+          "mean_persistence_s": 6.788235294117647,
+          "switches_per_min": 11.73076923076923,
+          "mean_gt_dist_m": 208.35007063416396
+        },
+        "S2_HeadingGated": {
+          "total_queries": 3120,
+          "associated_count": 1394,
+          "wrong_road_count": 835,
+          "wrong_road_rate_pct": 59.89956958393113,
+          "coverage_pct": 44.67948717948718,
+          "mean_persistence_s": 5.946808510638298,
+          "switches_per_min": 4.615384615384615,
+          "mean_gt_dist_m": 157.23827439442508
+        },
+        "S3_ContinuityAware": {
+          "total_queries": 3120,
+          "associated_count": 1468,
+          "wrong_road_count": 878,
+          "wrong_road_rate_pct": 59.80926430517711,
+          "coverage_pct": 47.05128205128205,
+          "mean_persistence_s": 6.9411764705882355,
+          "switches_per_min": 4.5576923076923075,
+          "mean_gt_dist_m": 154.91566473997364
+        },
+        "S4_TopologyAware": {
+          "total_queries": 3120,
+          "associated_count": 920,
+          "wrong_road_count": 348,
+          "wrong_road_rate_pct": 37.826086956521735,
+          "coverage_pct": 29.48717948717949,
+          "mean_persistence_s": 7.428571428571429,
+          "switches_per_min": 0.7115384615384616,
+          "mean_gt_dist_m": 37.419209168175335
+        },
+        "S5_MultiFactorScorer": {
+          "total_queries": 3120,
+          "associated_count": 1085,
+          "wrong_road_count": 484,
+          "wrong_road_rate_pct": 44.60829493087557,
+          "coverage_pct": 34.77564102564102,
+          "mean_persistence_s": 7.329268292682927,
+          "switches_per_min": 1.4230769230769231,
+          "mean_gt_dist_m": 85.45544007487246
+        }
+      }
+    }
+  }
+}

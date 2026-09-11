@@ -1,0 +1,13 @@
+{
+  "Vta02": {
+    "phone_internal_lag_samples": -7,
+    "phone_internal_lag_seconds": -0.7,
+    "phone_internal_corr": 0.2352,
+    "phone_internal_corr_at_zero": 0.1983,
+    "phone_vs_vbox_accel_lag_samples": -8,
+    "phone_vs_vbox_accel_lag_seconds": -0.8,
+    "phone_vs_vbox_accel_corr": 0.2845,
+    "phone_vs_vbox_speed_lag_samples": -2,
+    "phone_vs_vbox_speed_lag_seconds": -0.2,
+    "phone_vs_vbox_speed_corr": 0.9963,
+    "phone_internally_consistent": 

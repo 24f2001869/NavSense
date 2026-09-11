@@ -1,0 +1,36 @@
+{
+  "timestamp_iso": "2026-09-05T22:30:00Z",
+  "code_integrity": {
+    "w_b_star_selected_on_vta02": 10.0,
+    "causal_indexing_verified": true,
+    "expanding_initialization_verified": true,
+    "epsilon_nonzero_verified": true,
+    "bounded_c0_limits": [
+      0.21825,
+      0.39285
+    ],
+    "zero_vbox_can_in_features": true,
+    "zero_vta04_leakage_in_parameters": true
+  },
+  "sixty_second_forensic": {
+    "total_60s_windows": 23,
+    "c0_all_mean_m": 602.4653779097955,
+    "c0_all_median_m": 582.261945632128,
+    "cand1b_all_mean_m": 625.7214209835103,
+    "cand1b_all_median_m": 583.947039910667,
+    "bounded_c0_all_mean_m": 599.360731988337,
+    "bounded_c0_all_median_m": 588.7946108067526,
+    "anomalous_window_id": 21,
+    "anomalous_window_interval_s": [
+      110.0,
+      170.0
+    ],
+    "anomalous_window_drift_c0": 872.6771903900595,
+    "anomalous_window_drift_1b": 1774.669863548881,
+    "anomalous_window_drift_bnd": 855.6217795315299,
+    "anomalous_window_vel_err_1b": 122.97411858694075,
+    "anomalous_window_vel_err_c0": 8.37832447847658,
+    "cand1b_mean_excluding_anomaly_m": 573.4964917759934,
+    "c0_mean_excluding_anomaly_m": 590.1830227970563
+  }
+}

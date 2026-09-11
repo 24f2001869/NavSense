@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 840" width="960" height="840">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 22px; fill: #ffffff; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 13px; fill: #94a3b8; }
+      .badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11px; font-weight: 600; }
+      .box-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 14px; fill: #ffffff; }
+      .box-desc { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 11.5px; fill: #cbd5e1; }
+      .box-tag { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 10px; font-weight: 600; }
+      .line { stroke: #64748b; stroke-width: 2; fill: none; stroke-dasharray: none; }
+      .line-accent { stroke: #38bdf8; stroke-width: 2; fill: none; }
+      .line-orange { stroke: #fb923c; stroke-width: 2; fill: none; }
+      .line-emerald { stroke: #34d399; stroke-width: 2; fill: none; }
+      .arrow { fill: #38bdf8; }
+    </style>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+    <linearGradient id="blueCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="coreCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <marker id="arrowhead" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#38bdf8" />
+    </marker>
+    <marker id="arrowhead-slate" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#64748b" />
+    </marker>
+    <marker id="arrowhead-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#fb923c" />
+    </marker>
+    <filter id="dropGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="840" rx="16" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+
+  <!-- Header Section -->
+  <g transform="translate(40, 36)">
+    <text class="title" x="0" y="0">SIH26168-IDR: System Architecture</text>
+    <text class="subtitle" x="0" y="22">AI/ML-Based Intelligent Dead Reckoning for Smartphone GNSS-Denied Navigation</text>
+    <rect x="670" y="-18" width="210" height="26" rx="13" fill="#3b0764" stroke="#7e22ce" stroke-width="1.5" />
+    <text class="badge" x="775" y="-1" fill="#d8b4fe" text-anchor="middle">RESEARCH PROTOTYPE ARCHITECTURE</text>
+  </g>
+
+  <!-- LAYER 1: SENSOR INGESTION -->
+  <g transform="translate(40, 85)" filter="url(#dropGlow)">
+    <!-- GNSS Card -->
+    <rect x="60" y="0" width="360" height="66" rx="10" fill="url(#blueCard)" stroke="#38bdf8" stroke-width="1.5" />
+    <text class="box-title" x="80" y="26">Consumer Smartphone GNSS (1 Hz)</text>
+    <text class="box-desc" x="80" y="46">Fix coordinates, velocity vector, DOP quality metrics</text>
+    <rect x="330" y="10" width="76" height="18" rx="9" fill="#0369a1" />
+    <text class="box-tag" x="368" y="23" fill="#e0f2fe" text-anchor="middle">INTERMITTENT</text>
+
+    <!-- IMU Card -->
+    <rect x="460" y="0" width="400" height="66" rx="10" fill="url(#blueCard)" stroke="#38bdf8" stroke-width="1.5" />
+    <text class="box-title" x="480" y="26">Smartphone IMU (100 Hz Accel + Gyro)</text>
+    <text class="box-desc" x="480" y="46">Raw specific force (ax, ay, az) and rotation rates (gx, gy, gz)</text>
+    <rect x="770" y="10" width="76" height="18" rx="9" fill="#047857" />
+    <text class="box-tag" x="808" y="23" fill="#ecfdf5" text-anchor="middle">CONTINUOUS</text>
+  </g>
+
+  <!-- Downward Connectors to Preprocessing -->
+  <path d="M 660 151 L 660 185" class="line-accent" marker-end="url(#arrowhead)" />
+  <path d="M 240 151 L 240 450 L 360 450 L 360 630 L 415 630" class="line-slate" stroke-dasharray="4,4" marker-end="url(#arrowhead-slate)" />
+
+  <!-- LAYER 2: PREPROCESSING & FRAME ALIGNMENT -->
+  <g transform="translate(40, 185)" filter="url(#dropGlow)">
+    <rect x="60" y="0" width="800" height="74" rx="10" fill="url(#blueCard)" stroke="#475569" stroke-width="1.5" />
+    <text class="box-title" x="85" y="26">Preprocessing, Filtering &amp; Frame Transformation Layer</text>
+    <text class="box-desc" x="85" y="46">Causal low-pass anti-alias filtering, 10.0 Hz uniform resampling, static gravity compensation</text>
+    <text class="box-desc" x="85" y="62">Device Body Frame (Phone) ➔ Leveled Navigation Frame (Local Horizontal / Vertical)</text>
+    <rect x="740" y="12" width="105" height="18" rx="9" fill="#334155" />
+    <text class="box-tag" x="792" y="25" fill="#cbd5e1" text-anchor="middle">10 Hz CAUSAL</text>
+  </g>
+
+  <!-- Downward Connector to Velocity Engine -->
+  <path d="M 480 259 L 480 295" class="line-accent" marker-end="url(#arrowhead)" />
+
+  <!-- LAYER 3: VELOCITY ESTIMATION ENGINE (BRANCHES) -->
+  <g transform="translate(40, 295)" filter="url(#dropGlow)">
+    <rect x="40" y="0" width="840" height="250" rx="12" fill="url(#coreCard)" stroke="#6366f1" stroke-width="1.5" />
+    <text class="box-title" x="65" y="28">Multimodal Velocity Estimation &amp; Regime Classification Engine</text>
+    <text class="subtitle" x="65" y="46">Reconciles kinematic physics, deep sequence patterns, and stationary motion states</text>
+
+    <!-- Branch A: Kinematics -->
+    <rect x="65" y="60" width="240" height="110" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="1.2" />
+    <text class="box-title" x="80" y="84" fill="#38bdf8">Stateful Kinematics</text>
+    <text class="box-desc" x="80" y="104">v(t) = v(t-1) + a_lon · dt</text>
+    <text class="box-desc" x="80" y="122">✓ Highway cruise</text>
+    <text class="box-desc" x="80" y="138" fill="#f87171">✗ Urban bias accumulation</text>
+    <rect x="220" y="68" width="75" height="16" rx="8" fill="#0284c7" />
+    <text class="box-tag" x="257" y="80" fill="#ffffff" text-anchor="middle">KINEMATIC</text>
+
+    <!-- Branch B: TCN -->
+    <rect x="340" y="60" width="240" height="110" rx="8" fill="#1e293b" stroke="#818cf8" stroke-width="1.2" />
+    <text class="box-title" x="355" y="84" fill="#a5b4fc">Causal TCN (ONNX)</text>
+    <text class="box-desc" x="355" y="104">Dilated 1D Conv (6.1s memory)</text>
+    <text class="box-desc" x="355" y="122">✓ Dynamic transitions &amp; turns</text>
+    <text class="box-desc" x="355" y="138" fill="#f87171">✗ Steady highway flatline</text>
+    <rect x="495" y="68" width="75" height="16" rx="8" fill="#4f46e5" />
+    <text class="box-tag" x="532" y="80" fill="#ffffff" text-anchor="middle">LEARNED</text>
+
+    <!-- Branch C: ZVD -->
+    <rect x="615" y="60" width="240" height="110" rx="8" fill="#1e293b" stroke="#34d399" stroke-width="1.2" />
+    <text class="box-title" x="630" y="84" fill="#34d399">Causal ZVD / ZUPT</text>
+    <text class="box-desc" x="630" y="104">Energy &amp; variance gates</text>
+    <text class="box-desc" x="630" y="122">Forces v = 0 when stopped</text>
+    <text class="box-desc" x="630" y="138" fill="#34d399">✓ Stops urban runaway</text>
+    <rect x="770" y="68" width="75" height="16" rx="8" fill="#059669" />
+    <text class="box-tag" x="807" y="80" fill="#ffffff" text-anchor="middle">PHYSICS</text>
+
+    <!-- Dynamic Blender Box -->
+    <rect x="65" y="185" width="790" height="50" rx="8" fill="#0f172a" stroke="#fb923c" stroke-width="1.2" />
+    <text class="box-title" x="85" y="210" fill="#fb923c">Adaptive Regime Fusion &amp; Disagreement Arbiter</text>
+    <text class="box-desc" x="85" y="226">Blends v_est = w_kin · v_kin + w_tcn · v_tcn; clamps on ZVD triggers; modulates covariance R_v</text>
+  </g>
+
+  <!-- Connectors from branches into Blender -->
+  <path d="M 185 465 L 185 480" class="line-accent" marker-end="url(#arrowhead)" />
+  <path d="M 460 465 L 460 480" class="line-accent" marker-end="url(#arrowhead)" />
+  <path d="M 735 465 L 735 480" class="line-emerald" marker-end="url(#arrowhead)" />
+
+  <!-- Downward Connector to ESKF -->
+  <path d="M 480 545 L 480 580" class="line-orange" marker-end="url(#arrowhead-orange)" />
+
+  <!-- LAYER 4: ESKF FILTER -->
+  <g transform="translate(40, 580)" filter="url(#dropGlow)">
+    <rect x="60" y="0" width="800" height="80" rx="10" fill="url(#blueCard)" stroke="#38bdf8" stroke-width="1.5" />
+    <text class="box-title" x="85" y="28">15-State Error-State Kalman Filter (ESKF)</text>
+    <text class="box-desc" x="85" y="48">State Vector: δx = [δp(3), δv(3), δθ(3), δb_a(3), δb_g(3)]ᵀ (Position, Velocity, Attitude, Biases)</text>
+    <text class="box-desc" x="85" y="66">Propagates IMU strapdown physics; updates via GNSS (normal) or Virtual Forward Velocity + ZUPT (outage)</text>
+    <rect x="735" y="14" width="110" height="18" rx="9" fill="#0369a1" />
+    <text class="box-tag" x="790" y="27" fill="#e0f2fe" text-anchor="middle">KALMAN FUSION</text>
+  </g>
+
+  <!-- Downward Connector to Output -->
+  <path d="M 480 660 L 480 695" class="line-accent" marker-end="url(#arrowhead)" />
+
+  <!-- LAYER 5: DEAD RECKONING OUTPUT & ANDROID UI -->
+  <g transform="translate(40, 695)" filter="url(#dropGlow)">
+    <!-- Position Output -->
+    <rect x="60" y="0" width="370" height="74" rx="10" fill="url(#blueCard)" stroke="#34d399" stroke-width="1.5" />
+    <text class="box-title" x="80" y="28" fill="#34d399">Dead-Reckoned Navigation State</text>
+    <text class="box-desc" x="80" y="48">Continuous (Lat, Lon, Altitude), Metric Velocity, Heading (ψ)</text>
+    <text class="box-desc" x="80" y="64">Seamless continuity through 60s GNSS tunnels &amp; canyons</text>
+
+    <!-- Android App -->
+    <rect x="470" y="0" width="390" height="74" rx="10" fill="url(#blueCard)" stroke="#a855f7" stroke-width="1.5" />
+    <text class="box-title" x="490" y="28" fill="#c084fc">Android Application Prototype</text>
+    <text class="box-desc" x="490" y="48">Real-time Java ESKF + Kotlin UI + OSMDroid Map Engine</text>
+    <text class="box-desc" x="490" y="64">Integrated synthetic GNSS blackout simulation toggle</text>
+  </g>
+
+  <!-- Output to Android Connection -->
+  <path d="M 430 732 L 470 732" class="line-accent" marker-end="url(#arrowhead)" />
+
+  <!-- Footer Notice -->
+  <g transform="translate(40, 810)">
+    <text class="subtitle" x="440" y="0" text-anchor="middle">Empirical 60s Outage Benchmark: 16.76% Mean Drift (96.65 m) across 13 test trips • 3 / 13 (23.1%) pass SIH &lt;10% target</text>
+  </g>
+</svg>

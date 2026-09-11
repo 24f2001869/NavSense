@@ -1,0 +1,63 @@
+{
+  "speed_band_correlations": {
+    "a_long": 0.02835187502205372,
+    "jerk_long": -0.006355881815779933,
+    "a_lat": -0.04341955855488777,
+    "a_vert": 0.016636593267321587,
+    "a_horiz": 0.0735919252038002,
+    "gyro_yaw": -0.009724864736199379,
+    "omega_mag": 0.021385546773672104,
+    "time_since_transient": 0.00433459456379947
+  },
+  "decay_stats": {
+    "v_pred_t0": 22.638553619384766,
+    "v_pred_t6s": 23.087987899780273,
+    "v_pred_t10s": 23.709054946899414,
+    "decay_within_rf": 0.4494342803955078,
+    "decay_past_rf": 1.0705013275146484
+  },
+  "ml_separability": {
+    "logistic_regression_roc_auc": 0.6253852,
+    "logistic_regression_accuracy": 0.5947,
+    "decision_tree_roc_auc": 0.6248977,
+    "decision_tree_accuracy": 0.5986999999999999
+  },
+  "baselines_summary": [
+    {
+      "model": "BiasCorr_Kinematics",
+      "drift_30s_m": 111.0998,
+      "drift_60s_m": 428.3488,
+      "drift_pct_30s": 14.6966,
+      "drift_pct_60s": 27.5322,
+      "mae_mps": 7.41268,
+      "bias_mps": -2.3467
+    },
+    {
+      "model": "Damped_Momentum",
+      "drift_30s_m": 81.6704,
+      "drift_60s_m": 185.5838,
+      "drift_pct_30s": 10.832,
+      "drift_pct_60s": 12.1402,
+      "mae_mps": 3.2881799999999997,
+      "bias_mps": -2.96918
+    },
+    {
+      "model": "Pure_Kinematics",
+      "drift_30s_m": 72.9988,
+      "drift_60s_m": 236.8286,
+      "drift_pct_30s": 9.2546,
+      "drift_pct_60s": 15.3304,
+      "mae_mps": 4.33596,
+      "bias_mps": 2.34184
+    },
+    {
+      "model": "Static_TCN",
+      "drift_30s_m": 85.27860000000001,
+      "drift_60s_m": 165.4634,
+      "drift_pct_30s": 10.6378,
+      "drift_pct_60s": 10.4288,
+      "mae_mps": 3.1841199999999996,
+      "bias_mps": -2.66344
+    }
+  ]
+}

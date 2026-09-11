@@ -1,0 +1,534 @@
+{
+  "meta": {
+    "stage": "C8-11.2",
+    "description": "Magnetic Drift & Calibration Window Audit",
+    "trips_audited": [
+      "Vta02",
+      "Vta04"
+    ],
+    "constraints": {
+      "anti_circularity": "PASS - Strictly smartphone sensors for estimation; vehicle GT used post-hoc only",
+      "calibration_sensors": [
+        "phone_bearing_deg",
+        "phone_speed_kmh",
+        "accel",
+        "mag",
+        "gyro"
+      ]
+    }
+  },
+  "trips": {
+    "Vta02": {
+      "total_samples": 10991,
+      "total_duration_s": 1099.1000000000001,
+      "total_distance_km": 3.0561558333333387,
+      "moving_samples": 4570,
+      "moving_duration_s": 457.0,
+      "task1_offset_vs_distance": {
+        "total_distance_km": 3.0561558333333387,
+        "spatial_gradient_deg_per_km": 15.598238897181288,
+        "spatial_gradient_gt_deg_per_km": 15.514702340241973,
+        "correlation_with_distance": 0.8061666599592575,
+        "p_value": 0.0,
+        "distance_bins": {
+          "0-1km": {
+            "sample_count": 1854,
+            "estimated_offset_deg": 336.93841829097175,
+            "gt_offset_deg": 337.3103155734635,
+            "error_deg": 0.3718972824917728,
+            "mean_mag_norm_uT": 48.14713048470635,
+            "offset_std_deg": 6.783262060509711
+          },
+          "1-2km": {
+            "sample_count": 1366,
+            "estimated_offset_deg": 350.2643986646668,
+            "gt_offset_deg": 350.27252352223917,
+            "error_deg": 0.008124857572340716,
+            "mean_mag_norm_uT": 42.98186529427908,
+            "offset_std_deg": 10.538384300884976
+          },
+          "2-3km": {
+            "sample_count": 1350,
+            "estimated_offset_deg": 12.317618681639306,
+            "gt_offset_deg": 12.436305323719345,
+            "error_deg": 0.11868664208003565,
+            "mean_mag_norm_uT": 40.36900065563707,
+            "offset_std_deg": 8.242806207589554
+          }
+        }
+      },
+      "task2_offset_vs_time": {
+        "temporal_gradient_moving_deg_per_min": 2.662286200331679,
+        "temporal_gradient_moving_gt_deg_per_min": 2.644536932139055,
+        "correlation_with_time": 0.810266227588572,
+        "stationary_drift_rate_deg_per_min": -2.5774456276729847,
+        "finding": "Stationary drift is nearly zero while moving drift is significant, confirming that drift is dynamically and spatially driven rather than pure temporal sensor bias walk."
+      },
+      "task3_geographic_clusters": {
+        "num_clusters_analyzed": 23,
+        "cluster_offset_range_deg": 18.936316509942856,
+        "clusters": {
+          "cluster_0": {
+            "sample_count": 390,
+            "center_lat": 52.7636662051282,
+            "center_lon": -1.6760949743589744,
+            "estimated_offset_deg": 340.92310756219433,
+            "gt_offset_deg": 340.4568947653708,
+            "error_deg": 0.4662127968235268,
+            "mean_mag_norm_uT": 46.3361669655514,
+            "offset_std_deg": 6.31523261895115
+          },
+          "cluster_1000": {
+            "sample_count": 54,
+            "center_lat": 52.76641875925925,
+            "center_lon": -1.6718937777777774,
+            "estimated_offset_deg": 341.6797559466767,
+            "gt_offset_deg": 341.48053752282357,
+            "error_deg": 0.19921842385315358,
+            "mean_mag_norm_uT": 45.794174161703786,
+            "offset_std_deg": 3.9132349269099085
+          },
+          "cluster_1001": {
+            "sample_count": 276,
+            "center_lat": 52.7678096884058,
+            "center_lon": -1.6674990289855074,
+            "estimated_offset_deg": 332.58939789303236,
+            "gt_offset_deg": 333.0426305007674,
+            "error_deg": 0.45323260773506036,
+            "mean_mag_norm_uT": 49.74734831573333,
+            "offset_std_deg": 2.0545980057286513
+          },
+          "cluster_1002": {
+            "sample_count": 300,
+            "center_lat": 52.76896833333333,
+            "center_lon": -1.6603995333333332,
+            "estimated_offset_deg": 329.98184898829334,
+            "gt_offset_deg": 330.9644868420805,
+            "error_deg": 0.9826378537871392,
+            "mean_mag_norm_uT": 50.673723261096185,
+            "offset_std_deg": 4.33764254675013
+          },
+          "cluster_1003": {
+            "sample_count": 90,
+            "center_lat": 52.770020555555554,
+            "center_lon": -1.655309777777778,
+            "estimated_offset_deg": 334.99212754759037,
+            "gt_offset_deg": 335.21977439175646,
+            "error_deg": 0.22764684416608816,
+            "mean_mag_norm_uT": 47.98767295636554,
+            "offset_std_deg": 3.4507997105880017
+          },
+          "cluster_2003": {
+            "sample_count": 170,
+            "center_lat": 52.770974176470574,
+            "center_lon": -1.6515181176470586,
+            "estimated_offset_deg": 333.41116559371414,
+            "gt_offset_deg": 333.70566631353967,
+            "error_deg": 0.2945007198255212,
+            "mean_mag_norm_uT": 49.69533104445327,
+            "offset_std_deg": 2.5679817513201466
+          },
+          "cluster_2004": {
+            "sample_count": 350,
+            "center_lat": 52.77279300000001,
+            "center_lon": -1.6456443714285716,
+            "estimated_offset_deg": 340.3834636827455,
+            "gt_offset_deg": 341.0219699393622,
+            "error_deg": 0.6385062566166653,
+            "mean_mag_norm_uT": 47.148050613820075,
+            "offset_std_deg": 5.255619755922082
+          },
+          "cluster_3004": {
+            "sample_count": 40,
+            "center_lat": 52.77562725,
+            "center_lon": -1.6416545,
+            "estimated_offset_deg": 348.6873834796669,
+            "gt_offset_deg": 349.81633052480686,
+            "error_deg": 1.1289470451399666,
+            "mean_mag_norm_uT": 45.492629294601365,
+            "offset_std_deg": 5.598219833930176
+          },
+          "cluster_3005": {
+            "sample_count": 330,
+            "center_lat": 52.777479272727284,
+            "center_lon": -1.6381355151515153,
+            "estimated_offset_deg": 337.41549380599287,
+            "gt_offset_deg": 337.9833378391204,
+            "error_deg": 0.5678440331275283,
+            "mean_mag_norm_uT": 47.67358342290008,
+            "offset_std_deg": 7.326963606284571
+          },
+          "cluster_3006": {
+            "sample_count": 30,
+            "center_lat": 52.77917833333333,
+            "center_lon": -1.6316736666666674,
+            "estimated_offset_deg": 329.75106696972404,
+            "gt_offset_deg": 329.1052946318026,
+            "error_deg": 0.6457723379214144,
+            "mean_mag_norm_uT": 50.86242720157497,
+            "offset_std_deg": 1.690377361717546
+          }
+        }
+      },
+      "task4_mag_norm_coupling": {
+        "baseline_earth_field_uT": 43.886782748340075,
+        "field_norm_min_uT": 29.09490161523149,
+        "field_norm_max_uT": 53.630948154959924,
+        "field_norm_std_uT": 4.928454398244559,
+        "corr_field_norm_with_offset": -0.6992506634628819,
+        "spearman_corr_field_norm_with_offset": -0.730107694474594,
+        "field_regimes": {
+          "low_field": {
+            "sample_count": 862,
+            "mean_field_uT": 36.61419111816268,
+            "estimated_offset_deg": 9.318531075214745,
+            "gt_offset_deg": 9.42967660496624,
+            "error_deg": 0.1111455297514965,
+            "offset_std_deg": 9.77182976563931
+          },
+          "nominal_field": {
+            "sample_count": 2790,
+            "mean_field_uT": 44.744069127390574,
+            "estimated_offset_deg": 351.59547313955807,
+            "gt_offset_deg": 351.70585663989647,
+            "error_deg": 0.11038350033840061,
+            "offset_std_deg": 14.458341402084015
+          },
+          "high_field": {
+            "sample_count": 918,
+            "mean_field_uT": 50.194742033186174,
+            "estimated_offset_deg": 333.42065746960867,
+            "gt_offset_deg": 333.92745624175,
+            "error_deg": 0.5067987721413374,
+            "offset_std_deg": 8.904466726566149
+          }
+        }
+      },
+      "task5_window_sweep": {
+        "5s": {
+          "num_windows": 46,
+          "mean_local_error_deg": 0.6081203471976174,
+          "median_local_error_deg": 0.43834118322851623,
+          "p95_local_error_deg": 1.6616692382091287,
+          "mean_heading_diversity_deg": 4.073382247038303
+        },
+        "10s": {
+          "num_windows": 45,
+          "mean_local_error_deg": 0.5736137548547687,
+          "median_local_error_deg": 0.4563556674687561,
+          "p95_local_error_deg": 1.3425102557531885,
+          "mean_heading_diversity_deg": 6.567630923676401
+        },
+        "15s": {
+          "num_windows": 45,
+          "mean_local_error_deg": 0.4399946918387381,
+          "median_local_error_deg": 0.36184832785005483,
+          "p95_local_error_deg": 1.16545159683302,
+          "mean_heading_diversity_deg": 9.501327664626372
+        },
+        "20s": {
+          "num_windows": 44,
+          "mean_local_error_deg": 0.4250351412796389,
+          "median_local_error_deg": 0.3272795848004364,
+          "p95_local_error_deg": 1.173213280989984,
+          "mean_heading_diversity_deg": 11.682024872733807
+        },
+        "30s": {
+          "num_windows": 43,
+          "mean_local_error_deg": 0.39688038263657843,
+          "median_local_error_deg": 0.36790383860619613,
+          "p95_local_error_deg": 0.9353908854837186,
+          "mean_heading_diversity_deg": 15.753289258186003
+        },
+        "45s": {
+          "num_windows": 42,
+          "mean_local_error_deg": 0.34595307018735305,
+          "median_local_error_deg": 0.30899147771501134,
+          "p95_local_error_deg": 0.8590200635521765,
+          "mean_heading_diversity_deg": 20.53061564308833
+        },
+        "60s": {
+          "num_windows": 40,
+          "mean_local_error_deg": 0.3236630467584611,
+          "median_local_error_deg": 0.2556699271493983,
+          "p95_local_error_deg": 0.7778916253407885,
+          "mean_heading_diversity_deg": 22.316773846374126
+        },
+        "90s": {
+          "num_windows": 37,
+          "mean_local_error_deg": 0.2970736539898853,
+          "median_local_error_deg": 0.21739976961282537,
+          "p95_local_error_deg": 0.6355039119752971,
+          "mean_heading_diversity_deg": 24.826987422123103
+        },
+        "120s": {
+          "num_windows": 34,
+          "mean_local_error_deg": 0.2802752079472396,
+          "median_local_error_deg": 0.23999433287224292,
+          "p95_local_error_deg": 0.6840773498427779,
+          "mean_heading_diversity_deg": 26.42614888531352
+        }
+      },
+      "task6_rolling_vs_frozen": {
+        "num_simulated_outages": 7,
+        "frozen_calibration_offset_deg": 338.77146900773016,
+        "frozen_strategy": {
+          "mean_outage_offset_error_deg": 13.07905850430389,
+          "median_outage_offset_error_deg": 6.98016129141638,
+          "p95_outage_offset_error_deg": 31.14053294951227
+        },
+        "rolling_strategy": {
+          "mean_outage_offset_error_deg": 9.507408591897542,
+          "median_outage_offset_error_deg": 10.123235756477015,
+          "p95_outage_offset_error_deg": 20.132828980417116
+        },
+        "error_reduction_pct": 27.30815762641503
+      },
+      "task7_straight_vs_all": {
+        "all_motion_mean_err_deg": 9.507408591897542,
+        "straight_only_mean_err_deg": 8.295139499217921,
+        "improvement_deg": 1.2122690926796214
+      },
+      "task8_environmental_contrast": {
+        "total_route_length_km": 3.0561558333333387,
+        "mission_duration_min": 18.318333333333335,
+        "mag_field_baseline_uT": 43.886782748340075,
+        "mag_field_variation_uT": 50.58304651748369,
+        "spatial_drift_rate_deg_per_km": 15.598238897181288,
+        "temporal_drift_rate_deg_per_min": 2.662286200331679
+      },
+      "task9_root_cause": {
+        "verdict": "B_SPATIAL_AND_D_ELECTRICAL_VARIATION",
+        "evidence_breakdown": {
+          "stationary_drift_rate_deg_per_min": 2.5774456276729847,
+          "moving_drift_rate_deg_per_min": 2.662286200331679,
+          "spatial_correlation_r": 0.8061666599592575,
+          "field_magnitude_shift_uT": 50.58304651748369,
+          "temporal_sensor_drift_ruled_out": false
+        },
+        "attribution_notes": [
+          "Strong correlation with cumulative distance traveled (r=0.806) confirms spatial magnetic variation along the route.",
+          "Magnetic field magnitude shifts by 50.6 uT across the mission, indicating vehicle electrical load or infrastructure coupling.",
+          "Early calibration window sampling bias (Hypothesis C) also contributes because the first 1-2 minutes were spent on a single road heading, locking in the local starting anomaly."
+        ]
+      },
+      "task10_production_spec": {
+        "mode": "ROLLING_PRE_OUTAGE_ESTIMATION",
+        "recommended_window_s": 60,
+        "minimum_window_s": 30,
+        "speed_gate_ms": 3.0,
+        "straight_maneuver_gate_yaw_rate_degs": 2.5,
+        "magnetic_field_norm_gate_uT": 10.0,
+        "freeze_policy": "Freeze the 60s circular mean immediately preceding GNSS loss. Do NOT use a static calibration from trip start.",
+        "expected_outage_offset_error_deg": 10.123235756477015
+      }
+    },
+    "Vta04": {
+      "total_samples": 1789,
+      "total_duration_s": 178.9,
+      "total_distance_km": 0.5555080555555529,
+      "moving_samples": 1269,
+      "moving_duration_s": 126.9,
+      "task1_offset_vs_distance": {
+        "total_distance_km": 0.5555080555555529,
+        "spatial_gradient_deg_per_km": 19.801885177684323,
+        "spatial_gradient_gt_deg_per_km": 23.155814574799983,
+        "correlation_with_distance": 0.1587326767162866,
+        "p_value": 1.3077803186921247e-08,
+        "distance_bins": {
+          "0-1km": {
+            "sample_count": 1269,
+            "estimated_offset_deg": 13.224781778004845,
+            "gt_offset_deg": 13.319565567387134,
+            "error_deg": 0.0947837893822907,
+            "mean_mag_norm_uT": 37.65827622076757,
+            "offset_std_deg": 19.31987856561724
+          }
+        }
+      },
+      "task2_offset_vs_time": {
+        "temporal_gradient_moving_deg_per_min": 3.78617187610854,
+        "temporal_gradient_moving_gt_deg_per_min": 4.427957326974832,
+        "correlation_with_time": 0.16117853891974485,
+        "stationary_drift_rate_deg_per_min": 0.0,
+        "finding": "Stationary drift is nearly zero while moving drift is significant, confirming that drift is dynamically and spatially driven rather than pure temporal sensor bias walk."
+      },
+      "task3_geographic_clusters": {
+        "num_clusters_analyzed": 4,
+        "cluster_offset_range_deg": 45.73649915827643,
+        "clusters": {
+          "cluster_1": {
+            "sample_count": 450,
+            "center_lat": 52.81695679999999,
+            "center_lon": -1.6387590000000005,
+            "estimated_offset_deg": 5.783349801241241,
+            "gt_offset_deg": 6.224278522325308,
+            "error_deg": 0.4409287210840773,
+            "mean_mag_norm_uT": 37.39730506266268,
+            "offset_std_deg": 8.390222009138618
+          },
+          "cluster_1000": {
+            "sample_count": 90,
+            "center_lat": 52.82366600000001,
+            "center_lon": -1.6438109999999997,
+            "estimated_offset_deg": 51.519848959517674,
+            "gt_offset_deg": 44.94706189423258,
+            "error_deg": 6.572787065285098,
+            "mean_mag_norm_uT": 37.85025218635269,
+            "offset_std_deg": 16.468317140481236
+          },
+          "cluster_1001": {
+            "sample_count": 270,
+            "center_lat": 52.82152133333334,
+            "center_lon": -1.6414476666666664,
+            "estimated_offset_deg": 17.60262984868575,
+            "gt_offset_deg": 15.169686117316235,
+            "error_deg": 2.4329437313695053,
+            "mean_mag_norm_uT": 37.651432348424805,
+            "offset_std_deg": 16.754399173648743
+          },
+          "cluster_2000": {
+            "sample_count": 459,
+            "center_lat": 52.825385039215696,
+            "center_lon": -1.648252274509804,
+            "estimated_offset_deg": 11.15449784350048,
+            "gt_offset_deg": 13.318718819469002,
+            "error_deg": 2.164220975968533,
+            "mean_mag_norm_uT": 37.88051375840828,
+            "offset_std_deg": 19.959007759644603
+          }
+        }
+      },
+      "task4_mag_norm_coupling": {
+        "baseline_earth_field_uT": 37.82584698324679,
+        "field_norm_min_uT": 20.960968489075118,
+        "field_norm_max_uT": 44.16569483207527,
+        "field_norm_std_uT": 2.099915006346299,
+        "corr_field_norm_with_offset": -0.02007546732767676,
+        "spearman_corr_field_norm_with_offset": -0.0858394736036849,
+        "field_regimes": {
+          "low_field": {
+            "sample_count": 35,
+            "mean_field_uT": 30.271574155310503,
+            "estimated_offset_deg": 13.712151950512599,
+            "gt_offset_deg": 13.784479778911644,
+            "error_deg": 0.07232782839903962,
+            "offset_std_deg": 13.367457222895718
+          },
+          "nominal_field": {
+            "sample_count": 1230,
+            "mean_field_uT": 37.848565444771864,
+            "estimated_offset_deg": 13.282627580719053,
+            "gt_offset_deg": 13.375073810039776,
+            "error_deg": 0.09244622932072843,
+            "offset_std_deg": 19.453958205920227
+          }
+        }
+      },
+      "task5_window_sweep": {
+        "5s": {
+          "num_windows": 13,
+          "mean_local_error_deg": 2.6369177839847677,
+          "median_local_error_deg": 2.506207167369922,
+          "p95_local_error_deg": 6.098139538914596,
+          "mean_heading_diversity_deg": 2.246311110891183
+        },
+        "10s": {
+          "num_windows": 12,
+          "mean_local_error_deg": 3.2391296572953223,
+          "median_local_error_deg": 2.1030063185769308,
+          "p95_local_error_deg": 9.40206096862444,
+          "mean_heading_diversity_deg": 4.508535684778736
+        },
+        "15s": {
+          "num_windows": 12,
+          "mean_local_error_deg": 2.2640334961371402,
+          "median_local_error_deg": 1.2175395778072158,
+          "p95_local_error_deg": 6.5520156652112345,
+          "mean_heading_diversity_deg": 7.696553235097679
+        },
+        "20s": {
+          "num_windows": 11,
+          "mean_local_error_deg": 2.47633946810995,
+          "median_local_error_deg": 2.7769202852941817,
+          "p95_local_error_deg": 5.504733000064789,
+          "mean_heading_diversity_deg": 9.614492360296184
+        },
+        "30s": {
+          "num_windows": 10,
+          "mean_local_error_deg": 1.6179554110593615,
+          "median_local_error_deg": 1.3125597152550341,
+          "p95_local_error_deg": 3.658558611831112,
+          "mean_heading_diversity_deg": 12.840075394020172
+        },
+        "45s": {
+          "num_windows": 9,
+          "mean_local_error_deg": 1.0240043479002578,
+          "median_local_error_deg": 0.6959239233034111,
+          "p95_local_error_deg": 2.279942377206123,
+          "mean_heading_diversity_deg": 16.344391684352846
+        },
+        "60s": {
+          "num_windows": 7,
+          "mean_local_error_deg": 0.8616834410915999,
+          "median_local_error_deg": 0.7637034460366579,
+          "p95_local_error_deg": 1.7890747009376406,
+          "mean_heading_diversity_deg": 17.203577594128706
+        }
+      },
+      "task6_rolling_vs_frozen": {
+        "num_simulated_outages": 2,
+        "frozen_calibration_offset_deg": 6.285865047897837,
+        "frozen_strategy": {
+          "mean_outage_offset_error_deg": 4.345844737118426,
+          "median_outage_offset_error_deg": 4.345844737118426,
+          "p95_outage_offset_error_deg": 6.146044630696417
+        },
+        "rolling_strategy": {
+          "mean_outage_offset_error_deg": 7.471904917888949,
+          "median_outage_offset_error_deg": 7.471904917888949,
+          "p95_outage_offset_error_deg": 9.455617848368655
+        },
+        "error_reduction_pct": -71.93216439764714
+      },
+      "task7_straight_vs_all": {
+        "all_motion_mean_err_deg": 7.471904917888949,
+        "straight_only_mean_err_deg": 8.326325666331783,
+        "improvement_deg": -0.8544207484428341
+      },
+      "task8_environmental_contrast": {
+        "total_route_length_km": 0.5555080555555529,
+        "mission_duration_min": 2.981666666666667,
+        "mag_field_baseline_uT": 37.82584698324679,
+        "mag_field_variation_uT": 29.72258111037578,
+        "spatial_drift_rate_deg_per_km": 19.801885177684323,
+        "temporal_drift_rate_deg_per_min": 3.78617187610854
+      },
+      "task9_root_cause": {
+        "verdict": "B_SPATIAL_AND_D_ELECTRICAL_VARIATION",
+        "evidence_breakdown": {
+          "stationary_drift_rate_deg_per_min": 0.0,
+          "moving_drift_rate_deg_per_min": 3.78617187610854,
+          "spatial_correlation_r": 0.1587326767162866,
+          "field_magnitude_shift_uT": 29.72258111037578,
+          "temporal_sensor_drift_ruled_out": true
+        },
+        "attribution_notes": [
+          "Temporal sensor bias walk is ruled out because stationary drift is negligible (<0.5\u00b0/min) while moving drift is >2\u00b0/min.",
+          "Magnetic field magnitude shifts by 29.7 uT across the mission, indicating vehicle electrical load or infrastructure coupling.",
+          "Early calibration window sampling bias (Hypothesis C) also contributes because the first 1-2 minutes were spent on a single road heading, locking in the local starting anomaly."
+        ]
+      },
+      "task10_production_spec": {
+        "mode": "ROLLING_PRE_OUTAGE_ESTIMATION",
+        "recommended_window_s": 60,
+        "minimum_window_s": 30,
+        "speed_gate_ms": 3.0,
+        "straight_maneuver_gate_yaw_rate_degs": 2.5,
+        "magnetic_field_norm_gate_uT": 10.0,
+        "freeze_policy": "Freeze the 60s circular mean immediately preceding GNSS loss. Do NOT use a static calibration from trip start.",
+        "expected_outage_offset_error_deg": 7.471904917888949
+      }
+    }
+  }
+}

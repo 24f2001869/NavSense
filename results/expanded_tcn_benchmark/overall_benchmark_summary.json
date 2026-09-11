@@ -1,0 +1,38 @@
+[
+  {
+    "Model":"Current TCN (6 trips)",
+    "Training Scope":"6 trips (1.1 hrs)",
+    "Vehicle MAE (m\/s)":6.1706527017,
+    "Vehicle MAE (km\/h)":22.214349726,
+    "RMSE (m\/s)":6.9595621636,
+    "RMSE (km\/h)":25.054423789,
+    "Bias (m\/s)":-3.0561179595,
+    "R2":-147.7863978869,
+    "30s Drift (m)":153.314617548,
+    "60s Drift (m)":263.5504363692
+  },
+  {
+    "Model":"Expanded TCN (39 trips)",
+    "Training Scope":"39 trips (12.5 hrs)",
+    "Vehicle MAE (m\/s)":2.7565615371,
+    "Vehicle MAE (km\/h)":9.9236215337,
+    "RMSE (m\/s)":3.5865509737,
+    "RMSE (km\/h)":12.9115835055,
+    "Bias (m\/s)":-0.4121526803,
+    "R2":-16.2208102251,
+    "30s Drift (m)":52.6407617829,
+    "60s Drift (m)":92.9646660301
+  },
+  {
+    "Model":"Random Forest Baseline",
+    "Training Scope":"39 trips (12.5 hrs)",
+    "Vehicle MAE (m\/s)":4.3101321122,
+    "Vehicle MAE (km\/h)":15.5164756038,
+    "RMSE (m\/s)":5.1865823943,
+    "RMSE (km\/h)":18.6716966196,
+    "Bias (m\/s)":-1.0577261048,
+    "R2":-68.5141711015,
+    "30s Drift (m)":106.2963055108,
+    "60s Drift (m)":182.8274591958
+  }
+]

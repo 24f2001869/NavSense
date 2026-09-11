@@ -1,0 +1,800 @@
+[
+  {
+    "trip": "Trip 1",
+    "episode_idx": 1,
+    "start_row": 2035,
+    "end_row": 2064,
+    "duration_s": 3.918,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -142.40500343569872,
+        "max_vu_ms": 61.08909899539966,
+        "vnhc_active_pct": 0.0,
+        "max_rejection_epochs": 30,
+        "max_rejection_s": 3.75,
+        "time_to_recovery_s": null,
+        "final_horiz_err_m": 63.31522069370676,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": NaN,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -142.40500343569872,
+        "max_vu_ms": 61.08909899539966,
+        "vnhc_active_pct": 0.0,
+        "max_rejection_epochs": 30,
+        "max_rejection_s": 3.75,
+        "time_to_recovery_s": null,
+        "final_horiz_err_m": 63.31522069370676,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": NaN,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -142.40500343569872,
+        "max_vu_ms": 61.08909899539966,
+        "vnhc_active_pct": 0.0,
+        "max_rejection_epochs": 30,
+        "max_rejection_s": 3.75,
+        "time_to_recovery_s": null,
+        "final_horiz_err_m": 63.31522069370676,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": NaN,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -142.40500343569872,
+        "max_vu_ms": 61.08909899539966,
+        "vnhc_active_pct": 0.0,
+        "max_rejection_epochs": 30,
+        "max_rejection_s": 3.75,
+        "time_to_recovery_s": null,
+        "final_horiz_err_m": 63.31522069370676,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": NaN,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 2,
+    "start_row": 2182,
+    "end_row": 2967,
+    "duration_s": 94.301,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -657.6357470629638,
+        "max_vu_ms": 61.1996792676801,
+        "vnhc_active_pct": 46.81933842239186,
+        "max_rejection_epochs": 130,
+        "max_rejection_s": 16.25,
+        "time_to_recovery_s": 0.34799981117248535,
+        "final_horiz_err_m": 4269.230326514443,
+        "mean_heading_err_deg": 70.94817568921398,
+        "mean_nis": 0.7973888546135868,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -343.6252161463955,
+        "max_vu_ms": 35.30139992331802,
+        "vnhc_active_pct": 62.468193384223916,
+        "max_rejection_epochs": 16,
+        "max_rejection_s": 2.0,
+        "time_to_recovery_s": 0.34799981117248535,
+        "final_horiz_err_m": 4021.412564094742,
+        "mean_heading_err_deg": 70.94817568921398,
+        "mean_nis": 1.3498882145404614,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -355.2559009701712,
+        "max_vu_ms": 31.876112805407644,
+        "vnhc_active_pct": 57.88804071246819,
+        "max_rejection_epochs": 20,
+        "max_rejection_s": 2.5,
+        "time_to_recovery_s": 0.34799981117248535,
+        "final_horiz_err_m": 4274.847819293249,
+        "mean_heading_err_deg": 70.94817568921398,
+        "mean_nis": 0.8590595594651207,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -305.8625564544664,
+        "max_vu_ms": 49.063952157371936,
+        "vnhc_active_pct": 62.468193384223916,
+        "max_rejection_epochs": 16,
+        "max_rejection_s": 2.0,
+        "time_to_recovery_s": 0.34799981117248535,
+        "final_horiz_err_m": 4009.654054635485,
+        "mean_heading_err_deg": 70.94817568921398,
+        "mean_nis": 1.2053927879422695,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 3,
+    "start_row": 3900,
+    "end_row": 5056,
+    "duration_s": 132.432,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": 709.256469839889,
+        "max_vu_ms": 21.82204334781332,
+        "vnhc_active_pct": 18.66897147796024,
+        "max_rejection_epochs": 571,
+        "max_rejection_s": 71.375,
+        "time_to_recovery_s": 0.12199997901916504,
+        "final_horiz_err_m": 296.6643618990252,
+        "mean_heading_err_deg": 49.97286489382276,
+        "mean_nis": 0.5607578129310291,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": 70.44477062039604,
+        "max_vu_ms": 9.355651431232278,
+        "vnhc_active_pct": 73.46585998271391,
+        "max_rejection_epochs": 57,
+        "max_rejection_s": 7.125,
+        "time_to_recovery_s": 0.12199997901916504,
+        "final_horiz_err_m": 338.1850112683188,
+        "mean_heading_err_deg": 25.694343741335278,
+        "mean_nis": 1.3183380485033793,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": 161.85196107687034,
+        "max_vu_ms": 19.99617276283613,
+        "vnhc_active_pct": 71.65082108902332,
+        "max_rejection_epochs": 70,
+        "max_rejection_s": 8.75,
+        "time_to_recovery_s": 0.12199997901916504,
+        "final_horiz_err_m": 2974.8356348142834,
+        "mean_heading_err_deg": 25.749903131966967,
+        "mean_nis": 0.5755067367070927,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -3887.8375841591073,
+        "max_vu_ms": 183.46181764975657,
+        "vnhc_active_pct": 73.46585998271391,
+        "max_rejection_epochs": 57,
+        "max_rejection_s": 7.125,
+        "time_to_recovery_s": 0.12199997901916504,
+        "final_horiz_err_m": 10868.389542312463,
+        "mean_heading_err_deg": 35.534681735560696,
+        "mean_nis": 0.5372402061219674,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 4,
+    "start_row": 7441,
+    "end_row": 8521,
+    "duration_s": 128.581,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": 357.98849725845554,
+        "max_vu_ms": 35.479564405083416,
+        "vnhc_active_pct": 37.92784458834413,
+        "max_rejection_epochs": 239,
+        "max_rejection_s": 29.875,
+        "time_to_recovery_s": 0.33500003814697266,
+        "final_horiz_err_m": 5835.459048322639,
+        "mean_heading_err_deg": 174.23572927005424,
+        "mean_nis": 0.2002638021789209,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": 171.20214568600053,
+        "max_vu_ms": 35.72188092901953,
+        "vnhc_active_pct": 56.70675300647549,
+        "max_rejection_epochs": 68,
+        "max_rejection_s": 8.5,
+        "time_to_recovery_s": 0.33500003814697266,
+        "final_horiz_err_m": 4479.142086694917,
+        "mean_heading_err_deg": 174.23572927005424,
+        "mean_nis": 0.18888499836691594,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -973.1611937196894,
+        "max_vu_ms": 92.64228098023494,
+        "vnhc_active_pct": 54.94912118408881,
+        "max_rejection_epochs": 71,
+        "max_rejection_s": 8.875,
+        "time_to_recovery_s": 0.33500003814697266,
+        "final_horiz_err_m": 7005.306117838621,
+        "mean_heading_err_deg": 173.38073192258386,
+        "mean_nis": 1.61240281553685,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": 171.20214568600053,
+        "max_vu_ms": 35.72188092901953,
+        "vnhc_active_pct": 56.70675300647549,
+        "max_rejection_epochs": 68,
+        "max_rejection_s": 8.5,
+        "time_to_recovery_s": 0.33500003814697266,
+        "final_horiz_err_m": 4479.142086694917,
+        "mean_heading_err_deg": 174.23572927005424,
+        "mean_nis": 0.18888499836691594,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 5,
+    "start_row": 11097,
+    "end_row": 12191,
+    "duration_s": 125.063,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -41851.86735461276,
+        "max_vu_ms": 1133.2014536249544,
+        "vnhc_active_pct": 4.383561643835616,
+        "max_rejection_epochs": 949,
+        "max_rejection_s": 118.625,
+        "time_to_recovery_s": 0.8000001907348633,
+        "final_horiz_err_m": 52899.15639063197,
+        "mean_heading_err_deg": 31.36839368189312,
+        "mean_nis": 1.469309301992305,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -258.1045334840466,
+        "max_vu_ms": 286.4210968335764,
+        "vnhc_active_pct": 58.99543378995433,
+        "max_rejection_epochs": 54,
+        "max_rejection_s": 6.75,
+        "time_to_recovery_s": 0.8000001907348633,
+        "final_horiz_err_m": 9710.182882991796,
+        "mean_heading_err_deg": 38.42812827692877,
+        "mean_nis": 7.784196097007636,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -2567.359663302198,
+        "max_vu_ms": 577.9128193801978,
+        "vnhc_active_pct": 39.178082191780824,
+        "max_rejection_epochs": 81,
+        "max_rejection_s": 10.125,
+        "time_to_recovery_s": 0.8000001907348633,
+        "final_horiz_err_m": 8216.013556066016,
+        "mean_heading_err_deg": 31.552914408332356,
+        "mean_nis": 17.554955718883456,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": 6909.796092692499,
+        "max_vu_ms": 259.09742981327025,
+        "vnhc_active_pct": 58.99543378995433,
+        "max_rejection_epochs": 54,
+        "max_rejection_s": 6.75,
+        "time_to_recovery_s": 0.8000001907348633,
+        "final_horiz_err_m": 9111.516435094592,
+        "mean_heading_err_deg": 39.280959648508436,
+        "mean_nis": 4.536241116607848,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 6,
+    "start_row": 13395,
+    "end_row": 13503,
+    "duration_s": 24.89,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": 166.48212310280587,
+        "max_vu_ms": 26.584226816065396,
+        "vnhc_active_pct": 2.7522935779816518,
+        "max_rejection_epochs": 106,
+        "max_rejection_s": 13.25,
+        "time_to_recovery_s": null,
+        "final_horiz_err_m": 168.688715575209,
+        "mean_heading_err_deg": 113.01861965007448,
+        "mean_nis": 0.9085214722065121,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -35.183437545683944,
+        "max_vu_ms": 45.86270585695487,
+        "vnhc_active_pct": 25.688073394495415,
+        "max_rejection_epochs": 58,
+        "max_rejection_s": 7.25,
+        "time_to_recovery_s": 2.197000026702881,
+        "final_horiz_err_m": 279.5431528953879,
+        "mean_heading_err_deg": 113.01851646788108,
+        "mean_nis": 27.58547155075535,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -206.27149072231387,
+        "max_vu_ms": 49.55050347722519,
+        "vnhc_active_pct": 20.18348623853211,
+        "max_rejection_epochs": 72,
+        "max_rejection_s": 9.0,
+        "time_to_recovery_s": 2.558000087738037,
+        "final_horiz_err_m": 536.6461825642754,
+        "mean_heading_err_deg": 113.0880540270566,
+        "mean_nis": 40.49295007653928,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -343.0663520731518,
+        "max_vu_ms": 82.23216815640922,
+        "vnhc_active_pct": 25.688073394495415,
+        "max_rejection_epochs": 58,
+        "max_rejection_s": 7.25,
+        "time_to_recovery_s": 2.197000026702881,
+        "final_horiz_err_m": 937.768461806109,
+        "mean_heading_err_deg": 113.01861965007448,
+        "mean_nis": 7.35611064346358,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 7,
+    "start_row": 13516,
+    "end_row": 14365,
+    "duration_s": 99.536,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -5401.998643036494,
+        "max_vu_ms": 224.7927217241489,
+        "vnhc_active_pct": 0.823529411764706,
+        "max_rejection_epochs": 258,
+        "max_rejection_s": 32.25,
+        "time_to_recovery_s": 22.05699872970581,
+        "final_horiz_err_m": 14832.120994053901,
+        "mean_heading_err_deg": 101.04689942951175,
+        "mean_nis": 0.06940486857390672,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": 339.5307968435565,
+        "max_vu_ms": 185.3570527058304,
+        "vnhc_active_pct": 6.9411764705882355,
+        "max_rejection_epochs": 141,
+        "max_rejection_s": 17.625,
+        "time_to_recovery_s": 2.117999792098999,
+        "final_horiz_err_m": 2447.4854212919804,
+        "mean_heading_err_deg": 99.81413948131375,
+        "mean_nis": 20.91396898372876,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -5401.998643036494,
+        "max_vu_ms": 224.7927217241489,
+        "vnhc_active_pct": 0.823529411764706,
+        "max_rejection_epochs": 258,
+        "max_rejection_s": 32.25,
+        "time_to_recovery_s": 22.05699872970581,
+        "final_horiz_err_m": 14832.120994053901,
+        "mean_heading_err_deg": 101.04689942951175,
+        "mean_nis": 0.06940486857390672,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": 9878.77062231054,
+        "max_vu_ms": 2467.6617916556247,
+        "vnhc_active_pct": 6.9411764705882355,
+        "max_rejection_epochs": 141,
+        "max_rejection_s": 17.625,
+        "time_to_recovery_s": 2.117999792098999,
+        "final_horiz_err_m": 22519.879526976438,
+        "mean_heading_err_deg": 86.57905854696794,
+        "mean_nis": 1.554367243091919,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 8,
+    "start_row": 14574,
+    "end_row": 14929,
+    "duration_s": 39.931,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": 1039.5731286312628,
+        "max_vu_ms": 123.2722068741674,
+        "vnhc_active_pct": 0.2808988764044944,
+        "max_rejection_epochs": 256,
+        "max_rejection_s": 32.0,
+        "time_to_recovery_s": 11.057000875473022,
+        "final_horiz_err_m": 4710.553969391107,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 0.08386249520451755,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -2051.7574022804265,
+        "max_vu_ms": 230.96628787710728,
+        "vnhc_active_pct": 8.98876404494382,
+        "max_rejection_epochs": 102,
+        "max_rejection_s": 12.75,
+        "time_to_recovery_s": 1.5099999904632568,
+        "final_horiz_err_m": 3366.9458539265547,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 2411.931667048009,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": 1044.834052305425,
+        "max_vu_ms": 123.2722068741674,
+        "vnhc_active_pct": 5.056179775280898,
+        "max_rejection_epochs": 239,
+        "max_rejection_s": 29.875,
+        "time_to_recovery_s": 11.057000875473022,
+        "final_horiz_err_m": 4717.87312238899,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 1407.907657102026,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -1314.7773726758426,
+        "max_vu_ms": 1097.297759406846,
+        "vnhc_active_pct": 8.98876404494382,
+        "max_rejection_epochs": 102,
+        "max_rejection_s": 12.75,
+        "time_to_recovery_s": 1.5099999904632568,
+        "final_horiz_err_m": 5365.857229590267,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 42.325423996565746,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 1",
+    "episode_idx": 9,
+    "start_row": 15338,
+    "end_row": 15578,
+    "duration_s": 40.644,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": 509.26476348168825,
+        "max_vu_ms": 25.511513460356106,
+        "vnhc_active_pct": 0.4149377593360996,
+        "max_rejection_epochs": 240,
+        "max_rejection_s": 30.0,
+        "time_to_recovery_s": null,
+        "final_horiz_err_m": 2200.5854875247232,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 1.7767840642718433,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -94.92544019998957,
+        "max_vu_ms": 17.77684553305976,
+        "vnhc_active_pct": 85.47717842323651,
+        "max_rejection_epochs": 12,
+        "max_rejection_s": 1.5,
+        "time_to_recovery_s": 0.6159999370574951,
+        "final_horiz_err_m": 760.9505352246924,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 31.419003456694483,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -22.793265646412223,
+        "max_vu_ms": 27.260817167569304,
+        "vnhc_active_pct": 78.42323651452283,
+        "max_rejection_epochs": 19,
+        "max_rejection_s": 2.375,
+        "time_to_recovery_s": 0.247999906539917,
+        "final_horiz_err_m": 1082.539902338787,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 81.8456799503337,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -125.23685494100843,
+        "max_vu_ms": 10.502518169632532,
+        "vnhc_active_pct": 85.47717842323651,
+        "max_rejection_epochs": 12,
+        "max_rejection_s": 1.5,
+        "time_to_recovery_s": 0.6159999370574951,
+        "final_horiz_err_m": 697.2480884813509,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 7.420837132332976,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 2",
+    "episode_idx": 1,
+    "start_row": 0,
+    "end_row": 20,
+    "duration_s": 2.428,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -7.317879777960513,
+        "max_vu_ms": 6.063967696922064,
+        "vnhc_active_pct": 4.761904761904762,
+        "max_rejection_epochs": 15,
+        "max_rejection_s": 1.875,
+        "time_to_recovery_s": 0.5729999542236328,
+        "final_horiz_err_m": 8542109.627610914,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 6.851998406848446,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -4.71368071498074,
+        "max_vu_ms": 3.324765243429656,
+        "vnhc_active_pct": 33.33333333333333,
+        "max_rejection_epochs": 5,
+        "max_rejection_s": 0.625,
+        "time_to_recovery_s": 0.5729999542236328,
+        "final_horiz_err_m": 8542110.862663219,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 21.729959518675066,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -7.317879777960513,
+        "max_vu_ms": 6.063967696922064,
+        "vnhc_active_pct": 4.761904761904762,
+        "max_rejection_epochs": 15,
+        "max_rejection_s": 1.875,
+        "time_to_recovery_s": 0.5729999542236328,
+        "final_horiz_err_m": 8542109.627610914,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 6.851998406848446,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -3.4438138469721125,
+        "max_vu_ms": 2.4139409913916574,
+        "vnhc_active_pct": 33.33333333333333,
+        "max_rejection_epochs": 5,
+        "max_rejection_s": 0.625,
+        "time_to_recovery_s": 0.5729999542236328,
+        "final_horiz_err_m": 8542111.39910109,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 11.297777101313743,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 2",
+    "episode_idx": 2,
+    "start_row": 1705,
+    "end_row": 3055,
+    "duration_s": 161.654,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -36.0347772799032,
+        "max_vu_ms": 260.6944283643919,
+        "vnhc_active_pct": 26.12879348630644,
+        "max_rejection_epochs": 617,
+        "max_rejection_s": 77.125,
+        "time_to_recovery_s": 1.68399977684021,
+        "final_horiz_err_m": 17522.38993292073,
+        "mean_heading_err_deg": 122.68574332945362,
+        "mean_nis": 0.4044620370251595,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": 16208.032467172174,
+        "max_vu_ms": 641.5775824864696,
+        "vnhc_active_pct": 47.29829755736492,
+        "max_rejection_epochs": 85,
+        "max_rejection_s": 10.625,
+        "time_to_recovery_s": 1.68399977684021,
+        "final_horiz_err_m": 29380.749527310953,
+        "mean_heading_err_deg": 121.41117756647061,
+        "mean_nis": 174.00615672159745,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": 3571.9945042862287,
+        "max_vu_ms": 266.7143764082228,
+        "vnhc_active_pct": 31.976313841598813,
+        "max_rejection_epochs": 250,
+        "max_rejection_s": 31.25,
+        "time_to_recovery_s": 1.68399977684021,
+        "final_horiz_err_m": 19752.234195000045,
+        "mean_heading_err_deg": 124.41947799677797,
+        "mean_nis": 32.29790018165255,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": 3508.8187327713526,
+        "max_vu_ms": 317.015938037746,
+        "vnhc_active_pct": 47.29829755736492,
+        "max_rejection_epochs": 85,
+        "max_rejection_s": 10.625,
+        "time_to_recovery_s": 1.68399977684021,
+        "final_horiz_err_m": 9031.225483008797,
+        "mean_heading_err_deg": 121.82504133332421,
+        "mean_nis": 20.57151583678611,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 2",
+    "episode_idx": 3,
+    "start_row": 3501,
+    "end_row": 3981,
+    "duration_s": 57.56,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": 365.6913802695329,
+        "max_vu_ms": 22.311089496092574,
+        "vnhc_active_pct": 7.276507276507277,
+        "max_rejection_epochs": 427,
+        "max_rejection_s": 53.375,
+        "time_to_recovery_s": 0.10500001907348633,
+        "final_horiz_err_m": 1432.5752151084387,
+        "mean_heading_err_deg": 60.903626994777014,
+        "mean_nis": 0.9070099464183722,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -13.08797755581522,
+        "max_vu_ms": 2.168083127763374,
+        "vnhc_active_pct": 92.0997920997921,
+        "max_rejection_epochs": 10,
+        "max_rejection_s": 1.25,
+        "time_to_recovery_s": 0.10500001907348633,
+        "final_horiz_err_m": 74.24732603516976,
+        "mean_heading_err_deg": 63.88461053824674,
+        "mean_nis": 0.39424523224521346,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -8.619581486030736,
+        "max_vu_ms": 1.7057518304811115,
+        "vnhc_active_pct": 91.26819126819127,
+        "max_rejection_epochs": 15,
+        "max_rejection_s": 1.875,
+        "time_to_recovery_s": 0.10500001907348633,
+        "final_horiz_err_m": 67.3636457269916,
+        "mean_heading_err_deg": 64.065508487359,
+        "mean_nis": 0.41924865475070017,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -14.428457704282739,
+        "max_vu_ms": 2.2790730396711156,
+        "vnhc_active_pct": 92.0997920997921,
+        "max_rejection_epochs": 10,
+        "max_rejection_s": 1.25,
+        "time_to_recovery_s": 0.10500001907348633,
+        "final_horiz_err_m": 75.66897155083521,
+        "mean_heading_err_deg": 63.79416737767895,
+        "mean_nis": 0.2715023324240504,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 2",
+    "episode_idx": 4,
+    "start_row": 4092,
+    "end_row": 4757,
+    "duration_s": 80.099,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -373.52064638549973,
+        "max_vu_ms": 9.295092175821827,
+        "vnhc_active_pct": 78.52852852852853,
+        "max_rejection_epochs": 25,
+        "max_rejection_s": 3.125,
+        "time_to_recovery_s": 0.21300005912780762,
+        "final_horiz_err_m": 1798.6113810643694,
+        "mean_heading_err_deg": 95.36512954106533,
+        "mean_nis": 0.13661621643140007,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -373.52064638549973,
+        "max_vu_ms": 9.295092175821827,
+        "vnhc_active_pct": 78.52852852852853,
+        "max_rejection_epochs": 25,
+        "max_rejection_s": 3.125,
+        "time_to_recovery_s": 0.21300005912780762,
+        "final_horiz_err_m": 1798.6113810643694,
+        "mean_heading_err_deg": 95.36512954106533,
+        "mean_nis": 0.13661621643140007,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -373.52064638549973,
+        "max_vu_ms": 9.295092175821827,
+        "vnhc_active_pct": 78.52852852852853,
+        "max_rejection_epochs": 25,
+        "max_rejection_s": 3.125,
+        "time_to_recovery_s": 0.21300005912780762,
+        "final_horiz_err_m": 1798.6113810643694,
+        "mean_heading_err_deg": 95.36512954106533,
+        "mean_nis": 0.13661621643140007,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": -373.52064638549973,
+        "max_vu_ms": 9.295092175821827,
+        "vnhc_active_pct": 78.52852852852853,
+        "max_rejection_epochs": 25,
+        "max_rejection_s": 3.125,
+        "time_to_recovery_s": 0.21300005912780762,
+        "final_horiz_err_m": 1798.6113810643694,
+        "mean_heading_err_deg": 95.36512954106533,
+        "mean_nis": 0.13661621643140007,
+        "has_nan_inf": false
+      }
+    }
+  },
+  {
+    "trip": "Trip 2",
+    "episode_idx": 5,
+    "start_row": 9843,
+    "end_row": 10331,
+    "duration_s": 223.983,
+    "variants": {
+      "Version A (Control)": {
+        "delta_u_m": -16058.529306565344,
+        "max_vu_ms": 588.982429658225,
+        "vnhc_active_pct": 0.0,
+        "max_rejection_epochs": 489,
+        "max_rejection_s": 61.125,
+        "time_to_recovery_s": null,
+        "final_horiz_err_m": 1351.8286225685624,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": NaN,
+        "has_nan_inf": false
+      },
+      "Version B (Gate Removed)": {
+        "delta_u_m": -19228.717988000768,
+        "max_vu_ms": 1213.4024437885519,
+        "vnhc_active_pct": 8.588957055214724,
+        "max_rejection_epochs": 180,
+        "max_rejection_s": 22.5,
+        "time_to_recovery_s": 0.8589999675750732,
+        "final_horiz_err_m": 11608.034680565039,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 217.56241504699253,
+        "has_nan_inf": false
+      },
+      "Version C (Recoverable)": {
+        "delta_u_m": -61739.64838010847,
+        "max_vu_ms": 1328.789992576536,
+        "vnhc_active_pct": 2.4539877300613497,
+        "max_rejection_epochs": 474,
+        "max_rejection_s": 59.25,
+        "time_to_recovery_s": 1.5,
+        "final_horiz_err_m": 38601.64991178944,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 710.8343611228753,
+        "has_nan_inf": false
+      },
+      "Version D (Robust Huber)": {
+        "delta_u_m": NaN,
+        "max_vu_ms": NaN,
+        "vnhc_active_pct": 8.588957055214724,
+        "max_rejection_epochs": 180,
+        "max_rejection_s": 22.5,
+        "time_to_recovery_s": 0.8589999675750732,
+        "final_horiz_err_m": NaN,
+        "mean_heading_err_deg": NaN,
+        "mean_nis": 46.63017567603308,
+        "has_nan_inf": true
+      }
+    }
+  }
+]

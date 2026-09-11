@@ -1,0 +1,5 @@
+Outage Duration (s),Distance Travelled (m),Final Error (m),Max Error (m),Drift %,SIH Target (<10%)
+5,57.4,11.49,11.49,20.01,FAIL
+10,110.8,17.88,17.88,16.14,FAIL
+30,344.5,187.71,187.71,54.49,FAIL
+60,661.4,503.44,503.44,76.12,FAIL

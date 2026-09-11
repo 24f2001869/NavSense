@@ -1,0 +1,34 @@
+[
+  {
+    "Regime": "Standstill (<0.5 m/s)",
+    "Samples": 4736,
+    "Exp MAE": 1.282,
+    "Bal MAE": 1.262,
+    "Exp Bias": 1.246,
+    "Bal Bias": 1.219
+  },
+  {
+    "Regime": "Low Speed (0.5-5 m/s)",
+    "Samples": 3275,
+    "Exp MAE": 4.248,
+    "Bal MAE": 4.433,
+    "Exp Bias": 3.234,
+    "Bal Bias": 3.258
+  },
+  {
+    "Regime": "Mid Speed (5-20 m/s)",
+    "Samples": 28475,
+    "Exp MAE": 3.494,
+    "Bal MAE": 3.955,
+    "Exp Bias": 0.503,
+    "Bal Bias": 0.835
+  },
+  {
+    "Regime": "Motorway Extreme (>=25 m/s)",
+    "Samples": 50350,
+    "Exp MAE": 3.686,
+    "Bal MAE": 3.69,
+    "Exp Bias": -3.499,
+    "Bal Bias": -3.453
+  }
+]

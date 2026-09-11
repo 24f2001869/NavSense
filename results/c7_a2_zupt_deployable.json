@@ -1,0 +1,142 @@
+{
+  "status": "Complete",
+  "timestamp": "2026-09-05 23:45:50",
+  "sub_phase": "Stage C7-A2: Deployable Smartphone ZUPT Detector & Benchmark",
+  "detector_configuration": {
+    "window_sec": 0.5,
+    "persist_sec": 0.8,
+    "th_acc_var": 0.04,
+    "th_gyro_var": 0.003,
+    "th_grav_diff": 0.25,
+    "th_jerk_rms": 8.0
+  },
+  "classification_performance": {
+    "vta02_primary": {
+      "n_epochs": 10991,
+      "tp": 619,
+      "fp": 236,
+      "tn": 10131,
+      "fn": 5,
+      "precision": 0.7239766081871345,
+      "recall": 0.9919871794871795,
+      "f1_score": 0.837052062204192,
+      "fpr": 0.022764541333076108,
+      "fp_crawling_epochs": 161
+    },
+    "vta04_confirmation": {
+      "n_epochs": 1789,
+      "tp": 0,
+      "fp": 0,
+      "tn": 1789,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 0.0,
+      "f1_score": 0.0,
+      "fpr": 0.0
+    }
+  },
+  "navigation_benchmarks_vta02": {
+    "10s": {
+      "horizon_s": 10.0,
+      "stop_windows": {
+        "n": 3,
+        "baseline_mean": 20.439162640327805,
+        "oracle_mean": 0.9550042837575617,
+        "deployable_mean": 0.9459850595116377,
+        "oracle_reduction_pct": 95.32757627813345,
+        "deployable_reduction_pct": 95.37170344911709
+      },
+      "continuous_windows": {
+        "n": 52,
+        "baseline_mean": 51.83386154266988,
+        "oracle_mean": 51.056908724699014,
+        "deployable_mean": 49.804023297300475
+      },
+      "overall": {
+        "n_total": 55,
+        "baseline_mean": 50.12142342072396,
+        "oracle_mean": 48.32407757337493,
+        "deployable_mean": 47.13903939342108
+      }
+    },
+    "20s": {
+      "horizon_s": 20.0,
+      "stop_windows": {
+        "n": 5,
+        "baseline_mean": 41.19541032148159,
+        "oracle_mean": 16.602572670987875,
+        "deployable_mean": 18.879425964005375,
+        "oracle_reduction_pct": 59.69800387610081,
+        "deployable_reduction_pct": 54.171045228889035
+      },
+      "continuous_windows": {
+        "n": 49,
+        "baseline_mean": 206.87197534917965,
+        "oracle_mean": 209.07536730858214,
+        "deployable_mean": 199.49541151387885
+      },
+      "overall": {
+        "n_total": 54,
+        "baseline_mean": 191.53155266142983,
+        "oracle_mean": 191.2538122495456,
+        "deployable_mean": 182.77170914814982
+      }
+    },
+    "30s": {
+      "horizon_s": 30.0,
+      "stop_windows": {
+        "n": 6,
+        "baseline_mean": 207.81775931994014,
+        "oracle_mean": 110.09633831918194,
+        "deployable_mean": 126.06673327012572,
+        "oracle_reduction_pct": 47.0226516350385,
+        "deployable_reduction_pct": 39.337844040535956
+      },
+      "continuous_windows": {
+        "n": 48,
+        "baseline_mean": 470.01319865320994,
+        "oracle_mean": 470.8563673096184,
+        "deployable_mean": 420.8585679497933
+      },
+      "overall": {
+        "n_total": 54,
+        "baseline_mean": 440.8803720606245,
+        "oracle_mean": 430.77191964401453,
+        "deployable_mean": 388.10391965205247
+      }
+    },
+    "60s": {
+      "horizon_s": 60.0,
+      "stop_windows": {
+        "n": 9,
+        "baseline_mean": 1339.428280311983,
+        "oracle_mean": 725.9649738277246,
+        "deployable_mean": 771.023260517309,
+        "oracle_reduction_pct": 45.800384798607425,
+        "deployable_reduction_pct": 42.43639082058799
+      },
+      "continuous_windows": {
+        "n": 43,
+        "baseline_mean": 1436.2330999686942,
+        "oracle_mean": 1453.2718299272492,
+        "deployable_mean": 1158.8194616245223
+      },
+      "overall": {
+        "n_total": 52,
+        "baseline_mean": 1419.4784196434941,
+        "oracle_mean": 1327.3917971407932,
+        "deployable_mean": 1091.700888355966
+      }
+    }
+  },
+  "held_out_vta04_confirmation": {
+    "horizon_s": 30.0,
+    "baseline_mean_drift_m": 274.3471664603541,
+    "deployable_mean_drift_m": 274.3471664603541,
+    "delta_m": 0.0
+  },
+  "figures": [
+    "results\\figures\\c7_a2_deployable_detector_performance.png",
+    "results\\figures\\c7_a2_baseline_vs_oracle_vs_deployable_drift.png"
+  ]
+}

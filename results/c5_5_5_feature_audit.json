@@ -1,0 +1,373 @@
+{
+  "metadata": {
+    "stage": "C5.5.5",
+    "title": "Adaptive Confidence Feature Audit & C0 Benchmark",
+    "trip": "Vta02",
+    "honest_benchmark_c0": "sigma_a = 0.291 m/s^2",
+    "sampling_rate_hz": 10.0,
+    "outage_horizon_s": 30.0,
+    "stride_s": 20.0,
+    "feat_extraction_us_per_sample": 350.83314522351117
+  },
+  "feature_audit_summary": {
+    "f1_q_old": {
+      "r_qold": 1.0,
+      "rho_qold": 1.0,
+      "unexplained_var": 0.0,
+      "r_acc_error": 0.3084169576996555,
+      "mean_cruising": 2.2432594989946706,
+      "mean_braking": 20.83398880438858,
+      "mean_rough_road": 32.09579389571756,
+      "separation_braking": 9.2873734868561,
+      "separation_rough_road": 14.307659856469487
+    },
+    "f2_sigma_a": {
+      "r_qold": 0.7207707979268917,
+      "rho_qold": 0.8427964160313949,
+      "unexplained_var": 0.4804894568558319,
+      "r_acc_error": 0.3843731486900885,
+      "mean_cruising": 1.4634178696147948,
+      "mean_braking": 1.9708705994027302,
+      "mean_rough_road": 2.6526699261818685,
+      "separation_braking": 1.3467585977850263,
+      "separation_rough_road": 1.8126537740498263
+    },
+    "f3_jerk_rms": {
+      "r_qold": 0.7223154748255542,
+      "rho_qold": 0.8356564440891072,
+      "unexplained_var": 0.47826035482753415,
+      "r_acc_error": 0.36029678742352944,
+      "mean_cruising": 19.400295864924267,
+      "mean_braking": 24.704990790631737,
+      "mean_rough_road": 35.069078564588665,
+      "separation_braking": 1.2734337126283173,
+      "separation_rough_road": 1.8076568938407738
+    },
+    "f4_e_2_5hz": {
+      "r_qold": 0.849736123163449,
+      "rho_qold": 0.9052266079156007,
+      "unexplained_var": 0.27794852099115175,
+      "r_acc_error": 0.25044201114048115,
+      "mean_cruising": 0.05138734370867009,
+      "mean_braking": 0.20915444104792155,
+      "mean_rough_road": 0.3629935153358044,
+      "separation_braking": 4.070154670058929,
+      "separation_rough_road": 7.063869857330067
+    },
+    "f5_e_hf": {
+      "r_qold": 0.7798497307802694,
+      "rho_qold": 0.8476165861709115,
+      "unexplained_var": 0.39183439740194126,
+      "r_acc_error": 0.1995842971850263,
+      "mean_cruising": 0.02389061158960395,
+      "mean_braking": 0.10341884174210109,
+      "mean_rough_road": 0.20543578764036474,
+      "separation_braking": 4.328848469423677,
+      "separation_rough_road": 8.599017160814057
+    },
+    "f6_r_band": {
+      "r_qold": -0.11149522316611475,
+      "rho_qold": -0.23955337030879015,
+      "unexplained_var": 0.9875688152111383,
+      "r_acc_error": -0.05598937788680141,
+      "mean_cruising": 0.7859004246866497,
+      "mean_braking": 0.5236930410766215,
+      "mean_rough_road": 0.5490936276632088,
+      "separation_braking": 0.6663605514897962,
+      "separation_rough_road": 0.6986809139128024
+    },
+    "f7_gyro_norm": {
+      "r_qold": 0.46937699763440466,
+      "rho_qold": 0.578312399018556,
+      "unexplained_var": 0.7796852340917121,
+      "r_acc_error": 0.35862407889674247,
+      "mean_cruising": 0.17220294939629952,
+      "mean_braking": 0.21061958973488423,
+      "mean_rough_road": 0.30793603128730523,
+      "separation_braking": 1.2230893213511995,
+      "separation_rough_road": 1.7882157685372764
+    },
+    "f8_sigma_g": {
+      "r_qold": 0.6766845033286776,
+      "rho_qold": 0.8003219016988427,
+      "unexplained_var": 0.542098082954821,
+      "r_acc_error": 0.3345407477432421,
+      "mean_cruising": 0.18941041008948356,
+      "mean_braking": 0.2275868702434843,
+      "mean_rough_road": 0.3271980496479852,
+      "separation_braking": 1.2015541750551662,
+      "separation_rough_road": 1.7274554643852515
+    },
+    "f9_ang_accel": {
+      "r_qold": 0.6546238033764199,
+      "rho_qold": 0.8075871959453018,
+      "unexplained_var": 0.5714676760529903,
+      "r_acc_error": 0.3186038069129434,
+      "mean_cruising": 2.370719016906901,
+      "mean_braking": 2.872631383083119,
+      "mean_rough_road": 4.087205704157826,
+      "separation_braking": 1.2117131390878007,
+      "separation_rough_road": 1.7240363253872257
+    },
+    "f10_sigma_rp": {
+      "r_qold": 0.4872065202222869,
+      "rho_qold": 0.8136663057339586,
+      "unexplained_var": 0.7626298066528904,
+      "r_acc_error": 0.2251107294608679,
+      "mean_cruising": 0.003235649473105066,
+      "mean_braking": 0.007727727468680861,
+      "mean_rough_road": 0.012672378044130432,
+      "separation_braking": 2.3883072454562773,
+      "separation_rough_road": 3.9164854638855617
+    }
+  },
+  "cross_trip_stability": {
+    "f1_q_old": {
+      "vta02": {
+        "median": 12.196077056130198,
+        "iqr": 26.382966263658147
+      },
+      "vta03": {
+        "median": 0.3607155040223517,
+        "iqr": 5.496591985834862
+      },
+      "vta04": {
+        "median": 23.675562730478116,
+        "iqr": 36.23412952733844
+      }
+    },
+    "f2_sigma_a": {
+      "vta02": {
+        "median": 2.13281134217258,
+        "iqr": 1.6458763416015123
+      },
+      "vta03": {
+        "median": 0.6966848688610943,
+        "iqr": 0.8484375376208764
+      },
+      "vta04": {
+        "median": 2.8369985091465946,
+        "iqr": 1.8085718224842742
+      }
+    },
+    "f3_jerk_rms": {
+      "vta02": {
+        "median": 27.572630358543755,
+        "iqr": 22.351226730621683
+      },
+      "vta03": {
+        "median": 9.004967585850723,
+        "iqr": 11.71011752150104
+      },
+      "vta04": {
+        "median": 44.461692286731505,
+        "iqr": 29.78355729290851
+      }
+    },
+    "f4_e_2_5hz": {
+      "vta02": {
+        "median": 0.1366154888539366,
+        "iqr": 0.28547215421505084
+      },
+      "vta03": {
+        "median": 0.017897752009853864,
+        "iqr": 0.08102881883928757
+      },
+      "vta04": {
+        "median": 0.34355978787781777,
+        "iqr": 0.551483545369216
+      }
+    },
+    "f5_e_hf": {
+      "vta02": {
+        "median": 0.052521409898974455,
+        "iqr": 0.12885707434075044
+      },
+      "vta03": {
+        "median": 0.007654859038182728,
+        "iqr": 0.047133762772155044
+      },
+      "vta04": {
+        "median": 0.1987735356045212,
+        "iqr": 0.3759775114541653
+      }
+    },
+    "f6_r_band": {
+      "vta02": {
+        "median": 0.5112496041343546,
+        "iqr": 0.3387085558887628
+      },
+      "vta03": {
+        "median": 0.6183904614163541,
+        "iqr": 0.3836483214137309
+      },
+      "vta04": {
+        "median": 0.6299610974961007,
+        "iqr": 0.39741599028875113
+      }
+    },
+    "f7_gyro_norm": {
+      "vta02": {
+        "median": 0.2088768536722056,
+        "iqr": 0.26352891774315196
+      },
+      "vta03": {
+        "median": 0.10153216239202237,
+        "iqr": 0.18071175119992672
+      },
+      "vta04": {
+        "median": 0.27419288831040095,
+        "iqr": 0.3147500337051669
+      }
+    },
+    "f8_sigma_g": {
+      "vta02": {
+        "median": 0.25586677783565415,
+        "iqr": 0.22205957269585785
+      },
+      "vta03": {
+        "median": 0.07152560660350947,
+        "iqr": 0.09432160093381828
+      },
+      "vta04": {
+        "median": 0.3089978116427364,
+        "iqr": 0.24866456334057227
+      }
+    },
+    "f9_ang_accel": {
+      "vta02": {
+        "median": 3.257767214246933,
+        "iqr": 2.736779228675734
+      },
+      "vta03": {
+        "median": 1.0175548579260425,
+        "iqr": 1.226223910296905
+      },
+      "vta04": {
+        "median": 4.418483638836593,
+        "iqr": 3.6091814093797514
+      }
+    },
+    "f10_sigma_rp": {
+      "vta02": {
+        "median": 0.007667957216545321,
+        "iqr": 0.011827923111725949
+      },
+      "vta03": {
+        "median": 0.004278249052525454,
+        "iqr": 0.014792829538151017
+      },
+      "vta04": {
+        "median": 0.05091464987970284,
+        "iqr": 0.08511917012727316
+      }
+    }
+  },
+  "navigation_c0_benchmark": {
+    "C0_Honest_Baseline": {
+      "label": "C0. Constant Inflated (sigma_a = 0.291) [BENCHMARK]",
+      "mean_drift_m": 470.46217840158033,
+      "median_drift_m": 351.45407387488876,
+      "diff_vs_c0_m": 0.0,
+      "p90_drift_m": 968.6125544121393,
+      "mean_vel_err_ms": 37.47462081037778,
+      "status": "BENCHMARK BASE",
+      "regime_means_m": {
+        "cruising": 177.78884457826467,
+        "braking": 508.1330446584431,
+        "rough_road": 458.45465080885776,
+        "standstill": 83.88117936453004
+      }
+    },
+    "C1_Old_Adaptive": {
+      "label": "C1. Old Adaptive q_old(k)",
+      "mean_drift_m": 472.44680453856836,
+      "median_drift_m": 349.99111394992207,
+      "diff_vs_c0_m": 1.9846261369880267,
+      "p90_drift_m": 992.2994621250158,
+      "mean_vel_err_ms": 38.34789866991033,
+      "status": "TIE (NO GAIN)",
+      "regime_means_m": {
+        "cruising": 172.2579443384808,
+        "braking": 527.0595189117918,
+        "rough_road": 443.1447519580508,
+        "standstill": 85.25640554778873
+      }
+    },
+    "Cand1_Jerk_Gated": {
+      "label": "Cand 1. Jerk-Gated Quality (q_jerk)",
+      "mean_drift_m": 441.1346229370612,
+      "median_drift_m": 301.37140370882577,
+      "diff_vs_c0_m": -29.32755546451915,
+      "p90_drift_m": 975.9680070426613,
+      "mean_vel_err_ms": 36.56259545608613,
+      "status": "MAJOR SUCCESS",
+      "regime_means_m": {
+        "cruising": 171.16183143033734,
+        "braking": 490.0930955561067,
+        "rough_road": 415.25185176909383,
+        "standstill": 85.25640554778873
+      }
+    },
+    "Cand2_Rot_Decoupled": {
+      "label": "Cand 2. Rotational-Decoupled (q_rot)",
+      "mean_drift_m": 469.09612513493926,
+      "median_drift_m": 349.9139254654871,
+      "diff_vs_c0_m": -1.3660532666410745,
+      "p90_drift_m": 978.2838546139683,
+      "mean_vel_err_ms": 38.07899080574651,
+      "status": "MODEST GAIN",
+      "regime_means_m": {
+        "cruising": 173.66712764414248,
+        "braking": 520.7337293758964,
+        "rough_road": 442.56606299343156,
+        "standstill": 85.19896589853951
+      }
+    },
+    "Cand3_Spectral_Gated": {
+      "label": "Cand 3. Spectral Band-Gated (q_spec)",
+      "mean_drift_m": 476.56907705056307,
+      "median_drift_m": 351.7989744138765,
+      "diff_vs_c0_m": 6.106898648982735,
+      "p90_drift_m": 1017.016630901036,
+      "mean_vel_err_ms": 38.79091172640436,
+      "status": "REJECTED (WORSE)",
+      "regime_means_m": {
+        "cruising": 171.9315120682906,
+        "braking": 525.0068291224353,
+        "rough_road": 454.03182435521774,
+        "standstill": 85.25640554778873
+      }
+    },
+    "Cand4_Synergistic": {
+      "label": "Cand 4. Synergistic Composite (q_syn)",
+      "mean_drift_m": 445.963487341647,
+      "median_drift_m": 306.7282098252433,
+      "diff_vs_c0_m": -24.49869105993332,
+      "p90_drift_m": 974.6458814111849,
+      "mean_vel_err_ms": 36.843355963067886,
+      "status": "MAJOR SUCCESS",
+      "regime_means_m": {
+        "cruising": 172.03559239411504,
+        "braking": 489.323498465093,
+        "rough_road": 426.2544748429186,
+        "standstill": 85.25640554778873
+      }
+    },
+    "Cand1_Shuffled_Ctrl": {
+      "label": "Cand 1 Shuffled Control (Broken Timing)",
+      "mean_drift_m": 487.793607989979,
+      "median_drift_m": 387.6326980058329,
+      "diff_vs_c0_m": 17.33142958839869,
+      "p90_drift_m": 943.2444389988196,
+      "mean_vel_err_ms": 37.24544730825609,
+      "status": "REJECTED (WORSE)",
+      "regime_means_m": {
+        "cruising": 157.12701405399082,
+        "braking": 561.1044451702245,
+        "rough_road": 441.1120697502104,
+        "standstill": 79.41689123380011
+      }
+    }
+  }
+}

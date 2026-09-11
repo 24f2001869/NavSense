@@ -1,0 +1,1112 @@
+{
+  "task1_observability_matrix": {
+    "Vta04": {
+      "gravity_jacobian": [
+        [
+          0.0,
+          9.803832787096963,
+          0.0
+        ],
+        [
+          -9.760739825555712,
+          0.022013871918861016,
+          0.0
+        ],
+        [
+          -0.9182022517768499,
+          0.23401344958292414,
+          0.0
+        ]
+      ],
+      "gravity_rank": 2,
+      "gravity_singular_values": [
+        9.82717614631844,
+        9.783257664453455,
+        0.0
+      ],
+      "gravity_nullspace_dim": 1,
+      "gravity_nullspace_vectors": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "gravity_mag_stacked_rank": 3,
+      "gravity_mag_singular_values": [
+        38.35123024313631,
+        37.106028230113765,
+        9.761229763679937
+      ],
+      "gravity_mag_nullspace_dim": 0,
+      "gravity_mag_nullspace_vectors": [],
+      "B_nav_estimate_uT": [
+        -8.77882774819897,
+        -35.8492358346061,
+        3.206264171019092
+      ],
+      "interpretation": "Gravity alone: rank 2/3 (2 DOFs: roll + pitch observable, yaw in nullspace). Gravity + Magnetometer: rank 3/3 \u2014 FULL rank \u2014 R_p^n (phone-to-navigation) is fully observable."
+    },
+    "Vta02": {
+      "gravity_jacobian": [
+        [
+          0.0,
+          9.806523713048325,
+          0.0
+        ],
+        [
+          -9.798195663948045,
+          0.002050642945675507,
+          0.0
+        ],
+        [
+          -0.40406566987164105,
+          0.04972607750865394,
+          0.0
+        ]
+      ],
+      "gravity_rank": 2,
+      "gravity_singular_values": [
+        9.808636503565808,
+        9.804536781408668,
+        0.0
+      ],
+      "gravity_nullspace_dim": 1,
+      "gravity_nullspace_vectors": [
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "gravity_mag_stacked_rank": 3,
+      "gravity_mag_singular_values": [
+        42.23304575567811,
+        41.122892803677765,
+        9.656516223354426
+      ],
+      "gravity_mag_nullspace_dim": 0,
+      "gravity_mag_nullspace_vectors": [],
+      "B_nav_estimate_uT": [
+        -18.529508236973022,
+        -36.00319968703204,
+        6.885804479761571
+      ],
+      "interpretation": "Gravity alone: rank 2/3 (2 DOFs: roll + pitch observable, yaw in nullspace). Gravity + Magnetometer: rank 3/3 \u2014 FULL rank \u2014 R_p^n (phone-to-navigation) is fully observable."
+    }
+  },
+  "task2_rpn_vs_rpv": {
+    "Vta04": {
+      "R_p_n_gravity_only": [
+        [
+          0.9997127242327364,
+          0.0022447902106082114,
+          -0.023862730859460075
+        ],
+        [
+          0.0,
+          0.995604478118194,
+          0.09365747781676935
+        ],
+        [
+          0.023968083093161008,
+          -0.09363057229296956,
+          0.9953184650778515
+        ]
+      ],
+      "R_p_v_reference": [
+        [
+          0.25285749812707076,
+          -0.967503519697135,
+          0.000158159963152987
+        ],
+        [
+          0.9673649698843415,
+          0.25281851475048017,
+          -0.016965071176632044
+        ],
+        [
+          0.016373780308326587,
+          0.004442743861263258,
+          0.9998560703148218
+        ]
+      ],
+      "R_n_v_computed": [
+        [
+          0.2506092417369094,
+          -0.9632360239423414,
+          0.09680583730230573
+        ],
+        [
+          0.968059426824866,
+          0.2501183396593834,
+          -0.01737130684620684
+        ],
+        [
+          -0.00748024675816647,
+          0.09806721340887842,
+          0.9951516806812187
+        ]
+      ],
+      "R_n_v_euler_ZYX_deg": {
+        "yaw_deg": 75.48601813035259,
+        "pitch_deg": 0.4285905659220062,
+        "roll_deg": 5.628040831527171
+      },
+      "off_vertical_magnitude_deg": 5.644336406924591,
+      "is_R_n_v_pure_yaw": false,
+      "interpretation": "R_n^v yaw=75.49\u00b0, pitch=0.43\u00b0, roll=5.63\u00b0. Off-vertical magnitude: 5.64\u00b0. R_n^v has significant roll/pitch components. This indicates either road grade, vehicle body pitch, or cradle mechanical tilt that smartphone sensors CANNOT distinguish from level navigation."
+    },
+    "Vta02": {
+      "R_p_n_gravity_only": [
+        [
+          0.9999871223147889,
+          0.00020910738587341315,
+          -0.005070648744337153
+        ],
+        [
+          0.0,
+          0.9991507643948081,
+          0.0412037620766675
+        ],
+        [
+          0.005074958579858043,
+          -0.04120323146758996,
+          0.9991378976457859
+        ]
+      ],
+      "R_p_v_reference": [
+        [
+          0.8683111185692388,
+          -0.49599844751770644,
+          -0.0046196784587617026
+        ],
+        [
+          0.49585551186395793,
+          0.8677457896146379,
+          0.03383128670625567
+        ],
+        [
+          -0.012771559151865326,
+          -0.03166677542936166,
+          0.9994168812916543
+        ]
+      ],
+      "R_n_v_computed": [
+        [
+          0.8682196445600071,
+          -0.49576757610804,
+          0.02022768597871973
+        ],
+        [
+          0.49585903187497854,
+          0.8684028452820338,
+          0.0005646362341254637
+        ],
+        [
+          -0.017845708394566867,
+          0.00953985251598094,
+          0.9997952399896036
+        ]
+      ],
+      "R_n_v_euler_ZYX_deg": {
+        "yaw_deg": 29.73162272815564,
+        "pitch_deg": 1.0225380528257286,
+        "roll_deg": 0.546688638830733
+      },
+      "off_vertical_magnitude_deg": 1.1595052985231382,
+      "is_R_n_v_pure_yaw": true,
+      "interpretation": "R_n^v yaw=29.73\u00b0, pitch=1.02\u00b0, roll=0.55\u00b0. Off-vertical magnitude: 1.16\u00b0. R_n^v is approximately a pure yaw rotation. The vehicle is nearly level, so the missing DOFs of R_p^v are dominated by the horizontal heading offset, which IS recoverable from GNSS+magnetometer."
+    },
+    "decomposition_proof": {
+      "formula": "R_p^v = R_n^v @ R_p^n",
+      "R_p_n_observable": "YES \u2014 Gravity (2 DOFs) + Magnetometer (1 DOF yaw) = fully observable R_p^n",
+      "R_n_v_observable": "PARTIALLY \u2014 R_n^v encodes the vehicle body attitude relative to the local level plane. The yaw component (phone-to-vehicle horizontal heading offset) is observable from pre-outage GNSS bearing. The pitch and roll components (vehicle body tilt / road grade / cradle mechanical tilt) are NOT distinguishable from the smartphone. The phone accelerometer measures gravity + dynamic acceleration in the phone frame; it cannot separate 'phone tilted in cradle' from 'vehicle on a slope' from 'centripetal tilt'.",
+      "fundamental_ambiguity": "A phone accelerometer reading a_p = R_v^p @ (a_vehicle + g_nav) cannot determine whether a steady-state lateral acceleration component is due to: (1) road bank angle (vehicle body roll), (2) cradle mechanical roll in the mount, or (3) centripetal acceleration during a turn. Without an independent measurement of vehicle body attitude (e.g., wheel speed differential, suspension height, or road geometry), R_n^v pitch/roll remain unidentifiable."
+    }
+  },
+  "task3_centripetal_constraints": {
+    "Vta04": {
+      "turn_episodes_detected": 60,
+      "episodes_with_sufficient_centripetal": 56,
+      "episode_details": [
+        {
+          "start_idx": 0,
+          "end_idx": 58,
+          "duration_s": 5.800000000000001,
+          "mean_speed_ms": 5.163204022988504,
+          "phone_centripetal_magnitude_ms2": 1.3046266875150123,
+          "phone_centripetal_direction_leveled": [
+            -0.3073738331227297,
+            0.9515888433096724
+          ],
+          "reference_lateral_accel_ms2": 0.6220690430532886,
+          "reference_yaw_rate_degs": 8.117248489655173,
+          "expected_centripetal_ms2": 0.7314851183378249
+        },
+        {
+          "start_idx": 64,
+          "end_idx": 70,
+          "duration_s": 0.6000000000000001,
+          "mean_speed_ms": 3.7754629629629632,
+          "phone_centripetal_magnitude_ms2": 1.2457946658554093,
+          "phone_centripetal_direction_leveled": [
+            0.06467596016575793,
+            0.9979063183368654
+          ],
+          "reference_lateral_accel_ms2": 1.6154489641674996,
+          "reference_yaw_rate_degs": 28.233343333333334,
+          "expected_centripetal_ms2": 1.8604152518996402
+        },
+        {
+          "start_idx": 160,
+          "end_idx": 209,
+          "duration_s": 4.9,
+          "mean_speed_ms": 11.746303854875283,
+          "phone_centripetal_magnitude_ms2": 0.6598147578239646,
+          "phone_centripetal_direction_leveled": [
+            -0.9568130530528088,
+            -0.29070394133510247
+          ],
+          "reference_lateral_accel_ms2": -0.10104909333018572,
+          "reference_yaw_rate_degs": 0.10000173673469388,
+          "expected_centripetal_ms2": 0.020501523771620043
+        },
+        {
+          "start_idx": 210,
+          "end_idx": 230,
+          "duration_s": 2.0,
+          "mean_speed_ms": 11.895583333333333,
+          "phone_centripetal_magnitude_ms2": 0.8183005624153251,
+          "phone_centripetal_direction_leveled": [
+            -0.9919026891490733,
+            -0.12700021755428892
+          ],
+          "reference_lateral_accel_ms2": -0.013503976228627501,
+          "reference_yaw_rate_degs": 0.48500671000000006,
+          "expected_centripetal_ms2": 0.10069568448254552
+        },
+        {
+          "start_idx": 238,
+          "end_idx": 243,
+          "duration_s": 0.5,
+          "mean_speed_ms": 11.909611111111111,
+          "phone_centripetal_magnitude_ms2": 1.1100674933100487,
+          "phone_centripetal_direction_leveled": [
+            -0.4422202872533549,
+            0.8969064708995917
+          ],
+          "reference_lateral_accel_ms2": -0.27007625895809995,
+          "reference_yaw_rate_degs": -0.5799926799999999,
+          "expected_centripetal_ms2": 0.12055839583287153
+        },
+        {
+          "start_idx": 244,
+          "end_idx": 271,
+          "duration_s": 2.7,
+          "mean_speed_ms": 11.788405349794235,
+          "phone_centripetal_magnitude_ms2": 0.5407329918587778,
+          "phone_centripetal_direction_leveled": [
+            -0.9596885247166386,
+            0.28106571389481494
+          ],
+          "reference_lateral_accel_ms2": 0.05631153751109446,
+          "reference_yaw_rate_degs": 0.8407478851851852,
+          "expected_centripetal_ms2": 0.17298092375691013
+        },
+        {
+          "start_idx": 272,
+          "end_idx": 307,
+          "duration_s": 3.5,
+          "mean_speed_ms": 11.530968253968252,
+          "phone_centripetal_magnitude_ms2": 0.31528627613155197,
+          "phone_centripetal_direction_leveled": [
+            -0.993906053051356,
+            0.11023047540437672
+          ],
+          "reference_lateral_accel_ms2": -0.18090805959615,
+          "reference_yaw_rate_degs": -0.5685668942857143,
+          "expected_centripetal_ms2": 0.11442599898250684
+        },
+        {
+          "start_idx": 308,
+          "end_idx": 356,
+          "duration_s": 4.800000000000001,
+          "mean_speed_ms": 10.675000000000002,
+          "phone_centripetal_magnitude_ms2": 0.6092919176429374,
+          "phone_centripetal_direction_leveled": [
+            -0.6866005791007641,
+            -0.7270348305126072
+          ],
+          "reference_lateral_accel_ms2": -0.2611147006993437,
+          "reference_yaw_rate_degs": -1.0895755333333332,
+          "expected_centripetal_ms2": 0.2030030643998409
+        },
+        {
+          "start_idx": 357,
+          "end_idx": 399,
+          "duration_s": 4.2,
+          "mean_speed_ms": 9.612533068783069,
+          "phone_centripetal_magnitude_ms2": 1.0349048655077984,
+          "phone_centripetal_direction_leveled": [
+            0.9357944886991187,
+            -0.3525459897947427
+          ],
+          "reference_lateral_accel_ms2": -0.6890015671690916,
+          "reference_yaw_rate_degs": -3.016660523809524,
+          "expected_centripetal_ms2": 0.5061061964571135
+        },
+        {
+          "start_idx": 400,
+          "end_idx": 409,
+          "duration_s": 0.9,
+          "mean_speed_ms": 11.241666666666665,
+          "phone_centripetal_magnitude_ms2": 0.38319642522678354,
+          "phone_centripetal_direction_leveled": [
+            0.8162387381447646,
+            0.5777147413316043
+          ],
+          "reference_lateral_accel_ms2": -0.24673605494688886,
+          "reference_yaw_rate_degs": -0.8777737444444444,
+          "expected_centripetal_ms2": 0.1722228046752243
+        }
+      ],
+      "centripetal_direction_angular_spread_rad": 0.8970182258305187,
+      "mean_centripetal_angle_in_leveled_frame_deg": 88.19202699673775,
+      "mean_centripetal_magnitude_ms2": 1.0202032213112044,
+      "interpretation": "Detected 60 turn episodes, 56 with |a_c| > 0.3 m/s\u00b2. Centripetal directions show high variability or insufficient data \u2014 constraint is weak."
+    },
+    "Vta02": {
+      "turn_episodes_detected": 318,
+      "episodes_with_sufficient_centripetal": 299,
+      "episode_details": [
+        {
+          "start_idx": 351,
+          "end_idx": 363,
+          "duration_s": 1.2000000000000002,
+          "mean_speed_ms": 10.508935185185184,
+          "phone_centripetal_magnitude_ms2": 2.2528815372489768,
+          "phone_centripetal_direction_leveled": [
+            0.4419453145484538,
+            0.8970419939716693
+          ],
+          "reference_lateral_accel_ms2": 0.3550980119679999,
+          "reference_yaw_rate_degs": 5.200007,
+          "expected_centripetal_ms2": 0.9537619871814786
+        },
+        {
+          "start_idx": 364,
+          "end_idx": 374,
+          "duration_s": 1.0,
+          "mean_speed_ms": 10.871694444444442,
+          "phone_centripetal_magnitude_ms2": 0.7851486954890364,
+          "phone_centripetal_direction_leveled": [
+            0.561916065504587,
+            0.8271942548929149
+          ],
+          "reference_lateral_accel_ms2": 0.07402057066404,
+          "reference_yaw_rate_degs": 3.4900054,
+          "expected_centripetal_ms2": 0.6622175776419581
+        },
+        {
+          "start_idx": 375,
+          "end_idx": 391,
+          "duration_s": 1.6,
+          "mean_speed_ms": 10.64282986111111,
+          "phone_centripetal_magnitude_ms2": 1.3088331790974455,
+          "phone_centripetal_direction_leveled": [
+            -0.343539629734793,
+            0.9391381808880317
+          ],
+          "reference_lateral_accel_ms2": 0.5163930398460748,
+          "reference_yaw_rate_degs": 4.262506375,
+          "expected_centripetal_ms2": 0.7917708863820986
+        },
+        {
+          "start_idx": 392,
+          "end_idx": 419,
+          "duration_s": 2.7,
+          "mean_speed_ms": 10.444444444444445,
+          "phone_centripetal_magnitude_ms2": 1.8857954112330948,
+          "phone_centripetal_direction_leveled": [
+            0.828399852140661,
+            0.5601372019187181
+          ],
+          "reference_lateral_accel_ms2": 0.660924337953574,
+          "reference_yaw_rate_degs": 4.955561777777778,
+          "expected_centripetal_ms2": 0.9033490794412605
+        },
+        {
+          "start_idx": 420,
+          "end_idx": 458,
+          "duration_s": 3.8000000000000003,
+          "mean_speed_ms": 13.291637426900584,
+          "phone_centripetal_magnitude_ms2": 2.0456026629742268,
+          "phone_centripetal_direction_leveled": [
+            0.6583615667840955,
+            -0.7527018316581877
+          ],
+          "reference_lateral_accel_ms2": -0.7378371978225867,
+          "reference_yaw_rate_degs": -1.2026255605263159,
+          "expected_centripetal_ms2": 0.2789884882740631
+        },
+        {
+          "start_idx": 463,
+          "end_idx": 478,
+          "duration_s": 1.5,
+          "mean_speed_ms": 15.875703703703703,
+          "phone_centripetal_magnitude_ms2": 1.1366175846948003,
+          "phone_centripetal_direction_leveled": [
+            0.48638093042167474,
+            -0.8737468686765899
+          ],
+          "reference_lateral_accel_ms2": -1.158988868627099,
+          "reference_yaw_rate_degs": -2.9533245266666666,
+          "expected_centripetal_ms2": 0.8183169078890967
+        },
+        {
+          "start_idx": 483,
+          "end_idx": 501,
+          "duration_s": 1.8,
+          "mean_speed_ms": 16.95828703703704,
+          "phone_centripetal_magnitude_ms2": 1.0858028817384502,
+          "phone_centripetal_direction_leveled": [
+            -0.2843922632517688,
+            -0.9587080059134464
+          ],
+          "reference_lateral_accel_ms2": -0.8352325112553332,
+          "reference_yaw_rate_degs": -1.7944371055555557,
+          "expected_centripetal_ms2": 0.5311138056682315
+        },
+        {
+          "start_idx": 502,
+          "end_idx": 588,
+          "duration_s": 8.6,
+          "mean_speed_ms": 16.75316214470284,
+          "phone_centripetal_magnitude_ms2": 0.7397304032595858,
+          "phone_centripetal_direction_leveled": [
+            0.958297940771891,
+            0.2857709864775523
+          ],
+          "reference_lateral_accel_ms2": 0.3846413990697655,
+          "reference_yaw_rate_degs": 1.9779109023255816,
+          "expected_centripetal_ms2": 0.5783368746535682
+        },
+        {
+          "start_idx": 589,
+          "end_idx": 663,
+          "duration_s": 7.4,
+          "mean_speed_ms": 17.478825075075072,
+          "phone_centripetal_magnitude_ms2": 1.737811266567999,
+          "phone_centripetal_direction_leveled": [
+            0.3113137188834164,
+            -0.9503071968763454
+          ],
+          "reference_lateral_accel_ms2": -0.8522643420166038,
+          "reference_yaw_rate_degs": -2.920263418918919,
+          "expected_centripetal_ms2": 0.8908644564434258
+        },
+        {
+          "start_idx": 673,
+          "end_idx": 678,
+          "duration_s": 0.5,
+          "mean_speed_ms": 18.906555555555553,
+          "phone_centripetal_magnitude_ms2": 1.1853029222175255,
+          "phone_centripetal_direction_leveled": [
+            -0.21591361479358517,
+            -0.9764124696800873
+          ],
+          "reference_lateral_accel_ms2": 0.07402057066404,
+          "reference_yaw_rate_degs": 0.22000121999999997,
+          "expected_centripetal_ms2": 0.07259636440185388
+        }
+      ],
+      "centripetal_direction_angular_spread_rad": 0.9305637093056747,
+      "mean_centripetal_angle_in_leveled_frame_deg": 98.77302955485942,
+      "mean_centripetal_magnitude_ms2": 1.1374291802802212,
+      "interpretation": "Detected 318 turn episodes, 299 with |a_c| > 0.3 m/s\u00b2. Centripetal directions show high variability or insufficient data \u2014 constraint is weak."
+    }
+  },
+  "task4_dynamic_acceleration": {
+    "Vta04": {
+      "accel_episode_samples": 0,
+      "brake_episode_samples": 0,
+      "correlation_with_reference": {
+        "lev_x": {
+          "corr_with_longitudinal_ref": 0.050638068799752176,
+          "corr_with_lateral_ref": -0.015153765880665014
+        },
+        "lev_y": {
+          "corr_with_longitudinal_ref": 0.007293164470048104,
+          "corr_with_lateral_ref": 0.04336497457742554
+        },
+        "lev_z": {
+          "corr_with_longitudinal_ref": -0.03752600608812695,
+          "corr_with_lateral_ref": 0.025575716181333093
+        }
+      },
+      "forward_direction_in_leveled_frame": [
+        0,
+        0
+      ],
+      "forward_angle_leveled_deg": null,
+      "forward_magnitude_ms2": 0.0,
+      "brake_angle_leveled_deg": null,
+      "brake_magnitude_ms2": 0.0,
+      "forward_brake_angular_diff_deg": null,
+      "forward_brake_consistent_180": false,
+      "interpretation": "Insufficient acceleration episodes for forward axis identification."
+    },
+    "Vta02": {
+      "accel_episode_samples": 2,
+      "brake_episode_samples": 0,
+      "correlation_with_reference": {
+        "lev_x": {
+          "corr_with_longitudinal_ref": 0.2520604920005135,
+          "corr_with_lateral_ref": 0.07431131361311401
+        },
+        "lev_y": {
+          "corr_with_longitudinal_ref": -0.017336468630517538,
+          "corr_with_lateral_ref": 0.1407339057859488
+        },
+        "lev_z": {
+          "corr_with_longitudinal_ref": -0.006915116143867956,
+          "corr_with_lateral_ref": 0.005072766510526813
+        }
+      },
+      "forward_direction_in_leveled_frame": [
+        0,
+        0
+      ],
+      "forward_angle_leveled_deg": null,
+      "forward_magnitude_ms2": 0.0,
+      "brake_angle_leveled_deg": null,
+      "brake_magnitude_ms2": 0.0,
+      "forward_brake_angular_diff_deg": null,
+      "forward_brake_consistent_180": false,
+      "interpretation": "Insufficient acceleration episodes for forward axis identification."
+    }
+  },
+  "task5_fisher_information": {
+    "Vta04": {
+      "FIM_gravity_only": [
+        [
+          9611.513731735742,
+          -42.97433527062185,
+          0.0
+        ],
+        [
+          -42.97433527062184,
+          9617.038422249998,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "FIM_static_grav_mag": [
+        [
+          9623.783734252602,
+          -20.704799492297447,
+          5.502739177250701
+        ],
+        [
+          -20.70479949229744,
+          9660.305809766929,
+          -2.187155284003628
+        ],
+        [
+          5.502739177250701,
+          -2.187155284003628,
+          54.48942105163187
+        ]
+      ],
+      "FIM_with_dynamics": [
+        [
+          9623.783734252602,
+          -20.704799492297447,
+          5.502739177250701
+        ],
+        [
+          -20.70479949229744,
+          9660.305809766929,
+          -2.187155284003628
+        ],
+        [
+          5.502739177250701,
+          -2.187155284003628,
+          54.87773070343921
+        ]
+      ],
+      "eigenvalues_static": [
+        54.48576416068849,
+        9614.439402946018,
+        9669.653797964453
+      ],
+      "eigenvalues_total": [
+        54.87407366439273,
+        9614.439403017983,
+        9669.653798040585
+      ],
+      "eigenvectors_static_weakest": [
+        -0.0005745509752208631,
+        0.0002264521814749343,
+        0.999999809305275
+      ],
+      "eigenvectors_total_weakest": [
+        -0.0005745742709800777,
+        0.00022646128582021197,
+        0.9999998092898285
+      ],
+      "condition_number_static": 177.47119723689428,
+      "condition_number_total": 176.2153445574268,
+      "CRLB_roll_deg": 0.5840676272791318,
+      "CRLB_pitch_deg": 0.5829484269083957,
+      "CRLB_yaw_deg": 7.73461941780836,
+      "interpretation": "Static FIM (gravity+mag) condition number: 177.5. With dynamics: 176.2. CRLB bounds: roll=0.58\u00b0, pitch=0.58\u00b0, yaw=7.73\u00b0. NOTE: These bounds are for R_p^n (phone-to-NAVIGATION). The R_n^v (navigation-to-vehicle) pitch/roll remain unobservable \u2014 the FIM only constrains phone attitude relative to gravity and magnetic north, NOT the vehicle chassis orientation relative to navigation."
+    },
+    "Vta02": {
+      "FIM_gravity_only": [
+        [
+          9616.790733457909,
+          -4.018520163724679,
+          0.0
+        ],
+        [
+          -4.01852016372468,
+          9617.038422249996,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "FIM_static_grav_mag": [
+        [
+          9662.184551900693,
+          26.952459800893955,
+          6.814478357069517
+        ],
+        [
+          26.952459800893955,
+          9641.086980468415,
+          -9.075786676323963
+        ],
+        [
+          6.814478357069517,
+          -9.075786676323963,
+          65.58292255314902
+        ]
+      ],
+      "FIM_with_dynamics": [
+        [
+          9662.184551900693,
+          26.952459800893955,
+          6.814478357069517
+        ],
+        [
+          26.952459800893955,
+          9641.086980468415,
+          -9.075786676323963
+        ],
+        [
+          6.814478357069517,
+          -9.075786676323963,
+          65.98058202404717
+        ]
+      ],
+      "eigenvalues_static": [
+        65.56944512515963,
+        9622.70596199265,
+        9680.57904780445
+      ],
+      "eigenvalues_total": [
+        65.96710403526366,
+        9622.70596255231,
+        9680.579047805579
+      ],
+      "eigenvectors_static_weakest": [
+        -0.0007127589660531415,
+        0.0009498171614114037,
+        0.9999992949107595
+      ],
+      "eigenvectors_total_weakest": [
+        -0.0007127886131488251,
+        0.0009498566911292639,
+        0.9999992948520809
+      ],
+      "condition_number_static": 147.6385689908777,
+      "condition_number_total": 146.74858309121296,
+      "CRLB_roll_deg": 0.5829114678820039,
+      "CRLB_pitch_deg": 0.5835654412336018,
+      "CRLB_yaw_deg": 7.054376241331396,
+      "interpretation": "Static FIM (gravity+mag) condition number: 147.6. With dynamics: 146.7. CRLB bounds: roll=0.58\u00b0, pitch=0.58\u00b0, yaw=7.05\u00b0. NOTE: These bounds are for R_p^n (phone-to-NAVIGATION). The R_n^v (navigation-to-vehicle) pitch/roll remain unobservable \u2014 the FIM only constrains phone attitude relative to gravity and magnetic north, NOT the vehicle chassis orientation relative to navigation."
+    }
+  },
+  "task6_gyro_excitation": {
+    "Vta04": {
+      "turn_samples_ref": 176,
+      "gyro_rms_during_turns": {
+        "gyro_x_rms_rads": 0.4712712763463215,
+        "gyro_y_rms_rads": 0.276176687207335,
+        "gyro_z_rms_rads": 0.1170168453782306
+      },
+      "gyro_energy_fraction_during_turns": {
+        "gyro_x": 0.5451595848402591,
+        "gyro_y": 0.3194770733913074,
+        "gyro_z": 0.13536334176843348
+      },
+      "dominant_axis": "gyro_x",
+      "correlation_with_ref_yaw_rate": {
+        "gyro_x": 0.27548347705358495,
+        "gyro_y": -0.09774625905162877,
+        "gyro_z": -0.07724005081737094
+      },
+      "smartphone_only_turn_detection": {
+        "gyro_x_rms_rads": 0.3890287390009991,
+        "gyro_y_rms_rads": 0.23645819241867,
+        "gyro_z_rms_rads": 0.09762077292319729
+      },
+      "per_turn_ratio_consistency_std": 0.10358546743074029,
+      "num_individual_turns_analyzed": 8,
+      "interpretation": "During vehicle turns, gyro_x has highest RMS response (54.5%/31.9%/13.5% x/y/z). Ref yaw correlation: gx=0.275, gy=-0.098, gz=-0.077. Ratio consistency \u03c3=0.104 across 8 turns \u2014 variable or noisy."
+    },
+    "Vta02": {
+      "turn_samples_ref": 1159,
+      "gyro_rms_during_turns": {
+        "gyro_x_rms_rads": 0.38149502997383444,
+        "gyro_y_rms_rads": 0.19356142967494444,
+        "gyro_z_rms_rads": 0.07607434780162511
+      },
+      "gyro_energy_fraction_during_turns": {
+        "gyro_x": 0.5858961449967832,
+        "gyro_y": 0.2972696537472432,
+        "gyro_z": 0.11683420125597363
+      },
+      "dominant_axis": "gyro_x",
+      "correlation_with_ref_yaw_rate": {
+        "gyro_x": 0.512916772644063,
+        "gyro_y": 0.011147039440734845,
+        "gyro_z": 0.0049039549119943935
+      },
+      "smartphone_only_turn_detection": {
+        "gyro_x_rms_rads": 0.33960460391061725,
+        "gyro_y_rms_rads": 0.2156685300034337,
+        "gyro_z_rms_rads": 0.10000184047984174
+      },
+      "per_turn_ratio_consistency_std": 0.08918966292607168,
+      "num_individual_turns_analyzed": 56,
+      "interpretation": "During vehicle turns, gyro_x has highest RMS response (58.6%/29.7%/11.7% x/y/z). Ref yaw correlation: gx=0.513, gy=0.011, gz=0.005. Ratio consistency \u03c3=0.089 across 56 turns \u2014 rigid mounting confirmed."
+    }
+  },
+  "task7_direction_consistency": {
+    "Vta04": {
+      "accel_episodes": 0,
+      "accel_episodes_with_clear_direction": 0,
+      "brake_episodes": 0,
+      "brake_episodes_with_clear_direction": 0,
+      "forward_angles_deg": [],
+      "brake_angles_deg": [],
+      "forward_circular_mean_deg": null,
+      "forward_consistency_std_deg": null,
+      "brake_circular_mean_deg": null,
+      "anti_parallel_diff_deg": null,
+      "anti_parallel_confirmed": false,
+      "interpretation": "Insufficient acceleration episodes. Forward axis identification is uncertain from smartphone-only dynamics."
+    },
+    "Vta02": {
+      "accel_episodes": 0,
+      "accel_episodes_with_clear_direction": 0,
+      "brake_episodes": 0,
+      "brake_episodes_with_clear_direction": 0,
+      "forward_angles_deg": [],
+      "brake_angles_deg": [],
+      "forward_circular_mean_deg": null,
+      "forward_consistency_std_deg": null,
+      "brake_circular_mean_deg": null,
+      "anti_parallel_diff_deg": null,
+      "anti_parallel_confirmed": false,
+      "interpretation": "Insufficient acceleration episodes. Forward axis identification is uncertain from smartphone-only dynamics."
+    }
+  },
+  "task8_cross_axis_consistency": {
+    "Vta04": {
+      "turn_samples_phone_detected": 1470,
+      "dominant_gyro_axis_during_turns": "X",
+      "dominant_centripetal_axis_leveled": "lev_Y",
+      "cross_correlation_dominant": -0.04268482717902719,
+      "cross_correlation_matrix_gyro_vs_accel": [
+        [
+          0.0045863670531248995,
+          -0.04268482717902719
+        ],
+        [
+          0.002797034048817827,
+          0.08073537892226691
+        ],
+        [
+          0.022354822797605357,
+          -0.0022683528534579813
+        ]
+      ],
+      "geometric_consistency_perpendicular": true,
+      "interpretation": "Dominant gyro axis during turns: X. Dominant centripetal axis: lev_Y. Cross-correlation: -0.043. Geometric consistency confirmed \u2014 yaw and centripetal appear perpendicular."
+    },
+    "Vta02": {
+      "turn_samples_phone_detected": 5898,
+      "dominant_gyro_axis_during_turns": "X",
+      "dominant_centripetal_axis_leveled": "lev_Y",
+      "cross_correlation_dominant": 0.03754764377482459,
+      "cross_correlation_matrix_gyro_vs_accel": [
+        [
+          -0.012540107484660537,
+          0.03754764377482459
+        ],
+        [
+          0.024972887828895254,
+          -0.008552665861377267
+        ],
+        [
+          0.007042209171878201,
+          0.00046438960878930933
+        ]
+      ],
+      "geometric_consistency_perpendicular": true,
+      "interpretation": "Dominant gyro axis during turns: X. Dominant centripetal axis: lev_Y. Cross-correlation: 0.038. Geometric consistency confirmed \u2014 yaw and centripetal appear perpendicular."
+    }
+  },
+  "task9_identifiability": {
+    "Vta04": {
+      "R_p_n_fully_observable": true,
+      "R_n_v_yaw_observable": true,
+      "R_n_v_pitch_identifiable": false,
+      "R_n_v_roll_identifiable": false,
+      "fundamental_ambiguity": "Smartphone accelerometer cannot distinguish cradle mechanical tilt from vehicle body attitude (road grade/bank). Both produce identical accelerometer readings. This is a PHYSICAL observability limit, not a signal processing limitation.",
+      "classification": "B",
+      "classification_detail": "PARTIALLY IDENTIFIABLE. R_p^n fully observable. R_n^v yaw observable. R_n^v pitch and roll are fundamentally ambiguous between cradle mounting tilt and vehicle body/road geometry. Classification B: partial identifiability.",
+      "identifiable_dofs_of_R_pv": {
+        "phone_roll_to_vertical": "OBSERVABLE (gravity)",
+        "phone_pitch_to_vertical": "OBSERVABLE (gravity)",
+        "phone_to_vehicle_horizontal_heading": "OBSERVABLE (mag + GNSS)",
+        "cradle_mechanical_pitch_to_chassis": "UNIDENTIFIABLE (conflated with road grade)",
+        "cradle_mechanical_roll_to_chassis": "UNIDENTIFIABLE (conflated with road bank)"
+      },
+      "minimum_maneuvers_for_partial_id": "Forward driving at v > 2.5 m/s for heading offset. At least 2 turns with |omega| > 5 deg/s for centripetal direction. At least 1 acceleration + 1 braking episode for forward axis."
+    },
+    "Vta02": {
+      "R_p_n_fully_observable": true,
+      "R_n_v_yaw_observable": true,
+      "R_n_v_pitch_identifiable": false,
+      "R_n_v_roll_identifiable": false,
+      "fundamental_ambiguity": "Smartphone accelerometer cannot distinguish cradle mechanical tilt from vehicle body attitude (road grade/bank). Both produce identical accelerometer readings. This is a PHYSICAL observability limit, not a signal processing limitation.",
+      "classification": "B",
+      "classification_detail": "PARTIALLY IDENTIFIABLE. R_p^n fully observable. R_n^v yaw observable. R_n^v pitch and roll are fundamentally ambiguous between cradle mounting tilt and vehicle body/road geometry. Classification B: partial identifiability.",
+      "identifiable_dofs_of_R_pv": {
+        "phone_roll_to_vertical": "OBSERVABLE (gravity)",
+        "phone_pitch_to_vertical": "OBSERVABLE (gravity)",
+        "phone_to_vehicle_horizontal_heading": "OBSERVABLE (mag + GNSS)",
+        "cradle_mechanical_pitch_to_chassis": "UNIDENTIFIABLE (conflated with road grade)",
+        "cradle_mechanical_roll_to_chassis": "UNIDENTIFIABLE (conflated with road bank)"
+      },
+      "minimum_maneuvers_for_partial_id": "Forward driving at v > 2.5 m/s for heading offset. At least 2 turns with |omega| > 5 deg/s for centripetal direction. At least 1 acceleration + 1 braking episode for forward axis."
+    }
+  },
+  "task10_residual_ambiguity": {
+    "Vta04": {
+      "R_error_euler_ZYX_deg": {
+        "yaw_deg": 0.16266684066538786,
+        "pitch_deg": 5.5532716681377154,
+        "roll_deg": 1.0110981121621347
+      },
+      "R_error_total_angle_deg": 5.645426747410276,
+      "true_yaw_projection_row2": [
+        0.016373780308326587,
+        0.004442743861263258,
+        0.9998560703148218
+      ],
+      "smartphone_yaw_projection_row2": [
+        0.023968083093161008,
+        -0.09363057229296956,
+        0.9953184650778515
+      ],
+      "row2_error": [
+        -0.00759430278483442,
+        0.09807331615423281,
+        0.004537605236970332
+      ],
+      "gyro_yaw_projection_during_turns": {
+        "true_R_pv_correlation": -0.05114294460219699,
+        "smartphone_R_pv_correlation": -0.015666306959595904,
+        "true_R_pv_mae_rads": 0.19826237131331506,
+        "smartphone_R_pv_mae_rads": 0.19499952195137
+      },
+      "interpretation": "R_error total angle: 5.65\u00b0. True R_pv row2: [0.0164, 0.0044, 0.9999]. Smartphone row2: [0.0240, -0.0936, 0.9953]. Turn yaw correlation: true=-0.051, smartphone=-0.016. The smartphone-only alignment recovers the correct heading offset but preserves the degenerate row2 \u2248 [0,0,1], leaving gyro yaw unrecoverable."
+    },
+    "Vta02": {
+      "R_error_euler_ZYX_deg": {
+        "yaw_deg": -0.0024315684261607944,
+        "pitch_deg": 1.1590388947990402,
+        "roll_deg": -0.03240045987582124
+      },
+      "R_error_total_angle_deg": 1.159493524025588,
+      "true_yaw_projection_row2": [
+        -0.012771559151865326,
+        -0.03166677542936166,
+        0.9994168812916543
+      ],
+      "smartphone_yaw_projection_row2": [
+        0.005074958579858043,
+        -0.04120323146758996,
+        0.9991378976457859
+      ],
+      "row2_error": [
+        -0.01784651773172337,
+        0.009536456038228301,
+        0.0002789836458684247
+      ],
+      "gyro_yaw_projection_during_turns": {
+        "true_R_pv_correlation": -0.02812621731541308,
+        "smartphone_R_pv_correlation": 0.019162973002720473,
+        "true_R_pv_mae_rads": 0.2123186541933662,
+        "smartphone_R_pv_mae_rads": 0.20903078442037673
+      },
+      "interpretation": "R_error total angle: 1.16\u00b0. True R_pv row2: [-0.0128, -0.0317, 0.9994]. Smartphone row2: [0.0051, -0.0412, 0.9991]. Turn yaw correlation: true=-0.028, smartphone=0.019. The smartphone-only alignment recovers the correct heading offset but preserves the degenerate row2 \u2248 [0,0,1], leaving gyro yaw unrecoverable."
+    }
+  },
+  "task11_yaw_sensitivity": {
+    "Vta04": {
+      "sensitivities": {
+        "cradle_pitch": {
+          "perturbation": "Pitch around phone Y axis",
+          "correlation_curve": {
+            "-15deg": 0.2302414850755607,
+            "-10deg": 0.17938413505102688,
+            "-5deg": 0.0958475091117149,
+            "-2deg": 0.030551840358325224,
+            "-1deg": 0.007481574649352782,
+            "+0deg": -0.015666306959595904,
+            "+1deg": -0.03852260456992715,
+            "+2deg": -0.060741520587629196,
+            "+5deg": -0.1209269212145568,
+            "+10deg": -0.19363635783809513,
+            "+15deg": -0.2369408238000586
+          },
+          "sensitivity_dr_per_deg": -0.023002089609639967,
+          "optimal_perturbation_deg": "-15deg"
+        },
+        "cradle_roll": {
+          "perturbation": "Roll around phone X axis",
+          "correlation_curve": {
+            "-15deg": 0.04328282949721539,
+            "-10deg": 0.026711968370516873,
+            "-5deg": 0.006786822145669581,
+            "-2deg": -0.0064866495269764995,
+            "-1deg": -0.011055232491892279,
+            "+0deg": -0.015666306959595904,
+            "+1deg": -0.020299648297151713,
+            "+2deg": -0.02493385963342395,
+            "+5deg": -0.0386199174583159,
+            "+10deg": -0.05946643828174771,
+            "+15deg": -0.07629927929201767
+          },
+          "sensitivity_dr_per_deg": -0.004622207902629717,
+          "optimal_perturbation_deg": "-15deg"
+        }
+      },
+      "dominant_dof": "cradle_pitch",
+      "pitch_sensitivity_abs": 0.023002089609639967,
+      "roll_sensitivity_abs": 0.004622207902629717,
+      "optimal_cradle_tilt_reference": {
+        "pitch_deg": -20,
+        "roll_deg": 20,
+        "yaw_correlation_at_optimal": 0.3220738496587252,
+        "note": "Found via grid search using vehicle reference yaw rate \u2014 for validation only"
+      },
+      "interpretation": "Dominant sensitivity: cradle_pitch (0.0230 vs 0.0046 dr/deg). Optimal cradle tilt (reference validation): pitch=-20\u00b0, roll=20\u00b0, achieving r=0.322 with vehicle yaw. This confirms that a modest cradle tilt correction could significantly improve yaw projection."
+    },
+    "Vta02": {
+      "sensitivities": {
+        "cradle_pitch": {
+          "perturbation": "Pitch around phone Y axis",
+          "correlation_curve": {
+            "-15deg": 0.500635089963936,
+            "-10deg": 0.42669543278334193,
+            "-5deg": 0.26132470030737026,
+            "-2deg": 0.11791351691242716,
+            "-1deg": 0.06799951719961791,
+            "+0deg": 0.019162973002720473,
+            "+1deg": -0.027523286397860884,
+            "+2deg": -0.07127163025147541,
+            "+5deg": -0.18139672870345191,
+            "+10deg": -0.30053379946366104,
+            "+15deg": -0.36780004354399665
+          },
+          "sensitivity_dr_per_deg": -0.0477614017987394,
+          "optimal_perturbation_deg": "-15deg"
+        },
+        "cradle_roll": {
+          "perturbation": "Roll around phone X axis",
+          "correlation_curve": {
+            "-15deg": 0.011977207373856692,
+            "-10deg": 0.014935708133146933,
+            "-5deg": 0.017477865178336566,
+            "-2deg": 0.01860737287092517,
+            "-1deg": 0.01890516045070685,
+            "+0deg": 0.019162973002720473,
+            "+1deg": 0.01938147578738939,
+            "+2deg": 0.019561928822787653,
+            "+5deg": 0.01989444032422376,
+            "+10deg": 0.019903979289608725,
+            "+15deg": 0.019506063572267467
+          },
+          "sensitivity_dr_per_deg": 0.00023815766834126874,
+          "optimal_perturbation_deg": "+10deg"
+        }
+      },
+      "dominant_dof": "cradle_pitch",
+      "pitch_sensitivity_abs": 0.0477614017987394,
+      "roll_sensitivity_abs": 0.00023815766834126874,
+      "optimal_cradle_tilt_reference": {
+        "pitch_deg": -20,
+        "roll_deg": 20,
+        "yaw_correlation_at_optimal": 0.6843381072768554,
+        "note": "Found via grid search using vehicle reference yaw rate \u2014 for validation only"
+      },
+      "interpretation": "Dominant sensitivity: cradle_pitch (0.0478 vs 0.0002 dr/deg). Optimal cradle tilt (reference validation): pitch=-20\u00b0, roll=20\u00b0, achieving r=0.684 with vehicle yaw. This confirms that a modest cradle tilt correction could significantly improve yaw projection."
+    }
+  },
+  "task12_final_decision": {
+    "classification": "B",
+    "classification_label": "PARTIALLY IDENTIFIABLE",
+    "identifiable_components": {
+      "R_p_n_phone_to_navigation": {
+        "status": "FULLY IDENTIFIABLE",
+        "method": "Gravity leveling (2 DOFs) + Magnetometer + GNSS heading (1 DOF)",
+        "accuracy": "Roll/pitch: < 2\u00b0 from gravity; Heading: 8-17\u00b0 MAE depending on magnetic environment"
+      },
+      "R_n_v_yaw_heading_offset": {
+        "status": "IDENTIFIABLE with pre-outage GNSS",
+        "method": "Pre-outage GNSS course-over-ground vs magnetometer heading",
+        "accuracy": "3.7\u00b0 std over 60s calibration window (Vta04), 11.9\u00b0 on Vta02"
+      },
+      "R_n_v_pitch_forward_tilt": {
+        "status": "FUNDAMENTALLY AMBIGUOUS",
+        "reason": "Accelerometer cannot distinguish cradle pitch from road grade from vehicle body pitch",
+        "impact_on_gyro": "This DOF determines how much phone gyro_x contributes to vehicle yaw rate"
+      },
+      "R_n_v_roll_lateral_tilt": {
+        "status": "FUNDAMENTALLY AMBIGUOUS",
+        "reason": "Accelerometer cannot distinguish cradle roll from road bank from cornering force",
+        "impact_on_gyro": "This DOF determines how much phone gyro_y contributes to vehicle yaw rate"
+      }
+    },
+    "fundamental_physical_limitation": "The smartphone accelerometer measures the sum of gravitational and dynamic acceleration projected into the phone frame. Any constant tilt of the phone cradle relative to the vehicle chassis is indistinguishable from a constant road gradient or vehicle body pitch/roll. This is NOT a signal processing limitation \u2014 it is a PHYSICAL OBSERVABILITY CONSTRAINT. No algorithm operating on smartphone accelerometer data alone can resolve this ambiguity without either: (1) an independent road geometry model, (2) vehicle body attitude sensor, or (3) a constraint that road grade is zero on average over a calibration period.",
+    "what_this_means_for_navigation": "1. The horizontal heading offset calibration (R_n^v yaw) IS achievable and provides massive drift reduction (84-96% at 10-60s horizons) via compass aiding. 2. The gyro frame projection error (R_pv row 2 \u2248 [0,0,1]) CANNOT be fixed by smartphone-only calibration alone because the missing cradle tilt DOFs are unidentifiable. 3. However, compass-aided navigation does NOT require perfect gyro projection \u2014 it constrains heading through absolute magnetometer measurements. 4. The remaining performance gap is bounded by the magnetometer accuracy (~8-17\u00b0 MAE) rather than by the unresolvable gyro projection error.",
+    "recommendation": "PROCEED WITH COMPASS-AIDED HEADING STRATEGY. Do NOT attempt to solve full 3D cradle tilt from smartphone-only signals \u2014 it is physically unobservable. Instead, implement: (1) Pre-outage heading offset calibration, (2) Adaptive magnetometer gating, (3) Compass-ESKF fusion during blackout. The gyro serves as a short-term rate sensor between compass updates, not as a primary heading source.",
+    "circularity_compliance": "PASS \u2014 All identifiable calibration uses smartphone-only signals. Zero CAN/VBOX/vehicle reference in proposed calibration."
+  }
+}

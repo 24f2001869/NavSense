@@ -1,0 +1,1302 @@
+{
+  "meta": {
+    "stage": "C8-11.4",
+    "description": "Common-Support Rolling Calibration & Uncertainty Audit",
+    "trips": [
+      "Vta02",
+      "Vta04"
+    ],
+    "windows_s": [
+      5,
+      10,
+      20,
+      30,
+      60,
+      120
+    ],
+    "outage_duration_s": 30.0,
+    "min_straight_samples": 10,
+    "constraints": {
+      "anti_circularity": "All calibration uses smartphone channels only; vehicle GT is post-hoc evaluation only.",
+      "temporal_integrity": "max(t_calib) < t_outage_start enforced for every outage."
+    }
+  },
+  "trips": {
+    "Vta02": {
+      "n_samples": 10991,
+      "duration_s": 1099.1000000000001,
+      "distance_km": 3.0561558333333387,
+      "task1_common_support": {
+        "total_dense_outages": 59,
+        "common_support_outages": 13,
+        "excluded_outages": 46,
+        "exclusion_reasons": [
+          {
+            "outage_start_s": 60.0,
+            "missing_windows_s": [
+              5,
+              10,
+              20,
+              30,
+              60,
+              120
+            ]
+          },
+          {
+            "outage_start_s": 75.0,
+            "missing_windows_s": [
+              5
+            ]
+          },
+          {
+            "outage_start_s": 90.0,
+            "missing_windows_s": [
+              5,
+              10
+            ]
+          },
+          {
+            "outage_start_s": 105.0,
+            "missing_windows_s": [
+              5,
+              10
+            ]
+          },
+          {
+            "outage_start_s": 135.0,
+            "missing_windows_s": [
+              5
+            ]
+          },
+          {
+            "outage_start_s": 150.0,
+            "missing_windows_s": [
+              5,
+              10,
+              20
+            ]
+          },
+          {
+            "outage_start_s": 165.0,
+            "missing_windows_s": [
+              5,
+              10,
+              20,
+              30
+            ]
+          },
+          {
+            "outage_start_s": 195.0,
+            "missing_windows_s": [
+              5,
+              10
+            ]
+          },
+          {
+            "outage_start_s": 210.0,
+            "missing_windows_s": [
+              5,
+              10
+            ]
+          },
+          {
+            "outage_start_s": 225.0,
+            "missing_windows_s": [
+              5
+            ]
+          }
+        ],
+        "window_comparison": {
+          "5s": {
+            "n_outages": 13,
+            "mean_mae_deg": 9.983676251362244,
+            "median_mae_deg": 10.410455017078169,
+            "rmse_deg": 11.427697457930044,
+            "p95_mae_deg": 19.58575784313164,
+            "max_mae_deg": 20.011715066221292
+          },
+          "10s": {
+            "n_outages": 13,
+            "mean_mae_deg": 9.499388553710046,
+            "median_mae_deg": 9.487429225459756,
+            "rmse_deg": 10.947034134367769,
+            "p95_mae_deg": 20.13353322348119,
+            "max_mae_deg": 20.31626045937104
+          },
+          "20s": {
+            "n_outages": 13,
+            "mean_mae_deg": 9.487763725562205,
+            "median_mae_deg": 9.953496289963697,
+            "rmse_deg": 11.038430541251627,
+            "p95_mae_deg": 20.3406104638998,
+            "max_mae_deg": 22.071090276530583
+          },
+          "30s": {
+            "n_outages": 13,
+            "mean_mae_deg": 9.46060309344108,
+            "median_mae_deg": 9.700249186417661,
+            "rmse_deg": 11.006241321989892,
+            "p95_mae_deg": 20.48926653283478,
+            "max_mae_deg": 22.071090276530583
+          },
+          "60s": {
+            "n_outages": 13,
+            "mean_mae_deg": 10.45112061982746,
+            "median_mae_deg": 9.850365903438238,
+            "rmse_deg": 11.681973253559859,
+            "p95_mae_deg": 20.507045574401644,
+            "max_mae_deg": 21.855035977951665
+          },
+          "120s": {
+            "n_outages": 13,
+            "mean_mae_deg": 11.633029480117104,
+            "median_mae_deg": 9.654279610153935,
+            "rmse_deg": 13.240100635563696,
+            "p95_mae_deg": 22.407334883069215,
+            "max_mae_deg": 26.262735659052964
+          }
+        },
+        "per_outage": [
+          {
+            "outage_start_s": 120.0,
+            "distance_km": 0.43335749999999934,
+            "mae_5s": 4.870039017589617,
+            "mae_10s": 4.858567904972971,
+            "mae_20s": 4.607354780227033,
+            "mae_30s": 4.560012917113301,
+            "mae_60s": 6.211190906197215,
+            "mae_120s": 6.797970149336054
+          },
+          {
+            "outage_start_s": 180.0,
+            "distance_km": 0.7365686111111088,
+            "mae_5s": 10.996692648960941,
+            "mae_10s": 10.996692648960941,
+            "mae_20s": 10.70250630914954,
+            "mae_30s": 10.70250630914954,
+            "mae_60s": 13.037763528816955,
+            "mae_120s": 9.374473486923115
+          },
+          {
+            "outage_start_s": 270.0,
+            "distance_km": 1.0454797222222147,
+            "mae_5s": 2.026400988453553,
+            "mae_10s": 2.1833138968977273,
+            "mae_20s": 2.1833138968977273,
+            "mae_30s": 2.7499723390121913,
+            "mae_60s": 6.664758680944521,
+            "mae_120s": 7.249698410574558
+          },
+          {
+            "outage_start_s": 420.0,
+            "distance_km": 1.409749999999993,
+            "mae_5s": 7.2783522675873655,
+            "mae_10s": 7.2783522675873655,
+            "mae_20s": 7.2783522675873655,
+            "mae_30s": 7.2783522675873655,
+            "mae_60s": 7.2783522675873655,
+            "mae_120s": 9.223501034958286
+          },
+          {
+            "outage_start_s": 435.0,
+            "distance_km": 1.4598999999999962,
+            "mae_5s": 10.664548025177059,
+            "mae_10s": 9.972654062023041,
+            "mae_20s": 10.023877193478235,
+            "mae_30s": 10.023877193478235,
+            "mae_60s": 10.023877193478235,
+            "mae_120s": 9.654279610153935
+          },
+          {
+            "outage_start_s": 585.0,
+            "distance_km": 1.9212888888888944,
+            "mae_5s": 8.905664391687257,
+            "mae_10s": 10.1929847402698,
+            "mae_20s": 10.392532316421047,
+            "mae_30s": 9.842961324529186,
+            "mae_60s": 11.765334513441514,
+            "mae_120s": 11.765334513441514
+          },
+          {
+            "outage_start_s": 600.0,
+            "distance_km": 1.9791333333333347,
+            "mae_5s": 20.011715066221292,
+            "mae_10s": 20.011715066221292,
+            "mae_20s": 19.186957255479285,
+            "mae_30s": 19.43471737037092,
+            "mae_60s": 19.6083853053683,
+            "mae_120s": 19.837067699080066
+          },
+          {
+            "outage_start_s": 645.0,
+            "distance_km": 2.0973480555555595,
+            "mae_5s": 6.785952056593949,
+            "mae_10s": 6.386601264962681,
+            "mae_20s": 6.345287535006844,
+            "mae_30s": 6.345287535006844,
+            "mae_60s": 9.850365903438238,
+            "mae_120s": 19.36896672160311
+          },
+          {
+            "outage_start_s": 780.0,
+            "distance_km": 2.3085008333333477,
+            "mae_5s": 10.410455017078169,
+            "mae_10s": 9.487429225459756,
+            "mae_20s": 10.905045878081106,
+            "mae_30s": 10.905045878081106,
+            "mae_60s": 10.905045878081106,
+            "mae_120s": 12.667739302685685
+          },
+          {
+            "outage_start_s": 810.0,
+            "distance_km": 2.4139008333333467,
+            "mae_5s": 15.996404796720036,
+            "mae_10s": 9.447005455165455,
+            "mae_20s": 8.126477047662316,
+            "mae_30s": 7.8091302316332225,
+            "mae_60s": 7.431303797588242,
+            "mae_120s": 7.794462548849478
+          },
+          {
+            "outage_start_s": 870.0,
+            "distance_km": 2.5734205555555696,
+            "mae_5s": 19.30178636107187,
+            "mae_10s": 20.31626045937104,
+            "mae_20s": 22.071090276530583,
+            "mae_30s": 22.071090276530583,
+            "mae_60s": 21.855035977951665,
+            "mae_120s": 26.262735659052964
+          },
+          {
+            "outage_start_s": 1020.0,
+            "distance_km": 2.859506944444443,
+            "mae_5s": 1.7439438100533862,
+            "mae_10s": 1.5646373858238711,
+            "mae_20s": 1.5646373858238711,
+            "mae_30s": 1.5646373858238711,
+            "mae_60s": 1.5646373858238711,
+            "mae_120s": 1.5646373858238711
+          },
+          {
+            "outage_start_s": 1050.0,
+            "distance_km": 2.966837500000002,
+            "mae_5s": 10.795836820514683,
+            "mae_10s": 10.795836820514683,
+            "mae_20s": 9.953496289963697,
+            "mae_30s": 9.700249186417661,
+            "mae_60s": 9.66851671903973,
+            "mae_120s": 9.66851671903973
+          }
+        ]
+      },
+      "task2_non_overlapping": {
+        "n_outages": 11,
+        "min_separation_s": 30.0,
+        "window_comparison": {
+          "5s": {
+            "n_outages": 11,
+            "mean_mae_deg": 9.010138925119167,
+            "median_mae_deg": 8.905664391687257,
+            "rmse_deg": 10.372595778373347,
+            "p95_mae_deg": 17.649095578895952,
+            "max_mae_deg": 19.30178636107187
+          },
+          "10s": {
+            "n_outages": 11,
+            "mean_mae_deg": 8.500698369998753,
+            "median_mae_deg": 9.447005455165455,
+            "rmse_deg": 9.807073808202086,
+            "p95_mae_deg": 15.656476554165991,
+            "max_mae_deg": 20.31626045937104
+          },
+          "20s": {
+            "n_outages": 11,
+            "mean_mae_deg": 8.55728127121374,
+            "median_mae_deg": 8.126477047662316,
+            "rmse_deg": 10.06972461422201,
+            "p95_mae_deg": 16.488068077305844,
+            "max_mae_deg": 22.071090276530583
+          },
+          "30s": {
+            "n_outages": 11,
+            "mean_mae_deg": 8.502658695534988,
+            "median_mae_deg": 7.8091302316332225,
+            "rmse_deg": 9.984529720960966,
+            "p95_mae_deg": 16.488068077305844,
+            "max_mae_deg": 22.071090276530583
+          },
+          "60s": {
+            "n_outages": 11,
+            "mean_mae_deg": 9.65748232353731,
+            "median_mae_deg": 9.66851671903973,
+            "rmse_deg": 10.825574097671034,
+            "p95_mae_deg": 17.44639975338431,
+            "max_mae_deg": 21.855035977951665
+          },
+          "120s": {
+            "n_outages": 11,
+            "mean_mae_deg": 11.067094175662577,
+            "median_mae_deg": 9.374473486923115,
+            "rmse_deg": 12.76425788616288,
+            "p95_mae_deg": 22.815851190328036,
+            "max_mae_deg": 26.262735659052964
+          }
+        },
+        "per_outage": [
+          {
+            "outage_start_s": 120.0,
+            "distance_km": 0.43335749999999934,
+            "mae_5s": 4.870039017589617,
+            "mae_10s": 4.858567904972971,
+            "mae_20s": 4.607354780227033,
+            "mae_30s": 4.560012917113301,
+            "mae_60s": 6.211190906197215,
+            "mae_120s": 6.797970149336054
+          },
+          {
+            "outage_start_s": 180.0,
+            "distance_km": 0.7365686111111088,
+            "mae_5s": 10.996692648960941,
+            "mae_10s": 10.996692648960941,
+            "mae_20s": 10.70250630914954,
+            "mae_30s": 10.70250630914954,
+            "mae_60s": 13.037763528816955,
+            "mae_120s": 9.374473486923115
+          },
+          {
+            "outage_start_s": 270.0,
+            "distance_km": 1.0454797222222147,
+            "mae_5s": 2.026400988453553,
+            "mae_10s": 2.1833138968977273,
+            "mae_20s": 2.1833138968977273,
+            "mae_30s": 2.7499723390121913,
+            "mae_60s": 6.664758680944521,
+            "mae_120s": 7.249698410574558
+          },
+          {
+            "outage_start_s": 420.0,
+            "distance_km": 1.409749999999993,
+            "mae_5s": 7.2783522675873655,
+            "mae_10s": 7.2783522675873655,
+            "mae_20s": 7.2783522675873655,
+            "mae_30s": 7.2783522675873655,
+            "mae_60s": 7.2783522675873655,
+            "mae_120s": 9.223501034958286
+          },
+          {
+            "outage_start_s": 585.0,
+            "distance_km": 1.9212888888888944,
+            "mae_5s": 8.905664391687257,
+            "mae_10s": 10.1929847402698,
+            "mae_20s": 10.392532316421047,
+            "mae_30s": 9.842961324529186,
+            "mae_60s": 11.765334513441514,
+            "mae_120s": 11.765334513441514
+          },
+          {
+            "outage_start_s": 645.0,
+            "distance_km": 2.0973480555555595,
+            "mae_5s": 6.785952056593949,
+            "mae_10s": 6.386601264962681,
+            "mae_20s": 6.345287535006844,
+            "mae_30s": 6.345287535006844,
+            "mae_60s": 9.850365903438238,
+            "mae_120s": 19.36896672160311
+          },
+          {
+            "outage_start_s": 780.0,
+            "distance_km": 2.3085008333333477,
+            "mae_5s": 10.410455017078169,
+            "mae_10s": 9.487429225459756,
+            "mae_20s": 10.905045878081106,
+            "mae_30s": 10.905045878081106,
+            "mae_60s": 10.905045878081106,
+            "mae_120s": 12.667739302685685
+          },
+          {
+            "outage_start_s": 810.0,
+            "distance_km": 2.4139008333333467,
+            "mae_5s": 15.996404796720036,
+            "mae_10s": 9.447005455165455,
+            "mae_20s": 8.126477047662316,
+            "mae_30s": 7.8091302316332225,
+            "mae_60s": 7.431303797588242,
+            "mae_120s": 7.794462548849478
+          },
+          {
+            "outage_start_s": 870.0,
+            "distance_km": 2.5734205555555696,
+            "mae_5s": 19.30178636107187,
+            "mae_10s": 20.31626045937104,
+            "mae_20s": 22.071090276530583,
+            "mae_30s": 22.071090276530583,
+            "mae_60s": 21.855035977951665,
+            "mae_120s": 26.262735659052964
+          },
+          {
+            "outage_start_s": 1020.0,
+            "distance_km": 2.859506944444443,
+            "mae_5s": 1.7439438100533862,
+            "mae_10s": 1.5646373858238711,
+            "mae_20s": 1.5646373858238711,
+            "mae_30s": 1.5646373858238711,
+            "mae_60s": 1.5646373858238711,
+            "mae_120s": 1.5646373858238711
+          },
+          {
+            "outage_start_s": 1050.0,
+            "distance_km": 2.966837500000002,
+            "mae_5s": 10.795836820514683,
+            "mae_10s": 10.795836820514683,
+            "mae_20s": 9.953496289963697,
+            "mae_30s": 9.700249186417661,
+            "mae_60s": 9.66851671903973,
+            "mae_120s": 9.66851671903973
+          }
+        ]
+      },
+      "task3_short_window_estimators": {
+        "5s": {
+          "circ_mean": {
+            "n": 13,
+            "mean_mae_deg": 9.983676251362244,
+            "median_mae_deg": 10.410455017078169,
+            "p95_mae_deg": 19.58575784313164
+          },
+          "circ_median": {
+            "n": 13,
+            "mean_mae_deg": 10.18591216367263,
+            "median_mae_deg": 9.469251397234192,
+            "p95_mae_deg": 19.630451255321127
+          },
+          "trimmed_mean": {
+            "n": 13,
+            "mean_mae_deg": 10.285600082619172,
+            "median_mae_deg": 10.380344998307018,
+            "p95_mae_deg": 19.616177751884948
+          },
+          "huber_m": {
+            "n": 13,
+            "mean_mae_deg": 10.019514237053519,
+            "median_mae_deg": 10.548240045284823,
+            "p95_mae_deg": 19.569847095163208
+          }
+        },
+        "10s": {
+          "circ_mean": {
+            "n": 13,
+            "mean_mae_deg": 9.499388553710046,
+            "median_mae_deg": 9.487429225459756,
+            "p95_mae_deg": 20.13353322348119
+          },
+          "circ_median": {
+            "n": 13,
+            "mean_mae_deg": 9.401740543123287,
+            "median_mae_deg": 9.111642706092459,
+            "p95_mae_deg": 19.82953199712471
+          },
+          "trimmed_mean": {
+            "n": 13,
+            "mean_mae_deg": 9.393256485138846,
+            "median_mae_deg": 8.946782006819433,
+            "p95_mae_deg": 19.854168061467185
+          },
+          "huber_m": {
+            "n": 13,
+            "mean_mae_deg": 9.465531598889832,
+            "median_mae_deg": 9.537825221348246,
+            "p95_mae_deg": 20.057920317611213
+          }
+        }
+      },
+      "task4_sample_counts": {
+        "5s": {
+          "n_outages": 13,
+          "raw_samples_median": 50,
+          "valid_straight_min": 10,
+          "valid_straight_median": 21,
+          "valid_straight_max": 42,
+          "valid_straight_mean": 23.0,
+          "fraction_accepted_mean": 0.45999999999999996,
+          "fraction_accepted_min": 0.2
+        },
+        "10s": {
+          "n_outages": 13,
+          "raw_samples_median": 100,
+          "valid_straight_min": 11,
+          "valid_straight_median": 39,
+          "valid_straight_max": 75,
+          "valid_straight_mean": 37.15384615384615,
+          "fraction_accepted_mean": 0.37153846153846154,
+          "fraction_accepted_min": 0.11
+        },
+        "20s": {
+          "n_outages": 13,
+          "raw_samples_median": 200,
+          "valid_straight_min": 17,
+          "valid_straight_median": 49,
+          "valid_straight_max": 114,
+          "valid_straight_mean": 53.61538461538461,
+          "fraction_accepted_mean": 0.26807692307692305,
+          "fraction_accepted_min": 0.085
+        },
+        "30s": {
+          "n_outages": 13,
+          "raw_samples_median": 300,
+          "valid_straight_min": 17,
+          "valid_straight_median": 57,
+          "valid_straight_max": 121,
+          "valid_straight_mean": 62.0,
+          "fraction_accepted_mean": 0.20666666666666667,
+          "fraction_accepted_min": 0.056666666666666664
+        },
+        "60s": {
+          "n_outages": 13,
+          "raw_samples_median": 600,
+          "valid_straight_min": 17,
+          "valid_straight_median": 87,
+          "valid_straight_max": 225,
+          "valid_straight_mean": 90.0,
+          "fraction_accepted_mean": 0.15,
+          "fraction_accepted_min": 0.028333333333333332
+        },
+        "120s": {
+          "n_outages": 13,
+          "raw_samples_median": 1200,
+          "valid_straight_min": 25,
+          "valid_straight_median": 132,
+          "valid_straight_max": 264,
+          "valid_straight_mean": 136.53846153846155,
+          "fraction_accepted_mean": 0.1137820512820513,
+          "fraction_accepted_min": 0.020833333333333332
+        }
+      },
+      "task5_age_spatial_lag": {
+        "n_records": 78,
+        "corr_age_vs_mae": {
+          "pearson_r": 0.37259507670276426,
+          "p": 0.0007811876042265679,
+          "spearman_rho": 0.28953962187745186
+        },
+        "corr_dist_vs_mae": {
+          "pearson_r": 0.21459380764279487,
+          "p": 0.05920257793131985,
+          "spearman_rho": 0.20371542102199386
+        },
+        "5s": {
+          "n": 13,
+          "mean_age_s": 2.186609816015191,
+          "mean_dist_oldest_m": 14.300384615384324,
+          "mean_mae_deg": 9.983676251362244,
+          "corr_age_mae_r": 0.282167185621324,
+          "corr_age_mae_p": 0.35028622552401895,
+          "corr_dist_mae_r": 0.2191997404637694,
+          "corr_dist_mae_p": 0.47181731382143804
+        },
+        "10s": {
+          "n": 13,
+          "mean_age_s": 3.577448642271807,
+          "mean_dist_oldest_m": 26.289850427350068,
+          "mean_mae_deg": 9.499388553710046,
+          "corr_age_mae_r": 0.022284556451574945,
+          "corr_age_mae_p": 0.9423950141198274,
+          "corr_dist_mae_r": -0.19868284494574626,
+          "corr_dist_mae_p": 0.5152288426225548
+        },
+        "20s": {
+          "n": 13,
+          "mean_age_s": 6.476418434890793,
+          "mean_dist_oldest_m": 53.3073717948714,
+          "mean_mae_deg": 9.487763725562205,
+          "corr_age_mae_r": 0.5539446120490356,
+          "corr_age_mae_p": 0.04950008034286524,
+          "corr_dist_mae_r": 0.4433837214212947,
+          "corr_dist_mae_p": 0.12913162557322969
+        },
+        "30s": {
+          "n": 13,
+          "mean_age_s": 8.325470729315269,
+          "mean_dist_oldest_m": 76.03512820512778,
+          "mean_mae_deg": 9.46060309344108,
+          "corr_age_mae_r": 0.4473020195084922,
+          "corr_age_mae_p": 0.12538311299344784,
+          "corr_dist_mae_r": 0.02509655071421163,
+          "corr_dist_mae_p": 0.9351390432969063
+        },
+        "60s": {
+          "n": 13,
+          "mean_age_s": 17.81387403344361,
+          "mean_dist_oldest_m": 157.48021367521315,
+          "mean_mae_deg": 10.45112061982746,
+          "corr_age_mae_r": 0.5099215916782737,
+          "corr_age_mae_p": 0.07503876317842971,
+          "corr_dist_mae_r": 0.3366767357540695,
+          "corr_dist_mae_p": 0.2606611941487424
+        },
+        "120s": {
+          "n": 13,
+          "mean_age_s": 35.26456939886353,
+          "mean_dist_oldest_m": 267.6417521367531,
+          "mean_mae_deg": 11.633029480117104,
+          "corr_age_mae_r": 0.7260651368255853,
+          "corr_age_mae_p": 0.004952577526385722,
+          "corr_dist_mae_r": 0.26831807718447886,
+          "corr_dist_mae_p": 0.3754179060402945
+        }
+      },
+      "task6_error_distribution": {
+        "5s": {
+          "median_deg": 10.410455017078169,
+          "iqr_deg": 4.210740592366992,
+          "mad_deg": 3.62450296048422,
+          "p90_deg": 18.640710048201505,
+          "p95_deg": 19.58575784313164,
+          "max_deg": 20.011715066221292,
+          "n_above_20deg": 1,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 7.6923076923076925
+        },
+        "10s": {
+          "median_deg": 9.487429225459756,
+          "iqr_deg": 4.409235555552002,
+          "mad_deg": 2.209076957872391,
+          "p90_deg": 18.20871058276923,
+          "p95_deg": 20.13353322348119,
+          "max_deg": 20.31626045937104,
+          "n_above_20deg": 2,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 15.384615384615385
+        },
+        "20s": {
+          "median_deg": 9.953496289963697,
+          "iqr_deg": 4.357218774142695,
+          "mad_deg": 2.6751440223763314,
+          "p90_deg": 17.530574979999656,
+          "p95_deg": 20.3406104638998,
+          "max_deg": 22.071090276530583,
+          "n_above_20deg": 1,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 7.6923076923076925
+        },
+        "30s": {
+          "median_deg": 9.700249186417661,
+          "iqr_deg": 4.357218774142695,
+          "mad_deg": 2.4218969188302957,
+          "p90_deg": 17.72878307191296,
+          "p95_deg": 20.48926653283478,
+          "max_deg": 22.071090276530583,
+          "n_above_20deg": 1,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 7.6923076923076925
+        },
+        "60s": {
+          "median_deg": 9.850365903438238,
+          "iqr_deg": 4.486982245854149,
+          "mad_deg": 2.5720136358508725,
+          "p90_deg": 18.294260950058035,
+          "p95_deg": 20.507045574401644,
+          "max_deg": 21.855035977951665,
+          "n_above_20deg": 1,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 7.6923076923076925
+        },
+        "120s": {
+          "median_deg": 9.654279610153935,
+          "iqr_deg": 4.873276753836207,
+          "mad_deg": 2.4045811995793773,
+          "p90_deg": 19.743447503584676,
+          "p95_deg": 22.407334883069215,
+          "max_deg": 26.262735659052964,
+          "n_above_20deg": 1,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 7.6923076923076925
+        }
+      },
+      "task7_rpsi_audit": {
+        "n_outages": 13,
+        "univariate": {
+          "sigma_psi": {
+            "pearson_r": 0.17236405036621577,
+            "p": 0.573373144807209,
+            "spearman_rho": 0.2912087912087912
+          },
+          "sigma_B": {
+            "pearson_r": 0.3172844814298023,
+            "p": 0.29081981103144405,
+            "spearman_rho": 0.34615384615384615
+          },
+          "delta_B_rel": {
+            "pearson_r": 0.1393546538098937,
+            "p": 0.6497929773113846,
+            "spearman_rho": 0.049450549450549455
+          },
+          "mean_speed": {
+            "pearson_r": 0.10453814407672184,
+            "p": 0.7339527753707681,
+            "spearman_rho": 0.14835164835164835
+          },
+          "n_valid": {
+            "pearson_r": -0.0008831329341680437,
+            "p": 0.9977154266218133,
+            "spearman_rho": 0.23658894458871366
+          },
+          "oldest_age_s": {
+            "pearson_r": 0.49249134362259855,
+            "p": 0.08730744112012785,
+            "spearman_rho": 0.4972451580988469
+          }
+        },
+        "multivariate_loo": {
+          "loo_r": 0.17236055941746278,
+          "loo_rmse_deg": 6.64160153024638,
+          "baseline_rmse_deg": 5.219442200724636,
+          "in_sample_r2": 0.5774617422043533,
+          "standardized_coefs": {
+            "sigma_psi": -4.36402228746199,
+            "sigma_B": 5.901235545136265,
+            "delta_B_rel": -0.47531802697331804,
+            "mean_speed": -3.4704467323693744,
+            "n_valid": -2.756817458723293,
+            "oldest_age_s": 4.711667560377405
+          }
+        }
+      },
+      "task8_uncertainty_coverage": {
+        "n_outages": 11,
+        "pct_within_1sigma": 45.45454545454545,
+        "pct_within_2sigma": 81.81818181818183,
+        "expected_1sigma_pct": 68.3,
+        "expected_2sigma_pct": 95.0,
+        "median_predicted_1sigma_deg": 6.879388822554906,
+        "median_actual_abs_err_deg": 9.66851671903973,
+        "verdict": "OVERCONFIDENT"
+      }
+    },
+    "Vta04": {
+      "n_samples": 1789,
+      "duration_s": 178.9,
+      "distance_km": 0.5555080555555529,
+      "task1_common_support": {
+        "total_dense_outages": 9,
+        "common_support_outages": 4,
+        "excluded_outages": 5,
+        "exclusion_reasons": [
+          {
+            "outage_start_s": 60.0,
+            "missing_windows_s": [
+              5,
+              10
+            ]
+          },
+          {
+            "outage_start_s": 70.0,
+            "missing_windows_s": [
+              5,
+              10,
+              20
+            ]
+          },
+          {
+            "outage_start_s": 90.0,
+            "missing_windows_s": [
+              5,
+              10
+            ]
+          },
+          {
+            "outage_start_s": 100.0,
+            "missing_windows_s": [
+              5
+            ]
+          },
+          {
+            "outage_start_s": 140.0,
+            "missing_windows_s": [
+              5
+            ]
+          }
+        ],
+        "window_comparison": {
+          "5s": {
+            "n_outages": 4,
+            "mean_mae_deg": 19.59075680832549,
+            "median_mae_deg": 18.449946781468967,
+            "rmse_deg": 20.031948329718464,
+            "p95_mae_deg": 25.20828940230516,
+            "max_mae_deg": 26.040260595358273
+          },
+          "10s": {
+            "n_outages": 4,
+            "mean_mae_deg": 22.076915502479785,
+            "median_mae_deg": 18.546603748405076,
+            "rmse_deg": 23.528909739807254,
+            "p95_mae_deg": 33.49691211863837,
+            "max_mae_deg": 35.79158143810323
+          },
+          "20s": {
+            "n_outages": 4,
+            "mean_mae_deg": 20.1534208479154,
+            "median_mae_deg": 16.99229011931254,
+            "rmse_deg": 21.32943370043707,
+            "p95_mae_deg": 29.86482351168859,
+            "max_mae_deg": 32.12232311930088
+          },
+          "30s": {
+            "n_outages": 4,
+            "mean_mae_deg": 17.894324690954015,
+            "median_mae_deg": 17.116790991883544,
+            "rmse_deg": 18.15230760104756,
+            "p95_mae_deg": 22.009595356420494,
+            "max_mae_deg": 22.836936746313345
+          },
+          "60s": {
+            "n_outages": 4,
+            "mean_mae_deg": 18.648913845020378,
+            "median_mae_deg": 17.408200027124163,
+            "rmse_deg": 19.326233427837767,
+            "p95_mae_deg": 25.290289438821056,
+            "max_mae_deg": 26.144985415630536
+          },
+          "120s": {
+            "n_outages": 4,
+            "mean_mae_deg": 19.39367397056411,
+            "median_mae_deg": 17.961871738578935,
+            "rmse_deg": 20.578111110529733,
+            "p95_mae_deg": 28.242212273184762,
+            "max_mae_deg": 29.287551017883366
+          }
+        },
+        "per_outage": [
+          {
+            "outage_start_s": 80.0,
+            "distance_km": 0.24363944444444344,
+            "mae_5s": 16.40610758793373,
+            "mae_10s": 16.599421521805954,
+            "mae_20s": 16.91225450340608,
+            "mae_30s": 16.91225450340608,
+            "mae_60s": 13.634269910202645,
+            "mae_120s": 13.605117423931858
+          },
+          {
+            "outage_start_s": 110.0,
+            "distance_km": 0.32865611111110965,
+            "mae_5s": 15.422873075005755,
+            "mae_10s": 15.422873075005755,
+            "mae_20s": 14.50678003373563,
+            "mae_30s": 14.50678003373563,
+            "mae_60s": 26.144985415630536,
+            "mae_120s": 29.287551017883366
+          },
+          {
+            "outage_start_s": 120.0,
+            "distance_km": 0.36093138888888643,
+            "mae_5s": 20.4937859750042,
+            "mae_10s": 20.4937859750042,
+            "mae_20s": 17.072325735219,
+            "mae_30s": 17.32132748036101,
+            "mae_60s": 20.447012236900687,
+            "mae_120s": 22.318626053226016
+          },
+          {
+            "outage_start_s": 130.0,
+            "distance_km": 0.3920647222222191,
+            "mae_5s": 26.040260595358273,
+            "mae_10s": 35.79158143810323,
+            "mae_20s": 32.12232311930088,
+            "mae_30s": 22.836936746313345,
+            "mae_60s": 14.36938781734764,
+            "mae_120s": 12.363401387215188
+          }
+        ]
+      },
+      "task2_non_overlapping": {
+        "n_outages": 2,
+        "min_separation_s": 30.0,
+        "window_comparison": {
+          "5s": {
+            "n_outages": 2,
+            "mean_mae_deg": 15.914490331469743,
+            "median_mae_deg": 15.914490331469743,
+            "rmse_deg": 15.922081837413632,
+            "p95_mae_deg": 16.35694586228733,
+            "max_mae_deg": 16.40610758793373
+          },
+          "10s": {
+            "n_outages": 2,
+            "mean_mae_deg": 16.011147298405856,
+            "median_mae_deg": 16.011147298405856,
+            "rmse_deg": 16.021950704366997,
+            "p95_mae_deg": 16.540594099465945,
+            "max_mae_deg": 16.599421521805954
+          },
+          "20s": {
+            "n_outages": 2,
+            "mean_mae_deg": 15.709517268570854,
+            "median_mae_deg": 15.709517268570854,
+            "rmse_deg": 15.755491413078328,
+            "p95_mae_deg": 16.791980779922557,
+            "max_mae_deg": 16.91225450340608
+          },
+          "30s": {
+            "n_outages": 2,
+            "mean_mae_deg": 15.709517268570854,
+            "median_mae_deg": 15.709517268570854,
+            "rmse_deg": 15.755491413078328,
+            "p95_mae_deg": 16.791980779922557,
+            "max_mae_deg": 16.91225450340608
+          },
+          "60s": {
+            "n_outages": 2,
+            "mean_mae_deg": 19.889627662916592,
+            "median_mae_deg": 19.889627662916592,
+            "rmse_deg": 20.850102857873274,
+            "p95_mae_deg": 25.51944964035914,
+            "max_mae_deg": 26.144985415630536
+          },
+          "120s": {
+            "n_outages": 2,
+            "mean_mae_deg": 21.446334220907612,
+            "median_mae_deg": 21.446334220907612,
+            "rmse_deg": 22.83484031851433,
+            "p95_mae_deg": 28.50342933818579,
+            "max_mae_deg": 29.287551017883366
+          }
+        },
+        "per_outage": [
+          {
+            "outage_start_s": 80.0,
+            "distance_km": 0.24363944444444344,
+            "mae_5s": 16.40610758793373,
+            "mae_10s": 16.599421521805954,
+            "mae_20s": 16.91225450340608,
+            "mae_30s": 16.91225450340608,
+            "mae_60s": 13.634269910202645,
+            "mae_120s": 13.605117423931858
+          },
+          {
+            "outage_start_s": 110.0,
+            "distance_km": 0.32865611111110965,
+            "mae_5s": 15.422873075005755,
+            "mae_10s": 15.422873075005755,
+            "mae_20s": 14.50678003373563,
+            "mae_30s": 14.50678003373563,
+            "mae_60s": 26.144985415630536,
+            "mae_120s": 29.287551017883366
+          }
+        ]
+      },
+      "task3_short_window_estimators": {
+        "5s": {
+          "circ_mean": {
+            "n": 4,
+            "mean_mae_deg": 19.59075680832549,
+            "median_mae_deg": 18.449946781468967,
+            "p95_mae_deg": 25.20828940230516
+          },
+          "circ_median": {
+            "n": 4,
+            "mean_mae_deg": 19.16479564054834,
+            "median_mae_deg": 18.31210259445415,
+            "p95_mae_deg": 25.517715033103418
+          },
+          "trimmed_mean": {
+            "n": 4,
+            "mean_mae_deg": 19.21255488772604,
+            "median_mae_deg": 18.593706117103185,
+            "p95_mae_deg": 25.7339246564915
+          },
+          "huber_m": {
+            "n": 4,
+            "mean_mae_deg": 19.682765274150764,
+            "median_mae_deg": 18.677010370948707,
+            "p95_mae_deg": 25.439863450816727
+          }
+        },
+        "10s": {
+          "circ_mean": {
+            "n": 4,
+            "mean_mae_deg": 22.076915502479785,
+            "median_mae_deg": 18.546603748405076,
+            "p95_mae_deg": 33.49691211863837
+          },
+          "circ_median": {
+            "n": 4,
+            "mean_mae_deg": 20.193651352933472,
+            "median_mae_deg": 18.786554385395895,
+            "p95_mae_deg": 27.790924700060547
+          },
+          "trimmed_mean": {
+            "n": 4,
+            "mean_mae_deg": 21.24579498808298,
+            "median_mae_deg": 18.975942867350373,
+            "p95_mae_deg": 31.695938264220548
+          },
+          "huber_m": {
+            "n": 4,
+            "mean_mae_deg": 22.184260277686743,
+            "median_mae_deg": 18.91257462833495,
+            "p95_mae_deg": 33.54448722528244
+          }
+        }
+      },
+      "task4_sample_counts": {
+        "5s": {
+          "n_outages": 4,
+          "raw_samples_median": 50,
+          "valid_straight_min": 10,
+          "valid_straight_median": 22,
+          "valid_straight_max": 31,
+          "valid_straight_mean": 21.25,
+          "fraction_accepted_mean": 0.425,
+          "fraction_accepted_min": 0.2
+        },
+        "10s": {
+          "n_outages": 4,
+          "raw_samples_median": 100,
+          "valid_straight_min": 18,
+          "valid_straight_median": 22,
+          "valid_straight_max": 44,
+          "valid_straight_mean": 26.75,
+          "fraction_accepted_mean": 0.26749999999999996,
+          "fraction_accepted_min": 0.18
+        },
+        "20s": {
+          "n_outages": 4,
+          "raw_samples_median": 200,
+          "valid_straight_min": 37,
+          "valid_straight_median": 46,
+          "valid_straight_max": 52,
+          "valid_straight_mean": 45.5,
+          "fraction_accepted_mean": 0.22749999999999998,
+          "fraction_accepted_min": 0.185
+        },
+        "30s": {
+          "n_outages": 4,
+          "raw_samples_median": 300,
+          "valid_straight_min": 49,
+          "valid_straight_median": 57,
+          "valid_straight_max": 70,
+          "valid_straight_mean": 58.5,
+          "fraction_accepted_mean": 0.195,
+          "fraction_accepted_min": 0.16333333333333333
+        },
+        "60s": {
+          "n_outages": 4,
+          "raw_samples_median": 600,
+          "valid_straight_min": 101,
+          "valid_straight_median": 118,
+          "valid_straight_max": 133,
+          "valid_straight_mean": 117.75,
+          "fraction_accepted_mean": 0.19625,
+          "fraction_accepted_min": 0.16833333333333333
+        },
+        "120s": {
+          "n_outages": 4,
+          "raw_samples_median": 1150,
+          "valid_straight_min": 124,
+          "valid_straight_median": 185,
+          "valid_straight_max": 213,
+          "valid_straight_mean": 176.75,
+          "fraction_accepted_mean": 0.16354166666666667,
+          "fraction_accepted_min": 0.155
+        }
+      },
+      "task5_age_spatial_lag": {
+        "n_records": 24,
+        "corr_age_vs_mae": {
+          "pearson_r": -0.06565634137180129,
+          "p": 0.760512986279787,
+          "spearman_rho": -0.12891986062717772
+        },
+        "corr_dist_vs_mae": {
+          "pearson_r": -0.07932339863925784,
+          "p": 0.7125451579198604,
+          "spearman_rho": -0.19250871080139373
+        },
+        "5s": {
+          "n": 4,
+          "mean_age_s": 2.440491452991455,
+          "mean_dist_oldest_m": 14.517986111110808,
+          "mean_mae_deg": 19.59075680832549,
+          "corr_age_mae_r": -0.4257731051735534,
+          "corr_age_mae_p": 0.5742268948264466,
+          "corr_dist_mae_r": -0.36144948025220086,
+          "corr_dist_mae_p": 0.6385505197477992
+        },
+        "10s": {
+          "n": 4,
+          "mean_age_s": 3.4556230319388255,
+          "mean_dist_oldest_m": 19.964652777777275,
+          "mean_mae_deg": 22.076915502479785,
+          "corr_age_mae_r": 0.7539672878943695,
+          "corr_age_mae_p": 0.2460327121056305,
+          "corr_dist_mae_r": 0.8893621486474516,
+          "corr_dist_mae_p": 0.11063785135254856
+        },
+        "20s": {
+          "n": 4,
+          "mean_age_s": 7.786625922340213,
+          "mean_dist_oldest_m": 51.837152777776865,
+          "mean_mae_deg": 20.1534208479154,
+          "corr_age_mae_r": 0.267591717501022,
+          "corr_age_mae_p": 0.7324082824989779,
+          "corr_dist_mae_r": -0.5667979067170346,
+          "corr_dist_mae_p": 0.43320209328296544
+        },
+        "30s": {
+          "n": 4,
+          "mean_age_s": 10.849184763649053,
+          "mean_dist_oldest_m": 71.29499999999908,
+          "mean_mae_deg": 17.894324690954015,
+          "corr_age_mae_r": 0.5473420824652835,
+          "corr_age_mae_p": 0.4526579175347165,
+          "corr_dist_mae_r": 0.3479886123700484,
+          "corr_dist_mae_p": 0.6520113876299516
+        },
+        "60s": {
+          "n": 4,
+          "mean_age_s": 27.896871901974418,
+          "mean_dist_oldest_m": 168.52277777777593,
+          "mean_mae_deg": 18.648913845020378,
+          "corr_age_mae_r": -0.9822995220598131,
+          "corr_age_mae_p": 0.01770047794018703,
+          "corr_dist_mae_r": -0.8738864689078886,
+          "corr_dist_mae_p": 0.12611353109211132
+        },
+        "120s": {
+          "n": 4,
+          "mean_age_s": 46.63291447321452,
+          "mean_dist_oldest_m": 294.06736111110916,
+          "mean_mae_deg": 19.39367397056411,
+          "corr_age_mae_r": 0.1095542515214113,
+          "corr_age_mae_p": 0.8904457484785886,
+          "corr_dist_mae_r": 0.09236391369896768,
+          "corr_dist_mae_p": 0.9076360863010322
+        }
+      },
+      "task6_error_distribution": {
+        "5s": {
+          "median_deg": 18.449946781468967,
+          "iqr_deg": 5.720105670390986,
+          "mad_deg": 2.5354564499992245,
+          "p90_deg": 24.37631820925205,
+          "p95_deg": 25.20828940230516,
+          "max_deg": 26.040260595358273,
+          "n_above_20deg": 2,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 50.0
+        },
+        "10s": {
+          "median_deg": 18.546603748405076,
+          "iqr_deg": 8.012950430673051,
+          "mad_deg": 2.5354564499992227,
+          "p90_deg": 31.202242799173522,
+          "p95_deg": 33.49691211863837,
+          "max_deg": 35.79158143810323,
+          "n_above_20deg": 2,
+          "n_above_30deg": 1,
+          "pct_above_20deg": 50.0
+        },
+        "20s": {
+          "median_deg": 16.99229011931254,
+          "iqr_deg": 4.523939195251003,
+          "mad_deg": 1.2827728507416847,
+          "p90_deg": 27.607323904076317,
+          "p95_deg": 29.86482351168859,
+          "max_deg": 32.12232311930088,
+          "n_above_20deg": 1,
+          "n_above_30deg": 1,
+          "pct_above_20deg": 25.0
+        },
+        "30s": {
+          "median_deg": 17.116790991883544,
+          "iqr_deg": 2.389343910860628,
+          "mad_deg": 1.4072737233126897,
+          "p90_deg": 21.182253966527647,
+          "p95_deg": 22.009595356420494,
+          "max_deg": 22.836936746313345,
+          "n_above_20deg": 1,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 25.0
+        },
+        "60s": {
+          "median_deg": 17.408200027124163,
+          "iqr_deg": 7.685897191021759,
+          "mad_deg": 3.4063711633490206,
+          "p90_deg": 24.435593462011582,
+          "p95_deg": 25.290289438821056,
+          "max_deg": 26.144985415630536,
+          "n_above_20deg": 2,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 50.0
+        },
+        "120s": {
+          "median_deg": 17.961871738578935,
+          "iqr_deg": 10.766168879637661,
+          "mad_deg": 4.977612333005414,
+          "p90_deg": 27.19687352848616,
+          "p95_deg": 28.242212273184762,
+          "max_deg": 29.287551017883366,
+          "n_above_20deg": 2,
+          "n_above_30deg": 0,
+          "pct_above_20deg": 50.0
+        }
+      },
+      "task7_rpsi_audit": {
+        "n_outages": 4
+      },
+      "task8_uncertainty_coverage": {
+        "n_outages": 2,
+        "note": "insufficient outages for coverage test"
+      }
+    }
+  },
+  "task9_cross_trip": {
+    "Vta02": {
+      "best_window_cs_median": 10,
+      "best_window_no_median": 30,
+      "n_common_support": 13,
+      "n_non_overlapping": 11,
+      "statistical_power_note": "moderate"
+    },
+    "Vta04": {
+      "best_window_cs_median": 20,
+      "best_window_no_median": 20,
+      "n_common_support": 4,
+      "n_non_overlapping": 2,
+      "statistical_power_note": "weak"
+    }
+  },
+  "task10_final_decision": {
+    "decision_code": "C",
+    "decision_label": "5\u201310s adaptive range is justified (difference between top windows is marginal)",
+    "vta02_cs_ranking": [
+      30,
+      20,
+      10,
+      5,
+      60,
+      120
+    ],
+    "vta04_cs_ranking": [
+      30,
+      60,
+      120,
+      5,
+      20,
+      10
+    ],
+    "vta02_no_ranking": [
+      10,
+      30,
+      20,
+      5,
+      60,
+      120
+    ],
+    "cross_trip_agreement": true,
+    "overlap_nonoverlap_agreement": false,
+    "top1_top2_gap_deg": 0.027160632121125516,
+    "vta04_statistical_power": "weak"
+  }
+}

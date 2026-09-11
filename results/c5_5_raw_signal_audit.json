@@ -1,0 +1,67 @@
+[
+  {
+    "event_name": "Vta02 Event 1 (Stop 1)",
+    "t_start": 9.298,
+    "t_end": 10.897,
+    "peak_ref_ms2": -1.7457407407407413,
+    "peak_can_ms2": -2.4506828156649996,
+    "peak_phone_level_ms2": -2.200847678794525,
+    "peak_phone_raw_ax_ms2": -2.2008,
+    "rebound_phone_level_ms2": 0.0906485541519271,
+    "rebound_phone_raw_ax_ms2": 0.0907,
+    "rebound_can_ms2": -0.6801894401329999,
+    "rebound_ref_ms2": -0.4500925925925929
+  },
+  {
+    "event_name": "Vta02 Event 2 (Stop 2)",
+    "t_start": 173.298,
+    "t_end": 178.099,
+    "peak_ref_ms2": -2.9124537037037053,
+    "peak_can_ms2": -3.1408748426649997,
+    "peak_phone_level_ms2": -5.342251200649236,
+    "peak_phone_raw_ax_ms2": -5.3422,
+    "rebound_phone_level_ms2": 5.363752438631571,
+    "rebound_phone_raw_ax_ms2": 5.3638,
+    "rebound_can_ms2": 0.49013568053449996,
+    "rebound_ref_ms2": 0.5822685185185188
+  },
+  {
+    "event_name": "Vta03 Event 1 (Only Major Stop)",
+    "t_start": 15.299,
+    "t_end": 19.3,
+    "peak_ref_ms2": -2.630925925925927,
+    "peak_can_ms2": -3.040847012664999,
+    "peak_phone_level_ms2": -1.900187653424824,
+    "peak_phone_raw_ax_ms2": -1.9008,
+    "rebound_phone_level_ms2": 2.921584525820746,
+    "rebound_phone_raw_ax_ms2": 2.921,
+    "rebound_can_ms2": 0.49013568053449996,
+    "rebound_ref_ms2": 0.3900000000000002
+  },
+  {
+    "event_name": "Vta04 Event 1 (Highway Decel 1)",
+    "t_start": 1.299,
+    "t_end": 4.599,
+    "peak_ref_ms2": -2.6977777777777785,
+    "peak_can_ms2": -3.040847012664999,
+    "peak_phone_level_ms2": -2.6128489755669846,
+    "peak_phone_raw_ax_ms2": -2.613,
+    "rebound_phone_level_ms2": 3.667851627085214,
+    "rebound_phone_raw_ax_ms2": 3.6677,
+    "rebound_can_ms2": 2.7407625419999997,
+    "rebound_ref_ms2": 2.385787037037037
+  },
+  {
+    "event_name": "Vta04 Event 2 (Highway Decel 2)",
+    "t_start": 64.999,
+    "t_end": 65.898,
+    "peak_ref_ms2": -3.926064814814816,
+    "peak_can_ms2": -0.390109909931,
+    "peak_phone_level_ms2": -1.36002671083895,
+    "peak_phone_raw_ax_ms2": -1.3602,
+    "rebound_phone_level_ms2": 5.073148296019631,
+    "rebound_phone_raw_ax_ms2": 5.073,
+    "rebound_can_ms2": 0.09002572365885,
+    "rebound_ref_ms2": 4.211898148148149
+  }
+]

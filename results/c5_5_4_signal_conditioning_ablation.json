@@ -1,0 +1,835 @@
+{
+  "metadata": {
+    "stage": "C5.5.4",
+    "title": "End-to-End Signal Conditioning Ablation",
+    "control_trip": "Vta02",
+    "pipeline": "3D ESKF + NHC",
+    "sampling_rate_hz": 10.0,
+    "stride_s": 20.0,
+    "horizons_s": [
+      5.0,
+      10.0,
+      20.0,
+      30.0,
+      60.0
+    ]
+  },
+  "filter_latencies": {
+    "0.5Hz": {
+      "fc_hz": 0.5,
+      "peak_delay_ms": -800.0000000001819,
+      "attenuation_ms2": 4.7659619725188325
+    },
+    "1.0Hz": {
+      "fc_hz": 1.0,
+      "peak_delay_ms": -1000.0,
+      "attenuation_ms2": 3.6552166354104614
+    },
+    "1.5Hz": {
+      "fc_hz": 1.5,
+      "peak_delay_ms": -1000.0,
+      "attenuation_ms2": 2.6179800696940756
+    },
+    "2.0Hz": {
+      "fc_hz": 2.0,
+      "peak_delay_ms": -1000.0,
+      "attenuation_ms2": 2.009303177137741
+    }
+  },
+  "acceleration_metrics": {
+    "A_Raw": {
+      "mae_ms2": 1.3466223132650712,
+      "rmse_ms2": 1.8277352188661546,
+      "bias_ms2": -0.1471474219692358,
+      "correlation": 0.21858166252978542
+    },
+    "B_LP_0.5Hz": {
+      "mae_ms2": 0.6969177786844131,
+      "rmse_ms2": 0.8846666943539009,
+      "bias_ms2": -0.14674083027513615,
+      "correlation": 0.5153033518939137
+    },
+    "B_LP_1.0Hz": {
+      "mae_ms2": 0.8076218290234568,
+      "rmse_ms2": 1.0404210837627184,
+      "bias_ms2": -0.14694607472980842,
+      "correlation": 0.4174353013560301
+    },
+    "B_LP_2.0Hz": {
+      "mae_ms2": 1.0272107552002263,
+      "rmse_ms2": 1.3549005741566325,
+      "bias_ms2": -0.14705590685780145,
+      "correlation": 0.30929357368023536
+    },
+    "C1_Covariance_Only": {
+      "mae_ms2": 1.3466223132650712,
+      "rmse_ms2": 1.8277352188661546,
+      "bias_ms2": -0.1471474219692358,
+      "correlation": 0.21858166252978542
+    },
+    "C2_Adaptive_Blend": {
+      "mae_ms2": 0.9375408224340451,
+      "rmse_ms2": 1.206299328878964,
+      "bias_ms2": -0.14647086788785463,
+      "correlation": 0.3433581012857576
+    },
+    "C3_Combined": {
+      "mae_ms2": 0.9375408224340451,
+      "rmse_ms2": 1.206299328878964,
+      "bias_ms2": -0.14647086788785463,
+      "correlation": 0.3433581012857576
+    }
+  },
+  "outage_horizon_summary": {
+    "5s": {
+      "horizon_s": 5.0,
+      "n_windows": 55,
+      "conditions": {
+        "A_Raw": {
+          "label": "A. Raw IMU",
+          "mean_drift_m": 9.658344411207665,
+          "median_drift_m": 7.057065884236225,
+          "std_drift_m": 7.648130245979485,
+          "p75_drift_m": 12.402030610721908,
+          "p90_drift_m": 19.98082513051149,
+          "p95_drift_m": 22.188972788323625,
+          "mean_vel_err_ms": 3.942410401719835,
+          "median_vel_err_ms": 2.9038064809796538,
+          "mean_drift_pct": 25.49058104512036,
+          "regime_means_m": {
+            "cruising": 11.284787066758089,
+            "braking": 7.92217517362991,
+            "rough_road": 10.133041337307414,
+            "standstill": 5.87602787666242
+          }
+        },
+        "B_LP_0.5Hz": {
+          "label": "B. Fixed LP (0.5 Hz)",
+          "mean_drift_m": 9.067673737699998,
+          "median_drift_m": 6.125561655662418,
+          "std_drift_m": 7.704670398171855,
+          "p75_drift_m": 12.430841439160993,
+          "p90_drift_m": 18.546102289470625,
+          "p95_drift_m": 23.407864003773717,
+          "mean_vel_err_ms": 3.7595743906211876,
+          "median_vel_err_ms": 2.6065505103831295,
+          "mean_drift_pct": 24.79278504046455,
+          "regime_means_m": {
+            "cruising": 9.88531611067717,
+            "braking": 6.672697165960489,
+            "rough_road": 9.697399679560114,
+            "standstill": 5.803181158488192
+          }
+        },
+        "B_LP_1.0Hz": {
+          "label": "B. Fixed LP (1.0 Hz)",
+          "mean_drift_m": 9.392007024290098,
+          "median_drift_m": 6.4240891231856665,
+          "std_drift_m": 7.822307026205969,
+          "p75_drift_m": 11.517250829983581,
+          "p90_drift_m": 19.245238489585663,
+          "p95_drift_m": 23.57190458102966,
+          "mean_vel_err_ms": 3.856647622592015,
+          "median_vel_err_ms": 2.779970782857268,
+          "mean_drift_pct": 25.063235064056595,
+          "regime_means_m": {
+            "cruising": 11.05351743329824,
+            "braking": 7.158136872625757,
+            "rough_road": 9.961356924221139,
+            "standstill": 5.826564399219556
+          }
+        },
+        "B_LP_2.0Hz": {
+          "label": "B. Fixed LP (2.0 Hz)",
+          "mean_drift_m": 9.542155597410016,
+          "median_drift_m": 6.666621442712612,
+          "std_drift_m": 7.77789761778946,
+          "p75_drift_m": 11.70839403081563,
+          "p90_drift_m": 19.75349099048753,
+          "p95_drift_m": 22.931345018510616,
+          "mean_vel_err_ms": 3.896727177092364,
+          "median_vel_err_ms": 2.9599233456990084,
+          "mean_drift_pct": 25.28061419149061,
+          "regime_means_m": {
+            "cruising": 11.321916589366262,
+            "braking": 7.512601437994921,
+            "rough_road": 10.068805373047176,
+            "standstill": 5.83574303444129
+          }
+        },
+        "C1_Covariance_Only": {
+          "label": "C1. Covariance Only",
+          "mean_drift_m": 9.47446984537368,
+          "median_drift_m": 6.878162127706681,
+          "std_drift_m": 7.66107446058711,
+          "p75_drift_m": 11.889979116930323,
+          "p90_drift_m": 18.895856653839466,
+          "p95_drift_m": 23.00720439764766,
+          "mean_vel_err_ms": 3.8656479093388763,
+          "median_vel_err_ms": 2.882867384568585,
+          "mean_drift_pct": 25.110158880039837,
+          "regime_means_m": {
+            "cruising": 10.893216332469825,
+            "braking": 7.881939331292322,
+            "rough_road": 9.919521407039454,
+            "standstill": 5.87602787666242
+          }
+        },
+        "C2_Adaptive_Blend": {
+          "label": "C2. Adaptive Blend",
+          "mean_drift_m": 9.547949142610866,
+          "median_drift_m": 6.507538507965171,
+          "std_drift_m": 7.71618441176544,
+          "p75_drift_m": 12.109313857261725,
+          "p90_drift_m": 20.604163779130182,
+          "p95_drift_m": 22.902392999858147,
+          "mean_vel_err_ms": 3.8944183885990786,
+          "median_vel_err_ms": 2.8753387316980668,
+          "mean_drift_pct": 25.29675484436505,
+          "regime_means_m": {
+            "cruising": 11.340462303085307,
+            "braking": 7.553398165039492,
+            "rough_road": 10.06484854758921,
+            "standstill": 5.87602787666242
+          }
+        },
+        "C3_Combined": {
+          "label": "C3. Combined (Blend+Cov)",
+          "mean_drift_m": 9.319288055192306,
+          "median_drift_m": 6.373706206824848,
+          "std_drift_m": 7.719989990826599,
+          "p75_drift_m": 11.859270850741034,
+          "p90_drift_m": 18.980107723989054,
+          "p95_drift_m": 23.309594353022433,
+          "mean_vel_err_ms": 3.818899298880259,
+          "median_vel_err_ms": 2.856323153526673,
+          "mean_drift_pct": 24.820003818482867,
+          "regime_means_m": {
+            "cruising": 10.933717184647886,
+            "braking": 7.498226755940845,
+            "rough_road": 9.796602669273536,
+            "standstill": 5.87602787666242
+          }
+        },
+        "D_Oracle_CAN": {
+          "label": "D. Oracle Reference",
+          "mean_drift_m": 9.673059642366175,
+          "median_drift_m": 8.248102427529782,
+          "std_drift_m": 6.323664282389707,
+          "p75_drift_m": 11.066604546940976,
+          "p90_drift_m": 14.09557453081769,
+          "p95_drift_m": 15.866058636986285,
+          "mean_vel_err_ms": 3.9928705169640466,
+          "median_vel_err_ms": 3.428475431018131,
+          "mean_drift_pct": 27.699116005560874,
+          "regime_means_m": {
+            "cruising": 9.19905410669665,
+            "braking": 10.655943503813909,
+            "rough_road": 9.630650715307526,
+            "standstill": 6.614675269752552
+          }
+        }
+      }
+    },
+    "10s": {
+      "horizon_s": 10.0,
+      "n_windows": 54,
+      "conditions": {
+        "A_Raw": {
+          "label": "A. Raw IMU",
+          "mean_drift_m": 51.63947185522052,
+          "median_drift_m": 39.93462762797512,
+          "std_drift_m": 42.454106582257346,
+          "p75_drift_m": 63.014530733246616,
+          "p90_drift_m": 104.1663511654146,
+          "p95_drift_m": 143.08513986156566,
+          "mean_vel_err_ms": 11.490527820263802,
+          "median_vel_err_ms": 8.75319032136413,
+          "mean_drift_pct": 72.70289554359725,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 59.302107555424605,
+            "rough_road": 50.31043792040108,
+            "standstill": 23.252666715361478
+          }
+        },
+        "B_LP_0.5Hz": {
+          "label": "B. Fixed LP (0.5 Hz)",
+          "mean_drift_m": 51.932691091473046,
+          "median_drift_m": 42.48557337308039,
+          "std_drift_m": 41.94083169477888,
+          "p75_drift_m": 66.0237192182842,
+          "p90_drift_m": 111.9700118855371,
+          "p95_drift_m": 132.19243436262857,
+          "mean_vel_err_ms": 11.358227660870604,
+          "median_vel_err_ms": 8.059078910427527,
+          "mean_drift_pct": 73.5179761024417,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 60.4488695124923,
+            "rough_road": 50.311253459220346,
+            "standstill": 23.126757157140084
+          }
+        },
+        "B_LP_1.0Hz": {
+          "label": "B. Fixed LP (1.0 Hz)",
+          "mean_drift_m": 51.98420170191725,
+          "median_drift_m": 45.171986269832075,
+          "std_drift_m": 41.87626423984454,
+          "p75_drift_m": 59.88045851427841,
+          "p90_drift_m": 110.27420129266397,
+          "p95_drift_m": 137.15329631240655,
+          "mean_vel_err_ms": 11.506699011526353,
+          "median_vel_err_ms": 8.753709606101369,
+          "mean_drift_pct": 72.77003590277901,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 59.46215119020929,
+            "rough_road": 50.74332398072279,
+            "standstill": 23.215231986567943
+          }
+        },
+        "B_LP_2.0Hz": {
+          "label": "B. Fixed LP (2.0 Hz)",
+          "mean_drift_m": 51.193494047973964,
+          "median_drift_m": 41.667989291149226,
+          "std_drift_m": 42.34966966150297,
+          "p75_drift_m": 62.140376756696966,
+          "p90_drift_m": 106.41964389831415,
+          "p95_drift_m": 138.18268001746713,
+          "mean_vel_err_ms": 11.381841391589264,
+          "median_vel_err_ms": 8.342654549204184,
+          "mean_drift_pct": 72.15680745161094,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 59.93920647875287,
+            "rough_road": 49.44456224184222,
+            "standstill": 23.20321134902512
+          }
+        },
+        "C1_Covariance_Only": {
+          "label": "C1. Covariance Only",
+          "mean_drift_m": 45.74016660037346,
+          "median_drift_m": 38.46592770895482,
+          "std_drift_m": 39.088545525648655,
+          "p75_drift_m": 54.55964068634174,
+          "p90_drift_m": 76.0146105561758,
+          "p95_drift_m": 128.29599062292652,
+          "mean_vel_err_ms": 10.099662250949466,
+          "median_vel_err_ms": 8.223234265654614,
+          "mean_drift_pct": 66.75278772089506,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 51.17397888485813,
+            "rough_road": 44.92178838424817,
+            "standstill": 23.252666715361478
+          }
+        },
+        "C2_Adaptive_Blend": {
+          "label": "C2. Adaptive Blend",
+          "mean_drift_m": 52.40390748176897,
+          "median_drift_m": 43.481074976214884,
+          "std_drift_m": 42.548792483728974,
+          "p75_drift_m": 66.32342371903155,
+          "p90_drift_m": 106.48661972379271,
+          "p95_drift_m": 142.817073510044,
+          "mean_vel_err_ms": 11.59404336192463,
+          "median_vel_err_ms": 8.112511457921961,
+          "mean_drift_pct": 73.65252117383639,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 60.09418263653529,
+            "rough_road": 51.10492404403442,
+            "standstill": 23.252666715361478
+          }
+        },
+        "C3_Combined": {
+          "label": "C3. Combined (Blend+Cov)",
+          "mean_drift_m": 45.27726453372415,
+          "median_drift_m": 35.583566440733236,
+          "std_drift_m": 39.05033227556547,
+          "p75_drift_m": 55.07410191169765,
+          "p90_drift_m": 73.22271584591353,
+          "p95_drift_m": 131.40503611986762,
+          "mean_vel_err_ms": 10.01053883798844,
+          "median_vel_err_ms": 7.996120813370201,
+          "mean_drift_pct": 66.27585616847766,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 51.30261952155613,
+            "rough_road": 44.21658626548935,
+            "standstill": 23.252666715361478
+          }
+        },
+        "D_Oracle_CAN": {
+          "label": "D. Oracle Reference",
+          "mean_drift_m": 52.45729980101381,
+          "median_drift_m": 41.815798456821355,
+          "std_drift_m": 36.54002948056888,
+          "p75_drift_m": 63.284702625641515,
+          "p90_drift_m": 84.06989202201405,
+          "p95_drift_m": 103.37073698598498,
+          "mean_vel_err_ms": 11.226872555189935,
+          "median_vel_err_ms": 9.195358458626911,
+          "mean_drift_pct": 85.70548979971691,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 58.61347462717287,
+            "rough_road": 51.64058600828184,
+            "standstill": 24.88163807980825
+          }
+        }
+      }
+    },
+    "20s": {
+      "horizon_s": 20.0,
+      "n_windows": 54,
+      "conditions": {
+        "A_Raw": {
+          "label": "A. Raw IMU",
+          "mean_drift_m": 247.33455559202324,
+          "median_drift_m": 210.25003603837274,
+          "std_drift_m": 166.13534342552688,
+          "p75_drift_m": 345.5586347906288,
+          "p90_drift_m": 532.2071572228133,
+          "p95_drift_m": 540.1757093249449,
+          "mean_vel_err_ms": 29.858793533613042,
+          "median_vel_err_ms": 23.66965071014514,
+          "mean_drift_pct": 145.83497652552046,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 291.73060559246494,
+            "rough_road": 230.7020732651698,
+            "standstill": 69.49377281726117
+          }
+        },
+        "B_LP_0.5Hz": {
+          "label": "B. Fixed LP (0.5 Hz)",
+          "mean_drift_m": 238.35549881538677,
+          "median_drift_m": 193.2171858560135,
+          "std_drift_m": 150.7873254381439,
+          "p75_drift_m": 329.77732741414127,
+          "p90_drift_m": 490.0477226492485,
+          "p95_drift_m": 541.9386052728515,
+          "mean_vel_err_ms": 28.692013566246114,
+          "median_vel_err_ms": 23.05426029350473,
+          "mean_drift_pct": 141.9571172850087,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 258.0401378876734,
+            "rough_road": 236.37425152050753,
+            "standstill": 73.20906481058816
+          }
+        },
+        "B_LP_1.0Hz": {
+          "label": "B. Fixed LP (1.0 Hz)",
+          "mean_drift_m": 241.64167372254366,
+          "median_drift_m": 195.20710591344974,
+          "std_drift_m": 155.43308877857444,
+          "p75_drift_m": 353.77133462621623,
+          "p90_drift_m": 500.631751831131,
+          "p95_drift_m": 524.5989879510499,
+          "mean_vel_err_ms": 29.397331178798932,
+          "median_vel_err_ms": 23.420678581508348,
+          "mean_drift_pct": 146.1509547876663,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 287.3656536787014,
+            "rough_road": 223.73313168124176,
+            "standstill": 70.93854682179625
+          }
+        },
+        "B_LP_2.0Hz": {
+          "label": "B. Fixed LP (2.0 Hz)",
+          "mean_drift_m": 242.92112401334174,
+          "median_drift_m": 196.92268301413552,
+          "std_drift_m": 161.26670111753072,
+          "p75_drift_m": 345.67112479383985,
+          "p90_drift_m": 501.48703899661496,
+          "p95_drift_m": 534.953435710355,
+          "mean_vel_err_ms": 29.197573945711696,
+          "median_vel_err_ms": 23.03234423634116,
+          "mean_drift_pct": 146.2402036016921,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 295.6215728076369,
+            "rough_road": 220.79045545152565,
+            "standstill": 70.00733305944752
+          }
+        },
+        "C1_Covariance_Only": {
+          "label": "C1. Covariance Only",
+          "mean_drift_m": 217.5769993942365,
+          "median_drift_m": 171.17348496139692,
+          "std_drift_m": 151.2555310797481,
+          "p75_drift_m": 307.60087722655703,
+          "p90_drift_m": 441.99071675166323,
+          "p95_drift_m": 528.6482168853804,
+          "mean_vel_err_ms": 27.18663398023997,
+          "median_vel_err_ms": 18.79991850193887,
+          "mean_drift_pct": 132.34293691791976,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 242.48969799991005,
+            "rough_road": 211.2617644267515,
+            "standstill": 69.49377281726117
+          }
+        },
+        "C2_Adaptive_Blend": {
+          "label": "C2. Adaptive Blend",
+          "mean_drift_m": 236.08246528221028,
+          "median_drift_m": 201.7551324665032,
+          "std_drift_m": 165.29354080257465,
+          "p75_drift_m": 342.84730923737936,
+          "p90_drift_m": 509.6601806248566,
+          "p95_drift_m": 546.2546907243233,
+          "mean_vel_err_ms": 28.876146940647978,
+          "median_vel_err_ms": 22.45095339270465,
+          "mean_drift_pct": 141.63068907883724,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 288.38366867988833,
+            "rough_road": 213.80600643772078,
+            "standstill": 69.49377281726117
+          }
+        },
+        "C3_Combined": {
+          "label": "C3. Combined (Blend+Cov)",
+          "mean_drift_m": 226.90415837485415,
+          "median_drift_m": 191.60258354327675,
+          "std_drift_m": 144.3823898740483,
+          "p75_drift_m": 308.71371149835846,
+          "p90_drift_m": 425.20141759323747,
+          "p95_drift_m": 532.5979153745387,
+          "mean_vel_err_ms": 28.067867394515215,
+          "median_vel_err_ms": 22.2904736076679,
+          "mean_drift_pct": 137.877316816175,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 263.8496514629769,
+            "rough_road": 213.65137429212706,
+            "standstill": 69.49377281726117
+          }
+        },
+        "D_Oracle_CAN": {
+          "label": "D. Oracle Reference",
+          "mean_drift_m": 202.95106273887353,
+          "median_drift_m": 173.99144700725725,
+          "std_drift_m": 128.68483243702678,
+          "p75_drift_m": 249.353219616082,
+          "p90_drift_m": 377.2595818474895,
+          "p95_drift_m": 417.71775533974187,
+          "mean_vel_err_ms": 24.195137162982444,
+          "median_vel_err_ms": 18.504832990987506,
+          "mean_drift_pct": 119.11081359196704,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 207.8933295522717,
+            "rough_road": 208.4365471204211,
+            "standstill": 65.76064450013041
+          }
+        }
+      }
+    },
+    "30s": {
+      "horizon_s": 30.0,
+      "n_windows": 53,
+      "conditions": {
+        "A_Raw": {
+          "label": "A. Raw IMU",
+          "mean_drift_m": 544.1026053994731,
+          "median_drift_m": 463.9401157507739,
+          "std_drift_m": 368.30427023364786,
+          "p75_drift_m": 818.535152120444,
+          "p90_drift_m": 1047.9978856726084,
+          "p95_drift_m": 1249.1385067547835,
+          "mean_vel_err_ms": 44.33739378766039,
+          "median_vel_err_ms": 35.33204665763916,
+          "mean_drift_pct": 211.51172271370723,
+          "regime_means_m": {
+            "cruising": 168.84750301085353,
+            "braking": 628.0676370877255,
+            "rough_road": 490.1430245333029,
+            "standstill": 85.25640554778873
+          }
+        },
+        "B_LP_0.5Hz": {
+          "label": "B. Fixed LP (0.5 Hz)",
+          "mean_drift_m": 536.658566208018,
+          "median_drift_m": 397.96949308709907,
+          "std_drift_m": 347.4094939894894,
+          "p75_drift_m": 792.2543154866346,
+          "p90_drift_m": 1048.6286815238711,
+          "p95_drift_m": 1164.0350577971749,
+          "mean_vel_err_ms": 43.26173709417184,
+          "median_vel_err_ms": 31.314503803046964,
+          "mean_drift_pct": 211.5180771966324,
+          "regime_means_m": {
+            "cruising": 181.90013974519317,
+            "braking": 572.0411931506234,
+            "rough_road": 531.3843236371797,
+            "standstill": 103.32475643405152
+          }
+        },
+        "B_LP_1.0Hz": {
+          "label": "B. Fixed LP (1.0 Hz)",
+          "mean_drift_m": 546.8915112283131,
+          "median_drift_m": 421.958156205856,
+          "std_drift_m": 354.3609024600893,
+          "p75_drift_m": 833.4735853431812,
+          "p90_drift_m": 1050.0521859098037,
+          "p95_drift_m": 1208.2774169393654,
+          "mean_vel_err_ms": 43.69130176574416,
+          "median_vel_err_ms": 32.480212972682025,
+          "mean_drift_pct": 216.5869517853663,
+          "regime_means_m": {
+            "cruising": 177.28941302164597,
+            "braking": 624.6408509244212,
+            "rough_road": 499.0436506995549,
+            "standstill": 91.20729055512528
+          }
+        },
+        "B_LP_2.0Hz": {
+          "label": "B. Fixed LP (2.0 Hz)",
+          "mean_drift_m": 539.9938769573379,
+          "median_drift_m": 403.66081720740743,
+          "std_drift_m": 365.9617507416106,
+          "p75_drift_m": 837.5157004853967,
+          "p90_drift_m": 1090.455498198883,
+          "p95_drift_m": 1224.4933099160235,
+          "mean_vel_err_ms": 43.573353628530064,
+          "median_vel_err_ms": 34.61704258813107,
+          "mean_drift_pct": 212.70683180337656,
+          "regime_means_m": {
+            "cruising": 172.04991140276215,
+            "braking": 620.8827056577463,
+            "rough_road": 488.69716211240166,
+            "standstill": 87.24616742469081
+          }
+        },
+        "C1_Covariance_Only": {
+          "label": "C1. Covariance Only",
+          "mean_drift_m": 472.44680453856836,
+          "median_drift_m": 349.99111394992207,
+          "std_drift_m": 337.3056871531138,
+          "p75_drift_m": 635.8455847507184,
+          "p90_drift_m": 992.2994621250158,
+          "p95_drift_m": 1161.5311344446732,
+          "mean_vel_err_ms": 38.34789866991033,
+          "median_vel_err_ms": 25.22501580717802,
+          "mean_drift_pct": 191.765111888097,
+          "regime_means_m": {
+            "cruising": 172.2579443384808,
+            "braking": 527.0595189117918,
+            "rough_road": 443.1447519580508,
+            "standstill": 85.25640554778873
+          }
+        },
+        "C2_Adaptive_Blend": {
+          "label": "C2. Adaptive Blend",
+          "mean_drift_m": 530.4413293213976,
+          "median_drift_m": 375.87741543021923,
+          "std_drift_m": 371.290557478293,
+          "p75_drift_m": 887.4911569072285,
+          "p90_drift_m": 1036.4644955705573,
+          "p95_drift_m": 1258.4781402632223,
+          "mean_vel_err_ms": 43.231727817312425,
+          "median_vel_err_ms": 30.904402583370647,
+          "mean_drift_pct": 209.1008612007279,
+          "regime_means_m": {
+            "cruising": 173.5632109589535,
+            "braking": 609.1726941996218,
+            "rough_road": 480.6432315334864,
+            "standstill": 85.25640554778873
+          }
+        },
+        "C3_Combined": {
+          "label": "C3. Combined (Blend+Cov)",
+          "mean_drift_m": 492.6077117318223,
+          "median_drift_m": 381.44842053901,
+          "std_drift_m": 335.8451487454518,
+          "p75_drift_m": 621.5709658872021,
+          "p90_drift_m": 1008.776304522687,
+          "p95_drift_m": 1196.4260647025558,
+          "mean_vel_err_ms": 39.97896115127403,
+          "median_vel_err_ms": 25.716536150726917,
+          "mean_drift_pct": 201.2274182988799,
+          "regime_means_m": {
+            "cruising": 176.4562858160091,
+            "braking": 562.3796438410868,
+            "rough_road": 448.9850116221813,
+            "standstill": 85.25640554778873
+          }
+        },
+        "D_Oracle_CAN": {
+          "label": "D. Oracle Reference",
+          "mean_drift_m": 460.8327053220984,
+          "median_drift_m": 343.86110027398195,
+          "std_drift_m": 314.9650314597297,
+          "p75_drift_m": 629.4936931404912,
+          "p90_drift_m": 836.2209862605788,
+          "p95_drift_m": 1047.0181705502905,
+          "mean_vel_err_ms": 36.63636910733879,
+          "median_vel_err_ms": 24.283350094822588,
+          "mean_drift_pct": 177.0262552460038,
+          "regime_means_m": {
+            "cruising": 78.1053402613082,
+            "braking": 472.1629191539468,
+            "rough_road": 478.6938498601693,
+            "standstill": 102.44589730305476
+          }
+        }
+      }
+    },
+    "60s": {
+      "horizon_s": 60.0,
+      "n_windows": 52,
+      "conditions": {
+        "A_Raw": {
+          "label": "A. Raw IMU",
+          "mean_drift_m": 1536.127556612492,
+          "median_drift_m": 1023.4321200726096,
+          "std_drift_m": 1414.9627292746386,
+          "p75_drift_m": 2013.1452875099951,
+          "p90_drift_m": 3034.9987128022312,
+          "p95_drift_m": 4407.431565437761,
+          "mean_vel_err_ms": 66.91620704469815,
+          "median_vel_err_ms": 48.265239913004486,
+          "mean_drift_pct": 298.98958158706023,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1709.3292710411702,
+            "rough_road": 1108.8966610217535,
+            "standstill": 0.0
+          }
+        },
+        "B_LP_0.5Hz": {
+          "label": "B. Fixed LP (0.5 Hz)",
+          "mean_drift_m": 1599.2586494480213,
+          "median_drift_m": 1348.9455648674366,
+          "std_drift_m": 1302.8314465751196,
+          "p75_drift_m": 2002.531618255105,
+          "p90_drift_m": 2870.846480946088,
+          "p95_drift_m": 4212.344349271181,
+          "mean_vel_err_ms": 67.41839728173616,
+          "median_vel_err_ms": 54.10865852865486,
+          "mean_drift_pct": 330.7676688950973,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1708.9174504547445,
+            "rough_road": 1328.7669402981035,
+            "standstill": 0.0
+          }
+        },
+        "B_LP_1.0Hz": {
+          "label": "B. Fixed LP (1.0 Hz)",
+          "mean_drift_m": 1607.1927505056558,
+          "median_drift_m": 1180.3527479273912,
+          "std_drift_m": 1413.256351462574,
+          "p75_drift_m": 2072.05465398075,
+          "p90_drift_m": 3370.5576927960433,
+          "p95_drift_m": 4380.007713148449,
+          "mean_vel_err_ms": 69.00887928199107,
+          "median_vel_err_ms": 51.55511979000668,
+          "mean_drift_pct": 327.10058893622374,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1833.5286087517225,
+            "rough_road": 1048.8976334986914,
+            "standstill": 0.0
+          }
+        },
+        "B_LP_2.0Hz": {
+          "label": "B. Fixed LP (2.0 Hz)",
+          "mean_drift_m": 1556.4986528756438,
+          "median_drift_m": 1240.954163920696,
+          "std_drift_m": 1388.6985785749298,
+          "p75_drift_m": 2031.302792380819,
+          "p90_drift_m": 2464.549099307511,
+          "p95_drift_m": 4408.879640890601,
+          "mean_vel_err_ms": 67.60189001002124,
+          "median_vel_err_ms": 52.04813019249701,
+          "mean_drift_pct": 310.8770332190879,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1749.64986175234,
+            "rough_road": 1080.059004313126,
+            "standstill": 0.0
+          }
+        },
+        "C1_Covariance_Only": {
+          "label": "C1. Covariance Only",
+          "mean_drift_m": 1427.652560572755,
+          "median_drift_m": 900.9818136724348,
+          "std_drift_m": 1392.813281598956,
+          "p75_drift_m": 1803.9004965199556,
+          "p90_drift_m": 3402.6571366887574,
+          "p95_drift_m": 4047.7594299490174,
+          "mean_vel_err_ms": 58.17905499562277,
+          "median_vel_err_ms": 47.34078710168451,
+          "mean_drift_pct": 304.7781916448587,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1617.4660174224591,
+            "rough_road": 959.4460336768185,
+            "standstill": 0.0
+          }
+        },
+        "C2_Adaptive_Blend": {
+          "label": "C2. Adaptive Blend",
+          "mean_drift_m": 1538.6363061194747,
+          "median_drift_m": 1065.3270261083414,
+          "std_drift_m": 1395.9778408660084,
+          "p75_drift_m": 2037.9266378759687,
+          "p90_drift_m": 2928.750008730783,
+          "p95_drift_m": 4328.347757440593,
+          "mean_vel_err_ms": 67.45557839325066,
+          "median_vel_err_ms": 51.3217461135997,
+          "mean_drift_pct": 305.4018967778766,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1706.7470934406363,
+            "rough_road": 1123.9630307272766,
+            "standstill": 0.0
+          }
+        },
+        "C3_Combined": {
+          "label": "C3. Combined (Blend+Cov)",
+          "mean_drift_m": 1488.8492952544877,
+          "median_drift_m": 979.6773259635794,
+          "std_drift_m": 1342.0921247703873,
+          "p75_drift_m": 1743.096497116359,
+          "p90_drift_m": 3369.2117620892827,
+          "p95_drift_m": 3812.6457655487957,
+          "mean_vel_err_ms": 58.76836538948721,
+          "median_vel_err_ms": 44.61672228112562,
+          "mean_drift_pct": 323.59743005432813,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1685.4917128813215,
+            "rough_road": 1003.7979984416307,
+            "standstill": 0.0
+          }
+        },
+        "D_Oracle_CAN": {
+          "label": "D. Oracle Reference",
+          "mean_drift_m": 1202.3972362974687,
+          "median_drift_m": 951.9312210170848,
+          "std_drift_m": 954.5594290704942,
+          "p75_drift_m": 1753.1606341030565,
+          "p90_drift_m": 2454.901792552639,
+          "p95_drift_m": 3114.546543279503,
+          "mean_vel_err_ms": 50.02594679239881,
+          "median_vel_err_ms": 30.779876683776447,
+          "mean_drift_pct": 245.69083732709635,
+          "regime_means_m": {
+            "cruising": 0.0,
+            "braking": 1285.1248539551884,
+            "rough_road": 998.3357794084261,
+            "standstill": 0.0
+          }
+        }
+      }
+    }
+  }
+}

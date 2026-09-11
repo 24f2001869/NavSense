@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "stage": "C5.4",
+    "description": "Dynamic Attitude & Gravity-Leakage Diagnostic Investigation",
+    "timestamp": "2026-09-05",
+    "sampling_rate_hz": 10.0,
+    "dt_s": 0.1,
+    "g_const_ms2": 9.80665,
+    "trips_evaluated": [
+      "Vta02",
+      "Vta03",
+      "Vta04"
+    ]
+  },
+  "Vta02": {
+    "trip_name": "Vta02",
+    "samples": 10991,
+    "static_misalignment": {
+      "ax_stat_ms2": 0.03135075987841945,
+      "ay_stat_ms2": -0.39783145896656535,
+      "az_stat_ms2": 9.840270212765958,
+      "stat_pitch_deg": -0.18239275193551324,
+      "stat_roll_deg": -2.3151454466162904,
+      "mean_ori_pitch_deg": -85.34789737057592,
+      "mean_ori_roll_deg": 31.749877172231823
+    },
+    "correlations": {
+      "corr_r_a_delta_pitch_braking": 0.030425560834944805,
+      "corr_r_a_delta_grav_braking": 0.08080086214200283,
+      "corr_r_a_road_grade_braking": 0.07983658875376255,
+      "corr_r_a_gyro_pitch_braking": 0.028532275478831397,
+      "corr_can_ref_entire_trip": 0.9300507941637107
+    },
+    "regression_ols": {
+      "r2": 0.01174570895664917,
+      "weights": {
+        "intercept": 0.20713638495060893,
+        "delta_pitch_deg": 0.07350741340293954,
+        "pitch_rate_rads": -0.43157127520767186,
+        "road_grade_deg": 0.09932360563893658
+      }
+    },
+    "acceleration_error_profiles": {
+      "raw_phone": {
+        "mae": 1.2361227426664056,
+        "rmse": 1.715258200316154,
+        "sev_brake_bias": 1.0712385112226097
+      },
+      "static_leveled": {
+        "mae": 1.236114976803101,
+        "rmse": 1.7152523461527664,
+        "sev_brake_bias": 1.071187682193729
+      },
+      "dyn_pitch_comp": {
+        "mae": 1.2586415693488098,
+        "rmse": 1.7284479568342834,
+        "sev_brake_bias": 1.0431740605510595
+      },
+      "dyn_grav_mat": {
+        "mae": 1.2343283065285229,
+        "rmse": 1.712436537360455,
+        "sev_brake_bias": 1.0738750082743787
+      },
+      "dyn_road_comp": {
+        "mae": 1.2562534352324366,
+        "rmse": 1.7244734303937228,
+        "sev_brake_bias": 1.0619339671695551
+      },
+      "chassis_can": {
+        "mae": 0.1914478460167343,
+        "rmse": 0.2768288815546772,
+        "sev_brake_bias": -0.16373029251694055
+      }
+    },
+    "navigation_drift": {
+      "5s": {
+        "raw_phone": 6.873817815639271,
+        "static_leveled": 6.873614061936661,
+        "dyn_pitch_comp": 7.2993471826571845,
+        "chassis_can": 1.8157633146588508,
+        "oracle_ref": 0.25311998931064317
+      },
+      "10s": {
+        "raw_phone": 25.724511275038232,
+        "static_leveled": 25.723705829478444,
+        "dyn_pitch_comp": 26.672422891509587,
+        "chassis_can": 6.657693578764273,
+        "oracle_ref": 0.5057714013531186
+      },
+      "20s": {
+        "raw_phone": 95.55659769483026,
+        "static_leveled": 95.5534908850261,
+        "dyn_pitch_comp": 94.39992084249049,
+        "chassis_can": 23.092259250312903,
+        "oracle_ref": 1.0149103235284966
+      },
+      "30s": {
+        "raw_phone": 204.77374922923158,
+        "static_leveled": 204.76701974126314,
+        "dyn_pitch_comp": 197.41752207541344,
+        "chassis_can": 46.06224588484244,
+        "oracle_ref": 1.523863712296103
+      },
+      "60s": {
+        "raw_phone": 753.8904297456594,
+        "static_leveled": 753.8618856604091,
+        "dyn_pitch_comp": 723.0182155001073,
+        "chassis_can": 134.05411013165337,
+        "oracle_ref": 3.0661603654194236
+      }
+    }
+  },
+  "Vta03": {
+    "trip_name": "Vta03",
+    "samples": 645,
+    "static_misalignment": {
+      "ax_stat_ms2": -1.2231823529411765,
+      "ay_stat_ms2": 0.7900411764705882,
+      "az_stat_ms2": 9.775411764705881,
+      "stat_pitch_deg": 7.1093219690030205,
+      "stat_roll_deg": 4.620557700052855,
+      "mean_ori_pitch_deg": -85.52961240310077,
+      "mean_ori_roll_deg": 40.99226356589148
+    },
+    "correlations": {
+      "corr_r_a_delta_pitch_braking": -0.5315593468494606,
+      "corr_r_a_delta_grav_braking": 0.011635627631800838,
+      "corr_r_a_road_grade_braking": 0.4196805382809789,
+      "corr_r_a_gyro_pitch_braking": -0.1597569839371952,
+      "corr_can_ref_entire_trip": 0.9669409253454987
+    },
+    "regression_ols": {
+      "r2": 0.1849791354253305,
+      "weights": {
+        "intercept": -0.03671250897014848,
+        "delta_pitch_deg": -0.39012636494390224,
+        "pitch_rate_rads": 1.460407011101537,
+        "road_grade_deg": -0.24665083239681923
+      }
+    },
+    "acceleration_error_profiles": {
+      "raw_phone": {
+        "mae": 1.195784722529839,
+        "rmse": 1.5728835508713923,
+        "sev_brake_bias": 1.516336081242533
+      },
+      "static_leveled": {
+        "mae": 1.195607379282176,
+        "rmse": 1.5726921237750224,
+        "sev_brake_bias": 1.5169363409978325
+      },
+      "dyn_pitch_comp": {
+        "mae": 1.3320049194181967,
+        "rmse": 1.7672135795870885,
+        "sev_brake_bias": 1.5229334581242202
+      },
+      "dyn_grav_mat": {
+        "mae": 1.1963186072621366,
+        "rmse": 1.5730006314242233,
+        "sev_brake_bias": 1.5191703763075393
+      },
+      "dyn_road_comp": {
+        "mae": 1.3465911554732581,
+        "rmse": 1.786061801972298,
+        "sev_brake_bias": 1.5256273873416017
+      },
+      "chassis_can": {
+        "mae": 0.17027126573117277,
+        "rmse": 0.24420069294478036,
+        "sev_brake_bias": -0.10410248986359553
+      }
+    },
+    "navigation_drift": {
+      "5s": {
+        "raw_phone": 10.894929413194445,
+        "static_leveled": 10.891190472709193,
+        "dyn_pitch_comp": 13.575426899200039,
+        "chassis_can": 1.5344254623074196,
+        "oracle_ref": 0.15519383561558145
+      },
+      "10s": {
+        "raw_phone": 41.17208076262626,
+        "static_leveled": 41.15574492920762,
+        "dyn_pitch_comp": 51.478902074894876,
+        "chassis_can": 5.674305768429153,
+        "oracle_ref": 0.31649222473654376
+      },
+      "20s": {
+        "raw_phone": 147.31284927006175,
+        "static_leveled": 147.25970600338323,
+        "dyn_pitch_comp": 192.0166192326665,
+        "chassis_can": 26.14256982168594,
+        "oracle_ref": 0.5944218732463499
+      },
+      "30s": {
+        "raw_phone": 225.71910565277776,
+        "static_leveled": 225.60380370597179,
+        "dyn_pitch_comp": 327.7686951785968,
+        "chassis_can": 66.57403195720222,
+        "oracle_ref": 0.9900396443173184
+      },
+      "60s": {
+        "raw_phone": 974.9750462361104,
+        "static_leveled": 973.8980136539574,
+        "dyn_pitch_comp": 1389.9376682288253,
+        "chassis_can": 170.12509584336485,
+        "oracle_ref": 1.2211393706410403
+      }
+    }
+  },
+  "Vta04": {
+    "trip_name": "Vta04",
+    "samples": 1789,
+    "static_misalignment": {
+      "ax_stat_ms2": 0.3816,
+      "ay_stat_ms2": -0.6797,
+      "az_stat_ms2": 9.8147,
+      "stat_pitch_deg": -2.2212496078609845,
+      "stat_roll_deg": -3.961594476771068,
+      "mean_ori_pitch_deg": -83.68053661263275,
+      "mean_ori_roll_deg": 78.46406931246507
+    },
+    "correlations": {
+      "corr_r_a_delta_pitch_braking": -0.13288804497252898,
+      "corr_r_a_delta_grav_braking": -0.27214568862100563,
+      "corr_r_a_road_grade_braking": -0.17681375776152858,
+      "corr_r_a_gyro_pitch_braking": 0.02829138496266081,
+      "corr_can_ref_entire_trip": 0.8464334729045868
+    },
+    "regression_ols": {
+      "r2": 0.04639523864254547,
+      "weights": {
+        "intercept": 0.2843366215009245,
+        "delta_pitch_deg": -0.17116593140555902,
+        "pitch_rate_rads": 4.490731124342457,
+        "road_grade_deg": -0.5479801942822976
+      }
+    },
+    "acceleration_error_profiles": {
+      "raw_phone": {
+        "mae": 1.527601874772641,
+        "rmse": 1.9957940041530766,
+        "sev_brake_bias": 2.697712680041153
+      },
+      "static_leveled": {
+        "mae": 1.5276240975113247,
+        "rmse": 1.9958110304170347,
+        "sev_brake_bias": 2.6978639775187045
+      },
+      "dyn_pitch_comp": {
+        "mae": 1.5826971325423091,
+        "rmse": 2.0651396400740367,
+        "sev_brake_bias": 2.7525458577346518
+      },
+      "dyn_grav_mat": {
+        "mae": 1.5304845475476463,
+        "rmse": 2.000864210041211,
+        "sev_brake_bias": 2.6965086890886005
+      },
+      "dyn_road_comp": {
+        "mae": 1.5907620467559318,
+        "rmse": 2.076704131049928,
+        "sev_brake_bias": 2.769479551238215
+      },
+      "chassis_can": {
+        "mae": 0.2524028688317956,
+        "rmse": 0.4167189759765671,
+        "sev_brake_bias": 0.16826612129819013
+      }
+    },
+    "navigation_drift": {
+      "5s": {
+        "raw_phone": 8.266563311507932,
+        "static_leveled": 8.26726599482287,
+        "dyn_pitch_comp": 9.669398246562338,
+        "chassis_can": 2.213491703277156,
+        "oracle_ref": 0.2651395133950051
+      },
+      "10s": {
+        "raw_phone": 30.560112780637247,
+        "static_leveled": 30.563224584601418,
+        "dyn_pitch_comp": 35.53407433299659,
+        "chassis_can": 8.712029861694822,
+        "oracle_ref": 0.5128844615181927
+      },
+      "20s": {
+        "raw_phone": 113.0351625364583,
+        "static_leveled": 113.04555280708149,
+        "dyn_pitch_comp": 134.06631393698245,
+        "chassis_can": 32.73100906489929,
+        "oracle_ref": 1.0393538810961114
+      },
+      "30s": {
+        "raw_phone": 232.1085147736111,
+        "static_leveled": 232.13117418458214,
+        "dyn_pitch_comp": 274.40053862099245,
+        "chassis_can": 66.91187389433529,
+        "oracle_ref": 1.6311676877905794
+      },
+      "60s": {
+        "raw_phone": 701.4170505069442,
+        "static_leveled": 701.5187445615247,
+        "dyn_pitch_comp": 794.1755126101161,
+        "chassis_can": 244.57981095385608,
+        "oracle_ref": 3.393578077087742
+      }
+    }
+  }
+}

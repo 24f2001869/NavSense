@@ -1,0 +1,38 @@
+[
+  {
+    "Category":"Vf (Driver E)",
+    "Trips":1,
+    "Epochs":67424,
+    "Current TCN MAE":13.1756677628,
+    "Expanded TCN MAE":3.4124903679,
+    "RF MAE":7.8920545578,
+    "Expanded MAE Improvement":"+74.1%"
+  },
+  {
+    "Category":"Vta (Driver E)",
+    "Trips":8,
+    "Epochs":14463,
+    "Current TCN MAE":3.8233268857,
+    "Expanded TCN MAE":2.5920891613,
+    "RF MAE":3.5210449994,
+    "Expanded MAE Improvement":"+32.2%"
+  },
+  {
+    "Category":"Vtb (Driver E)",
+    "Trips":4,
+    "Epochs":1059,
+    "Current TCN MAE":5.3542915583,
+    "Expanded TCN MAE":3.3123570681,
+    "RF MAE":3.9443270862,
+    "Expanded MAE Improvement":"+38.1%"
+  },
+  {
+    "Category":"Vw (Driver E)",
+    "Trips":6,
+    "Epochs":30593,
+    "Current TCN MAE":8.6771587084,
+    "Expanded TCN MAE":2.4960062125,
+    "RF MAE":5.0091312056,
+    "Expanded MAE Improvement":"+71.2%"
+  }
+]

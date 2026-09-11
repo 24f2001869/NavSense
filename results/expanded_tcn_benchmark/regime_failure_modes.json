@@ -1,0 +1,101 @@
+[
+  {
+    "regime":"Standstill (v < 0.5 m\/s)",
+    "samples":3259,
+    "pct_of_eval":8.8,
+    "mean_true_mps":0.05,
+    "mean_pred_mps":0.82,
+    "mae_mps":0.804,
+    "bias_mps":0.769,
+    "under_est_pct":0.0,
+    "over_est_pct":8.0
+  },
+  {
+    "regime":"Low Speed (0.5 <= v < 5.0 m\/s)",
+    "samples":1539,
+    "pct_of_eval":4.2,
+    "mean_true_mps":2.43,
+    "mean_pred_mps":5.0,
+    "mae_mps":3.39,
+    "bias_mps":2.571,
+    "under_est_pct":3.3,
+    "over_est_pct":34.2
+  },
+  {
+    "regime":"Medium Speed (5.0 <= v < 15.0 m\/s)",
+    "samples":8505,
+    "pct_of_eval":23.1,
+    "mean_true_mps":10.88,
+    "mean_pred_mps":12.45,
+    "mae_mps":3.102,
+    "bias_mps":1.575,
+    "under_est_pct":8.9,
+    "over_est_pct":32.0
+  },
+  {
+    "regime":"High Speed (15.0 <= v < 25.0 m\/s)",
+    "samples":10435,
+    "pct_of_eval":28.3,
+    "mean_true_mps":21.36,
+    "mean_pred_mps":20.4,
+    "mae_mps":2.791,
+    "bias_mps":-0.962,
+    "under_est_pct":24.0,
+    "over_est_pct":10.6
+  },
+  {
+    "regime":"Motorway Extreme (v >= 25.0 m\/s)",
+    "samples":13090,
+    "pct_of_eval":35.5,
+    "mean_true_mps":27.46,
+    "mean_pred_mps":24.0,
+    "mae_mps":3.642,
+    "bias_mps":-3.46,
+    "under_est_pct":52.4,
+    "over_est_pct":0.4
+  },
+  {
+    "regime":"Hard Acceleration (a_y > 1.5 m\/s2)",
+    "samples":5617,
+    "pct_of_eval":15.3,
+    "mean_true_mps":19.15,
+    "mean_pred_mps":18.23,
+    "mae_mps":3.288,
+    "bias_mps":-0.919,
+    "under_est_pct":29.6,
+    "over_est_pct":14.8
+  },
+  {
+    "regime":"Hard Braking (a_y < -1.5 m\/s2)",
+    "samples":4788,
+    "pct_of_eval":13.0,
+    "mean_true_mps":18.17,
+    "mean_pred_mps":17.41,
+    "mae_mps":3.141,
+    "bias_mps":-0.76,
+    "under_est_pct":27.1,
+    "over_est_pct":15.4
+  },
+  {
+    "regime":"Sharp Turning (|yaw_rate| > 0.1 rad\/s)",
+    "samples":8925,
+    "pct_of_eval":24.2,
+    "mean_true_mps":20.6,
+    "mean_pred_mps":19.85,
+    "mae_mps":3.146,
+    "bias_mps":-0.753,
+    "under_est_pct":27.6,
+    "over_est_pct":15.1
+  },
+  {
+    "regime":"Straight Cruising (|yaw| < 0.02 & |a_y| < 0.3)",
+    "samples":3583,
+    "pct_of_eval":9.7,
+    "mean_true_mps":7.56,
+    "mean_pred_mps":6.95,
+    "mae_mps":1.49,
+    "bias_mps":-0.61,
+    "under_est_pct":12.8,
+    "over_est_pct":4.7
+  }
+]

@@ -1,0 +1,17 @@
+horizon_sec,model,total_trips,mean_drift_m,mean_drift_pct,trips_passed_10pct,trip_pass_rate_pct
+10,Static_TCN,18,26.83,106.44,5,27.8
+10,Pure_Kinematics,18,23.66,83.54,6,33.3
+10,Fixed_Damped_Momentum,18,23.49,111.37,6,33.3
+10,Adaptive_Regime_Fusion,18,25.06,111.53,5,27.8
+20,Static_TCN,17,45.73,123.95,5,29.4
+20,Pure_Kinematics,17,57.01,147.98,4,23.5
+20,Fixed_Damped_Momentum,17,65.81,193.51,4,23.5
+20,Adaptive_Regime_Fusion,17,49.27,135.51,4,23.5
+30,Static_TCN,16,54.62,65.57,5,31.2
+30,Pure_Kinematics,16,109.57,118.22,2,12.5
+30,Fixed_Damped_Momentum,16,98.07,127.13,2,12.5
+30,Adaptive_Regime_Fusion,16,61.83,71.38,4,25.0
+60,Static_TCN,13,95.53,18.26,3,23.1
+60,Pure_Kinematics,13,324.21,89.66,0,0.0
+60,Fixed_Damped_Momentum,13,173.71,40.75,1,7.7
+60,Adaptive_Regime_Fusion,13,96.65,16.76,3,23.1

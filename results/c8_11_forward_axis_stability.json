@@ -1,0 +1,576 @@
+{
+  "meta": {
+    "stage": "C8-11",
+    "description": "Pre-Outage Vehicle-Forward Axis Identifiability & Multi-Regime Stability Audit",
+    "trips_audited": [
+      "Vta02",
+      "Vta04"
+    ],
+    "constraints": {
+      "anti_circularity": "PASS - Strictly smartphone sensors for estimation; vehicle GT used post-hoc only",
+      "calibration_sensors": [
+        "phone_bearing_deg",
+        "phone_speed_kmh",
+        "accel",
+        "mag",
+        "gyro"
+      ]
+    }
+  },
+  "trips": {
+    "Vta02": {
+      "sample_count": 10991,
+      "duration_s": 1099.1000000000001,
+      "task1_gnss_course_accuracy": {
+        "v_ge_1.0ms": {
+          "sample_count": 9661,
+          "median_abs_err_deg": 0.811000000000007,
+          "p95_abs_err_deg": 3.9139999999999873,
+          "mean_signed_diff_deg": 0.10542925163026458,
+          "std_diff_deg": 2.283065245705151
+        },
+        "v_ge_2.0ms": {
+          "sample_count": 8381,
+          "median_abs_err_deg": 0.7639999999999816,
+          "p95_abs_err_deg": 3.1430000000000007,
+          "mean_signed_diff_deg": -0.03742274191624029,
+          "std_diff_deg": 1.676997736531386
+        },
+        "v_ge_3.0ms": {
+          "sample_count": 4570,
+          "median_abs_err_deg": 0.7009999999999934,
+          "p95_abs_err_deg": 2.9726499999999962,
+          "mean_signed_diff_deg": -0.18981947483588754,
+          "std_diff_deg": 1.377800216250824
+        },
+        "v_ge_5.0ms": {
+          "sample_count": 800,
+          "median_abs_err_deg": 0.7704999999999842,
+          "p95_abs_err_deg": 3.167600000000006,
+          "mean_signed_diff_deg": -0.41898875000000096,
+          "std_diff_deg": 1.4425541024944044
+        }
+      },
+      "task1_selected_v_min_ms": 3.0,
+      "task2_estimators": {
+        "estimator_A_mag_gnss": {
+          "heading_offset_deg": 351.2773325021262,
+          "circular_std_deg": 16.98254939211009,
+          "u_fwd_phone": [
+            0.1635,
+            0.0184,
+            -0.9864
+          ]
+        },
+        "estimator_B_ori_gnss": {
+          "heading_offset_deg": 250.8122155986789,
+          "circular_std_deg": 67.29873787222111,
+          "u_fwd_phone": [
+            -0.3286,
+            -0.9442,
+            -0.0216
+          ]
+        },
+        "estimator_C_dynamic_accel": {
+          "u_fwd_phone": [
+            0.9637,
+            -0.2668,
+            -0.0042
+          ]
+        },
+        "angle_between_A_and_B_deg": 92.8569606571555,
+        "angle_between_A_and_C_deg": 80.97841863814894
+      },
+      "task3_regimes": {
+        "straight_cruise": {
+          "sample_count": 2012,
+          "duration_s": 201.20000000000002,
+          "mean_speed_ms": 3.9425074552683896,
+          "mean_accel_ms2": -0.0004072785509167293,
+          "mean_yaw_rate_degs": -0.08949057095212144
+        },
+        "accel": {
+          "sample_count": 115,
+          "duration_s": 11.5,
+          "mean_speed_ms": 4.14012077294686,
+          "mean_accel_ms2": 0.803743961352657,
+          "mean_yaw_rate_degs": -0.404177276835175
+        },
+        "brake": {
+          "sample_count": 129,
+          "duration_s": 12.9,
+          "mean_speed_ms": 3.9827950043066322,
+          "mean_accel_ms2": -0.8557278208440999,
+          "mean_yaw_rate_degs": 0.03640872718824176
+        },
+        "left_turn": {
+          "sample_count": 1070,
+          "duration_s": 107.0,
+          "mean_speed_ms": 4.159914330218069,
+          "mean_accel_ms2": -0.0012590861889927158,
+          "mean_yaw_rate_degs": 7.300213168175189
+        },
+        "right_turn": {
+          "sample_count": 1184,
+          "duration_s": 118.4,
+          "mean_speed_ms": 4.1634337462462465,
+          "mean_accel_ms2": 0.017079579579579573,
+          "mean_yaw_rate_degs": -7.074166947227339
+        }
+      },
+      "task4_regime_stability": {
+        "regime_offsets": {
+          "straight_cruise": {
+            "mean_offset_deg": 352.9730037607693,
+            "std_deg": 17.186139759876323,
+            "median_deg": -8.498047210707483,
+            "iqr_deg": 30.83357722796415,
+            "deviation_from_overall_deg": 1.6956712586426688
+          },
+          "accel": {
+            "mean_offset_deg": 349.44848719874847,
+            "std_deg": 17.498990967703918,
+            "median_deg": -13.333220621718311,
+            "iqr_deg": 28.960213026150512,
+            "deviation_from_overall_deg": 1.8288453033775052
+          },
+          "brake": {
+            "mean_offset_deg": 346.18047276465825,
+            "std_deg": 16.158629760550117,
+            "median_deg": -17.95959323451393,
+            "iqr_deg": 24.19934060920059,
+            "deviation_from_overall_deg": 5.0968597374679625
+          },
+          "left_turn": {
+            "mean_offset_deg": 350.1424199664419,
+            "std_deg": 16.545539232252853,
+            "median_deg": -13.591525862495217,
+            "iqr_deg": 28.685923880270643,
+            "deviation_from_overall_deg": 1.1349125356839533
+          },
+          "right_turn": {
+            "mean_offset_deg": 349.7947057409773,
+            "std_deg": 16.605699677068582,
+            "median_deg": -13.927557936121943,
+            "iqr_deg": 28.3740853805295,
+            "deviation_from_overall_deg": 1.4826267611487816
+          }
+        },
+        "pairwise_deviations_deg": {
+          "straight_cruise_vs_accel": 3.5245165620206356,
+          "straight_cruise_vs_brake": 6.79253099611102,
+          "straight_cruise_vs_left_turn": 2.830583794327192,
+          "straight_cruise_vs_right_turn": 3.178298019791925,
+          "accel_vs_brake": 3.268014434090127,
+          "accel_vs_left_turn": 0.693932767692909,
+          "accel_vs_right_turn": 0.3462185422285108,
+          "brake_vs_left_turn": 3.9619472017835284,
+          "brake_vs_right_turn": 3.6142329763189807,
+          "left_turn_vs_right_turn": 0.3477142254641422
+        },
+        "turn_vs_cruise_deviation_deg": 3.178298019791925,
+        "max_inter_regime_deviation_deg": 6.79253099611102,
+        "stability_status": "PASS"
+      },
+      "task5_convergence": {
+        "5s": {
+          "num_windows": 91,
+          "mean_error_vs_trip_deg": 14.0103538105987,
+          "p95_error_vs_trip_deg": 29.676241965095414,
+          "max_error_vs_trip_deg": 32.04727221970916,
+          "stability_within_3deg_pct": 8.791208791208792
+        },
+        "10s": {
+          "num_windows": 90,
+          "mean_error_vs_trip_deg": 13.685711027077648,
+          "p95_error_vs_trip_deg": 26.771666365737676,
+          "max_error_vs_trip_deg": 31.885851474448486,
+          "stability_within_3deg_pct": 10.0
+        },
+        "15s": {
+          "num_windows": 89,
+          "mean_error_vs_trip_deg": 13.458901285807185,
+          "p95_error_vs_trip_deg": 26.682782759515064,
+          "max_error_vs_trip_deg": 31.68056301732662,
+          "stability_within_3deg_pct": 11.235955056179774
+        },
+        "20s": {
+          "num_windows": 88,
+          "mean_error_vs_trip_deg": 13.201675244599233,
+          "p95_error_vs_trip_deg": 27.023822022182134,
+          "max_error_vs_trip_deg": 31.710727296873188,
+          "stability_within_3deg_pct": 13.636363636363635
+        },
+        "30s": {
+          "num_windows": 86,
+          "mean_error_vs_trip_deg": 12.742026638901448,
+          "p95_error_vs_trip_deg": 24.640072474862563,
+          "max_error_vs_trip_deg": 30.62899535802933,
+          "stability_within_3deg_pct": 19.767441860465116
+        },
+        "45s": {
+          "num_windows": 83,
+          "mean_error_vs_trip_deg": 12.416279879871702,
+          "p95_error_vs_trip_deg": 24.077656570938178,
+          "max_error_vs_trip_deg": 27.352435849056405,
+          "stability_within_3deg_pct": 21.686746987951807
+        },
+        "60s": {
+          "num_windows": 80,
+          "mean_error_vs_trip_deg": 12.22792459481624,
+          "p95_error_vs_trip_deg": 21.485337914623358,
+          "max_error_vs_trip_deg": 25.086298186371096,
+          "stability_within_3deg_pct": 18.75
+        },
+        "90s": {
+          "num_windows": 74,
+          "mean_error_vs_trip_deg": 11.710311347647247,
+          "p95_error_vs_trip_deg": 19.77925764390633,
+          "max_error_vs_trip_deg": 21.24044810413062,
+          "stability_within_3deg_pct": 17.56756756756757
+        },
+        "120s": {
+          "num_windows": 68,
+          "mean_error_vs_trip_deg": 11.089352497901757,
+          "p95_error_vs_trip_deg": 19.799079363810122,
+          "max_error_vs_trip_deg": 20.91481445086083,
+          "stability_within_3deg_pct": 17.647058823529413
+        }
+      },
+      "task6_anti_circularity_validation": {
+        "estimated_offset_deg": 351.2773325021262,
+        "ground_truth_offset_deg": 351.4655288731419,
+        "offset_error_deg": 0.18819637101569242,
+        "u_fwd_phone_estimated": [
+          0.1635,
+          0.0184,
+          -0.9864
+        ],
+        "u_fwd_phone_ground_truth": [
+          0.1603,
+          0.0184,
+          -0.9869
+        ],
+        "vector_alignment_error_deg": 0.1881963710123415,
+        "calibrated_compass_heading_mae_deg": 14.570149571390726,
+        "calibrated_compass_heading_rmse_deg": 16.90781890887233,
+        "anti_circularity_assert": "VERIFIED: Vehicle GT was never queried during estimation"
+      },
+      "task7_gyro_recovery": {
+        "turn_evaluation_samples": 907,
+        "corr_calibrated_yaw_vs_veh": 0.046272211750548686,
+        "corr_raw_gyro_x_vs_veh": 0.10525187031108978,
+        "corr_raw_gyro_y_vs_veh": 0.035711941465650994,
+        "corr_raw_gyro_z_vs_veh": 0.052972987017088705,
+        "finding": "Horizontal GNSS course rotates the forward/lateral plane, but preserves vertical z-axis. Gyro z projection is invariant under pure yaw rotation."
+      },
+      "task8_outage_drift": {
+        "10s_outage": {
+          "num_evaluations": 31,
+          "baseline_cep50_m": 95.58021232660427,
+          "baseline_heading_mae_deg": 6.258229510375855,
+          "proposed_cep50_m": 97.45150869002134,
+          "proposed_heading_mae_deg": 10.68434771626462,
+          "drift_reduction_pct": -1.9578282134619318,
+          "heading_err_reduction_pct": -70.72476646231118
+        },
+        "30s_outage": {
+          "num_evaluations": 18,
+          "baseline_cep50_m": 319.5153523358865,
+          "baseline_heading_mae_deg": 13.516766160758714,
+          "proposed_cep50_m": 323.4834874911261,
+          "proposed_heading_mae_deg": 14.226309670272915,
+          "drift_reduction_pct": -1.2419231583802315,
+          "heading_err_reduction_pct": -5.249358471363652
+        },
+        "60s_outage": {
+          "num_evaluations": 9,
+          "baseline_cep50_m": 741.9637147342808,
+          "baseline_heading_mae_deg": 18.03036217618659,
+          "proposed_cep50_m": 759.8698252632721,
+          "proposed_heading_mae_deg": 13.639999793571164,
+          "drift_reduction_pct": -2.4133404603760233,
+          "heading_err_reduction_pct": 24.34982913662128
+        }
+      },
+      "task9_failure_modes": {
+        "stationary_bearing_jitter_deg": 0.0,
+        "nominal_mag_field_uT": 43.886782748340075,
+        "mag_anomaly_percentage": 5.3316349740696936,
+        "forward_vector_vertical_leakage_deg": -80.52831925007544,
+        "recommendations": {
+          "zero_speed_guard": "Inhibit GNSS-course calibration when speed < 3.0 m/s",
+          "magnetic_anomaly_guard": "Gate compass heading when |B| deviates > 10 uT from median baseline",
+          "road_grade_guard": "Forward axis is leveled via static gravity; horizontal heading is decoupled from pitch"
+        }
+      },
+      "task10_decision": {
+        "decision": "ACCEPT",
+        "rationale": "Stability=PASS (max inter-regime dev 6.79\u00b0, turn vs cruise dev 3.18\u00b0), offset error vs GT=0.19\u00b0, calibrated compass heading MAE=14.57\u00b0"
+      }
+    },
+    "Vta04": {
+      "sample_count": 1789,
+      "duration_s": 178.9,
+      "task1_gnss_course_accuracy": {
+        "v_ge_1.0ms": {
+          "sample_count": 1789,
+          "median_abs_err_deg": 2.0819999999999936,
+          "p95_abs_err_deg": 22.586800000000014,
+          "mean_signed_diff_deg": -0.42218446059251596,
+          "std_diff_deg": 9.827512527604739
+        },
+        "v_ge_2.0ms": {
+          "sample_count": 1699,
+          "median_abs_err_deg": 2.038000000000011,
+          "p95_abs_err_deg": 23.215300000000006,
+          "mean_signed_diff_deg": -0.22601059446733954,
+          "std_diff_deg": 10.00249665125038
+        },
+        "v_ge_3.0ms": {
+          "sample_count": 1269,
+          "median_abs_err_deg": 1.849999999999966,
+          "p95_abs_err_deg": 18.852800000000013,
+          "mean_signed_diff_deg": -0.06371158392435881,
+          "std_diff_deg": 7.563521976713623
+        }
+      },
+      "task1_selected_v_min_ms": 3.0,
+      "task2_estimators": {
+        "estimator_A_mag_gnss": {
+          "heading_offset_deg": 13.224781778004845,
+          "circular_std_deg": 19.31987856561724,
+          "u_fwd_phone": [
+            -0.236,
+            -0.0148,
+            -0.9716
+          ]
+        },
+        "estimator_B_ori_gnss": {
+          "heading_offset_deg": 181.16694073202518,
+          "circular_std_deg": 56.79863017709237,
+          "u_fwd_phone": [
+            -0.9998,
+            -0.0202,
+            0.0078
+          ]
+        },
+        "estimator_C_dynamic_accel": {
+          "u_fwd_phone": [
+            -0.7534,
+            0.6575,
+            -0.0109
+          ]
+        },
+        "angle_between_A_and_B_deg": 76.77801078629044,
+        "angle_between_A_and_C_deg": 79.70465697711124
+      },
+      "task3_regimes": {
+        "straight_cruise": {
+          "sample_count": 664,
+          "duration_s": 66.4,
+          "mean_speed_ms": 3.350196619812583,
+          "mean_accel_ms2": 0.0,
+          "mean_yaw_rate_degs": -0.14081414219656818
+        },
+        "accel": {
+          "sample_count": 6,
+          "duration_s": 0.6000000000000001,
+          "mean_speed_ms": 3.4703703703703703,
+          "mean_accel_ms2": 1.8865740740740742,
+          "mean_yaw_rate_degs": -0.3611825897826671
+        },
+        "brake": {
+          "sample_count": 7,
+          "duration_s": 0.7000000000000001,
+          "mean_speed_ms": 3.308333333333333,
+          "mean_accel_ms2": -2.2619047619047614,
+          "mean_yaw_rate_degs": 0.4519281048191307
+        },
+        "left_turn": {
+          "sample_count": 300,
+          "duration_s": 30.0,
+          "mean_speed_ms": 3.378092592592593,
+          "mean_accel_ms2": 0.010416666666666666,
+          "mean_yaw_rate_degs": 7.169579103632729
+        },
+        "right_turn": {
+          "sample_count": 290,
+          "duration_s": 29.0,
+          "mean_speed_ms": 3.353505747126437,
+          "mean_accel_ms2": 0.03740421455938697,
+          "mean_yaw_rate_degs": -6.874186113014549
+        }
+      },
+      "task4_regime_stability": {
+        "regime_offsets": {
+          "straight_cruise": {
+            "mean_offset_deg": 12.526662836929031,
+            "std_deg": 19.7554772955932,
+            "median_deg": 10.399386839341417,
+            "iqr_deg": 23.37031566466443,
+            "deviation_from_overall_deg": 0.6981189410753881
+          },
+          "left_turn": {
+            "mean_offset_deg": 13.482676041292917,
+            "std_deg": 18.901824591457103,
+            "median_deg": 10.527499094629292,
+            "iqr_deg": 21.62493167910084,
+            "deviation_from_overall_deg": 0.2578942632853123
+          },
+          "right_turn": {
+            "mean_offset_deg": 14.670118639546265,
+            "std_deg": 18.80761627229004,
+            "median_deg": 11.085405827937677,
+            "iqr_deg": 22.028450792617534,
+            "deviation_from_overall_deg": 1.445336861541269
+          }
+        },
+        "pairwise_deviations_deg": {
+          "straight_cruise_vs_left_turn": 0.9560132043636839,
+          "straight_cruise_vs_right_turn": 2.1434558026172863,
+          "left_turn_vs_right_turn": 1.18744259825324
+        },
+        "turn_vs_cruise_deviation_deg": 2.1434558026172863,
+        "max_inter_regime_deviation_deg": 2.1434558026172863,
+        "stability_status": "PASS"
+      },
+      "task5_convergence": {
+        "5s": {
+          "num_windows": 25,
+          "mean_error_vs_trip_deg": 13.651595292136285,
+          "p95_error_vs_trip_deg": 35.650926944674985,
+          "max_error_vs_trip_deg": 43.970784638118346,
+          "stability_within_3deg_pct": 12.0
+        },
+        "10s": {
+          "num_windows": 24,
+          "mean_error_vs_trip_deg": 12.334617663490869,
+          "p95_error_vs_trip_deg": 33.86863977057017,
+          "max_error_vs_trip_deg": 38.84066596681663,
+          "stability_within_3deg_pct": 16.666666666666664
+        },
+        "15s": {
+          "num_windows": 23,
+          "mean_error_vs_trip_deg": 11.909004288753716,
+          "p95_error_vs_trip_deg": 33.00468066195009,
+          "max_error_vs_trip_deg": 34.09551721659477,
+          "stability_within_3deg_pct": 17.391304347826086
+        },
+        "20s": {
+          "num_windows": 22,
+          "mean_error_vs_trip_deg": 10.858803940216777,
+          "p95_error_vs_trip_deg": 29.872111200768572,
+          "max_error_vs_trip_deg": 31.24458005349595,
+          "stability_within_3deg_pct": 18.181818181818183
+        },
+        "30s": {
+          "num_windows": 20,
+          "mean_error_vs_trip_deg": 9.57443695836574,
+          "p95_error_vs_trip_deg": 23.6243105994064,
+          "max_error_vs_trip_deg": 25.255988453035457,
+          "stability_within_3deg_pct": 10.0
+        },
+        "45s": {
+          "num_windows": 17,
+          "mean_error_vs_trip_deg": 8.092334135523357,
+          "p95_error_vs_trip_deg": 14.322736165337954,
+          "max_error_vs_trip_deg": 15.166108742075238,
+          "stability_within_3deg_pct": 17.647058823529413
+        },
+        "60s": {
+          "num_windows": 14,
+          "mean_error_vs_trip_deg": 6.461701563715217,
+          "p95_error_vs_trip_deg": 9.623334711361148,
+          "max_error_vs_trip_deg": 9.735523875519306,
+          "stability_within_3deg_pct": 14.285714285714285
+        },
+        "90s": {
+          "num_windows": 8,
+          "mean_error_vs_trip_deg": 2.357067583908954,
+          "p95_error_vs_trip_deg": 3.4895655850247578,
+          "max_error_vs_trip_deg": 3.558929122871575,
+          "stability_within_3deg_pct": 62.5
+        },
+        "120s": {
+          "num_windows": 2,
+          "mean_error_vs_trip_deg": 0.3051684820519256,
+          "p95_error_vs_trip_deg": 0.33997555009837865,
+          "max_error_vs_trip_deg": 0.34384300210354013,
+          "stability_within_3deg_pct": 100.0
+        }
+      },
+      "task6_anti_circularity_validation": {
+        "estimated_offset_deg": 13.224781778004845,
+        "ground_truth_offset_deg": 13.319565567387134,
+        "offset_error_deg": 0.0947837893822907,
+        "u_fwd_phone_estimated": [
+          -0.236,
+          -0.0148,
+          -0.9716
+        ],
+        "u_fwd_phone_ground_truth": [
+          -0.2376,
+          -0.0148,
+          -0.9712
+        ],
+        "vector_alignment_error_deg": 0.09478378937341783,
+        "calibrated_compass_heading_mae_deg": 11.839053497284755,
+        "calibrated_compass_heading_rmse_deg": 15.460405023153458,
+        "anti_circularity_assert": "VERIFIED: Vehicle GT was never queried during estimation"
+      },
+      "task7_gyro_recovery": {
+        "turn_evaluation_samples": 317,
+        "corr_calibrated_yaw_vs_veh": -0.047852221532206744,
+        "corr_raw_gyro_x_vs_veh": 0.15708796950237183,
+        "corr_raw_gyro_y_vs_veh": -0.09078471519854416,
+        "corr_raw_gyro_z_vs_veh": -0.04941980580134957,
+        "finding": "Horizontal GNSS course rotates the forward/lateral plane, but preserves vertical z-axis. Gyro z projection is invariant under pure yaw rotation."
+      },
+      "task8_outage_drift": {
+        "10s_outage": {
+          "num_evaluations": 9,
+          "baseline_cep50_m": 85.47480887111564,
+          "baseline_heading_mae_deg": 5.1860607733177995,
+          "proposed_cep50_m": 85.88652404716461,
+          "proposed_heading_mae_deg": 6.678244875677678,
+          "drift_reduction_pct": -0.4816801365064016,
+          "heading_err_reduction_pct": -28.772977556243507
+        },
+        "30s_outage": {
+          "num_evaluations": 6,
+          "baseline_cep50_m": 254.62321043750438,
+          "baseline_heading_mae_deg": 22.01914267669098,
+          "proposed_cep50_m": 250.32574486233585,
+          "proposed_heading_mae_deg": 9.364753638269157,
+          "drift_reduction_pct": 1.6877744836318875,
+          "heading_err_reduction_pct": 57.46994433083674
+        },
+        "60s_outage": {
+          "num_evaluations": 2,
+          "baseline_cep50_m": 443.41932224675577,
+          "baseline_heading_mae_deg": 20.780757805535373,
+          "proposed_cep50_m": 472.13611523462487,
+          "proposed_heading_mae_deg": 13.105711667364607,
+          "drift_reduction_pct": -6.476215975967015,
+          "heading_err_reduction_pct": 36.93342759678554
+        }
+      },
+      "task9_failure_modes": {
+        "stationary_bearing_jitter_deg": 0.0,
+        "nominal_mag_field_uT": 37.82584698324679,
+        "mag_anomaly_percentage": 1.5651201788708775,
+        "forward_vector_vertical_leakage_deg": -76.32046773076716,
+        "recommendations": {
+          "zero_speed_guard": "Inhibit GNSS-course calibration when speed < 3.0 m/s",
+          "magnetic_anomaly_guard": "Gate compass heading when |B| deviates > 10 uT from median baseline",
+          "road_grade_guard": "Forward axis is leveled via static gravity; horizontal heading is decoupled from pitch"
+        }
+      },
+      "task10_decision": {
+        "decision": "ACCEPT",
+        "rationale": "Stability=PASS (max inter-regime dev 2.14\u00b0, turn vs cruise dev 2.14\u00b0), offset error vs GT=0.09\u00b0, calibrated compass heading MAE=11.84\u00b0"
+      }
+    }
+  }
+}

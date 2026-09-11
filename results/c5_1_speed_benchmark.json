@@ -1,0 +1,118 @@
+{
+  "benchmark_results": {
+    "Baseline Mean": {
+      "mae_ms": 2.067010593535013,
+      "rmse_ms": 2.54625409016172,
+      "mae_kmh": 7.441238136726047,
+      "rmse_kmh": 9.166514724582193,
+      "max_err_ms": 8.412505139344594,
+      "bias_ms": -1.1050516717037422,
+      "r2": -0.23205556460722665
+    },
+    "Model A (Random Forest)": {
+      "mae_ms": 2.2439792281883055,
+      "rmse_ms": 2.8388430877888444,
+      "mae_kmh": 8.0783252214779,
+      "rmse_kmh": 10.21983511603984,
+      "max_err_ms": 7.826339195601589,
+      "bias_ms": 0.9187050392989723,
+      "r2": -0.5314738721942938
+    },
+    "Model B (Gradient Boosting)": {
+      "mae_ms": 2.06965701801432,
+      "rmse_ms": 2.622323229615387,
+      "mae_kmh": 7.450765264851553,
+      "rmse_kmh": 9.440363626615394,
+      "max_err_ms": 8.97006412549326,
+      "bias_ms": 0.6528627408351868,
+      "r2": -0.3067703126196899
+    },
+    "Model C (Small MLP)": {
+      "mae_ms": 2.727058326277518,
+      "rmse_ms": 3.4412600367421753,
+      "mae_kmh": 9.817409974599064,
+      "rmse_kmh": 12.388536132271831,
+      "max_err_ms": 11.736018520723862,
+      "bias_ms": 1.3678030579524685,
+      "r2": -1.2504107690218937
+    },
+    "Previous Model (W=10 baseline)": {
+      "mae_ms": 2.2074358566961103,
+      "rmse_ms": 2.8164331099479623,
+      "mae_kmh": 7.9467690841059975,
+      "rmse_kmh": 10.139159195812665,
+      "max_err_ms": 9.495094316177646,
+      "bias_ms": -0.6878425868354578,
+      "r2": -0.5018454243849573
+    }
+  },
+  "speed_range_breakdown": [
+    {
+      "Speed Bin": "0 - 5 m/s (0 - 18 km/h)",
+      "Sample Count": 81,
+      "MAE (m/s)": 2.1653706429366477,
+      "RMSE (m/s)": 2.4485001689906682,
+      "MAE (km/h)": 7.795334314571932,
+      "Bias (m/s)": 1.6054848513784665
+    },
+    {
+      "Speed Bin": "5 - 10 m/s (18 - 36 km/h)",
+      "Sample Count": 189,
+      "MAE (m/s)": 3.22107399655098,
+      "RMSE (m/s)": 3.8685516285735537,
+      "MAE (km/h)": 11.595866387583529,
+      "Bias (m/s)": 2.881659589017329
+    },
+    {
+      "Speed Bin": "10 - 15 m/s (36 - 54 km/h)",
+      "Sample Count": 1500,
+      "MAE (m/s)": 1.9194099429728955,
+      "RMSE (m/s)": 2.4300098644917223,
+      "MAE (km/h)": 6.909875794702423,
+      "Bias (m/s)": 0.3205927439948999
+    },
+    {
+      "Speed Bin": "> 15 m/s (> 54 km/h)",
+      "Sample Count": 0,
+      "MAE (m/s)": NaN,
+      "RMSE (m/s)": NaN,
+      "MAE (km/h)": NaN,
+      "Bias (m/s)": NaN
+    }
+  ],
+  "sync_info": {
+    "train": {
+      "trip_name": "Vta02",
+      "n_samples_phone": 10991,
+      "n_samples_veh": 10991,
+      "dt_mean_phone": 0.09999981801637853,
+      "dt_std_phone": 0.0006983667177288274,
+      "duration_s": 1098.998,
+      "min_vbox_speed": 0.0011111111111111111,
+      "max_vbox_speed": 22.678888888888885,
+      "mean_vbox_speed": 10.05299080560863
+    },
+    "test": {
+      "trip_name": "Vta04",
+      "n_samples_phone": 1789,
+      "n_samples_veh": 1789,
+      "dt_mean_phone": 0.09999944071588367,
+      "dt_std_phone": 0.0005651114205414236,
+      "duration_s": 178.799,
+      "min_vbox_speed": 1.6488888888888888,
+      "max_vbox_speed": 14.356111111111112,
+      "mean_vbox_speed": 11.139835724489162
+    }
+  },
+  "leakage_audit": {
+    "1. No VBOX speed in features": true,
+    "2. No GNSS speed/coords in features": true,
+    "3. Causal window only (no future data)": true,
+    "4. Strict trip separation (Vta02 != Vta04)": true,
+    "5. Normalization parameters fit only on train": true,
+    "6. Feature matrix shape consistency": true,
+    "7. No NaN or Inf values in train/test": true
+  },
+  "feature_count": 72,
+  "best_model": "Model B (Gradient Boosting)"
+}

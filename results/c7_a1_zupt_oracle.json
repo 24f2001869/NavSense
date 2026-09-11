@@ -1,0 +1,150 @@
+{
+  "status": "Complete",
+  "timestamp": "2026-09-05 23:43:39",
+  "sub_phase": "Stage C7-A1: Oracle ZUPT Diagnostic",
+  "trip": "Vta02",
+  "horizons_evaluation": {
+    "10s": {
+      "horizon_s": 10.0,
+      "group_a_stop_intersecting": {
+        "n_windows": 3,
+        "baseline_drift_mean": 20.439162640327805,
+        "zupt_drift_mean": 0.9550042837575617,
+        "baseline_drift_median": 24.008694786530587,
+        "zupt_drift_median": 1.0869548854146378,
+        "baseline_vel_mean": 4.416427339150835,
+        "zupt_vel_mean": 0.7250116134502931,
+        "baseline_long_mean": 20.342739656202742,
+        "zupt_long_mean": 0.609433690045901,
+        "reduction_m": 19.484158356570244,
+        "reduction_pct": 95.32757627813345
+      },
+      "group_b_continuous_motion": {
+        "n_windows": 52,
+        "baseline_drift_mean": 51.83386154266988,
+        "zupt_drift_mean": 51.056908724699014,
+        "baseline_drift_median": 39.31724008576788,
+        "zupt_drift_median": 37.540143521578464
+      },
+      "aggregate": {
+        "n_windows_total": 55,
+        "baseline_drift_mean": 50.12142342072396,
+        "zupt_drift_mean": 48.32407757337493,
+        "overall_reduction_m": 1.7973458473490282,
+        "overall_reduction_pct": 3.585983247646296
+      }
+    },
+    "20s": {
+      "horizon_s": 20.0,
+      "group_a_stop_intersecting": {
+        "n_windows": 5,
+        "baseline_drift_mean": 41.19541032148159,
+        "zupt_drift_mean": 16.602572670987875,
+        "baseline_drift_median": 42.84449696800117,
+        "zupt_drift_median": 8.38562542247726,
+        "baseline_vel_mean": 5.920387211714937,
+        "zupt_vel_mean": 3.832964888990747,
+        "baseline_long_mean": 39.44330360197107,
+        "zupt_long_mean": 4.35841255609912,
+        "reduction_m": 24.592837650493713,
+        "reduction_pct": 59.69800387610081
+      },
+      "group_b_continuous_motion": {
+        "n_windows": 49,
+        "baseline_drift_mean": 206.87197534917965,
+        "zupt_drift_mean": 209.07536730858214,
+        "baseline_drift_median": 163.77265261835785,
+        "zupt_drift_median": 165.02687081483273
+      },
+      "aggregate": {
+        "n_windows_total": 54,
+        "baseline_drift_mean": 191.53155266142983,
+        "zupt_drift_mean": 191.2538122495456,
+        "overall_reduction_m": 0.27774041188422416,
+        "overall_reduction_pct": 0.14501026490146282
+      }
+    },
+    "30s": {
+      "horizon_s": 30.0,
+      "group_a_stop_intersecting": {
+        "n_windows": 6,
+        "baseline_drift_mean": 207.81775931994014,
+        "zupt_drift_mean": 110.09633831918194,
+        "baseline_drift_median": 246.0471792623511,
+        "zupt_drift_median": 100.66832855465303,
+        "baseline_vel_mean": 24.496785550210756,
+        "zupt_vel_mean": 17.203284797752172,
+        "baseline_long_mean": 171.59189832715012,
+        "zupt_long_mean": 66.87061718858885,
+        "reduction_m": 97.7214210007582,
+        "reduction_pct": 47.0226516350385
+      },
+      "group_b_continuous_motion": {
+        "n_windows": 48,
+        "baseline_drift_mean": 470.01319865320994,
+        "zupt_drift_mean": 470.8563673096184,
+        "baseline_drift_median": 411.7308684614193,
+        "zupt_drift_median": 411.7308684614193
+      },
+      "aggregate": {
+        "n_windows_total": 54,
+        "baseline_drift_mean": 440.8803720606245,
+        "zupt_drift_mean": 430.77191964401453,
+        "overall_reduction_m": 10.108452416609964,
+        "overall_reduction_pct": 2.2927880343967715
+      }
+    },
+    "60s": {
+      "horizon_s": 60.0,
+      "group_a_stop_intersecting": {
+        "n_windows": 9,
+        "baseline_drift_mean": 1339.428280311983,
+        "zupt_drift_mean": 725.9649738277246,
+        "baseline_drift_median": 915.6239921567841,
+        "zupt_drift_median": 728.601014175076,
+        "baseline_vel_mean": 65.32561197965805,
+        "zupt_vel_mean": 30.699365372939877,
+        "baseline_long_mean": 1108.4713025973174,
+        "zupt_long_mean": 609.9895604353345,
+        "reduction_m": 613.4633064842583,
+        "reduction_pct": 45.800384798607425
+      },
+      "group_b_continuous_motion": {
+        "n_windows": 43,
+        "baseline_drift_mean": 1436.2330999686942,
+        "zupt_drift_mean": 1453.2718299272492,
+        "baseline_drift_median": 976.1609239177204,
+        "zupt_drift_median": 976.1609239177204
+      },
+      "aggregate": {
+        "n_windows_total": 52,
+        "baseline_drift_mean": 1419.4784196434941,
+        "zupt_drift_mean": 1327.3917971407932,
+        "overall_reduction_m": 92.08662250270095,
+        "overall_reduction_pct": 6.487356287236036
+      }
+    }
+  },
+  "stop7_forensic_case_study": {
+    "window_start_time_s": 700.0,
+    "outage_duration_s": 60.0,
+    "stop_start_relative_s": 7.3,
+    "stop_end_relative_s": 53.2,
+    "pre_stop_vel_err_base": 5.891495337622194,
+    "pre_stop_vel_err_zupt": 5.891495337622194,
+    "mid_stop_vel_err_base": 29.899803930626746,
+    "mid_stop_vel_err_zupt": 0.01140135750543631,
+    "end_vel_err_base": 11.871578371563986,
+    "end_vel_err_zupt": 3.449619179084216,
+    "end_drift_base_m": 830.4256491801073,
+    "end_drift_zupt_m": 13.257056085761304,
+    "end_drift_reduction_m": 817.168593094346,
+    "end_drift_reduction_pct": 98.40358301807632,
+    "final_ba_x_base": -0.0856845588617808,
+    "final_ba_x_zupt": 0.09755907525664342
+  },
+  "figures": [
+    "results\\figures\\c7_a1_oracle_zupt_timeseries_forensic.png",
+    "results\\figures\\c7_a1_oracle_zupt_drift_comparison.png"
+  ]
+}
