@@ -1,8 +1,8 @@
-# Android Deployment Engine & Sensor Telemetry System
+# NavSense: Android Deployment Engine & Sensor Telemetry System
 
 ## 1. Overview & Architectural Role
 
-The `android/` directory contains the production-ready edge navigation prototype developed for **SIH26168**. It is designed to run locally on commercial Android smartphones without cloud connectivity, executing real-time dead reckoning during GNSS blackouts.
+The `android/` directory contains the production-ready edge navigation prototype of **NavSense** (developed for **SIH26168**). It is designed to run locally on commercial Android smartphones without cloud connectivity, executing real-time dead reckoning during GNSS blackouts.
 
 ```
                   ┌─────────────────────────────────────┐

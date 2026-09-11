@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420">
+  <defs>
+    <style>
+      @keyframes radarSweep {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulseRing {
+        0% { r: 40px; opacity: 0.8; }
+        50% { r: 90px; opacity: 0.3; }
+        100% { r: 140px; opacity: 0; }
+      }
+      @keyframes pulseBeacon {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(0.95); }
+      }
+      @keyframes packetMove {
+        0% { stroke-dashoffset: 200; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes glowText {
+        0%, 100% { filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.6)); }
+        50% { filter: drop-shadow(0 0 24px rgba(129, 140, 248, 0.9)); }
+      }
+
+      .title-nav { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 900; font-size: 58px; letter-spacing: 6px; animation: glowText 4s infinite ease-in-out; }
+      .sub-title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 500; font-size: 17px; fill: #94a3b8; letter-spacing: 2px; }
+      .tag-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 700; font-size: 11px; letter-spacing: 1px; }
+      .metric-val { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 800; font-size: 20px; fill: #38bdf8; }
+      .metric-lbl { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-weight: 600; font-size: 11px; fill: #64748b; letter-spacing: 0.5px; }
+
+      .radar-sweep { transform-origin: 1040px 210px; animation: radarSweep 6s linear infinite; }
+      .radar-pulse-1 { animation: pulseRing 3s linear infinite; }
+      .radar-pulse-2 { animation: pulseRing 3s linear infinite 1.5s; }
+      .beacon { animation: pulseBeacon 2s infinite ease-in-out; transform-origin: 52px 64px; }
+      .packet-line { stroke-dasharray: 8 16; animation: packetMove 2s linear infinite; }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#030712" />
+      <stop offset="50%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#818cf8" />
+      <stop offset="80%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#f472b6" />
+    </linearGradient>
+
+    <linearGradient id="radarSweepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(56, 189, 248, 0)" />
+      <stop offset="70%" stop-color="rgba(56, 189, 248, 0.05)" />
+      <stop offset="100%" stop-color="rgba(56, 189, 248, 0.4)" />
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="cyberGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.75" opacity="0.45" />
+      <circle cx="40" cy="40" r="1" fill="#38bdf8" opacity="0.3" />
+    </pattern>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" rx="20" fill="url(#bgGrad)" stroke="#1e293b" stroke-width="2" />
+  <rect width="1200" height="420" rx="20" fill="url(#cyberGrid)" />
+
+  <!-- Outer Cyber Frame Accents -->
+  <path d="M 30 50 L 50 30 L 250 30" fill="none" stroke="#38bdf8" stroke-width="2" opacity="0.7" />
+  <path d="M 1170 370 L 1150 390 L 950 390" fill="none" stroke="#818cf8" stroke-width="2" opacity="0.7" />
+  <circle cx="30" cy="50" r="3" fill="#38bdf8" />
+  <circle cx="1170" cy="370" r="3" fill="#818cf8" />
+
+  <!-- Animated Sensor Conduits (Top & Bottom) -->
+  <path d="M 60 70 L 650 70" stroke="#0ea5e9" stroke-width="2" opacity="0.5" class="packet-line" />
+  <path d="M 60 370 L 650 370" stroke="#6366f1" stroke-width="2" opacity="0.5" class="packet-line" />
+
+  <!-- Radar HUD Scanner (Right Side) -->
+  <g transform="translate(0, 0)">
+    <!-- Radar Base Circles -->
+    <circle cx="1040" cy="210" r="150" fill="#090d1a" stroke="#1e293b" stroke-width="1.5" />
+    <circle cx="1040" cy="210" r="110" fill="none" stroke="#334155" stroke-width="1" stroke-dasharray="4 4" />
+    <circle cx="1040" cy="210" r="70" fill="none" stroke="#0ea5e9" stroke-width="1" opacity="0.4" />
+    <circle cx="1040" cy="210" r="30" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.6" />
+
+    <!-- Pulse Waves -->
+    <circle cx="1040" cy="210" r="40" fill="none" stroke="#38bdf8" stroke-width="1.5" class="radar-pulse-1" />
+    <circle cx="1040" cy="210" r="40" fill="none" stroke="#818cf8" stroke-width="1.5" class="radar-pulse-2" />
+
+    <!-- Crosshairs -->
+    <line x1="880" y1="210" x2="1200" y2="210" stroke="#334155" stroke-width="1" opacity="0.6" />
+    <line x1="1040" y1="50" x2="1040" y2="370" stroke="#334155" stroke-width="1" opacity="0.6" />
+    <line x1="935" y1="105" x2="1145" y2="315" stroke="#1e293b" stroke-width="1" />
+    <line x1="935" y1="315" x2="1145" y2="105" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Rotating Sweep Beam -->
+    <g class="radar-sweep">
+      <path d="M 1040 210 L 1190 210 A 150 150 0 0 0 1146 104 Z" fill="url(#radarSweepGrad)" />
+      <line x1="1040" y1="210" x2="1190" y2="210" stroke="#38bdf8" stroke-width="2" />
+    </g>
+
+    <!-- Radar Target Blips -->
+    <circle cx="1085" cy="165" r="4" fill="#34d399" />
+    <circle cx="1085" cy="165" r="8" fill="none" stroke="#34d399" stroke-width="1" opacity="0.7" />
+    <circle cx="980" cy="245" r="3.5" fill="#f87171" />
+    <circle cx="1015" cy="275" r="3" fill="#fbbf24" />
+
+    <!-- Radar Labels -->
+    <text x="1040" y="75" fill="#64748b" font-size="10" font-family="monospace" text-anchor="middle">N 360°</text>
+    <text x="1040" y="360" fill="#64748b" font-size="10" font-family="monospace" text-anchor="middle">S 180°</text>
+    <text x="900" y="214" fill="#64748b" font-size="10" font-family="monospace">W 270°</text>
+    <text x="1165" y="214" fill="#64748b" font-size="10" font-family="monospace">E 090°</text>
+    <text x="1040" y="395" fill="#38bdf8" font-size="11" font-family="monospace" font-weight="700" text-anchor="middle">60s OUTAGE RADAR HUD</text>
+  </g>
+
+  <!-- Left Content Column -->
+  <g transform="translate(60, 60)">
+    <!-- Status Badge -->
+    <g class="beacon">
+      <rect x="0" y="0" width="280" height="26" rx="13" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" />
+      <circle cx="14" cy="13" r="5" fill="#34d399" />
+      <circle cx="14" cy="13" r="8" fill="none" stroke="#34d399" stroke-width="1" opacity="0.6" />
+      <text class="tag-text" x="28" y="17" fill="#38bdf8">SYSTEM ACTIVE • 10 Hz CAUSAL FUSION</text>
+    </g>
+
+    <!-- Main Title -->
+    <text class="title-nav" x="0" y="90" fill="url(#titleGrad)">NAVSENSE</text>
+
+    <!-- Subtitle -->
+    <text class="sub-title" x="2" y="124">AI/ML-BASED INTELLIGENT DEAD RECKONING</text>
+    <text class="sub-title" x="2" y="148" fill="#64748b" font-size="14">GNSS-Denied Ground Vehicle Navigation Engine • SIH Problem 26168</text>
+
+    <!-- Architecture Feature Tags -->
+    <g transform="translate(0, 175)">
+      <rect x="0" y="0" width="130" height="24" rx="6" fill="#1e1b4b" stroke="#6366f1" stroke-width="1" />
+      <text class="tag-text" x="65" y="16" fill="#a5b4fc" text-anchor="middle">15-STATE ESKF</text>
+
+      <rect x="140" y="0" width="150" height="24" rx="6" fill="#082f49" stroke="#0284c7" stroke-width="1" />
+      <text class="tag-text" x="215" y="16" fill="#7dd3fc" text-anchor="middle">DILATED TCN (ONNX)</text>
+
+      <rect x="300" y="0" width="165" height="24" rx="6" fill="#064e3b" stroke="#059669" stroke-width="1" />
+      <text class="tag-text" x="382" y="16" fill="#6ee7b7" text-anchor="middle">CAUSAL ZVD GATING</text>
+
+      <rect x="475" y="0" width="155" height="24" rx="6" fill="#431407" stroke="#ea580c" stroke-width="1" />
+      <text class="tag-text" x="552" y="16" fill="#fdba74" text-anchor="middle">ADAPTIVE REGIME</text>
+    </g>
+
+    <!-- Real-Time Metric Telemetry Cards -->
+    <g transform="translate(0, 220)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="145" height="66" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+      <text class="metric-val" x="14" y="32">16.76%</text>
+      <text class="metric-lbl" x="14" y="52">60s MEAN DRIFT</text>
+
+      <!-- Card 2 -->
+      <rect x="155" y="0" width="145" height="66" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+      <text class="metric-val" x="169" y="32" fill="#34d399">3.01%</text>
+      <text class="metric-lbl" x="169" y="52">PEAK PASS (Vw12)</text>
+
+      <!-- Card 3 -->
+      <rect x="310" y="0" width="145" height="66" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+      <text class="metric-val" x="324" y="32" fill="#fb923c">575%➔47%</text>
+      <text class="metric-lbl" x="324" y="52">URBAN RUNAWAY CUT</text>
+
+      <!-- Card 4 -->
+      <rect x="465" y="0" width="165" height="66" rx="8" fill="#0f172a" stroke="#1e293b" stroke-width="1.5" />
+      <text class="metric-val" x="479" y="32" fill="#c084fc">162 KB</text>
+      <text class="metric-lbl" x="479" y="52">ON-DEVICE ONNX MODEL</text>
+    </g>
+  </g>
+</svg>

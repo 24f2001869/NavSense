@@ -1,6 +1,6 @@
 # GitHub Release & Readiness Checklist
 
-> **Target Repository:** `24f2001869/SIH26168-IDR`  
+> **Target Repository:** `24f2001869/NavSense`  
 > **Phase:** 6.1 — Final GitHub Preparation & Self-Contained Repository Audit  
 > **Date:** September 11, 2026  
 > **Audit Status:** ✅ Complete — Ready for User Inspection  

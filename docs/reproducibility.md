@@ -17,8 +17,8 @@ This document provides step-by-step instructions for reproducing all major exper
 ### Virtual Environment Setup
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/SIH26168-IDR.git
-cd SIH26168-IDR
+git clone https://github.com/24f2001869/NavSense.git
+cd NavSense
 
 # Create isolated Python virtual environment
 python -m venv .venv

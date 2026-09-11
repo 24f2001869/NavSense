@@ -1,10 +1,11 @@
 # START HERE: 5-Minute Project Onboarding
 
-> **Project:** SIH26168-IDR (AI/ML-Based Intelligent Dead Reckoning for GNSS-Denied Navigation)  
+> **Project:** **NavSense** (AI/ML-Based Intelligent Dead Reckoning for GNSS-Denied Navigation | SIH Problem Statement 26168)  
+> **Repository:** `24f2001869/NavSense`  
 > **Target Audience:** Researchers, evaluators, judges, software engineers, and new contributors.  
 > **Reading Time:** ~5 minutes.  
 
-Welcome to the `SIH26168-IDR` research repository. This document gives you an immediate, transparent, and accurate understanding of the project, its discoveries, and where to look next.
+Welcome to the **NavSense** research repository. This document gives you an immediate, transparent, and accurate understanding of the project, its discoveries, and where to look next.
 
 ---
 
@@ -79,7 +80,7 @@ We report our numbers transparently without cherry-picking:
 ## 8. Where Are the Important Files?
 
 ```text
-SIH26168-IDR/
+NavSense/
 ├── README.md                      ← Master repository documentation
 ├── docs/
 │   ├── START_HERE.md              ← This document
@@ -101,9 +102,9 @@ SIH26168-IDR/
 ## 9. How Can Someone Reproduce It?
 
 ```bash
-# 1. Clone repository (once published)
-git clone https://github.com/24f2001869/SIH26168-IDR.git
-cd SIH26168-IDR
+# 1. Clone repository
+git clone https://github.com/24f2001869/NavSense.git
+cd NavSense
 
 # 2. Install Python dependencies
 pip install -r requirements.txt

@@ -1,6 +1,6 @@
 # GitHub Large File & Data Audit
 
-> **Target Repository:** `24f2001869/SIH26168-IDR`  
+> **Target Repository:** `24f2001869/NavSense`  
 > **Policy:** GitHub file size limit is 100 MB hard limit; recommended <50 MB. No large binary datasets, checkpoints, or local caches should be committed.  
 > **Date:** September 11, 2026  
 > **Audit Status:** ✅ All large files identified, categorized, and filtered via `.gitignore`.

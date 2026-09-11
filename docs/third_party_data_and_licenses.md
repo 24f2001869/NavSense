@@ -1,6 +1,6 @@
 # Third-Party Data, Open-Source Software, and Licenses
 
-> **Repository:** `SIH26168-IDR`  
+> **Repository:** `NavSense` (`24f2001869/NavSense`)  
 > **Author / Maintainer:** `24f2001869`  
 > **Repository License:** MIT License (see [`LICENSE`](../LICENSE))  
 

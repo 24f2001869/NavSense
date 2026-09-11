@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "SIH26168-IDR"
+rootProject.name = "NavSense"
 include(":app")
