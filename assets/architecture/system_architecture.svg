@@ -44,8 +44,8 @@
 
   <!-- Header Section -->
   <g transform="translate(40, 36)">
-    <text class="title" x="0" y="0">SIH26168-IDR: System Architecture</text>
-    <text class="subtitle" x="0" y="22">AI/ML-Based Intelligent Dead Reckoning for Smartphone GNSS-Denied Navigation</text>
+    <text class="title" x="0" y="0">NavSense: System Architecture</text>
+    <text class="subtitle" x="0" y="22">AI/ML-Based Inertial Dead Reckoning for GNSS-Denied Ground Vehicles (SIH 26168)</text>
     <rect x="670" y="-18" width="210" height="26" rx="13" fill="#3b0764" stroke="#7e22ce" stroke-width="1.5" />
     <text class="badge" x="775" y="-1" fill="#d8b4fe" text-anchor="middle">RESEARCH PROTOTYPE ARCHITECTURE</text>
   </g>
