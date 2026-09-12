@@ -13,8 +13,8 @@
 * **Article Type:** Research Article
 * **Full Title:** Failure-Aware Smartphone Inertial Dead Reckoning Under GNSS Outages: An Empirical Study of Learned Velocity, Sensor Fusion, Map Constraints, and Distribution Shift
 * **Short Running Title ($\le 40$ characters):** Failure-Aware Smartphone Dead Reckoning
-* **Manuscript Word Count (Main Body):** 7,105 words (official Microsoft Word COM count; within Cambridge 6,000–8,000 range)
-* **Actual Submission Page Count:** 18 pages (single-column, 12 pt Times New Roman, single spacing, 2.54 cm margins, compliant with $\le 20$ page limit)
+* **Manuscript Word Count (Main Body):** 7,247 words (official Microsoft Word COM count; within Cambridge 6,000–8,000 range)
+* **Actual Submission Page Count:** 20 pages (single-column, 12 pt Times New Roman, single spacing, 2.54 cm margins, compliant with $\le 20$ page limit)
 * **Intended Publication Route:** Conventional / Subscription publication; Gold Open Access not selected. No Gold-OA APC is incurred when publishing through the conventional route; optional paid services and print-colour charges are not selected.
 
 ---
