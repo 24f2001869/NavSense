@@ -29,7 +29,7 @@
   University of Hyderabad  
   Prof. C.R. Rao Road, Gachibowli, Hyderabad 500046, Telangana, India
 * **Additional Academic Programme Note:**  
-  The author is concurrently enrolled in the BS Degree in Data Science and Applications (Diploma Level) at the Indian Institute of Technology Madras (IIT Madras). In strict accordance with Cambridge Journal of Navigation affiliation policy—which mandates that affiliations reflect the primary institution where the physical research was undertaken—IIT Madras is omitted from the formal research affiliation block to prevent institutional misattribution.
+  The author is concurrently enrolled in the BS Degree in Data Science and Applications (Diploma Level) at the Indian Institute of Technology Madras (IIT Madras). The formal affiliation reflects the primary academic institution associated with the research presented in this manuscript (University of Hyderabad).
 * **ORCID ID:**  
   `[REQUIRED — AUTHOR MUST SUPPLY DURING SCHOLARONE SUBMISSION]`  
   *(Cambridge University Press mandates an authenticated ORCID for corresponding authors. See `publication/ORCID_REQUIRED.md` for instructions).*
@@ -38,9 +38,9 @@
 
 ## 3. Abstract
 
-*(Exact word count: 147 words. Formatted as a single, self-contained paragraph without citations or unexplained acronyms).*
+*(Exact word count: 148 words. Formatted as a single, self-contained paragraph without citations or unexplained acronyms).*
 
-> During Global Navigation Satellite System (GNSS) outages, smartphone inertial dead reckoning suffers from rapid nonlinear open-loop position drift due to low-cost sensor errors. We present an empirical study evaluating learned forward velocity estimation, sensor fusion, kinematic constraints, map feedback, and distribution shifts using the public IO-VNBD benchmark dataset (64 passenger-car trips, 16.27 hours). On 19 trip-disjoint test routes, scaling a causal temporal convolutional network from 6 to 39 training trips reduces velocity error by 55.27% (6.17 to 2.76 m/s) and 60-second drift by 64.72% (263.6 to 93.0 m). However, unconditional lateral kinematic constraints degrade 60-second drift by 45.47%, and closed-loop map heading feedback degrades drift by 125.5%. Across 13 usable 60-second blackout trajectories, adaptive fusion achieves 96.65 m mean absolute drift and a macro-average normalized drift of 16.76% across the 12 dynamic routes (stationary control Vw15 excluded per Eq. 13), satisfying a sub-10% drift benchmark on 3 of 13 routes (23.08%). Physical road validation and multi-driver generalisation remain open challenges.
+> During Global Navigation Satellite System (GNSS) outages, smartphone inertial dead reckoning suffers from rapid nonlinear open-loop position drift. We present an empirical study evaluating learned forward velocity estimation, sensor fusion, kinematic constraints, map feedback, and distribution shifts using the public IO-VNBD benchmark dataset (64 passenger-car trips, 16.27 hours). On 19 trip-disjoint test routes, scaling a causal temporal convolutional network from 6 to 39 training trips reduces velocity error by 55.27% (6.17 to 2.76 m/s) and 60-second drift by 64.72% (263.6 to 93.0 m). Unconditional lateral kinematic constraints degrade 60-second drift by 45.47%, and closed-loop map heading feedback degrades drift by 125.5%. Across 13 usable 60-second blackout trajectories, adaptive fusion achieves 96.65 m mean absolute drift and 16.76% macro-average normalized drift across 12 dynamic routes (excluding stationary control Vw15), satisfying a sub-10% drift benchmark on 3 of 13 routes (23.08%). Physical road validation and multi-driver generalisation remain open challenges.
 
 ---
 

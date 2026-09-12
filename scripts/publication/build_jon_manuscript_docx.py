@@ -208,16 +208,15 @@ def build_manuscript():
 
     abs_text = (
         "During Global Navigation Satellite System (GNSS) outages, smartphone inertial dead reckoning "
-        "suffers from rapid nonlinear open-loop position drift due to low-cost sensor errors. We present an "
-        "empirical study evaluating learned forward velocity estimation, sensor fusion, kinematic "
-        "constraints, map feedback, and distribution shifts using the public IO-VNBD benchmark dataset "
-        "(64 passenger-car trips, 16.27 hours). On 19 trip-disjoint test routes, scaling a causal temporal "
-        "convolutional network from 6 to 39 training trips reduces velocity error by 55.27% (6.17 to 2.76 m/s) "
-        "and 60-second drift by 64.72% (263.6 to 93.0 m). However, unconditional lateral kinematic constraints "
-        "degrade 60-second drift by 45.47%, and closed-loop map heading feedback degrades drift by 125.5%. "
-        "Across 13 usable 60-second blackout trajectories, adaptive fusion achieves 96.65 m mean absolute drift "
-        "and a macro-average normalized drift of 16.76% across the 12 dynamic routes (stationary control Vw15 "
-        "excluded per Eq. 13), satisfying a sub-10% drift benchmark on 3 of 13 routes (23.08%). "
+        "suffers from rapid nonlinear open-loop position drift. We present an empirical study evaluating "
+        "learned forward velocity estimation, sensor fusion, kinematic constraints, map feedback, and "
+        "distribution shifts using the public IO-VNBD benchmark dataset (64 passenger-car trips, 16.27 hours). "
+        "On 19 trip-disjoint test routes, scaling a causal temporal convolutional network from 6 to 39 training "
+        "trips reduces velocity error by 55.27% (6.17 to 2.76 m/s) and 60-second drift by 64.72% (263.6 to 93.0 m). "
+        "Unconditional lateral kinematic constraints degrade 60-second drift by 45.47%, and closed-loop map heading "
+        "feedback degrades drift by 125.5%. Across 13 usable 60-second blackout trajectories, adaptive fusion achieves "
+        "96.65 m mean absolute drift and 16.76% macro-average normalized drift across 12 dynamic routes (excluding "
+        "stationary control Vw15), satisfying a sub-10% drift benchmark on 3 of 13 routes (23.08%). "
         "Physical road validation and multi-driver generalisation remain open challenges."
     )
     p_abs = doc.add_paragraph()
@@ -253,9 +252,20 @@ def build_manuscript():
         6: ("publication/journal_of_navigation_submission/figures/Figure_06.png",
             "Figure 6. Statistical feature separability and regression bias during steady-state motorway cruising ($v \\ge 25\\text{ m/s}$): near-zero specific force leaves 80 km/h vs 110 km/h cruising weakly separable (ROC-AUC = 0.625), producing an average negative prediction bias of -3.5 m/s ($r = -0.4866$)."),
         7: ("publication/journal_of_navigation_submission/figures/Figure_07.png",
-            "Figure 7. Spectral vibration speed audit across 64 passenger-car trips (>450,000 one-second windows): dominant inertial vibration frequency (~2.2–2.5 Hz) remains invariant to vehicle speed ($r = -0.032, \\rho = -0.028$), consistent with low-frequency vehicle-body/chassis dynamics. Panel (a) shows a motorway-specific spectral example with a peak near 2.9 Hz; the corpus-wide dominant-frequency census in panel (b) centres near 2.2–2.5 Hz across all 64 trips."),
+            "Figure 7. Spectral vibration speed audit across 64 passenger-car trips (>450,000 one-second windows): dominant inertial vibration frequency (~2.2–2.5 Hz) remains invariant to vehicle speed ($r = -0.032, \\rho = -0.028$), consistent with low-frequency vehicle-body/chassis dynamics; the physical mechanism was not directly identified. Panel (a) shows a motorway-specific spectral example with a peak near 2.9 Hz; the corpus-wide dominant-frequency census in panel (b) centres near 2.2–2.5 Hz across all 64 trips."),
         8: ("publication/journal_of_navigation_submission/figures/Figure_08.png",
             "Figure 8. Pedestrian out-of-distribution dynamic response (71.66 m/s spike induced by +26.08$\\sigma$ arm-swing yaw rates) alongside Android on-device execution benchmarks on Google Pixel 7a (mean latency 9.15 ms, 99th percentile 13.89 ms).")
+    }
+
+    figure_widths = {
+        1: Inches(5.8),
+        2: Inches(5.5),
+        3: Inches(5.6),
+        4: Inches(6.0),
+        5: Inches(5.5),
+        6: Inches(5.5),
+        7: Inches(5.8),
+        8: Inches(5.4),
     }
 
     # Split markdown by double newlines into blocks
@@ -452,8 +462,8 @@ def build_manuscript():
                 p_fig.paragraph_format.space_before = Pt(0)
                 p_fig.paragraph_format.space_after = Pt(0)
                 p_fig.paragraph_format.line_spacing = 1.0
-                p_fig.paragraph_format.keep_with_next = True
-                p_fig.add_run().add_picture(fig_path, width=Inches(2.25))
+                fig_w = figure_widths.get(fig_num, Inches(5.5))
+                p_fig.add_run().add_picture(fig_path, width=fig_w)
 
                 # Figure caption beneath figure
                 p_cap = doc.add_paragraph()

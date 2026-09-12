@@ -7,7 +7,7 @@ Integrated M.Tech. (Materials Engineering), School of Engineering Sciences & Tec
 Corresponding author email: 24f2001869@ds.study.iitm.ac.in
 
 Abstract
-During Global Navigation Satellite System (GNSS) outages, smartphone inertial dead reckoning suffers from rapid nonlinear open-loop position drift due to low-cost sensor errors. We present an empirical study evaluating learned forward velocity estimation, sensor fusion, kinematic constraints, map feedback, and distribution shifts using the public IO-VNBD benchmark dataset (64 passenger-car trips, 16.27 hours). On 19 trip-disjoint test routes, scaling a causal temporal convolutional network from 6 to 39 training trips reduces velocity error by 55.27% (6.17 to 2.76 m/s) and 60-second drift by 64.72% (263.6 to 93.0 m). However, unconditional lateral kinematic constraints degrade 60-second drift by 45.47%, and closed-loop map heading feedback degrades drift by 125.5%. Across 13 usable 60-second blackout trajectories, adaptive fusion achieves 96.65 m mean absolute drift and a macro-average normalized drift of 16.76% across the 12 dynamic routes (stationary control Vw15 excluded per Eq. 13), satisfying a sub-10% drift benchmark on 3 of 13 routes (23.08%). Physical road validation and multi-driver generalisation remain open challenges.
+During Global Navigation Satellite System (GNSS) outages, smartphone inertial dead reckoning suffers from rapid nonlinear open-loop position drift. We present an empirical study evaluating learned forward velocity estimation, sensor fusion, kinematic constraints, map feedback, and distribution shifts using the public IO-VNBD benchmark dataset (64 passenger-car trips, 16.27 hours). On 19 trip-disjoint test routes, scaling a causal temporal convolutional network from 6 to 39 training trips reduces velocity error by 55.27% (6.17 to 2.76 m/s) and 60-second drift by 64.72% (263.6 to 93.0 m). Unconditional lateral kinematic constraints degrade 60-second drift by 45.47%, and closed-loop map heading feedback degrades drift by 125.5%. Across 13 usable 60-second blackout trajectories, adaptive fusion achieves 96.65 m mean absolute drift and 16.76% macro-average normalized drift across 12 dynamic routes (excluding stationary control Vw15), satisfying a sub-10% drift benchmark on 3 of 13 routes (23.08%). Physical road validation and multi-driver generalisation remain open challenges.
 
 1. Introduction
 
@@ -198,7 +198,7 @@ Dead reckoning performance is quantified using four primary metrics:
 
 $$\bar{D}_{\%} = \frac{1}{M_{\text{dyn}}} \sum_{m=1}^{M_{\text{dyn}}} \left( \frac{E_{p,m}(T)}{S_m(T)} \times 100\% \right)$$
 
-where $M_{\text{dyn}} = 12$ denotes the set of dynamic driving routes, with the stationary control route (Vw15) excluded from normalized percentage calculation to prevent division-by-zero distortion ($S < 2\text{ m}$). Absolute drift $E_p$ is reported across all 13 eligible trajectories.
+where $M_{\text{dyn}} = 12$ denotes the set of dynamic driving routes, with the stationary control route (Vw15) excluded from normalized percentage calculation to avoid distortion from the near-zero travel-distance denominator ($S < 2\text{ m}$). Normalised drift percentages are calculated using the reference distance travelled during the corresponding 60-s blackout window, $S_m(T)$, which can differ from total trip distance. Absolute drift $E_p$ is reported across all 13 eligible trajectories.
 
 3. Velocity estimation accuracy: Mean Absolute Error (MAE), Root Mean Square Error (RMSE), and signed bias ($\bar{e}_v$) relative to CAN bus reference velocity over all held-out prediction epochs.
 
@@ -341,9 +341,9 @@ Figure 6 illustrates statistical feature overlap and speed regression residuals 
 
 To test whether vehicle engine and chassis vibrations contain a speed-dependent spectral signature that could aid forward velocity estimation, a spectral audit was performed across all 64 passenger-car trips, analyzing over 450,000 one-second windows.
 
-Across the complete corpus, the correlation between dominant inertial spectral frequency and reference vehicle speed was $r = -0.032$ (Pearson) and $\rho = -0.028$ (Spearman). While a consistent spectral peak was observed between 2.2 and 2.5 Hz, this peak remained invariant across speeds from 0 to 120 km/h. Under the evaluated 10 Hz feature construction, no reliable speed dependence was identified in the dominant vibration frequency, with the ~2.2–2.5 Hz component being consistent with low-frequency vehicle-body/chassis dynamics rather than wheel rotation or engine harmonics.
+Across the complete corpus, the correlation between dominant inertial spectral frequency and reference vehicle speed was $r = -0.032$ (Pearson) and $\rho = -0.028$ (Spearman). While a consistent spectral peak was observed between 2.2 and 2.5 Hz, this peak remained invariant across speeds from 0 to 120 km/h. Under the evaluated 10 Hz feature construction, no reliable speed dependence was identified in the dominant vibration frequency, with the ~2.2–2.5 Hz component being consistent with low-frequency vehicle-body/chassis dynamics; the physical mechanism was not directly identified.
 
-Figure 7 shows the spectral energy distribution of vertical and horizontal acceleration across vehicle speed bands.
+Figure 7 shows the acceleration power spectral density across vehicle speed bands and the cross-trip correlation between dominant frequency and vehicle speed.
 
 [Figure 7 about here: publication/journal_of_navigation_submission/figures/Figure_07.png]
 

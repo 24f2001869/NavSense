@@ -104,7 +104,7 @@ def generate_figure_03():
     for patch, col in zip(bp['boxes'], box_colors):
         patch.set_facecolor(col)
     ax4.set_ylabel('Per-Trip MAE (m/s)', fontweight='bold', fontsize=10.5)
-    ax4.set_title('(d) Per-Trip Error Variance Across 19 Held-Out Test Routes', fontweight='bold', fontsize=10.5)
+    ax4.set_title('(d) Per-Trip MAE Across 19 Held-Out Test Routes', fontweight='bold', fontsize=10.5)
     ax4.grid(True, alpha=0.3, axis='y')
 
     plt.tight_layout()

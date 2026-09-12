@@ -104,7 +104,7 @@ def generate_figure_04():
 
     ax_b.set_title('(b) Innovation Instability Across 83 Windows', fontweight='bold')
     ax_b.set_xlabel('Outage Window Index (83 Windows)')
-    ax_b.set_ylabel('Forward Innovation Squared (NIS_x)')
+    ax_b.set_ylabel('Normalised Innovation Squared (NIS_x)')
     ax_b.set_ylim(0, 105)
     ax_b.grid(True, linestyle=':', alpha=0.6)
     ax_b.legend(loc='upper right', framealpha=0.92, fontsize=7.8)

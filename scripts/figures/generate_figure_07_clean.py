@@ -93,10 +93,10 @@ def generate_figure_07():
     # Shaded null correlation band (-0.1 to +0.1)
     ax_b.axhspan(-0.1, 0.1, color='#f1f5f9', alpha=0.5, label='Null Correlation Margin (±0.10)')
 
-    ax_b.annotate('Speed-Invariant Distribution:\nPopulation Mean Pearson r = -0.032\nMean Spearman ρ = -0.028\nConsistent with chassis dynamics',
-                  xy=(75, mean_r), xytext=(45, 0.38),
+    ax_b.annotate('Speed-Invariant Distribution:\nPopulation Mean Pearson r = -0.032\nMean Spearman ρ = -0.028\nConsistent with chassis dynamics;\nphysical mechanism not directly identified',
+                  xy=(75, mean_r), xytext=(40, 0.35),
                   arrowprops=dict(arrowstyle='->', color='#C62828', lw=1.1),
-                  fontsize=8, fontweight='bold', color='#0f172a',
+                  fontsize=7.8, fontweight='bold', color='#0f172a',
                   bbox=dict(boxstyle='round,pad=0.3', fc='#F8FAFC', ec='#94A3B8', lw=0.8))
 
     ax_b.set_title('(b) Frequency–Speed Correlation Across 64 Trips', fontweight='bold')

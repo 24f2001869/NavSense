@@ -29,15 +29,15 @@
 
 - [x] **Language:** UK English throughout (`generalisation`, `optimise`, `modelled`, `metre`, `kilometre`, `behaviour`, etc.).
 - [x] **Target Typography:** 12 pt Times New Roman, 2.54 cm (1 inch) margins, single column, single spacing (1.0), 0 pt before/after.
-- [x] **Page Budget:** Exactly 18 pages for main manuscript (Cambridge limit: $\le 20$ pages).
+- [x] **Page Budget:** Exactly 20 pages for main manuscript with full-width legible figures (5.4–6.0 inches wide) (Cambridge limit: $\le 20$ pages).
 - [x] **Headings Format:** Unbolded, left-aligned headings per Cambridge JoN instructions ("no unnecessary bold headings; simple formatting"). Declaration labels placed in separate left-aligned paragraphs.
-- [x] **Abstract:** Exactly 141 words (target: ~130–150 words, $\le 150$ words), single self-contained paragraph, zero citations, no unexplained acronyms.
+- [x] **Abstract:** Exactly 148 words (target: ~130–150 words, $\le 150$ words), single self-contained paragraph, zero citations, no unexplained acronyms.
 - [x] **Keywords Omitted from Text:** Manuscript body contains no keywords section per Cambridge JoN style (keywords entered in ScholarOne).
 - [x] **Harvard Citations:** In-text citations converted to Harvard author-date format: `(Kemp, 1998)`, `(Dissanayake et al., 2001)`, `(Onyekpe et al., 2021)`, `(Shin et al., 2025)`, `(Qian et al., 2025)`, `(Xiao et al., 2025)`. Zero bracketed numbers.
 - [x] **Alphabetical Reference List:** Unnumbered reference list sorted alphabetically by first author's surname. Zero hanging indent per Cambridge instructions ("Indents should NOT be used"). Exactly 17 verified entries (all cited in body).
 - [x] **Applied Sciences Duplicate & Obsolete References Resolved:** Merged duplicate entries [8] and [11] into Shin et al. (2025); corrected AVNet to Qian et al. (2025) and sequence learning to Xiao et al. (2025); purged uncited/unverified records (Goodall et al., 2006; Rohani et al., 2023).
 - [x] **Table Captions:** Placed **ABOVE** tables (`Table 1.` to `Table 7.`). Table headers repeated across pages.
-- [x] **Figure Captions:** Placed **BENEATH** figures (`Figure 1.` to `Figure 8.`).
+- [x] **Figure Captions:** Placed **BENEATH** figures (`Figure 1.` to `Figure 8.`). Embedded at full readable column width (5.4–6.0 inches wide).
 - [x] **Equations:** Rendered natively via Word OMML mathematics (0 raw LaTeX delimiters). Sequentially numbered with Arabic numerals in parentheses: `(1)` to `(13)`, centered in 2-column tables with numbers right-aligned.
 
 ---
@@ -73,8 +73,8 @@
 
 ## 6. Submission Deliverables Summary
 
-- [x] `publication/journal_of_navigation_submission/01_JON_manuscript.docx` (Primary submission file, 18 pages, 12pt Times New Roman, 1.0 single spacing, 0pt before/after, 2.54 cm margins, single column, native OMML equations).
-- [x] `publication/journal_of_navigation_submission/02_JON_manuscript.pdf` (Word-exported companion PDF, exactly 18 pages).
+- [x] `publication/journal_of_navigation_submission/01_JON_manuscript.docx` (Primary submission file, 20 pages, 12pt Times New Roman, 1.0 single spacing, 0pt before/after, 2.54 cm margins, single column, native OMML equations).
+- [x] `publication/journal_of_navigation_submission/02_JON_manuscript.pdf` (Word-exported companion PDF, exactly 20 pages).
 - [x] `publication/journal_of_navigation_submission/figures/` (Figures 1–8 in 600 DPI production TIFF format + 300 DPI PNG).
 - [x] `publication/journal_of_navigation_submission/tables/` (Tables 1–7 in clean CSV format; Table 4 without rationale column, Table 7 concise category-level).
 - [x] `publication/journal_of_navigation_submission/supplementary/Supplementary_Material.md` (Clean, reader-facing academic document with Tables S1–S3, Sections S1–S2).

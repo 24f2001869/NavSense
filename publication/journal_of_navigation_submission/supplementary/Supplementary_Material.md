@@ -35,7 +35,7 @@ Table S1. Detailed route-by-route evaluation across all 13 usable held-out test 
 | **Vw15** | Stationary Control | 1.3 | 5.6 | 450.48% | 0.82 | 63.83% | Unmet | Zero-velocity control trip; standstill clamped by causal ZVD |
 | **Mean / Total** | **All 13 Routes** | **820.2** | **324.21** | **89.66%** | **96.65** | **16.76%** | **3 / 13 (23.08%)** | **Complete Held-Out 60-s Evaluation Set** |
 
-*Note: In accordance with the experimental protocol, trips with total durations shorter than 70.0 seconds are excluded from the 60-second evaluation set because they cannot accommodate the 10-second pre-outage calibration window plus the 60-second blackout duration. Macro-average normalized drift weights each dynamic trip equally, excluding the stationary control trip Vw15 from the percentage mean per Equation (13) to prevent division-by-zero distortion.*
+*Note: In accordance with the experimental protocol, trips with total durations shorter than 70.0 seconds are excluded from the 60-second evaluation set because they cannot accommodate the 10-second pre-outage calibration window plus the 60-second blackout duration. Macro-average normalized drift weights each dynamic trip equally, excluding the stationary control trip Vw15 from the percentage mean per Equation (13) to avoid distortion from the near-zero travel-distance denominator. Normalised drift percentages are calculated using the reference distance travelled during the corresponding 60-s blackout window, S_i(T), as defined in Eq. (13). The 'Reference Distance' column reports the route/reference distance associated with the evaluation record and is not necessarily identical to the blackout-window travel distance.*
 
 ---
 
@@ -58,7 +58,7 @@ Table S2. Cross-trip spectral vibration census across four standardized road cat
 
 ## Supplementary Table S3: On-Device Android Execution Profiling and Numerical Parity
 
-Table S3 details the execution latency, memory utilization, and cross-platform numerical parity between the mobile Android deployment (Java/EJML/ONNX Runtime) on a Google Pixel 7a and the 64-bit Python reference engine.
+Table S3 details the execution latency and cross-platform numerical parity between the mobile Android deployment (Java/EJML/ONNX Runtime) on a Google Pixel 7a and the 64-bit Python reference engine.
 
 Table S3. Mobile execution benchmarks and cross-platform numerical parity on Google Pixel 7a.
 | Pipeline Subsystem | Implementation Language | Runtime Framework | Mean Execution Latency | Peak Latency (99th %tile) | Maximum Discrepancy vs. Python 64-bit Engine |
