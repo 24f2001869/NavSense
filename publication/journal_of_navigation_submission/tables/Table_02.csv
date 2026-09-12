@@ -1,0 +1,5 @@
+Data Split,Trip Count (N),Synchronized Epochs,Duration (h),Distance (km),Driver Identity,Partitioning Protocol
+Training Split,39,"448,993",12.47,634.5,Driver E,Whole-trip disjoint; zero temporal or route overlap
+Validation Split,6,"21,230",0.59,27.2,Driver E,"Model selection, checkpoint early stopping, loss tuning"
+Held-Out Test Split,19,"115,420",3.21,240.6,Driver E,Strictly unseen test routes; multi-horizon evaluation
+Total Synchronized Corpus,64,"585,643",16.27,902.4,Driver E,"Usable sliding sequence samples: 579,307 (100-sample buffer)"

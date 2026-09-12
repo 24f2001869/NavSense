@@ -1,0 +1,7 @@
+Evaluation Metric,Current TCN (6 Training Trips),Expanded TCN (39 Training Trips),Relative Performance Delta (%)
+Training Scope,"6 trips (1.1 h, 40,890 epochs)","39 trips (12.5 h, 448,993 epochs)",+550% training route exposure
+Velocity MAE (m/s),6.17 m/s,2.76 m/s,-55.27% error reduction
+Velocity RMSE (m/s),6.96 m/s,3.59 m/s,-48.42% error reduction
+Signed Bias (m/s),-3.06 m/s,-0.41 m/s,-86.60% bias reduction
+30-Second Dead-Reckoning Drift (m),153.31 m,52.64 m,-65.67% drift reduction
+60-Second Dead-Reckoning Drift (m),263.55 m,92.96 m,-64.72% drift reduction

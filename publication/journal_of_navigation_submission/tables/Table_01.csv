@@ -1,0 +1,6 @@
+Environment / Category,Trips (N),Duration (h),Synchronized Epochs,Distance (km),Mean Speed (km/h),Notes & Operational Profile
+Suburban Town (Vta),30,3.57,"128,618",147.9,41.4,"Frequent intersections, traffic signals, stop-and-go"
+Dense Urban (Vtb),12,3.18,"114,437",163.6,51.5,"Multi-lane arterials, urban street canyons, variable speeds"
+Winding Mountain / Rural (Vw),20,7.32,"263,579",409.0,55.9,"Continuous curvature, elevation changes, unbanked turns"
+High-Speed Motorway (V-Vfa),2,2.19,"79,009",181.9,82.7,"Sustained high-speed cruising (80–118 km/h), minimal turns"
+Complete Passenger-Car Corpus,64,16.27,"585,643",902.4,55.5,Synchronized 10 Hz telemetry; Driver E; Ford Fiesta test vehicle

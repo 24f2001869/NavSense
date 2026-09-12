@@ -1,0 +1,7 @@
+Variant ID,Map Matching Mode,Heading Feedback,Envelope Gate,Mean 60-s Drift (m),Heading Error (deg),Delta vs. M0 (%),Regression Rate (%)
+M0 (Baseline),Open-Loop / None,Disabled,No,578.3,63.4°,+0.0%,0.0%
+M1 (Shadow Map),Shadow 5-Gate MHT,Disabled,No,578.3,63.4°,+0.0%,0.0%
+M2 (Closed-Loop Heading),Heading Constraint,Enabled (Direct),No,1303.9,73.5°,-125.5%,47.0%
+M3 (Lateral Map),Lateral Constraint,Disabled,No,597.7,65.5°,-3.3%,28.9%
+M4 (Joint Map),Joint Heading & Lateral,Enabled,No,829.8,68.2°,-43.5%,33.7%
+M5 (Envelope-Gated),Joint Heading & Lateral,Enabled,Yes,807.9,67.5°,-39.7%,22.9%

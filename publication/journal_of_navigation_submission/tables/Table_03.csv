@@ -1,0 +1,17 @@
+Outage Horizon,Navigation Architecture,Evaluated Episodes (N),Mean Drift (m),Macro Distance Drift (%),SIH Pass Count (<10%),Route Pass Rate (%)
+10 s Outage,Pure Strapdown Kinematics,18,23.66,83.54,6 / 18,33.3%
+10 s Outage,Learned Static TCN,18,26.83,106.44,5 / 18,27.8%
+10 s Outage,Fixed Damped Momentum,18,23.49,111.37,6 / 18,33.3%
+10 s Outage,Adaptive Regime Fusion (Proposed),18,25.06,111.53,5 / 18,27.8%
+20 s Outage,Pure Strapdown Kinematics,17,57.01,147.98,4 / 17,23.5%
+20 s Outage,Learned Static TCN,17,45.73,123.95,5 / 17,29.4%
+20 s Outage,Fixed Damped Momentum,17,65.81,193.51,4 / 17,23.5%
+20 s Outage,Adaptive Regime Fusion (Proposed),17,49.27,135.51,4 / 17,23.5%
+30 s Outage,Pure Strapdown Kinematics,16,109.57,118.22,2 / 16,12.5%
+30 s Outage,Learned Static TCN,16,54.62,65.57,5 / 16,31.2%
+30 s Outage,Fixed Damped Momentum,16,98.07,127.13,2 / 16,12.5%
+30 s Outage,Adaptive Regime Fusion (Proposed),16,61.83,71.38,4 / 16,25.0%
+60 s Outage,Pure Strapdown Kinematics,13,324.21,89.66,0 / 13,0.0%
+60 s Outage,Learned Static TCN,13,95.53,18.26,3 / 13,23.1%
+60 s Outage,Fixed Damped Momentum,13,173.71,40.75,1 / 13,7.7%
+60 s Outage,Adaptive Regime Fusion (Proposed),13,96.65,16.76,3 / 13,23.1%

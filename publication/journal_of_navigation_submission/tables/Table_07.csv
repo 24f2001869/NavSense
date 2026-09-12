@@ -1,0 +1,6 @@
+Road Category,Trips (N),Mean Ref Distance (m),Pure Strapdown Drift (m),Pure Macro Drift (%),Adaptive Fusion Drift (m),Adaptive Macro Drift (%),SIH Pass Count (<10%)
+Suburban Town (Vta),7,575.1,301.6,127.4%,95.1,21.6%,1 / 7 (14.3%)
+Winding Mountain (Vw),4,1293.9,446.1,39.7%,108.2,9.7%,2 / 4 (50.0%)
+High-Speed Motorway (V-Vfa),1,1460.3,313.9,25.4%,157.2,11.7%,0 / 1 (0.0%)
+Stationary Control (Vw15),1,1.3,5.6,450.5%,0.82,63.8%,0 / 1 (0.0%)
+Overall Benchmark,13,820.2,324.21,89.66%,96.65,16.76%,3 / 13 (23.08%)

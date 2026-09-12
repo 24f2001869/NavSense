@@ -60,15 +60,15 @@ NavSense implements an end-to-end 5-layer pipeline combining deep sequence model
 </div>
 
 ### Pipeline Overview
-1. **Sensor Ingestion Layer:** Ingests high-frequency tri-axial linear acceleration, angular velocity, and gravity vectors at 100 Hz; applies causal anti-aliasing filtering and resamples to a synchronized 10.0 Hz clock.
+1. **Sensor Ingestion Layer:** Ingests high-frequency tri-axial linear acceleration, angular velocity, and gravity vectors at ~400 Hz hardware rate (~8.63 Hz Android callback rate); applies causal anti-aliasing filtering and resamples to a synchronized 10.0 Hz clock.
 2. **Coordinate Alignment Layer:** Transforms raw phone-body measurements into a leveled navigation frame (horizontal plane vs. gravity vector) with dynamic forward axis alignment via Principal Component Analysis (PCA).
 3. **Triple-Branch Velocity Engine:**
    - **Stateful Kinematics Branch:** Integrates longitudinal acceleration ($v_t = v_{t-1} + a_{\text{lon}}\Delta t$) initialized from pre-outage GNSS speed.
-   - **Causal Dilated TCN Branch:** 65k-parameter Temporal Convolutional Network with a 6.1s receptive field predicting forward speed directly from motion dynamics.
+   - **Causal Dilated TCN Branch:** 60,225-parameter causal Temporal Convolutional Network with a 61-sample receptive field (6.0 s causal look-back at 10 Hz) across 9 causal kinematic channels (6 IMU + 3 derived) predicting forward speed directly from motion dynamics.
    - **Causal Zero-Velocity Detector (ZVD):** Energy and variance gating detecting complete vehicle halts and enforcing $v = 0$.
 4. **Adaptive Dynamic Regime Blender:** Causally modulates kinematic momentum vs. neural predictions based on real-time maneuver intensity, preventing urban stop-and-go runaway while preserving highway cruise momentum.
-5. **15-State Error-State Kalman Filter (ESKF):** Propagates 3D kinematics; fuses virtual velocity pseudo-measurements and zero-velocity updates (ZUPT) with Non-Holonomic Constraints (NHC) during satellite blackouts.
-6. **Mobile Edge Deployment:** Fully operational native Android app running local ONNX Runtime inference ($<8\text{ ms}$ latency), Java ESKF, and offline OSMDroid vector map rendering.
+5. **15-State Error-State Kalman Filter (ESKF):** Propagates 3D kinematics; fuses virtual velocity pseudo-measurements and zero-velocity updates (ZUPT) with decoupled lateral velocity damping ($K_y[6:15] = 0$) to prevent cornering sideslip from corrupting attitude states.
+6. **Mobile Edge Deployment:** Fully operational native Android app running local ONNX Runtime inference (4.2–7.8 ms), Java ESKF (0.8–1.4 ms), total loop mean latency 9.15 ms (p99 13.89 ms) within a 100 ms epoch budget, and offline OSMDroid vector map rendering.
 
 ---
 
@@ -93,11 +93,11 @@ Evaluated across rolling blackouts on the **19 held-out test trips** of the IO-V
 | | Fixed Damped Momentum | 13 | 173.71 m | 40.75% | 1 / 13 | 7.7% | [Verify CSV](results/adaptive_fusion/adaptive_aggregate_summary.csv#L16) |
 | | Pure Kinematics | 13 | 324.21 m | 89.66% | 0 / 13 | 0.0% | [Verify CSV](results/adaptive_fusion/adaptive_aggregate_summary.csv#L15) |
 
-*(Trips with duration under 70 seconds are excluded from the 60-second evaluation window as they cannot accommodate a 60s outage plus pre-outage calibration).*
+*(Trips with duration under 70 seconds are excluded from the 60-second evaluation set as they cannot accommodate a 60s outage plus pre-outage calibration. Macro-average normalized drift weights each dynamic trip equally, with the stationary control trip Vw15 excluded per Eq. 13 to prevent division-by-zero distortion; absolute mean drift is 96.65 m across all 13 eligible trajectories).*
 
 > [!NOTE]
 > **Definitive Status Assessment:** **RESEARCH PROTOTYPE — NOT YET UNIVERSALLY ACHIEVED.**  
-> Under continuous 60-second outages, NavSense achieves an aggregate mean drift of **16.76% (96.65 m)**. While 3 trips achieve $<10\%$ drift (`Vw12` at 3.01%, `Vta21` at 7.88%, `Vw14a` at 8.54%), universal $<10\%$ compliance across all road environments remains an open research frontier.
+> Under continuous 60-second outages, NavSense achieves a mean absolute drift of **96.65 m** across all 13 eligible trajectories and a macro-average normalized drift of **16.76%** across the 12 dynamic routes. While 3 trips achieve $<10\%$ drift (`Vw12` at 3.01%, `Vta21` at 7.88%, `Vw14a` at 8.54%), universal $<10\%$ compliance across all road environments remains an open research frontier.
 
 ---
 
@@ -112,7 +112,7 @@ Every finding in NavSense is supported by verifiable numerical data and high-res
 
 </div>
 
-* **Observed Reality:** Head-to-head evaluation across 19 held-out test trips demonstrates that Adaptive Fusion achieves the lowest aggregate 60s blackout drift at **16.76% (96.65 m)**.
+* **Observed Reality:** Head-to-head evaluation demonstrates that Adaptive Fusion achieves a 60s blackout mean absolute drift of **96.65 m** across all 13 eligible routes and a normalized macro-average drift of **16.76%** across the 12 dynamic routes.
 * **Empirical Proof:** [`results/adaptive_fusion/adaptive_aggregate_summary.csv`](results/adaptive_fusion/adaptive_aggregate_summary.csv) • [`results/adaptive_fusion/adaptive_per_trip_results.csv`](results/adaptive_fusion/adaptive_per_trip_results.csv)
 * **Detailed Phase Report:** [Phase 5.6: Adaptive Regime-Aware Velocity Fusion](docs/experiments/phase5_6_adaptive_fusion.md)
 

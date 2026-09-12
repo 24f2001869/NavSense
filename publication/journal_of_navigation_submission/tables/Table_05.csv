@@ -1,0 +1,7 @@
+Configuration Variant,Forward Speed,Lateral Constraint,Attitude Feedback,Mean 60-s Drift (m),Relative Drift vs. Baseline (%),Mean NIS_x,Filter State
+Variant A (Pure-INS Baseline),None,None,None,2488.7,295.1%,0.00,Divergent
+Variant D (Coupled 3D NHC alone),None,"Coupled (v_y, v_z)",Full,1166.7,138.3%,0.00,Marginal
+Variant E (Learned TCN Alone),TCN v_x,None,None,843.4,100.0% (Ref),6.55,Stable
+Variant F (TCN + Unconditional Lateral NHC),TCN v_x,Coupled (v_y = 0),Full,1226.9,145.5%,82.12,Degraded
+Variant H (TCN + Full Coupled 3D NHC),TCN v_x,"Coupled (v_y, v_z = 0)",Full,1240.8,147.1%,87.85,Degraded
+Variant V1 (Proposed Decoupled Damping),TCN v_x,Decoupled Damping,None (K_y[6:15]=0),382.7,45.4%,6.60,Stable
