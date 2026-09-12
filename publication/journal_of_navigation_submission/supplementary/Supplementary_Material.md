@@ -4,7 +4,7 @@
 **Journal:** *The Journal of Navigation* (Cambridge University Press / Royal Institute of Navigation)  
 **Author:** Rahul Kumar  
 **Affiliation:** Integrated M.Tech. (Materials Engineering), School of Engineering Sciences & Technology, University of Hyderabad, Hyderabad, India  
-**Corresponding Email:** 24f2001869@ds.study.iitm.ac.in  
+**Corresponding Email:** 24etim23@uohyd.ac.in  
 
 ---
 

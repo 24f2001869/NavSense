@@ -22,7 +22,7 @@
 ## 2. Author & Institution Details
 
 * **Corresponding Author:** Rahul Kumar
-* **Email Address:** `24f2001869@ds.study.iitm.ac.in`
+* **Email Address:** `24etim23@uohyd.ac.in`
 * **Primary Research Affiliation:**  
   Integrated M.Tech. (Materials Engineering)  
   School of Engineering Sciences & Technology  

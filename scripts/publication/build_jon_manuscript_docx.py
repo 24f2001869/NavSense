@@ -191,7 +191,7 @@ def build_manuscript():
     p_email.paragraph_format.space_before = Pt(0)
     p_email.paragraph_format.space_after = Pt(0)
     p_email.paragraph_format.line_spacing = 1.0
-    run_email = p_email.add_run("Corresponding author email: 24f2001869@ds.study.iitm.ac.in")
+    run_email = p_email.add_run("Corresponding author email: 24etim23@uohyd.ac.in")
     run_email.font.name = 'Times New Roman'
     run_email.font.size = Pt(12)
 

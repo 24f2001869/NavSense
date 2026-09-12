@@ -4,7 +4,7 @@ Short running title: Failure-Aware Smartphone Dead Reckoning
 
 Rahul Kumar
 Integrated M.Tech. (Materials Engineering), School of Engineering Sciences & Technology, University of Hyderabad, Hyderabad, India
-Corresponding author email: 24f2001869@ds.study.iitm.ac.in
+Corresponding author email: 24etim23@uohyd.ac.in
 
 Abstract
 During Global Navigation Satellite System (GNSS) outages, smartphone inertial dead reckoning suffers from rapid nonlinear open-loop position drift. We present an empirical study evaluating learned forward velocity estimation, sensor fusion, kinematic constraints, map feedback, and distribution shifts using the public IO-VNBD benchmark dataset (64 passenger-car trips, 16.27 hours). On 19 trip-disjoint test routes, scaling a causal temporal convolutional network from 6 to 39 training trips reduces velocity error by 55.27% (6.17 to 2.76 m/s) and 60-second drift by 64.72% (263.6 to 93.0 m). Unconditional lateral kinematic constraints degrade 60-second drift by 45.47%, and closed-loop map heading feedback degrades drift by 125.5%. Across 13 usable 60-second blackout trajectories, adaptive fusion achieves 96.65 m mean absolute drift and 16.76% macro-average normalized drift across 12 dynamic routes (excluding stationary control Vw15), satisfying a sub-10% drift benchmark on 3 of 13 routes (23.08%). Physical road validation and multi-driver generalisation remain open challenges.

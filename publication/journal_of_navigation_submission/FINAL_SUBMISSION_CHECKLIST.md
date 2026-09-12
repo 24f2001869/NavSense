@@ -46,7 +46,7 @@
 
 - [x] **Sole Author:** Rahul Kumar.
 - [x] **Primary Research Affiliation:** Integrated M.Tech. (Materials Engineering), School of Engineering Sciences & Technology, University of Hyderabad, Hyderabad, India.
-- [x] **Corresponding Email:** `24f2001869@ds.study.iitm.ac.in`.
+- [x] **Corresponding Email:** `24etim23@uohyd.ac.in`.
 - [x] **Institutional Policy Compliance:** IIT Madras BS degree programme omitted from research affiliation block per Cambridge affiliation instructions to reflect primary physical research institution.
 - [ ] **ORCID Supplied Manually:** Author must authenticate ORCID profile in ScholarOne during submission (Flagged in `publication/ORCID_REQUIRED.md`).
 
